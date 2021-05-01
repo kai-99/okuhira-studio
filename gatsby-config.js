@@ -3,7 +3,7 @@ module.exports = {
 		title: "Gatsby TailwindCSS Starter",
 		description: "Gatsby TailwindCSS MyStarter Template",
 		lang: "ja",
-		// siteUrl: "https://gatsby-tailwindcss-mystarter-template.netlify.app/",
+		siteUrl: "https://gatsby-tailwindcss-customblog.netlify.app/",
 	},
 	plugins: [
 		`gatsby-plugin-sitemap`,
