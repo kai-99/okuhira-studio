@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { FolderOpenIcon } from "@heroicons/react/solid";
+import { Link } from "gatsby";
 
 const CategoryList = () => {
 	return (
@@ -16,32 +17,36 @@ const CategoryList = () => {
 			</div>
 			<div className="flex text-sm text-gray-700">
 				<div className="text-center">
-					<figure className="mx-2 p-1 border-yellow-300 border-2 bg-white rounded-full hover:bg-yellow-200 hover:shadow-2xl duration-300">
-						<StaticImage
-							src="http://placekitten.com/120/150"
-							placeholder="tracedSVG"
-							alt="cat"
-							layout="fixed"
-							width={100}
-							height={100}
-							className="rounded-full"
-						/>
-					</figure>
-					<p>Category1</p>
+					<Link to="/posts/">
+						<figure className="mx-2 p-1 border-yellow-300 border-2 bg-white rounded-full hover:bg-yellow-200 hover:shadow-2xl duration-300">
+							<StaticImage
+								src="http://placekitten.com/120/150"
+								placeholder="tracedSVG"
+								alt="cat"
+								layout="fixed"
+								width={100}
+								height={100}
+								className="rounded-full"
+							/>
+						</figure>
+						<p>Category1</p>
+					</Link>
 				</div>
 				<div className="text-center">
-					<figure className="mx-2 p-1 border-blue-300 border-2 bg-white rounded-full hover:bg-blue-200 hover:shadow-2xl duration-300">
-						<StaticImage
-							src="http://placekitten.com/120/150"
-							placeholder="tracedSVG"
-							alt="cat"
-							layout="fixed"
-							width={100}
-							height={100}
-							className="rounded-full"
-						/>
-					</figure>
-					<p>Category1</p>
+					<Link to="/posts/">
+						<figure className="mx-2 p-1 border-blue-300 border-2 bg-white rounded-full hover:bg-blue-200 hover:shadow-2xl duration-300">
+							<StaticImage
+								src="http://placekitten.com/120/150"
+								placeholder="tracedSVG"
+								alt="cat"
+								layout="fixed"
+								width={100}
+								height={100}
+								className="rounded-full"
+							/>
+						</figure>
+						<p>Category1</p>
+					</Link>
 				</div>
 				<div className="text-center">
 					<figure className="mx-2 p-1 border-green-300 border-2 bg-white rounded-full hover:bg-green-200 hover:shadow-2xl duration-300">

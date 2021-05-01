@@ -44,7 +44,7 @@ const PopularPostList = () => {
 				<div className="bg-white flex mx-2 mb-2 rounded">
 					<figure>
 						<StaticImage
-							src="http://placekitten.com/190/110"
+							src="http://placekitten.com/200/100"
 							placeholder="tracedSVG"
 							alt="cat"
 							layout="fixed"
