@@ -6,3 +6,69 @@
 body {
 	font-family: "Noto Sans JP", sans-serif;
 } */
+
+/* html {
+	scroll-behavior: smooth;
+} */
+
+/* MarkDown Post Only Styles */
+.markdown {
+	@apply p-4 lg:px-8 lg:py-4;
+}
+
+.markdown > h2 {
+	@apply text-2xl text-gray-900 font-bold mt-12 mb-4 bg-gray-100 p-4 border-l-4 border-gray-600 shadow;
+}
+
+.markdown > h3 {
+	@apply text-2xl text-gray-900 font-bold mt-12 mb-4 bg-gray-50 p-4 rounded-sm shadow;
+}
+
+.markdown > h4 {
+	@apply text-lg text-gray-800 font-bold mt-12 mb-4 p-4 rounded;
+}
+
+.markdown a {
+	@apply text-blue-500 hover:text-blue-300;
+}
+
+.markdown > p {
+	@apply my-8 leading-relaxed text-gray-800;
+}
+
+.markdown > blockquote {
+	@apply text-gray-600 italic leading-normal border-l-2 border-gray-900 px-4 py-2;
+}
+
+.markdown > blockquote cite {
+	@apply block text-right;
+}
+
+.markdown > ul {
+	@apply list-disc my-4 list-inside;
+}
+
+.markdown > ol {
+	@apply list-decimal my-4 list-inside;
+}
+
+.markdown > ol li,
+ul li {
+	@apply my-1;
+}
+
+.markdown > table {
+	@apply mx-0 my-4 border border-gray-100 text-gray-800;
+}
+
+.markdown > table th {
+	@apply p-2 bg-blue-100 font-bold border border-gray-100;
+}
+
+.markdown > table td {
+	@apply p-2 border border-gray-100;
+}
+
+.markdown > hr {
+	@apply text-gray-400 m-4;
+}

@@ -1,4 +1,7 @@
 module.exports = {
+	flags: {
+		DEV_SSR: true,
+	},
 	siteMetadata: {
 		title: "Kaito",
 		description: "Gatsby TailwindCSS MyStarter Template",
@@ -15,11 +18,6 @@ module.exports = {
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
-				// Footnotes mode (default: true)
-				footnotes: true,
-				// GitHub Flavored Markdown mode (default: true)
-				gfm: true,
-				// Plugins configs
 				plugins: [
 					`gatsby-remark-relative-images`,
 					{
@@ -28,6 +26,7 @@ module.exports = {
 							maxWidth: 700,
 						},
 					},
+					`gatsby-remark-autolink-headers`,
 				],
 			},
 		},
@@ -48,9 +47,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-nprogress`,
 			options: {
-				// Setting a color is optional.
 				color: `#374251`,
-				// Disable the loading spinner.
 				showSpinner: true,
 			},
 		},

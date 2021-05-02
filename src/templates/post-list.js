@@ -3,29 +3,48 @@ import Layout from "../components/Layout";
 import SideBar from "../components/Home/SideBar";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { ClockIcon } from "@heroicons/react/solid";
+import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
+import { Helmet } from "react-helmet";
 
 const postList = ({ data }) => {
 	const image = getImage(data.markdownRemark.frontmatter.hero);
 	return (
 		<Layout>
-			<main className="w-3/4 mr-8">
-				<h2 className="font-bold text-center text-2xl my-4">
+			<Helmet>
+				<title>
+					{data.markdownRemark.frontmatter.title} |{" "}
+					{data.site.siteMetadata.title}
+				</title>
+			</Helmet>
+			<main className="lg:w-3/4 lg:mr-8">
+				<h1 className="font-bold text-center text-2xl my-4">
 					{data.markdownRemark.frontmatter.title}
-				</h2>
-				<time className="text-gray-600 block text-right text-sm mb-1">
-					<ClockIcon className="inline-block w-4 h-4 ml-1" />
-					{data.markdownRemark.frontmatter.date}
-				</time>
-				<article className="bg-white p-4 rounded">
-					<figure className="text-center pb-4">
+				</h1>
+				<div className="flex justify-end mb-1">
+					<time className="text-gray-600 block text-right text-sm mr-4">
+						<span className="mr-1">
+							<PencilAltIcon className="inline-block w-4 h-4" />
+						</span>
+						{data.markdownRemark.frontmatter.createdDate}
+					</time>
+					<time className="text-gray-600 block text-right text-sm">
+						<span className="mr-1">
+							<RefreshIcon className="inline-block w-4 h-4" />
+						</span>
+						{data.markdownRemark.frontmatter.updateDate}
+					</time>
+				</div>
+				<article className="bg-white rounded">
+					<figure className="text-center mb-4">
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
 						/>
 					</figure>
-					<hr className="mb-8 h-px bg-gradient-to-r from-gray-300" />
-					<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+					<div
+						className="markdown"
+						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+					/>
 				</article>
 			</main>
 			<SideBar />
@@ -39,16 +58,24 @@ export const query = graphql`
 			html
 			frontmatter {
 				title
-				date
+				createdDate
+				updateDate
 				hero {
 					childImageSharp {
 						gatsbyImageData(
-							width: 480
-							placeholder: BLURRED
+							placeholder: TRACED_SVG
 							formats: [AUTO, WEBP, AVIF]
+							layout: CONSTRAINED
+							width: 730
+							height: 500
 						)
 					}
 				}
+			}
+		}
+		site {
+			siteMetadata {
+				title
 			}
 		}
 	}
