@@ -1,9 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
 import SideBar from "../components/Home/SideBar";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
+import {
+	RefreshIcon,
+	PencilAltIcon,
+	CursorClickIcon,
+} from "@heroicons/react/outline";
 import { Helmet } from "react-helmet";
 
 const postList = ({ data }) => {
@@ -22,12 +26,14 @@ const postList = ({ data }) => {
 				</h1>
 				<div className="flex justify-end mb-1">
 					<time className="text-gray-600 block text-right text-sm mr-4">
+						<span className="lg:hidden">投稿日</span>{" "}
 						<span className="mr-1">
 							<PencilAltIcon className="inline-block w-4 h-4" />
 						</span>
 						{data.markdownRemark.frontmatter.createdDate}
 					</time>
 					<time className="text-gray-600 block text-right text-sm">
+						<span className="lg:hidden">更新日</span>{" "}
 						<span className="mr-1">
 							<RefreshIcon className="inline-block w-4 h-4" />
 						</span>
@@ -46,6 +52,15 @@ const postList = ({ data }) => {
 						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 					/>
 				</article>
+				<div className="my-4 text-right">
+					<Link
+						className="justify-end text-md border-b-2 border-indigo-300 inline-block text-gray-600"
+						to="/posts/"
+					>
+						<CursorClickIcon className="w-4 h-4 mr-1 inline-block" />
+						記事一覧はこちら
+					</Link>
+				</div>
 			</main>
 			<SideBar />
 		</Layout>

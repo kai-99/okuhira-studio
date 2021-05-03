@@ -12,7 +12,7 @@ const PostList = ({ data }) => {
 			<Helmet>
 				<title>{data.site.siteMetadata.title}</title>
 			</Helmet>
-			<main className="w-3/4 mr-8">
+			<main className="lg:w-3/4 lg:mr-8">
 				<div className="mb-4">
 					<h1 className="font-bold text-xl">記事一覧</h1>
 				</div>
@@ -24,7 +24,7 @@ const PostList = ({ data }) => {
 								key={node.frontmatter.title}
 							>
 								<Link
-									className="flex hover:shadow-xl hover:bg-indigo-50 border-2 hover:border-indigo-100 duration-300"
+									className="flex hover:shadow-xl hover:bg-indigo-50 border-2 hover:border-indigo-200 duration-300"
 									to={node.fields.slug}
 								>
 									<GatsbyImage
@@ -32,22 +32,21 @@ const PostList = ({ data }) => {
 										alt={node.frontmatter.title}
 									/>
 									<div className="p-2 flex-1">
-										<h2 className="font-bold text-lg text-gray-900 mb-4">
+										<h2 className="font-bold text-sm lg:text-lg text-gray-900 mb-4">
 											{node.frontmatter.title}
 										</h2>
-										<p className="hidden lg:block text-gray-500 text-sm">
-											{node.frontmatter.desc}
-										</p>
-										<div className="flex justify-end">
-											<time className="text-gray-600 block text-right text-sm mr-4">
+										<div className="lg:flex lg:justify-end">
+											<time className="text-gray-600 block text-right text-xs lg:mr-4">
+												<span className="lg:hidden">投稿日</span>{" "}
 												<span className="mr-1">
-													<PencilAltIcon className="inline-block w-4 h-4" />
+													<PencilAltIcon className="inline-block w-3 h-3" />
 												</span>
 												{node.frontmatter.createdDate}
 											</time>
-											<time className="text-gray-600 block text-right text-sm">
+											<time className="text-gray-600 block text-right text-xs">
+												<span className="lg:hidden">更新日</span>{" "}
 												<span className="mr-1">
-													<RefreshIcon className="inline-block w-4 h-4" />
+													<RefreshIcon className="inline-block w-3 h-3" />
 												</span>
 												{node.frontmatter.updateDate}
 											</time>

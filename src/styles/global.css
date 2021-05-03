@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 body {
 	font-family: "Noto Sans JP", sans-serif;
-} */
+}
 
-/* html {
-	scroll-behavior: smooth;
-} */
-
+.site-title {
+	font-family: "Pacifico", cursive;
+}
 /* MarkDown Post Only Styles */
 .markdown {
 	@apply p-4 lg:px-8 lg:py-4;
@@ -48,8 +49,16 @@ body {
 	@apply list-disc my-4 list-inside;
 }
 
+.markdown > ul li::marker {
+	@apply text-gray-600;
+}
+
 .markdown > ol {
 	@apply list-decimal my-4 list-inside;
+}
+
+.markdown > ol li::marker {
+	@apply text-gray-600 font-bold;
 }
 
 .markdown > ol li,

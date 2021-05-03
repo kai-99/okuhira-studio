@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 // Custom Components
 import Layout from "../components/Layout";
-import PopularArticles from "../components/Home/PopularArticles";
 import NewArticles from "../components/Home/NewArticles";
+import PopularArticles from "../components/Home/PopularArticles";
 import SideBar from "../components/Home/SideBar";
 // import CategoryList from "../components/Home/CategoryList";
 

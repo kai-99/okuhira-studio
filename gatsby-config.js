@@ -1,9 +1,9 @@
 module.exports = {
 	flags: {
-		DEV_SSR: true,
+		DEV_SSR: false,
 	},
 	siteMetadata: {
-		title: "Kaito",
+		title: `z-idia`,
 		description: "Gatsby TailwindCSS MyStarter Template",
 		lang: "ja",
 		siteUrl: "https://gatsby-tailwindcss-customblog.netlify.app/",
@@ -26,7 +26,15 @@ module.exports = {
 							maxWidth: 700,
 						},
 					},
-					`gatsby-remark-autolink-headers`,
+					{
+						resolve: `gatsby-remark-autolink-headers`,
+						options: {
+							icon: false,
+							maintainCase: false,
+							elements: [`h2`, `h3`, `h4`],
+						},
+					},
+					`gatsby-remark-prismjs`,
 				],
 			},
 		},
