@@ -4,9 +4,6 @@ import { graphql } from "gatsby";
 // Custom Components
 import Layout from "../components/Layout";
 import NewArticles from "../components/Home/NewArticles";
-import PopularArticles from "../components/Home/PopularArticles";
-import SideBar from "../components/Home/SideBar";
-// import CategoryList from "../components/Home/CategoryList";
 
 const IndexPage = ({ data }) => {
 	return (
@@ -15,14 +12,9 @@ const IndexPage = ({ data }) => {
 				<title>{data.site.siteMetadata.title}</title>
 			</Helmet>
 			<Layout>
-				<main className="lg:w-3/4 lg:mr-8">
-					<PopularArticles />
-					{/* <hr className="my-8 h-px bg-gradient-to-r from-gray-300" />
-					<CategoryList /> */}
-					<hr className="my-8 h-px bg-gradient-to-r from-gray-300" />
+				<main className="lg:w-3/4 mx-auto">
 					<NewArticles />
 				</main>
-				<SideBar />
 			</Layout>
 		</>
 	);

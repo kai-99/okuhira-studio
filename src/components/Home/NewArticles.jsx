@@ -1,10 +1,6 @@
 import React from "react";
-import { StarIcon } from "@heroicons/react/solid";
-import {
-	RefreshIcon,
-	PencilAltIcon,
-	CursorClickIcon,
-} from "@heroicons/react/outline";
+import { CheckIcon } from "@heroicons/react/solid";
+import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
@@ -22,6 +18,7 @@ const PopularPostList = () => {
 							createdDate
 							updateDate
 							title
+							category
 							hero {
 								childImageSharp {
 									gatsbyImageData(
@@ -44,19 +41,25 @@ const PopularPostList = () => {
 		<section>
 			<div>
 				<p className="pl-2 font-bold text-gray-600 text-sm italic">
-					新着記事
-					<StarIcon className="h-5 w-5 ml-1 text-yellow-400 inline-block align-bottom" />
+					記事一覧
+					<CheckIcon className="h-5 w-5 ml-1 text-green-400 inline-block align-bottom" />
 				</p>
 				<h2 className="text-gray800 text-2xl font-bold italic pt-0 pb-2 px-2 mb-2">
-					New articles
+					All articles
 				</h2>
 			</div>
-			<article>
+			<div>
 				{data.allMarkdownRemark.nodes.map((node) => {
 					return (
-						<div className="bg-white rounded mb-3" key={node.frontmatter.title}>
+						<div
+							className="bg-white mb-4 relative"
+							key={node.frontmatter.title}
+						>
+							<span className="absolute p-1 text-xs inline-block bg-purple-400 text-gray-50 -top-1.5 -left-1.5 z-20 shadow rounded-sm">
+								{node.frontmatter.category}
+							</span>
 							<Link
-								className="flex hover:shadow-xl hover:bg-indigo-50 border-2 hover:border-indigo-200 duration-300"
+								className="flex hover:shadow-xl hover:bg-purple-50 border-2 hover:border-purple-200 duration-300"
 								to={node.fields.slug}
 							>
 								<GatsbyImage
@@ -64,7 +67,7 @@ const PopularPostList = () => {
 									alt={node.frontmatter.title}
 								/>
 								<div className="p-2 flex-1">
-									<h2 className="font-bold text-sm lg:text-lg text-gray-900 mb-4">
+									<h2 className="font-bold text-sm lg:text-lg text-gray-800 mb-4">
 										{node.frontmatter.title}
 									</h2>
 									<div className="lg:flex lg:justify-end">
@@ -88,15 +91,6 @@ const PopularPostList = () => {
 						</div>
 					);
 				})}
-			</article>
-			<div className="my-4 text-right">
-				<Link
-					className="justify-end text-md border-b-2 border-indigo-300 inline-block text-gray-600"
-					to="/posts/"
-				>
-					<CursorClickIcon className="w-4 h-4 mr-1 inline-block" />
-					記事一覧はこちら
-				</Link>
 			</div>
 		</section>
 	);

@@ -41,6 +41,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "gatsby-remark-code-titles": "^1.1.0",
     "tailwindcss": "^2.1.1"
   }
 }

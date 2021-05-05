@@ -40,7 +40,7 @@ const Layout = (props) => {
 			<footer className="w-full">
 				<div className="py-4 text-center bg-white">
 					<small className="text-gray-800">
-						&copy;{new Date().getFullYear()}, {data.site.siteMetadata.title}
+						&copy;{new Date().getFullYear()} {data.site.siteMetadata.title}
 					</small>
 				</div>
 			</footer>

@@ -3,30 +3,33 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: "Noto Sans JP", sans-serif;
 }
 
-.site-title {
-	font-family: "Pacifico", cursive;
-}
 /* MarkDown Post Only Styles */
 .markdown {
-	@apply p-4 lg:px-8 lg:py-4;
+	@apply px-2 py-4 lg:px-8 lg:py-4;
 }
 
 .markdown > h2 {
-	@apply text-2xl text-gray-900 font-bold mt-12 mb-4 bg-gray-100 p-4 border-l-4 border-gray-600 shadow;
+	@apply text-xl lg:text-2xl text-gray-900 font-bold mt-12 mb-8 bg-purple-100 px-4 py-2 lg:p-4 border-l-4 border-purple-600 shadow;
+	scroll-margin-block-start: 4rem;
 }
 
 .markdown > h3 {
-	@apply text-2xl text-gray-900 font-bold mt-12 mb-4 bg-gray-50 p-4 rounded-sm shadow;
+	@apply text-xl lg:text-2xl text-gray-900 font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:p-4 shadow;
+	scroll-margin-block-start: 4rem;
 }
 
 .markdown > h4 {
-	@apply text-lg text-gray-800 font-bold mt-12 mb-4 p-4 rounded;
+	@apply text-xl lg:text-2xl text-gray-800 font-bold mt-12 mb-8 px-4 py-2 border-l-4 border-purple-600;
+	scroll-margin-block-start: 4rem;
 }
 
 .markdown a {
@@ -80,4 +83,38 @@ ul li {
 
 .markdown > hr {
 	@apply text-gray-400 m-4;
+}
+
+.markdown > .gatsby-code-title {
+	@apply border-b border-gray-200 inline-block rounded-t-md mt-1;
+	font-size: 13px;
+	color: #d4d4d4;
+	background: #121828;
+	padding: 4px 13px;
+	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+		"Courier New", monospace;
+}
+
+/* h2 */
+.toc .toc__content ul li p {
+	@apply border-b border-gray-200 lg:border-purple-50 p-2;
+}
+.toc .toc__content ul li p::before {
+	@apply inline-block w-2 h-2 bg-gray-600 rounded-full mr-2;
+	content: " ";
+}
+.toc .toc__content ul li p:hover {
+	@apply text-gray-600 duration-300;
+}
+
+/* h3 */
+.toc .toc__content ul li > a {
+	@apply border-b border-gray-200 lg:border-purple-50 py-2 px-6 block;
+}
+.toc .toc__content ul li > a::before {
+	@apply inline-block w-2 h-2 bg-gray-600 rounded-full mr-2;
+	content: "  ";
+}
+.toc .toc__content ul li > a:hover {
+	@apply text-gray-600 duration-300;
 }

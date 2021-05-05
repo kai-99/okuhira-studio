@@ -5,11 +5,14 @@ updateDate: "2021-05-04"
 hero: "./tr.jpeg"
 desc: "マークダウンスタイル確認投稿"
 tags: ["JS", "Gatsby", "TailwindCSS"]
+category: "HTML"
 ---
 
-```toc
-# This code block gets replaced with the TOC
-```
+[[danger]]
+| content
+
+[[info | This is a title!]]
+| content
 
 ## h2
 
@@ -23,6 +26,8 @@ const IndexPage = () => {
 		</React.Fragment>
 	);
 };
+
+export default IndexPage;
 ```
 
 ![gatsby](./icon.png)
@@ -30,10 +35,6 @@ const IndexPage = () => {
 ### h3
 
 #### h4
-
-##### h5
-
-###### h6
 
 - list
 - list

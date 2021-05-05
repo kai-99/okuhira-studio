@@ -1,17 +1,30 @@
 import React from "react";
 import Layout from "../components/Layout";
-import SideBar from "../components/Home/SideBar";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
 	RefreshIcon,
 	PencilAltIcon,
-	CursorClickIcon,
+	HashtagIcon,
+	ArrowCircleRightIcon,
 } from "@heroicons/react/outline";
 import { Helmet } from "react-helmet";
 
 const postList = ({ data }) => {
 	const image = getImage(data.markdownRemark.frontmatter.hero);
+	// TableOfContents Component
+	const Toc = (props) => {
+		return (
+			<div className="toc">
+				<div
+					className="toc__content"
+					dangerouslySetInnerHTML={{
+						__html: props.data,
+					}}
+				/>
+			</div>
+		);
+	};
 	return (
 		<Layout>
 			<Helmet>
@@ -21,32 +34,44 @@ const postList = ({ data }) => {
 				</title>
 			</Helmet>
 			<main className="lg:w-3/4 lg:mr-8">
-				<h1 className="font-bold text-center text-2xl my-4">
+				<h1 className="font-bold text-center text-xl lg:text-2xl my-4 text-gray-800">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
 				<div className="flex justify-end mb-1">
-					<time className="text-gray-600 block text-right text-sm mr-4">
-						<span className="lg:hidden">投稿日</span>{" "}
+					<time className="text-gray-600 block text-right text-xs lg:text-sm mr-4">
+						<span className="lg:hidden">投稿日：</span>{" "}
 						<span className="mr-1">
 							<PencilAltIcon className="inline-block w-4 h-4" />
 						</span>
 						{data.markdownRemark.frontmatter.createdDate}
 					</time>
-					<time className="text-gray-600 block text-right text-sm">
-						<span className="lg:hidden">更新日</span>{" "}
+					<time className="text-gray-600 block text-right text-xs lg:text-sm">
+						<span className="lg:hidden">更新日：</span>{" "}
 						<span className="mr-1">
 							<RefreshIcon className="inline-block w-4 h-4" />
 						</span>
 						{data.markdownRemark.frontmatter.updateDate}
 					</time>
 				</div>
-				<article className="bg-white rounded">
+				<article className="bg-white rounded shadow-sm">
 					<figure className="text-center mb-4">
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
 						/>
 					</figure>
+					{/* 目次 SP */}
+					<div className="lg:hidden bg-white border border-gray-100 mb-8 rounded">
+						<div className="bg-gray-700 text-center py-3">
+							<p className="font-bold text-gray-100">
+								<HashtagIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
+								もくじ
+							</p>
+						</div>
+						<nav className="p-4 bg-purple-50">
+							<Toc data={data.markdownRemark.tableOfContents} />
+						</nav>
+					</div>
 					<div
 						className="markdown"
 						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
@@ -54,15 +79,28 @@ const postList = ({ data }) => {
 				</article>
 				<div className="my-4 text-right">
 					<Link
-						className="justify-end text-md border-b-2 border-indigo-300 inline-block text-gray-600"
-						to="/posts/"
+						className="justify-end text-md border-b-2 border-purple-400 inline-block text-gray-600"
+						to="/"
 					>
-						<CursorClickIcon className="w-4 h-4 mr-1 inline-block" />
-						記事一覧はこちら
+						記事一覧
+						<ArrowCircleRightIcon className="w-4 h-4 ml-1 inline-block" />
 					</Link>
 				</div>
 			</main>
-			<SideBar />
+			{/* 目次 PC */}
+			<aside className="hidden lg:block lg:w-1/4">
+				<div className="bg-white border border-gray-100 mb-8 rounded sticky top-20 shadow-sm">
+					<div className="bg-gray-700 text-center py-8 rounded-t-md">
+						<p className="font-bold text-gray-100 text-lg">
+							<HashtagIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
+							もくじ
+						</p>
+					</div>
+					<nav className="p-4">
+						<Toc data={data.markdownRemark.tableOfContents} />
+					</nav>
+				</div>
+			</aside>
 		</Layout>
 	);
 };
@@ -71,6 +109,7 @@ export const query = graphql`
 	query($slug: String!) {
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
+			tableOfContents
 			frontmatter {
 				title
 				createdDate

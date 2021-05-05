@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 // Custom Components
 import Layout from "../components/Layout";
-import SideBar from "../components/Home/SideBar";
 
 const NotFoundPage = () => {
 	return (
@@ -12,9 +11,9 @@ const NotFoundPage = () => {
 				<title>NotFoundPage</title>
 			</Helmet>
 			<Layout>
-				<main className="w-3/4 mr-8">
+				<main className="lg:w-3/4 lg:mx-auto">
 					<div className="">
-						<h6 className="text-xl">お探しのページが見つかりません</h6>
+						<h2 className="text-xl">お探しのページが見つかりません</h2>
 						<Link
 							className="border-b border-blue-500 text-blue-500 hover:text-blue-300"
 							to="/"
@@ -23,7 +22,6 @@ const NotFoundPage = () => {
 						</Link>
 					</div>
 				</main>
-				<SideBar />
 			</Layout>
 		</>
 	);

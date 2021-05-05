@@ -5,10 +5,16 @@ updateDate: "2021-05-02"
 hero: "./18.jpeg"
 desc: "このサイトはGatsby と TailwindCSS を使用してつくています。"
 tags: ["HTML", "CSS", "TailwindCSS"]
+category: "CSS"
 ---
 
-```toc
-# This code block gets replaced with the TOC
+```css:title=styles.css
+@media print {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    text-shadow: none;
+  }
+}
 ```
 
 # Hello Gatsby
