@@ -19,7 +19,7 @@ const Layout = (props) => {
 		<div className="bg-gray-100">
 			<header className="w-full border-b bg-white top-0 h-12 z-50 fixed">
 				<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
-					<h1 className="font-extrabold text-3xl text-gray-800 items-center flex h-12 site-title">
+					<h1 className="font-extrabold text-xl ls:text-2xl text-gray-800 items-center flex h-12 site-title">
 						<Link to="/">{data.site.siteMetadata.title}</Link>
 					</h1>
 					<a

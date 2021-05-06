@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 // Custom Components
 import Layout from "../components/Layout";
-import NewArticles from "../components/Home/NewArticles";
+import AllArticles from "../components/Home/AllArticles";
 
 const IndexPage = ({ data }) => {
 	return (
@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 			</Helmet>
 			<Layout>
 				<main className="lg:w-3/4 mx-auto">
-					<NewArticles />
+					<AllArticles />
 				</main>
 			</Layout>
 		</>

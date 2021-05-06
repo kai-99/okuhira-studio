@@ -7,8 +7,19 @@ import {
 	PencilAltIcon,
 	HashtagIcon,
 	ArrowCircleRightIcon,
+	ShareIcon,
 } from "@heroicons/react/outline";
 import { Helmet } from "react-helmet";
+import {
+	FacebookShareButton,
+	TwitterShareButton,
+	LineShareButton,
+	LinkedinShareButton,
+	FacebookIcon,
+	TwitterIcon,
+	LineIcon,
+	LinkedinIcon,
+} from "react-share";
 
 const postList = ({ data }) => {
 	const image = getImage(data.markdownRemark.frontmatter.hero);
@@ -76,6 +87,26 @@ const postList = ({ data }) => {
 						className="markdown"
 						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 					/>
+					<div className="px-10">
+						<hr className="my-8" />
+					</div>
+					<div className="pb-8 px-8">
+						<div className="flex items-center justify-center">
+							<ShareIcon className="w-6 h-6 inline-block mr-4 text-purple-400" />
+							<TwitterShareButton className="mr-2">
+								<TwitterIcon round size={48} />
+							</TwitterShareButton>
+							<FacebookShareButton className="mr-2">
+								<FacebookIcon round size={48} />
+							</FacebookShareButton>
+							<LineShareButton className="mr-2">
+								<LineIcon round size={48} />
+							</LineShareButton>
+							<LinkedinShareButton>
+								<LinkedinIcon round size={48} />
+							</LinkedinShareButton>
+						</div>
+					</div>
 				</article>
 				<div className="my-4 text-right">
 					<Link

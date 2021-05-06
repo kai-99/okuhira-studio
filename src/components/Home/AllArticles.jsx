@@ -25,8 +25,6 @@ const PopularPostList = () => {
 										placeholder: TRACED_SVG
 										formats: [AUTO, WEBP, AVIF]
 										layout: CONSTRAINED
-										width: 150
-										height: 100
 									)
 								}
 							}
@@ -52,21 +50,22 @@ const PopularPostList = () => {
 				{data.allMarkdownRemark.nodes.map((node) => {
 					return (
 						<div
-							className="bg-white mb-4 relative"
+							className="bg-white mb-8 lg:mb-4 relative"
 							key={node.frontmatter.title}
 						>
-							<span className="absolute p-1 text-xs inline-block bg-purple-400 text-gray-50 -top-1.5 -left-1.5 z-20 shadow rounded-sm">
+							<span className="absolute font-bold py-1 px-3 text-sm lg:text-xs inline-block bg-gray-700 text-gray-100 top-0 left-0 lg:top-0.5 lg:left-0.5 z-20 shadow">
 								{node.frontmatter.category}
 							</span>
 							<Link
-								className="flex hover:shadow-xl hover:bg-purple-50 border-2 hover:border-purple-200 duration-300"
+								className="lg:flex hover:shadow-xl hover:bg-purple-50 lg:border-2 hover:border-purple-200 duration-300"
 								to={node.fields.slug}
 							>
 								<GatsbyImage
 									image={getImage(node.frontmatter.hero)}
 									alt={node.frontmatter.title}
+									className="w-full h-72 lg:w-36 lg:h-24 object-contain"
 								/>
-								<div className="p-2 flex-1">
+								<div className="flex flex-col p-2 lg:flex-1">
 									<h2 className="font-bold text-sm lg:text-lg text-gray-800 mb-4">
 										{node.frontmatter.title}
 									</h2>

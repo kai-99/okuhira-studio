@@ -2,14 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
-
 html {
 	scroll-behavior: smooth;
-}
-
-body {
-	font-family: "Noto Sans JP", sans-serif;
 }
 
 /* MarkDown Post Only Styles */
@@ -86,7 +80,7 @@ ul li {
 }
 
 .markdown > .gatsby-code-title {
-	@apply border-b border-gray-200 inline-block rounded-t-md mt-1;
+	@apply inline-block rounded-t-md mt-1 mb-px border-l-4 border-purple-600;
 	font-size: 13px;
 	color: #d4d4d4;
 	background: #121828;
