@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
 	RefreshIcon,
 	PencilAltIcon,
-	HashtagIcon,
+	ClipboardListIcon,
 	ArrowCircleRightIcon,
 	ShareIcon,
 } from "@heroicons/react/outline";
@@ -21,7 +21,7 @@ import {
 	LinkedinIcon,
 } from "react-share";
 
-const postList = ({ data }) => {
+const entryList = ({ data }) => {
 	const image = getImage(data.markdownRemark.frontmatter.hero);
 	// TableOfContents Component
 	const Toc = (props) => {
@@ -40,7 +40,7 @@ const postList = ({ data }) => {
 		<Layout>
 			<Helmet>
 				<title>
-					{data.markdownRemark.frontmatter.title} |{" "}
+					{data.markdownRemark.frontmatter.title} {"  "}|{"  "}
 					{data.site.siteMetadata.title}
 				</title>
 			</Helmet>
@@ -75,7 +75,7 @@ const postList = ({ data }) => {
 					<div className="lg:hidden bg-white border border-gray-100 mb-8 rounded">
 						<div className="bg-gray-700 text-center py-3">
 							<p className="font-bold text-gray-100">
-								<HashtagIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
+								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
 								もくじ
 							</p>
 						</div>
@@ -122,8 +122,8 @@ const postList = ({ data }) => {
 			<aside className="hidden lg:block lg:w-1/4">
 				<div className="bg-white border border-gray-100 mb-8 rounded sticky top-20 shadow-sm">
 					<div className="bg-gray-700 text-center py-8 rounded-t-md">
-						<p className="font-bold text-gray-100 text-lg">
-							<HashtagIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
+						<p className="font-bold text-gray-100">
+							<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
 							もくじ
 						</p>
 					</div>
@@ -135,9 +135,10 @@ const postList = ({ data }) => {
 		</Layout>
 	);
 };
+export default entryList;
 
 export const query = graphql`
-	query($slug: String!) {
+	query EntryListQuery($slug: String!) {
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 			tableOfContents
@@ -165,5 +166,3 @@ export const query = graphql`
 		}
 	}
 `;
-
-export default postList;

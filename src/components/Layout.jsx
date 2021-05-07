@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const Layout = (props) => {
+const Layout = ({ children }) => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -26,15 +26,18 @@ const Layout = (props) => {
 						href="https://twitter.com/z_idia"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="bg-blue-400 rounded-full h-10 w-10 flex items-center justify-center"
+						className="bg-white-400 rounded-full h-10 w-10 flex items-center justify-center shadow-sm border-gray-100"
 					>
-						<FontAwesomeIcon className="text-white text-2xl" icon={faTwitter} />
+						<FontAwesomeIcon
+							className="text-blue-400 text-2xl"
+							icon={faTwitter}
+						/>
 					</a>
 				</div>
 			</header>
 			<div className="max-w-5xl lg:mx-auto">
 				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
-					{props.children}
+					{children}
 				</div>
 			</div>
 			<footer className="w-full">

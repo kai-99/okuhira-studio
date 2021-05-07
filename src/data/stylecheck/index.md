@@ -32,9 +32,9 @@ export default IndexPage;
 
 ![gatsby](./icon.png)
 
-### h3
+## h3
 
-#### h4
+## h4
 
 - list
 - list
@@ -62,13 +62,13 @@ export default IndexPage;
 | Text | Text | Text | Text | Text | Text |
 | Text | Text | Text | Text | Text | Text |
 
-### h3 見出し
+## h3 見出し
 
 クライアントからの要望を元に Web サイト制作を担当。ディレクション、デザイン、制作を行い 3 名チームのチームリーダーを担当。
 
 クライアントからの要望を元に Web サイト制作を担当。ディレクション、デザイン、制作を行い 3 名チームのチームリーダーを担当。
 
-#### h4 見出し
+## h4 見出し
 
 ![gatsby](./tr.jpeg)
 

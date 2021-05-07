@@ -8,7 +8,9 @@ const PopularPostList = () => {
 	const data = useStaticQuery(
 		graphql`
 			{
-				allMarkdownRemark {
+				allMarkdownRemark(
+					sort: { order: DESC, fields: [frontmatter___updateDate] }
+				) {
 					nodes {
 						html
 						fields {
@@ -58,12 +60,12 @@ const PopularPostList = () => {
 							</span>
 							<Link
 								className="lg:flex hover:shadow-xl hover:bg-purple-50 lg:border-2 hover:border-purple-200 duration-300"
-								to={node.fields.slug}
+								to={`entry${node.fields.slug}`}
 							>
 								<GatsbyImage
 									image={getImage(node.frontmatter.hero)}
 									alt={node.frontmatter.title}
-									className="w-full h-72 lg:w-36 lg:h-24 object-contain"
+									className="w-full h-72 lg:w-36 lg:h-24 object-cover"
 								/>
 								<div className="flex flex-col p-2 lg:flex-1">
 									<h2 className="font-bold text-sm lg:text-lg text-gray-800 mb-4">

@@ -8,21 +8,21 @@ html {
 
 /* MarkDown Post Only Styles */
 .markdown {
-	@apply px-2 py-4 lg:px-8 lg:py-4;
+	@apply px-2 py-4 lg:px-8 lg:py-4 text-gray-900;
 }
 
 .markdown > h2 {
-	@apply text-xl lg:text-2xl text-gray-900 font-bold mt-12 mb-8 bg-purple-100 px-4 py-2 lg:p-4 border-l-4 border-purple-600 shadow;
+	@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-100 px-4 py-2 lg:p-4 border-l-4 border-purple-600 shadow;
 	scroll-margin-block-start: 4rem;
 }
 
 .markdown > h3 {
-	@apply text-xl lg:text-2xl text-gray-900 font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:p-4 shadow;
+	@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:p-4 shadow;
 	scroll-margin-block-start: 4rem;
 }
 
 .markdown > h4 {
-	@apply text-xl lg:text-2xl text-gray-800 font-bold mt-12 mb-8 px-4 py-2 border-l-4 border-purple-600;
+	@apply text-xl lg:text-2xl font-bold mt-12 mb-8 px-4 py-2 border-l-4 border-purple-600;
 	scroll-margin-block-start: 4rem;
 }
 
@@ -31,11 +31,11 @@ html {
 }
 
 .markdown > p {
-	@apply my-8 leading-relaxed text-gray-800;
+	@apply my-8 leading-relaxed;
 }
 
 .markdown > blockquote {
-	@apply text-gray-600 italic leading-normal border-l-2 border-gray-900 px-4 py-2;
+	@apply text-gray-700 italic leading-normal border-l-2 border-gray-900 px-4 py-2;
 }
 
 .markdown > blockquote cite {
@@ -47,7 +47,7 @@ html {
 }
 
 .markdown > ul li::marker {
-	@apply text-gray-600;
+	@apply text-gray-600 font-bold;
 }
 
 .markdown > ol {
@@ -55,20 +55,20 @@ html {
 }
 
 .markdown > ol li::marker {
-	@apply text-gray-600 font-bold;
+	@apply text-gray-700 font-bold;
 }
 
 .markdown > ol li,
 ul li {
-	@apply my-1;
+	@apply p-2;
 }
 
 .markdown > table {
-	@apply mx-0 my-4 border border-gray-100 text-gray-800;
+	@apply mx-0 my-4 border border-gray-100 w-full;
 }
 
 .markdown > table th {
-	@apply p-2 bg-blue-100 font-bold border border-gray-100;
+	@apply p-2 bg-purple-100 font-bold border border-gray-100;
 }
 
 .markdown > table td {
@@ -90,25 +90,13 @@ ul li {
 }
 
 /* h2 */
-.toc .toc__content ul li p {
-	@apply border-b border-gray-200 lg:border-purple-50 p-2;
+.toc .toc__content ul li a {
+	@apply font-bold text-gray-900;
 }
-.toc .toc__content ul li p::before {
-	@apply inline-block w-2 h-2 bg-gray-600 rounded-full mr-2;
+.toc .toc__content ul li a::before {
+	@apply inline-block w-2 h-2 bg-purple-300 rounded-full mr-2 border-2 border-purple-400;
 	content: " ";
 }
-.toc .toc__content ul li p:hover {
-	@apply text-gray-600 duration-300;
-}
-
-/* h3 */
-.toc .toc__content ul li > a {
-	@apply border-b border-gray-200 lg:border-purple-50 py-2 px-6 block;
-}
-.toc .toc__content ul li > a::before {
-	@apply inline-block w-2 h-2 bg-gray-600 rounded-full mr-2;
-	content: "  ";
-}
-.toc .toc__content ul li > a:hover {
+.toc .toc__content ul li a:hover {
 	@apply text-gray-600 duration-300;
 }
