@@ -35,7 +35,7 @@ module.exports = {
 							icon: false,
 							maintainCase: false,
 							removeAccents: true,
-							elements: [`h2`, `h3`, `h4`],
+							elements: [`h2`],
 						},
 					},
 					`gatsby-remark-code-titles`,
@@ -53,8 +53,8 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `src`,
-				path: `${__dirname}/src/`,
+				name: `blog`,
+				path: `${__dirname}/src/data`,
 			},
 		},
 		{
