@@ -1,10 +1,10 @@
 ---
 title: "Hello Gatsby"
-createdDate: "2021-05-06"
-updateDate: "2021-05-07"
-hero: "./icon.png"
-desc: "Gatsbyjs"
-tags: ["gatsby"]
+createdAt: "2021-05-06"
+updateAt: "2021-05-07"
+thumbnail: "./icon.png"
+description: "Gatsbyjs"
+tags: ["Gatsby"]
 category: "HTML"
 ---
 

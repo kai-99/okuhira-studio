@@ -13,7 +13,7 @@ const PopularPostList = () => {
 		graphql`
 			{
 				allMarkdownRemark(
-					sort: { order: DESC, fields: [frontmatter___updateDate] }
+					sort: { order: DESC, fields: [frontmatter___updateAt] }
 				) {
 					nodes {
 						html
@@ -21,11 +21,11 @@ const PopularPostList = () => {
 							slug
 						}
 						frontmatter {
-							createdDate
-							updateDate
+							createdAt(formatString: "YYYY.MM.DD")
+							updateAt(formatString: "YYYY.MM.DD")
 							title
 							tags
-							hero {
+							thumbnail {
 								childImageSharp {
 									gatsbyImageData(
 										placeholder: TRACED_SVG
@@ -46,7 +46,7 @@ const PopularPostList = () => {
 			<div>
 				<p className="pl-2 font-bold text-gray-600 text-sm italic">
 					記事一覧
-					<CheckIcon className="h-5 w-5 ml-1 text-green-400 inline-block align-bottom" />
+					<CheckIcon className="h-5 w-5 ml-1 text-purple-400 inline-block align-bottom" />
 				</p>
 				<h2 className="text-gray800 text-2xl font-bold italic pt-0 pb-2 px-2 mb-2">
 					All articles
@@ -56,20 +56,20 @@ const PopularPostList = () => {
 				{data.allMarkdownRemark.nodes.map((node) => {
 					return (
 						<div
-							className="bg-white mb-8 lg:mb-4 relative"
+							className="bg-white mb-8 md:mb-4 relative"
 							key={node.frontmatter.title}
 						>
 							<Link
-								className="lg:flex hover:shadow-xl hover:bg-purple-50 lg:border-2 hover:border-purple-200 duration-300"
+								className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300"
 								to={node.fields.slug}
 							>
 								<GatsbyImage
-									image={getImage(node.frontmatter.hero)}
+									image={getImage(node.frontmatter.thumbnail)}
 									alt={node.frontmatter.title}
-									className="w-full h-72 lg:w-36 lg:h-24 object-cover"
+									className="w-full h-72 md:w-36 md:h-24 object-cover"
 								/>
-								<div className="flex flex-col p-2 lg:flex-1">
-									<h2 className="font-bold text-sm lg:text-lg text-gray-800 mb-4">
+								<div className="flex flex-col p-2 md:flex-1">
+									<h2 className="font-bold text-sm md:text-lg text-gray-800 mb-4">
 										{node.frontmatter.title}
 									</h2>
 									<div className="flex justify-between items-center font-bold">
@@ -79,20 +79,20 @@ const PopularPostList = () => {
 												{node.frontmatter.tags}
 											</span>
 										</div>
-										<div className="lg:flex lg:justify-end">
-											<time className="text-gray-600 block text-right text-xs lg:mr-4">
-												<span className="lg:hidden">投稿日</span>{" "}
+										<div className="md:flex md:justify-end">
+											<time className="text-gray-600 block text-right text-xs md:mr-4">
+												<span className="md:hidden">投稿日</span>{" "}
 												<span className="mr-1">
 													<PencilAltIcon className="inline-block w-3 h-3" />
 												</span>
-												{node.frontmatter.createdDate}
+												{node.frontmatter.createdAt}
 											</time>
 											<time className="text-gray-600 block text-right text-xs">
-												<span className="lg:hidden">更新日</span>{" "}
+												<span className="md:hidden">更新日</span>{" "}
 												<span className="mr-1">
 													<RefreshIcon className="inline-block w-3 h-3" />
 												</span>
-												{node.frontmatter.updateDate}
+												{node.frontmatter.updateAt}
 											</time>
 										</div>
 									</div>

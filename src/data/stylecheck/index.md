@@ -1,10 +1,10 @@
 ---
 title: "markdown の style チェックをします！"
-createdDate: "2021-05-03"
-updateDate: "2021-05-04"
-hero: "./tr.jpeg"
-desc: "マークダウンスタイル確認投稿"
-tags: ["js"]
+createdAt: "2021-05-03"
+updateAt: "2021-05-04"
+thumbnail: "./tr.jpeg"
+description: "マークダウンスタイル確認投稿"
+tags: ["JavaScript"]
 category: "HTML"
 ---
 

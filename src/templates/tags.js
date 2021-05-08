@@ -3,22 +3,24 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
+import { Helmet } from "react-helmet";
+// Custom Components
 import Layout from "../components/Layout";
+import SideBar from "../components/SideBar";
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
 	const { edges, totalCount } = data.allMarkdownRemark;
-	const tagHeader = ` ${tag} に関する記事  ${totalCount}件
-  ${totalCount === 1 ? "" : "s"} `;
+	const tagHeader = ` ${tag} に関する記事  ${totalCount}件`;
 
 	return (
 		<Layout>
-			<main className="lg:w-3/4 mx-auto">
+			<Helmet>
+				<title>{tag}に関する記事 | うぇぶこーだーどっとこむ</title>
+			</Helmet>
+			<main className="md:w-3/4 lg:mr-8">
 				<section>
 					<div>
-						{/* <p className="pl-2 font-bold text-gray-600 text-sm italic">
-							記事一覧
-						</p> */}
 						<h2 className="text-gray800 text-2xl font-bold italic pt-0 pb-2 px-2 mb-2">
 							{tagHeader}
 						</h2>
@@ -27,36 +29,36 @@ const Tags = ({ pageContext, data }) => {
 						{edges.map(({ node }) => {
 							return (
 								<div
-									className="bg-white mb-8 lg:mb-4 relative"
+									className="bg-white mb-8 md:mb-4 relative"
 									key={node.fields.slug}
 								>
 									<Link
-										className="lg:flex hover:shadow-xl hover:bg-purple-50 lg:border-2 hover:border-purple-200 duration-300"
+										className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300"
 										to={node.fields.slug}
 									>
 										<GatsbyImage
-											image={getImage(node.frontmatter.hero)}
+											image={getImage(node.frontmatter.thumbnail)}
 											alt={node.frontmatter.title}
-											className="w-full h-72 lg:w-36 lg:h-24 object-cover"
+											className="w-full h-72 md:w-36 md:h-24 object-cover"
 										/>
-										<div className="flex flex-col p-2 lg:flex-1">
-											<h2 className="font-bold text-sm lg:text-lg text-gray-800 mb-4">
+										<div className="flex flex-col p-2 md:flex-1">
+											<h2 className="font-bold text-sm md:text-lg text-gray-800 mb-4">
 												{node.frontmatter.title}
 											</h2>
-											<div className="lg:flex lg:justify-end">
-												<time className="text-gray-600 block text-right text-xs lg:mr-4">
-													<span className="lg:hidden">投稿日</span>{" "}
+											<div className="md:flex md:justify-end font-bold">
+												<time className="text-gray-600 block text-right text-xs md:mr-4">
+													<span className="md:hidden">投稿日</span>{" "}
 													<span className="mr-1">
 														<PencilAltIcon className="inline-block w-3 h-3" />
 													</span>
-													{node.frontmatter.createdDate}
+													{node.frontmatter.createdAt}
 												</time>
 												<time className="text-gray-600 block text-right text-xs">
-													<span className="lg:hidden">更新日</span>{" "}
+													<span className="md:hidden">更新日</span>{" "}
 													<span className="mr-1">
 														<RefreshIcon className="inline-block w-3 h-3" />
 													</span>
-													{node.frontmatter.updateDate}
+													{node.frontmatter.updateAt}
 												</time>
 											</div>
 										</div>
@@ -67,6 +69,9 @@ const Tags = ({ pageContext, data }) => {
 					</div>
 				</section>
 			</main>
+			<aside className="hidden lg:block lg:w-1/4 lg:sticky lg:top-20">
+				<SideBar />
+			</aside>
 		</Layout>
 	);
 };
@@ -100,7 +105,7 @@ export const pageQuery = graphql`
 	query($tag: String) {
 		allMarkdownRemark(
 			limit: 2000
-			sort: { fields: [frontmatter___updateDate], order: DESC }
+			sort: { fields: [frontmatter___updateAt], order: DESC }
 			filter: { frontmatter: { tags: { in: [$tag] } } }
 		) {
 			totalCount
@@ -110,11 +115,11 @@ export const pageQuery = graphql`
 						slug
 					}
 					frontmatter {
-						createdDate
-						updateDate
+						createdAt(formatString: "YYYY.MM.DD")
+						updateAt(formatString: "YYYY.MM.DD")
 						title
 						tags
-						hero {
+						thumbnail {
 							childImageSharp {
 								gatsbyImageData(
 									placeholder: TRACED_SVG

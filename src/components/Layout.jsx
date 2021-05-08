@@ -26,7 +26,8 @@ const Layout = (props) => {
 						href="https://twitter.com/webcoder_com"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="bg-white-400 rounded-full h-10 w-10 flex items-center justify-center shadow-sm border-gray-100"
+						className="bg-white rounded-full h-10 w-10 flex items-center justify-center"
+						aria-label="うぇぶこーだーTwitterアカウント"
 					>
 						<FontAwesomeIcon
 							className="text-blue-400 text-2xl"
@@ -42,7 +43,7 @@ const Layout = (props) => {
 			</div>
 			<footer className="w-full">
 				<div className="py-4 text-center bg-white">
-					<small className="text-gray-800">
+					<small className="text-gray-800 font-bold">
 						&copy;{new Date().getFullYear()} {data.site.siteMetadata.title}
 					</small>
 				</div>

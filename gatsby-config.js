@@ -8,7 +8,8 @@ module.exports = {
 	},
 	siteMetadata: {
 		title: `うぇぶこーだーどっとこむ`,
-		description: "うぇぶこーだーの学習帳！",
+		description:
+			"うぇぶこーだーどっとこむはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。",
 		siteUrl: "https://gatsby-tailwindcss-customblog.netlify.app/",
 	},
 	plugins: [
@@ -18,6 +19,7 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
+		`gatsby-plugin-netlify`,
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {

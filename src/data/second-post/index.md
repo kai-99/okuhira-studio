@@ -1,10 +1,10 @@
 ---
 title: "SECOND POST"
-createdDate: "2021-05-01"
-updateDate: "2021-05-02"
-hero: "./18.jpeg"
-desc: "このサイトはGatsby と TailwindCSS を使用してつくています。"
-tags: ["css"]
+createdAt: "2021-05-01"
+updateAt: "2021-05-02"
+thumbnail: "./18.jpeg"
+description: "このサイトはGatsby と TailwindCSS を使用してつくています。"
+tags: ["CSS"]
 category: "CSS"
 ---
 

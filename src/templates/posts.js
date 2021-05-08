@@ -6,10 +6,9 @@ import {
 	RefreshIcon,
 	PencilAltIcon,
 	ClipboardListIcon,
-	HomeIcon,
 	HashtagIcon,
 } from "@heroicons/react/outline";
-import { HeartIcon } from "@heroicons/react/solid";
+import { FireIcon, HomeIcon } from "@heroicons/react/solid";
 import { Helmet } from "react-helmet";
 import {
 	FacebookShareButton,
@@ -21,10 +20,12 @@ import {
 	LineIcon,
 	LinkedinIcon,
 } from "react-share";
+// Custom Component
+import SideBar from "../components/SideBar";
 
 const Posts = ({ data }) => {
 	// GatsbyImage Component
-	const image = getImage(data.markdownRemark.frontmatter.hero);
+	const image = getImage(data.markdownRemark.frontmatter.thumbnail);
 	// TableOfContents Component
 	const Toc = (props) => {
 		return (
@@ -44,7 +45,7 @@ const Posts = ({ data }) => {
 			<div className="pb-8 px-8">
 				<p className="text-center font-bold text-lg mb-2">
 					Share
-					<HeartIcon className="h-6 w-6 inline-block ml-1 text-purple-400 align-text-bottom" />
+					<FireIcon className="h-6 w-6 inline-block ml-1 text-red-500 align-text-bottom" />
 				</p>
 				<div className="flex items-center justify-center">
 					<TwitterShareButton className="mr-2">
@@ -90,13 +91,13 @@ const Posts = ({ data }) => {
 							<span className="mr-1">
 								<PencilAltIcon className="inline-block w-4 h-4" />
 							</span>
-							{data.markdownRemark.frontmatter.createdDate}
+							{data.markdownRemark.frontmatter.createdAt}
 						</time>
 						<time className="text-gray-600 block text-right text-xs lg:text-sm">
 							<span className="mr-1">
 								<RefreshIcon className="inline-block w-4 h-4" />
 							</span>
-							{data.markdownRemark.frontmatter.updateDate}
+							{data.markdownRemark.frontmatter.updateAt}
 						</time>
 					</div>
 				</div>
@@ -128,28 +129,31 @@ const Posts = ({ data }) => {
 					</div>
 					<SnsShare />
 				</article>
-				<div className="my-4 text-center">
+				<div className="mt-8 text-center">
 					<Link
-						className="text-md border-2 block bg-white text-gray-800 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded-sm"
+						className="text-lg font-bold border-2 border-gray-50 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow-sm"
 						to="/"
 					>
-						<HomeIcon className="w-6 h-6 mr-1 inline-block align-bottom" />
-						記事一覧ページにいく
+						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom" />
+						トップページにいく
 					</Link>
 				</div>
 			</main>
 			{/* 目次 PC */}
 			<aside className="hidden lg:block lg:w-1/4">
-				<div className="bg-white border border-gray-100 mb-8 rounded sticky top-20 shadow-sm">
-					<div className="bg-gray-700 text-center py-8 rounded-t-md">
-						<p className="font-bold text-gray-100">
-							<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
-							もくじ
-						</p>
+				<div className="sticky top-20">
+					<div className="bg-white border border-gray-100 mb-8 rounded shadow-sm">
+						<div className="bg-gray-700 text-center py-8 rounded-t-md">
+							<p className="font-bold text-gray-100">
+								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
+								もくじ
+							</p>
+						</div>
+						<nav className="p-4">
+							<Toc data={data.markdownRemark.tableOfContents} />
+						</nav>
 					</div>
-					<nav className="p-4">
-						<Toc data={data.markdownRemark.tableOfContents} />
-					</nav>
+					<SideBar />
 				</div>
 			</aside>
 		</Layout>
@@ -164,16 +168,16 @@ export const query = graphql`
 			tableOfContents
 			frontmatter {
 				title
-				createdDate
-				updateDate
+				createdAt(formatString: "YYYY.MM.DD")
+				updateAt(formatString: "YYYY.MM.DD")
 				tags
-				hero {
+				thumbnail {
 					childImageSharp {
 						gatsbyImageData(
 							placeholder: TRACED_SVG
 							formats: [AUTO, WEBP, AVIF]
 							layout: CONSTRAINED
-							width: 730
+							width: 732
 							height: 500
 						)
 					}
