@@ -1,4 +1,5 @@
 const path = require(`path`);
+const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -27,15 +28,30 @@ exports.createPages = async ({ graphql, actions }) => {
 					}
 				}
 			}
+			tags: allMarkdownRemark(limit: 1000) {
+				group(field: frontmatter___tags) {
+					fieldValue
+				}
+			}
 		}
 	`);
 
 	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
 		createPage({
-			path: `entry${node.fields.slug}`,
-			component: path.resolve(`./src/templates/entry-list.js`),
+			path: node.fields.slug,
+			component: path.resolve(`./src/templates/posts.js`),
 			context: {
 				slug: node.fields.slug,
+			},
+		});
+	});
+
+	result.data.tags.group.forEach((tag) => {
+		createPage({
+			path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+			component: path.resolve(`./src/templates/tags.js`),
+			context: {
+				tag: tag.fieldValue,
 			},
 		});
 	});

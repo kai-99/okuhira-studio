@@ -4,7 +4,7 @@ createdDate: "2021-05-03"
 updateDate: "2021-05-04"
 hero: "./tr.jpeg"
 desc: "マークダウンスタイル確認投稿"
-tags: ["JS", "Gatsby", "TailwindCSS"]
+tags: ["js"]
 category: "HTML"
 ---
 

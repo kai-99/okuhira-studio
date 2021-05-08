@@ -21,7 +21,8 @@ import {
 	LinkedinIcon,
 } from "react-share";
 
-const entryList = ({ data }) => {
+const Posts = ({ data }) => {
+	// GatsbyImage Component
 	const image = getImage(data.markdownRemark.frontmatter.hero);
 	// TableOfContents Component
 	const Toc = (props) => {
@@ -33,6 +34,28 @@ const entryList = ({ data }) => {
 						__html: props.data,
 					}}
 				/>
+			</div>
+		);
+	};
+	// SNS shareicon&link Component
+	const SnsShare = () => {
+		return (
+			<div className="pb-8 px-8">
+				<div className="flex items-center justify-center">
+					<ShareIcon className="w-6 h-6 inline-block mr-4 text-purple-400" />
+					<TwitterShareButton className="mr-2">
+						<TwitterIcon round size={48} />
+					</TwitterShareButton>
+					<FacebookShareButton className="mr-2">
+						<FacebookIcon round size={48} />
+					</FacebookShareButton>
+					<LineShareButton className="mr-2">
+						<LineIcon round size={48} />
+					</LineShareButton>
+					<LinkedinShareButton>
+						<LinkedinIcon round size={48} />
+					</LinkedinShareButton>
+				</div>
 			</div>
 		);
 	};
@@ -48,6 +71,14 @@ const entryList = ({ data }) => {
 				<h1 className="font-bold text-center text-xl lg:text-2xl my-4 text-gray-800">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
+				<Link
+					className="border border-purple-400 bg-purple-200 px-4 py-2 rounded-full"
+					to={`/tags/${data.markdownRemark.frontmatter.tags}/`}
+				>
+					<span className="inline-block">
+						#{data.markdownRemark.frontmatter.tags}
+					</span>
+				</Link>
 				<div className="flex justify-end mb-1">
 					<time className="text-gray-600 block text-right text-xs lg:text-sm mr-4">
 						<span className="lg:hidden">投稿日：</span>{" "}
@@ -90,23 +121,7 @@ const entryList = ({ data }) => {
 					<div className="px-10">
 						<hr className="my-8" />
 					</div>
-					<div className="pb-8 px-8">
-						<div className="flex items-center justify-center">
-							<ShareIcon className="w-6 h-6 inline-block mr-4 text-purple-400" />
-							<TwitterShareButton className="mr-2">
-								<TwitterIcon round size={48} />
-							</TwitterShareButton>
-							<FacebookShareButton className="mr-2">
-								<FacebookIcon round size={48} />
-							</FacebookShareButton>
-							<LineShareButton className="mr-2">
-								<LineIcon round size={48} />
-							</LineShareButton>
-							<LinkedinShareButton>
-								<LinkedinIcon round size={48} />
-							</LinkedinShareButton>
-						</div>
-					</div>
+					<SnsShare />
 				</article>
 				<div className="my-4 text-right">
 					<Link
@@ -135,10 +150,10 @@ const entryList = ({ data }) => {
 		</Layout>
 	);
 };
-export default entryList;
+export default Posts;
 
 export const query = graphql`
-	query EntryListQuery($slug: String!) {
+	query PostsQuery($slug: String!) {
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 			tableOfContents
@@ -146,6 +161,7 @@ export const query = graphql`
 				title
 				createdDate
 				updateDate
+				tags
 				hero {
 					childImageSharp {
 						gatsbyImageData(

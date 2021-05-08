@@ -20,7 +20,7 @@ const PopularPostList = () => {
 							createdDate
 							updateDate
 							title
-							category
+							tags
 							hero {
 								childImageSharp {
 									gatsbyImageData(
@@ -56,11 +56,11 @@ const PopularPostList = () => {
 							key={node.frontmatter.title}
 						>
 							<span className="absolute font-bold py-1 px-3 text-sm lg:text-xs inline-block bg-gray-700 text-gray-100 top-0 left-0 lg:top-0.5 lg:left-0.5 z-20 shadow">
-								{node.frontmatter.category}
+								{node.frontmatter.tags}
 							</span>
 							<Link
 								className="lg:flex hover:shadow-xl hover:bg-purple-50 lg:border-2 hover:border-purple-200 duration-300"
-								to={`entry${node.fields.slug}`}
+								to={node.fields.slug}
 							>
 								<GatsbyImage
 									image={getImage(node.frontmatter.hero)}

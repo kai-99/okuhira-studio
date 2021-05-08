@@ -4,7 +4,7 @@ createdDate: "2021-05-06"
 updateDate: "2021-05-07"
 hero: "./icon.png"
 desc: "Gatsbyjs"
-tags: ["JS", "Gatsby", "TailwindCSS"]
+tags: ["gatsby"]
 category: "HTML"
 ---
 

@@ -4,7 +4,7 @@ createdDate: "2021-05-01"
 updateDate: "2021-05-02"
 hero: "./18.jpeg"
 desc: "このサイトはGatsby と TailwindCSS を使用してつくています。"
-tags: ["HTML", "CSS", "TailwindCSS"]
+tags: ["css"]
 category: "CSS"
 ---
 
