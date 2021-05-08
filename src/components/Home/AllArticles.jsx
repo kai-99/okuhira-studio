@@ -1,6 +1,10 @@
 import React from "react";
 import { CheckIcon } from "@heroicons/react/solid";
-import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
+import {
+	RefreshIcon,
+	PencilAltIcon,
+	HashtagIcon,
+} from "@heroicons/react/outline";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
@@ -55,9 +59,6 @@ const PopularPostList = () => {
 							className="bg-white mb-8 lg:mb-4 relative"
 							key={node.frontmatter.title}
 						>
-							<span className="absolute font-bold py-1 px-3 text-sm lg:text-xs inline-block bg-gray-700 text-gray-100 top-0 left-0 lg:top-0.5 lg:left-0.5 z-20 shadow">
-								{node.frontmatter.tags}
-							</span>
 							<Link
 								className="lg:flex hover:shadow-xl hover:bg-purple-50 lg:border-2 hover:border-purple-200 duration-300"
 								to={node.fields.slug}
@@ -71,21 +72,29 @@ const PopularPostList = () => {
 									<h2 className="font-bold text-sm lg:text-lg text-gray-800 mb-4">
 										{node.frontmatter.title}
 									</h2>
-									<div className="lg:flex lg:justify-end">
-										<time className="text-gray-600 block text-right text-xs lg:mr-4">
-											<span className="lg:hidden">投稿日</span>{" "}
-											<span className="mr-1">
-												<PencilAltIcon className="inline-block w-3 h-3" />
+									<div className="flex justify-between items-center font-bold">
+										<div className="border border-purple-400 inline-block bg-purple-200 px-2 py-1 text-sm text-gray-700 rounded-full">
+											<span className="inline-block italic">
+												<HashtagIcon className="inline-block w-4 h-4" />
+												{node.frontmatter.tags}
 											</span>
-											{node.frontmatter.createdDate}
-										</time>
-										<time className="text-gray-600 block text-right text-xs">
-											<span className="lg:hidden">更新日</span>{" "}
-											<span className="mr-1">
-												<RefreshIcon className="inline-block w-3 h-3" />
-											</span>
-											{node.frontmatter.updateDate}
-										</time>
+										</div>
+										<div className="lg:flex lg:justify-end">
+											<time className="text-gray-600 block text-right text-xs lg:mr-4">
+												<span className="lg:hidden">投稿日</span>{" "}
+												<span className="mr-1">
+													<PencilAltIcon className="inline-block w-3 h-3" />
+												</span>
+												{node.frontmatter.createdDate}
+											</time>
+											<time className="text-gray-600 block text-right text-xs">
+												<span className="lg:hidden">更新日</span>{" "}
+												<span className="mr-1">
+													<RefreshIcon className="inline-block w-3 h-3" />
+												</span>
+												{node.frontmatter.updateDate}
+											</time>
+										</div>
 									</div>
 								</div>
 							</Link>

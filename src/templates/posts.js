@@ -6,9 +6,10 @@ import {
 	RefreshIcon,
 	PencilAltIcon,
 	ClipboardListIcon,
-	ArrowCircleRightIcon,
-	ShareIcon,
+	HomeIcon,
+	HashtagIcon,
 } from "@heroicons/react/outline";
+import { HeartIcon } from "@heroicons/react/solid";
 import { Helmet } from "react-helmet";
 import {
 	FacebookShareButton,
@@ -41,8 +42,11 @@ const Posts = ({ data }) => {
 	const SnsShare = () => {
 		return (
 			<div className="pb-8 px-8">
+				<p className="text-center font-bold text-lg mb-2">
+					Share
+					<HeartIcon className="h-6 w-6 inline-block ml-1 text-purple-400 align-text-bottom" />
+				</p>
 				<div className="flex items-center justify-center">
-					<ShareIcon className="w-6 h-6 inline-block mr-4 text-purple-400" />
 					<TwitterShareButton className="mr-2">
 						<TwitterIcon round size={48} />
 					</TwitterShareButton>
@@ -71,29 +75,30 @@ const Posts = ({ data }) => {
 				<h1 className="font-bold text-center text-xl lg:text-2xl my-4 text-gray-800">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
-				<Link
-					className="border border-purple-400 bg-purple-200 px-4 py-2 rounded-full"
-					to={`/tags/${data.markdownRemark.frontmatter.tags}/`}
-				>
-					<span className="inline-block">
-						#{data.markdownRemark.frontmatter.tags}
-					</span>
-				</Link>
-				<div className="flex justify-end mb-1">
-					<time className="text-gray-600 block text-right text-xs lg:text-sm mr-4">
-						<span className="lg:hidden">投稿日：</span>{" "}
-						<span className="mr-1">
-							<PencilAltIcon className="inline-block w-4 h-4" />
+				<div className="flex items-center justify-between mb-1 font-bold">
+					<Link
+						className="border border-purple-400 bg-purple-200 px-2 py-1 text-sm text-gray-700 rounded-full"
+						to={`/tags/${data.markdownRemark.frontmatter.tags}/`}
+					>
+						<span className="inline-block italic">
+							<HashtagIcon className="inline-block w-4 h-4" />
+							{data.markdownRemark.frontmatter.tags}
 						</span>
-						{data.markdownRemark.frontmatter.createdDate}
-					</time>
-					<time className="text-gray-600 block text-right text-xs lg:text-sm">
-						<span className="lg:hidden">更新日：</span>{" "}
-						<span className="mr-1">
-							<RefreshIcon className="inline-block w-4 h-4" />
-						</span>
-						{data.markdownRemark.frontmatter.updateDate}
-					</time>
+					</Link>
+					<div className="flex">
+						<time className="text-gray-600 block text-right text-xs lg:text-sm mr-4">
+							<span className="mr-1">
+								<PencilAltIcon className="inline-block w-4 h-4" />
+							</span>
+							{data.markdownRemark.frontmatter.createdDate}
+						</time>
+						<time className="text-gray-600 block text-right text-xs lg:text-sm">
+							<span className="mr-1">
+								<RefreshIcon className="inline-block w-4 h-4" />
+							</span>
+							{data.markdownRemark.frontmatter.updateDate}
+						</time>
+					</div>
 				</div>
 				<article className="bg-white rounded shadow-sm">
 					<figure className="text-center mb-4">
@@ -123,13 +128,13 @@ const Posts = ({ data }) => {
 					</div>
 					<SnsShare />
 				</article>
-				<div className="my-4 text-right">
+				<div className="my-4 text-center">
 					<Link
-						className="justify-end text-md border-b-2 border-purple-400 inline-block text-gray-600"
+						className="text-md border-2 block bg-white text-gray-800 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded-sm"
 						to="/"
 					>
-						記事一覧
-						<ArrowCircleRightIcon className="w-4 h-4 ml-1 inline-block" />
+						<HomeIcon className="w-6 h-6 mr-1 inline-block align-bottom" />
+						記事一覧ページにいく
 					</Link>
 				</div>
 			</main>

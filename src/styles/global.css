@@ -89,6 +89,10 @@ ul li {
 		"Courier New", monospace;
 }
 
+.markdown > .hogehoge {
+	@apply bg-gray-500 p-6;
+}
+
 /* h2 */
 .toc .toc__content ul li a {
 	@apply font-bold text-gray-900;

@@ -7,7 +7,7 @@ module.exports = {
 		FUNCTIONS: true,
 	},
 	siteMetadata: {
-		title: `うぇぶこーだー.com`,
+		title: `うぇぶこーだーどっとこむ`,
 		description: "うぇぶこーだーの学習帳！",
 		siteUrl: "https://gatsby-tailwindcss-customblog.netlify.app/",
 	},
