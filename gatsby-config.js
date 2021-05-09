@@ -1,10 +1,10 @@
 module.exports = {
 	flags: {
-		// 	PRESERVE_FILE_DOWNLOAD_CACHE: true,
+		PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PRESERVE_WEBPACK_CACHE: true,
-		// 	DEV_SSR: true,
-		// 	PARALLEL_SOURCING: true,
-		// 	FUNCTIONS: true,
+		DEV_SSR: false,
+		PARALLEL_SOURCING: true,
+		FUNCTIONS: true,
 	},
 	siteMetadata: {
 		title: `うぇぶこーだーどっとこむ`,
@@ -12,6 +12,12 @@ module.exports = {
 		locale: `ja_JP`,
 		description: `うぇぶこーだーどっとこむはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。`,
 		siteUrl: `https://gatsby-tailwindcss-customblog.netlify.app`,
+		social: {
+			twitter: {
+				name: `うぇぶこーだーどっとこむ`,
+				id: `https://twitter.com/webcoder_com`,
+			},
+		},
 	},
 	plugins: [
 		`gatsby-plugin-sitemap`,
@@ -46,7 +52,7 @@ module.exports = {
 						resolve: `gatsby-remark-images-medium-zoom`,
 						options: {
 							margin: 24,
-							background: "#c4b5fa",
+							background: "#ede9fd",
 							scrollOffset: 40,
 						},
 					},
