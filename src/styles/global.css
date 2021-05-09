@@ -2,105 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	scroll-behavior: smooth;
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
 }
+@layer components {
+	@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+	.site-title {
+		font-family: "Hachi Maru Pop", cursive;
+	}
 
-/* MarkDown Post Only Styles */
-.markdown {
-	@apply px-2 py-4 lg:px-8 lg:py-4 text-gray-900;
-}
+	.markdown {
+		@apply px-2 py-4 lg:px-8 lg:py-4 text-gray-900;
+	}
 
-.markdown > h2 {
-	@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-100 px-4 py-2 lg:p-4 border-l-4 border-purple-600 shadow;
-	scroll-margin-block-start: 4rem;
-}
+	.markdown > h2 {
+		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-100 px-4 py-2 lg:p-4 border-l-4 border-purple-600 shadow;
+		scroll-margin-block-start: 4rem;
+	}
 
-.markdown > h3 {
-	@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:p-4 shadow;
-	scroll-margin-block-start: 4rem;
-}
+	.markdown > h3 {
+		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:p-4 shadow;
+		scroll-margin-block-start: 4rem;
+	}
 
-.markdown > h4 {
-	@apply text-xl lg:text-2xl font-bold mt-12 mb-8 px-4 py-2 border-l-4 border-purple-600;
-	scroll-margin-block-start: 4rem;
-}
+	.markdown > h4 {
+		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 px-4 py-2 border-l-4 border-purple-600;
+		scroll-margin-block-start: 4rem;
+	}
 
-.markdown a {
-	@apply text-blue-500 hover:text-blue-300;
-}
+	.markdown a {
+		@apply text-blue-500 border-b border-blue-400 hover:text-blue-400 hover:border-blue-300 duration-300;
+	}
 
-.markdown > p {
-	@apply my-8 leading-relaxed;
-}
+	.markdown > p {
+		@apply my-8 leading-relaxed;
+	}
 
-.markdown > blockquote {
-	@apply text-gray-700 italic leading-normal border-l-2 border-gray-900 px-4 py-2;
-}
+	.markdown > blockquote {
+		@apply text-gray-700 italic leading-normal border-l-2 border-gray-900 px-4 py-2;
+	}
 
-.markdown > blockquote cite {
-	@apply block text-right;
-}
+	.markdown > blockquote cite {
+		@apply block text-right;
+	}
 
-.markdown > ul {
-	@apply list-disc my-4 list-inside;
-}
+	.markdown > ul {
+		@apply list-disc my-4 list-inside;
+	}
 
-.markdown > ul li::marker {
-	@apply text-gray-600 font-bold;
-}
+	.markdown > ul li::marker {
+		@apply text-gray-600 font-bold;
+	}
 
-.markdown > ol {
-	@apply list-decimal my-4 list-inside;
-}
+	.markdown > ol {
+		@apply list-decimal my-4 list-inside;
+	}
 
-.markdown > ol li::marker {
-	@apply text-gray-700 font-bold;
-}
+	.markdown > ol li::marker {
+		@apply text-gray-700 font-bold;
+	}
 
-.markdown > ol li,
-ul li {
-	@apply p-2;
-}
+	.markdown > ol li,
+	ul li {
+		@apply p-2;
+	}
 
-.markdown > table {
-	@apply mx-0 my-4 border border-gray-100 w-full;
-}
+	.markdown > table {
+		@apply mx-0 my-4 w-full;
+	}
 
-.markdown > table th {
-	@apply p-2 bg-purple-100 font-bold border border-gray-100;
-}
+	.markdown > table th {
+		@apply p-2 bg-purple-100 font-bold border-2 border-gray-100;
+	}
 
-.markdown > table td {
-	@apply p-2 border border-gray-100;
-}
+	.markdown > table td {
+		@apply p-2 border-2 text-center border-gray-100;
+	}
 
-.markdown > hr {
-	@apply text-gray-400 m-4;
-}
+	.markdown > hr {
+		@apply text-gray-400 m-4;
+	}
 
-.markdown > .gatsby-code-title {
-	@apply inline-block rounded-t-md mt-1 mb-px border-l-4 border-purple-600;
-	font-size: 13px;
-	color: #d4d4d4;
-	background: #121828;
-	padding: 4px 13px;
-	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
-		"Courier New", monospace;
-}
+	.markdown > .gatsby-code-title {
+		@apply inline-block rounded-t-md mt-1 mb-px border-l-4 border-purple-600;
+		font-size: 13px;
+		color: #d4d4d4;
+		background: #121828;
+		padding: 4px 13px;
+		font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+			"Courier New", monospace;
+	}
 
-.markdown > .hogehoge {
-	@apply bg-gray-500 p-6;
-}
+	.markdown > .hogehoge {
+		@apply bg-gray-500 p-6;
+	}
 
-/* h2 */
-.toc .toc__content ul li a {
-	@apply font-bold text-gray-900;
-}
-.toc .toc__content ul li a::before {
-	@apply inline-block w-2 h-2 bg-purple-300 rounded-full mr-2 border-2 border-purple-400;
-	content: " ";
-}
-.toc .toc__content ul li a:hover {
-	@apply text-gray-600 duration-300;
+	/* h2 */
+	.toc .toc__content ul li a {
+		@apply font-bold text-gray-900;
+	}
+	.toc .toc__content ul li a::before {
+		@apply inline-block w-2 h-2 bg-purple-300 rounded-full mr-2 border-2 border-purple-400;
+		content: " ";
+	}
+	.toc .toc__content ul li a:hover {
+		@apply text-gray-600 duration-300;
+	}
 }

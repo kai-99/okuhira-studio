@@ -16,7 +16,10 @@ category: "JavaScript"
 </div>
 ```
 
-<a className="bg-gray-800" href="https:google.com">hello</a>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">HTML and CSS cheat sheet 📃👇 <a href="https://t.co/cO5fqKxoXs">pic.twitter.com/cO5fqKxoXs</a></p>&mdash; Pratham (@Prathkum) <a href="https://twitter.com/Prathkum/status/1385640752978354183?ref_src=twsrc%5Etfw">April 23, 2021</a></blockquote>
+
+<a className="bg-gray-800" href="https://google.com">hello</a>  
+[hello](https://google.com)
 
 <div class="hogehoge">
   <p>World</p>

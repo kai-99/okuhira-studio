@@ -2,26 +2,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
-import { Helmet } from "react-helmet";
+import {
+	RefreshIcon,
+	PencilAltIcon,
+	HashtagIcon,
+} from "@heroicons/react/outline";
 // Custom Components
 import Layout from "../components/Layout";
 import SideBar from "../components/SideBar";
+import Seo from "../components/Seo";
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
 	const { edges, totalCount } = data.allMarkdownRemark;
-	const tagHeader = ` ${tag} に関する記事  ${totalCount}件`;
+	const tagHeader = `${tag} に関する記事  ${totalCount}件`;
+	// SEO Only Fanction
+	const seoTitle = `${tag}に関する記事一覧`;
 
 	return (
 		<Layout>
-			<Helmet>
-				<title>{tag}に関する記事 | うぇぶこーだーどっとこむ</title>
-			</Helmet>
+			<Seo pagetitle={seoTitle} pagedescription={seoTitle} />
 			<main className="md:w-3/4 lg:mr-8">
 				<section>
 					<div>
-						<h2 className="text-gray800 text-2xl font-bold italic pt-0 pb-2 px-2 mb-2">
+						<h2 className="text-gray800 text-xl md:text-2xl font-bold italic mb-4">
+							<HashtagIcon className="inline-block w-6 h-6 text-blue-500 align-text-bottom" />
 							{tagHeader}
 						</h2>
 					</div>

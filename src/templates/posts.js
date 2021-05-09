@@ -9,7 +9,6 @@ import {
 	HashtagIcon,
 } from "@heroicons/react/outline";
 import { FireIcon, HomeIcon } from "@heroicons/react/solid";
-import { Helmet } from "react-helmet";
 import {
 	FacebookShareButton,
 	TwitterShareButton,
@@ -20,7 +19,9 @@ import {
 	LineIcon,
 	LinkedinIcon,
 } from "react-share";
+import kebabCase from "lodash/kebabCase";
 // Custom Component
+import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
 
 const Posts = ({ data }) => {
@@ -43,46 +44,45 @@ const Posts = ({ data }) => {
 	const SnsShare = () => {
 		return (
 			<div className="pb-8 px-8">
-				<p className="text-center font-bold text-lg mb-2">
+				<p className="text-center font-bold text-lg mb-2 italic">
 					Share
 					<FireIcon className="h-6 w-6 inline-block ml-1 text-red-500 align-text-bottom" />
 				</p>
 				<div className="flex items-center justify-center">
-					<TwitterShareButton className="mr-2">
+					<TwitterShareButton className="mr-2 hover:opacity-60 duration-300">
 						<TwitterIcon round size={48} />
 					</TwitterShareButton>
-					<FacebookShareButton className="mr-2">
+					<FacebookShareButton className="mr-2 hover:opacity-60 duration-300">
 						<FacebookIcon round size={48} />
 					</FacebookShareButton>
-					<LineShareButton className="mr-2">
+					<LineShareButton className="mr-2 hover:opacity-60 duration-300">
 						<LineIcon round size={48} />
 					</LineShareButton>
-					<LinkedinShareButton>
+					<LinkedinShareButton className="hover:opacity-60 duration-300">
 						<LinkedinIcon round size={48} />
 					</LinkedinShareButton>
 				</div>
 			</div>
 		);
 	};
+
 	return (
 		<Layout>
-			<Helmet>
-				<title>
-					{data.markdownRemark.frontmatter.title} {"  "}|{"  "}
-					{data.site.siteMetadata.title}
-				</title>
-			</Helmet>
+			<Seo
+				pagetitle={data.markdownRemark.frontmatter.title}
+				pagedescription={data.markdownRemark.frontmatter.description}
+			/>
 			<main className="lg:w-3/4 lg:mr-8">
 				<h1 className="font-bold text-center text-xl lg:text-2xl my-4 text-gray-800">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
 				<div className="flex items-center justify-between mb-1 font-bold">
 					<Link
-						className="border border-purple-400 bg-purple-200 px-2 py-1 text-sm text-gray-700 rounded-full"
-						to={`/tags/${data.markdownRemark.frontmatter.tags}/`}
+						className="border-2 bg-white hover:bg-purple-50 duration-300 hover:border-purple-200 px-2 py-1 text-sm text-gray-700 rounded-full"
+						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
 					>
 						<span className="inline-block italic">
-							<HashtagIcon className="inline-block w-4 h-4" />
+							<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
 							{data.markdownRemark.frontmatter.tags}
 						</span>
 					</Link>
@@ -102,21 +102,21 @@ const Posts = ({ data }) => {
 					</div>
 				</div>
 				<article className="bg-white rounded shadow-sm">
-					<figure className="text-center mb-4">
+					<figure className="text-center md:mb-4">
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
 						/>
 					</figure>
 					{/* 目次 SP */}
-					<div className="lg:hidden bg-white border border-gray-100 mb-8 rounded">
+					<div className="lg:hidden bg-white mb-8">
 						<div className="bg-gray-700 text-center py-3">
 							<p className="font-bold text-gray-100">
 								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
 								もくじ
 							</p>
 						</div>
-						<nav className="p-4 bg-purple-50">
+						<nav className="p-4 border border-gray-700 rounded-b-lg">
 							<Toc data={data.markdownRemark.tableOfContents} />
 						</nav>
 					</div>
@@ -168,6 +168,7 @@ export const query = graphql`
 			tableOfContents
 			frontmatter {
 				title
+				description
 				createdAt(formatString: "YYYY.MM.DD")
 				updateAt(formatString: "YYYY.MM.DD")
 				tags
@@ -182,11 +183,6 @@ export const query = graphql`
 						)
 					}
 				}
-			}
-		}
-		site {
-			siteMetadata {
-				title
 			}
 		}
 	}

@@ -1,16 +1,17 @@
 module.exports = {
 	flags: {
-		PRESERVE_FILE_DOWNLOAD_CACHE: true,
+		// 	PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PRESERVE_WEBPACK_CACHE: true,
-		DEV_SSR: true,
-		PARALLEL_SOURCING: true,
-		FUNCTIONS: true,
+		// 	DEV_SSR: true,
+		// 	PARALLEL_SOURCING: true,
+		// 	FUNCTIONS: true,
 	},
 	siteMetadata: {
 		title: `うぇぶこーだーどっとこむ`,
-		description:
-			"うぇぶこーだーどっとこむはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。",
-		siteUrl: "https://gatsby-tailwindcss-customblog.netlify.app/",
+		lang: `ja`,
+		locale: `ja_JP`,
+		description: `うぇぶこーだーどっとこむはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。`,
+		siteUrl: `https://gatsby-tailwindcss-customblog.netlify.app`,
 	},
 	plugins: [
 		`gatsby-plugin-sitemap`,
@@ -20,6 +21,15 @@ module.exports = {
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-netlify`,
+		`gatsby-plugin-breadcrumb`,
+		`gatsby-plugin-twitter`,
+		`gatsby-plugin-catch-links`,
+		{
+			resolve: `gatsby-plugin-canonical-urls`,
+			options: {
+				siteUrl: `https://gatsby-tailwindcss-customblog.netlify.app`,
+			},
+		},
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
@@ -28,7 +38,16 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 700,
+							maxWidth: 732,
+							linkImagesToOriginal: false,
+						},
+					},
+					{
+						resolve: `gatsby-remark-images-medium-zoom`,
+						options: {
+							margin: 24,
+							background: "#c4b5fa",
+							scrollOffset: 40,
 						},
 					},
 					{
@@ -40,8 +59,16 @@ module.exports = {
 							elements: [`h2`],
 						},
 					},
+					{
+						resolve: "gatsby-remark-external-links",
+						options: {
+							target: "_blank",
+							rel: "noopener noreferrer",
+						},
+					},
 					`gatsby-remark-code-titles`,
 					`gatsby-remark-prismjs`,
+					"gatsby-remark-copy-linked-files",
 				],
 			},
 		},

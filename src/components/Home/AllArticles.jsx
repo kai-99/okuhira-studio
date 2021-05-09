@@ -73,9 +73,9 @@ const PopularPostList = () => {
 										{node.frontmatter.title}
 									</h2>
 									<div className="flex justify-between items-center font-bold">
-										<div className="border border-purple-400 inline-block bg-purple-200 px-2 py-1 text-sm text-gray-700 rounded-full">
+										<div className="border-2 bg-white inline-block px-2 py-1 text-sm text-gray-700 rounded-full">
 											<span className="inline-block italic">
-												<HashtagIcon className="inline-block w-4 h-4" />
+												<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
 												{node.frontmatter.tags}
 											</span>
 										</div>
