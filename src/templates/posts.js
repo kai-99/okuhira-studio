@@ -7,8 +7,11 @@ import {
 	PencilAltIcon,
 	ClipboardListIcon,
 	HashtagIcon,
+	// ShareIcon,
+	ScissorsIcon,
+	HomeIcon,
 } from "@heroicons/react/outline";
-import { FireIcon, HomeIcon } from "@heroicons/react/solid";
+// import {HomeIcon, ScissorsIcon } from "@heroicons/react/solid";
 import {
 	FacebookShareButton,
 	TwitterShareButton,
@@ -43,22 +46,36 @@ const Posts = ({ data }) => {
 	// SNS shareicon&link Component
 	const SnsShare = () => {
 		return (
-			<div className="pb-8 px-8">
-				<p className="text-center font-bold text-lg mb-2 italic">
-					Share
-					<FireIcon className="h-6 w-6 inline-block ml-1 text-red-500 align-text-bottom" />
-				</p>
+			<div className="pb-10 px-8">
+				<p className="text-center font-bold text-lg mb-2 italic">Share</p>
 				<div className="flex items-center justify-center">
-					<TwitterShareButton className="mr-2 hover:opacity-60 duration-300">
+					{/* <ShareIcon className="h-6 w-6 inline-block mr-4 text-purple-400 align-text-bottom" /> */}
+					<TwitterShareButton
+						url={data.markdownRemark.fields.slug}
+						title={data.markdownRemark.frontmatter.title}
+						className="mr-2 hover:opacity-60 duration-300"
+					>
 						<TwitterIcon round size={48} />
 					</TwitterShareButton>
-					<FacebookShareButton className="mr-2 hover:opacity-60 duration-300">
+					<FacebookShareButton
+						url={data.markdownRemark.fields.slug}
+						title={data.markdownRemark.frontmatter.title}
+						className="mr-2 hover:opacity-60 duration-300"
+					>
 						<FacebookIcon round size={48} />
 					</FacebookShareButton>
-					<LineShareButton className="mr-2 hover:opacity-60 duration-300">
+					<LineShareButton
+						url={data.markdownRemark.fields.slug}
+						title={data.markdownRemark.frontmatter.title}
+						className="mr-2 hover:opacity-60 duration-300"
+					>
 						<LineIcon round size={48} />
 					</LineShareButton>
-					<LinkedinShareButton className="hover:opacity-60 duration-300">
+					<LinkedinShareButton
+						url={data.markdownRemark.fields.slug}
+						title={data.markdownRemark.frontmatter.title}
+						className="hover:opacity-60 duration-300"
+					>
 						<LinkedinIcon round size={48} />
 					</LinkedinShareButton>
 				</div>
@@ -109,14 +126,14 @@ const Posts = ({ data }) => {
 						/>
 					</figure>
 					{/* 目次 SP */}
-					<div className="lg:hidden bg-white mb-8">
-						<div className="bg-gray-700 text-center py-3">
+					<div className="lg:hidden bg-white my-6 px-2">
+						<div className="bg-gray-700 text-center py-3 rounded-t-md">
 							<p className="font-bold text-gray-100">
 								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
 								もくじ
 							</p>
 						</div>
-						<nav className="p-4 border border-gray-700 rounded-b-lg">
+						<nav className="p-4 border-2 border-gray-700 rounded-b-md">
 							<Toc data={data.markdownRemark.tableOfContents} />
 						</nav>
 					</div>
@@ -124,8 +141,12 @@ const Posts = ({ data }) => {
 						className="markdown"
 						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 					/>
-					<div className="px-10">
-						<hr className="my-8" />
+					<div className="px-10 relative">
+						<hr className="my-10 border-t-4 border-dotted border-gray-400 block" />
+						<ScissorsIcon
+							className="absolute z-10 w-6 h-6 inline-block text-gray-700 bg-white"
+							style={{ top: `-10px`, left: `49%` }}
+						/>
 					</div>
 					<SnsShare />
 				</article>
@@ -134,7 +155,7 @@ const Posts = ({ data }) => {
 						className="text-lg font-bold border-2 border-gray-50 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow-sm"
 						to="/"
 					>
-						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom" />
+						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom text-gray-700" />
 						トップページにいく
 					</Link>
 				</div>
@@ -166,6 +187,9 @@ export const query = graphql`
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 			tableOfContents
+			fields {
+				slug
+			}
 			frontmatter {
 				title
 				description

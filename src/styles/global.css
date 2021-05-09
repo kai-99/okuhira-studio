@@ -8,11 +8,6 @@
 	}
 }
 @layer components {
-	@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
-	.site-title {
-		font-family: "Hachi Maru Pop", cursive;
-	}
-
 	.markdown {
 		@apply px-2 py-4 lg:px-8 lg:py-4 text-gray-900;
 	}
@@ -33,59 +28,63 @@
 	}
 
 	.markdown a {
-		@apply text-blue-500 border-b border-blue-400 hover:text-blue-400 hover:border-blue-300 duration-300;
+		@apply text-blue-600 border-b border-blue-500 hover:text-blue-500 hover:border-blue-400 duration-300;
 	}
 
-	.markdown > p {
+	.markdown p {
 		@apply my-8 leading-relaxed;
 	}
 
-	.markdown > blockquote {
+	.markdown span.caution {
+		@apply text-gray-600 text-sm text-center block;
+	}
+
+	.markdown blockquote {
 		@apply text-gray-700 italic leading-normal border-l-2 border-gray-900 px-4 py-2;
 	}
 
-	.markdown > blockquote cite {
+	.markdown blockquote cite {
 		@apply block text-right;
 	}
 
-	.markdown > ul {
+	.markdown ul {
 		@apply list-disc my-4 list-inside;
 	}
 
-	.markdown > ul li::marker {
+	.markdown ul li::marker {
 		@apply text-gray-600 font-bold;
 	}
 
-	.markdown > ol {
+	.markdown ol {
 		@apply list-decimal my-4 list-inside;
 	}
 
-	.markdown > ol li::marker {
+	.markdown ol li::before {
 		@apply text-gray-700 font-bold;
 	}
 
-	.markdown > ol li,
+	.markdown ol li,
 	ul li {
 		@apply p-2;
 	}
 
-	.markdown > table {
+	.markdown table {
 		@apply mx-0 my-4 w-full;
 	}
 
-	.markdown > table th {
-		@apply p-2 bg-purple-100 font-bold border-2 border-gray-100;
+	.markdown table th {
+		@apply p-2 bg-gray-700 font-bold border-2 border-white text-gray-100;
 	}
 
-	.markdown > table td {
-		@apply p-2 border-2 text-center border-gray-100;
+	.markdown table td {
+		@apply p-2 border-2 border-white bg-purple-50;
 	}
 
-	.markdown > hr {
-		@apply text-gray-400 m-4;
+	.markdown hr {
+		@apply border-purple-200 my-8 border-t-4 border-dotted;
 	}
 
-	.markdown > .gatsby-code-title {
+	.markdown .gatsby-code-title {
 		@apply inline-block rounded-t-md mt-1 mb-px border-l-4 border-purple-600;
 		font-size: 13px;
 		color: #d4d4d4;

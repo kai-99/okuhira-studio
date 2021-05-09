@@ -10,6 +10,11 @@ const Layout = (props) => {
 				site {
 					siteMetadata {
 						title
+						social {
+							twitter {
+								id
+							}
+						}
 					}
 				}
 			}
@@ -24,7 +29,7 @@ const Layout = (props) => {
 						<Link to="/">{data.site.siteMetadata.title}</Link>
 					</h1>
 					<a
-						href="https://twitter.com/webcoder_com"
+						href={data.site.siteMetadata.social.twitter.id}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="bg-white rounded-full h-10 w-10 flex items-center justify-center"

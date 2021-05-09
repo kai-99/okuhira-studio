@@ -46,6 +46,9 @@ const Seo = (props) => {
 			<meta property="og:img" content={imgurl} />
 			<meta property="og:img:width" content={imgw} />
 			<meta property="og:img:height" content={imgh} />
+			<meta name="twitter:card" content="summary" />
+			{/* <meta name="twitter:site" content="" /> */}
+			{/* <meta name="twitter:creator" content="" /> */}
 		</Helmet>
 	);
 };

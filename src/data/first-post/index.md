@@ -29,7 +29,33 @@ category: "JavaScript"
 
 ![Gatsbyjs](./icon.png)
 
-クライアントからの要望を元に Web サイト制作を担当。ディレクション、デザイン、制作を行い 3 名チームのチームリーダーを担当。
+```jsx:title=gatsby
+const data = [
+  {id: 1, title: "a"},
+  {id: 2, title: "b"},
+  {id: 3, title: "c"},
+]
+
+const IndexPage = () => {
+  <ul>
+    {data.map((item) => {
+      return (
+        <li key={item.id}>
+         {item.title}
+        </li>
+      )
+    })}
+  </ul>
+}
+
+export default IndexPage
+```
+
+## HTML
+
+```HTML
+<h1>Hello Gatsby</h1>
+```
 
 ## JS
 

@@ -17,15 +17,16 @@ category: "CSS"
 }
 ```
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">It&#39;s real, and it&#39;s spectacular.<a href="https://t.co/yyKqWt05he">https://t.co/yyKqWt05he</a> <a href="https://t.co/5QBUkBxkgU">pic.twitter.com/5QBUkBxkgU</a></p>&mdash; Tailwind CSS (@tailwindcss) <a href="https://twitter.com/tailwindcss/status/1329129585024372741?ref_src=twsrc%5Etfw">November 18, 2020</a></blockquote>
+## Twitter
 
-## SPA
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">It&#39;s real, and it&#39;s spectacular.<a href="https://t.co/yyKqWt05he">https://t.co/yyKqWt05he</a> <a href="https://t.co/5QBUkBxkgU">pic.twitter.com/5QBUkBxkgU</a></p>&mdash; Tailwind CSS (@tailwindcss) <a href="https://twitter.com/tailwindcss/status/1329129585024372741?ref_src=twsrc%5Etfw">November 18, 2020</a></blockquote>
 
 [TailwindCSS のタグ](/tags/tailwind-css)
 
 ## Hello TailwindCSS
 
 ![TailwindCSS](./tailwindcss.png)
+<span class="caution">※タップで拡大</span>
 
 今回は<mark>TailwindCSS</mark>について解説します。
 
