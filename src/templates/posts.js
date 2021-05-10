@@ -5,13 +5,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
 	RefreshIcon,
 	PencilAltIcon,
-	ClipboardListIcon,
+	// ClipboardListIcon,
 	HashtagIcon,
 	// ShareIcon,
-	ScissorsIcon,
+	// ScissorsIcon,
 	HomeIcon,
 } from "@heroicons/react/outline";
-// import {HomeIcon, ScissorsIcon } from "@heroicons/react/solid";
+import { ClipboardListIcon, ScissorsIcon } from "@heroicons/react/solid";
 import {
 	FacebookShareButton,
 	TwitterShareButton,
@@ -95,7 +95,7 @@ const Posts = ({ data }) => {
 				</h1>
 				<div className="flex items-center justify-between mb-1 font-bold">
 					<Link
-						className="border-2 bg-white hover:bg-purple-50 duration-300 hover:border-purple-200 px-2 py-1 text-sm text-gray-700 rounded-full"
+						className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full"
 						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
 					>
 						<span className="inline-block italic">
@@ -129,7 +129,7 @@ const Posts = ({ data }) => {
 					<div className="lg:hidden bg-white my-6 px-2">
 						<div className="bg-gray-700 text-center py-3 rounded-t-md">
 							<p className="font-bold text-gray-100">
-								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
+								<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
 								もくじ
 							</p>
 						</div>
@@ -156,7 +156,7 @@ const Posts = ({ data }) => {
 						to="/"
 					>
 						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom text-gray-700" />
-						トップページにいく
+						{/* トップページにいく */}
 					</Link>
 				</div>
 			</main>
@@ -166,7 +166,7 @@ const Posts = ({ data }) => {
 					<div className="bg-white border border-gray-100 mb-8 rounded shadow-sm">
 						<div className="bg-gray-700 text-center py-8 rounded-t-md">
 							<p className="font-bold text-gray-100">
-								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
+								<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
 								もくじ
 							</p>
 						</div>

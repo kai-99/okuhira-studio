@@ -40,7 +40,7 @@ pre[class*="language-"] {
 	margin: 0 0 0.5em 0;
 	overflow: auto;
 	background: rgb(17, 24, 39);
-	@apply rounded-b-sm border-l-4 border-purple-600;
+	@apply rounded-b-sm;
 }
 
 :not(pre) > code[class*="language-"] {

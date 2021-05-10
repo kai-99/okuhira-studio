@@ -13,12 +13,12 @@
 	}
 
 	.markdown > h2 {
-		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-100 px-4 py-2 lg:p-4 border-l-4 border-purple-600 shadow;
+		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:py-3 border-l-4 border-purple-600 shadow;
 		scroll-margin-block-start: 4rem;
 	}
 
 	.markdown > h3 {
-		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:p-4 shadow;
+		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:py-3 shadow;
 		scroll-margin-block-start: 4rem;
 	}
 
@@ -85,7 +85,7 @@
 	}
 
 	.markdown .gatsby-code-title {
-		@apply inline-block rounded-t-md mt-1 mb-px border-l-4 border-purple-600;
+		@apply inline-block rounded-t-md mt-1 mb-px;
 		font-size: 13px;
 		color: #d4d4d4;
 		background: #121828;
@@ -103,7 +103,7 @@
 		@apply font-bold text-gray-900;
 	}
 	.toc .toc__content ul li a::before {
-		@apply inline-block w-2 h-2 bg-purple-300 rounded-full mr-2 border-2 border-purple-400;
+		@apply inline-block w-2 h-2 bg-gray-400 rounded-full mr-2 border-2 border-gray-500;
 		content: " ";
 	}
 	.toc .toc__content ul li a:hover {

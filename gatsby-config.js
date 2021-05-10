@@ -11,7 +11,7 @@ module.exports = {
 		lang: `ja`,
 		locale: `ja_JP`,
 		description: `うぇぶこーだーどっとこむはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。`,
-		siteUrl: `https://gatsby-tailwindcss-customblog.netlify.app`,
+		siteUrl: `https://gatsbytailwindmyblog.gtsb.io/`,
 		social: {
 			twitter: {
 				name: `うぇぶこーだーどっとこむ`,
@@ -26,16 +26,31 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-netlify`,
-		`gatsby-plugin-breadcrumb`,
 		`gatsby-plugin-twitter`,
+		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-plugin-catch-links`,
 		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
-				siteUrl: `https://gatsby-tailwindcss-customblog.netlify.app`,
+				siteUrl: `https://gatsbytailwindmyblog.gtsb.io`,
 			},
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `うぇぶこーだーどっとこむ`,
+				short_name: `うぇぶこーだーどっとこむ`,
+				start_url: `/`,
+				background_color: `#ffffff`,
+				theme_color: `#663399`,
+				display: `minimal-ui`,
+				icon: `./static/icon.png`, // This path is relative to the root of the site.
+				icon_options: {
+					purpose: `maskable`,
+				},
+			},
+		},
+		`gatsby-plugin-offline`,
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
@@ -52,7 +67,7 @@ module.exports = {
 						resolve: `gatsby-remark-images-medium-zoom`,
 						options: {
 							margin: 24,
-							background: "#ede9fd",
+							background: "#f9fafb",
 							scrollOffset: 40,
 						},
 					},

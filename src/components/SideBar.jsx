@@ -1,5 +1,5 @@
 import React from "react";
-import { HashtagIcon, LightBulbIcon } from "@heroicons/react/outline";
+import { HashtagIcon, LightBulbIcon } from "@heroicons/react/solid";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 
@@ -36,7 +36,7 @@ const SideBar = () => {
 						<li key={tag.fieldValue}>
 							<Link
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
-								className="flex items-center justify-between border-2 hover:bg-purple-50 duration-300 hover:border-purple-200 rounded-full font-bold italic text-gray-700 hover:shadow-xl"
+								className="flex items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold italic text-gray-700 hover:shadow-xl"
 							>
 								<span className="px-4">
 									<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
