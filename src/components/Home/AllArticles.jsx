@@ -56,7 +56,7 @@ const PopularPostList = () => {
 				{data.allMarkdownRemark.nodes.map((node) => {
 					return (
 						<div
-							className="bg-white mb-8 md:mb-4 relative"
+							className="bg-white mb-16 md:mb-4 relative"
 							key={node.frontmatter.title}
 						>
 							<Link

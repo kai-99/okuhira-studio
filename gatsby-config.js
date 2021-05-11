@@ -7,15 +7,15 @@ module.exports = {
 		FUNCTIONS: true,
 	},
 	siteMetadata: {
-		title: `うぇぶこーだーどっとこむ`,
+		title: `LAZULI`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `うぇぶこーだーどっとこむはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。`,
-		siteUrl: `https://gatsbytailwindmyblog.gtsb.io/`,
+		description: `LAZULIはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。`,
+		siteUrl: `https://lapis-lazuli.dev/`,
 		social: {
 			twitter: {
-				name: `うぇぶこーだーどっとこむ`,
-				id: `https://twitter.com/webcoder_com`,
+				name: `LAZULI`,
+				id: `https://twitter.com/web_lazuli`,
 			},
 		},
 	},
@@ -32,14 +32,14 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
-				siteUrl: `https://gatsbytailwindmyblog.gtsb.io`,
+				siteUrl: `https://lapis-lazuli.dev`,
 			},
 		},
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `うぇぶこーだーどっとこむ`,
-				short_name: `うぇぶこーだーどっとこむ`,
+				name: `LAZULI`,
+				short_name: `LAZULI`,
 				start_url: `/`,
 				background_color: `#ffffff`,
 				theme_color: `#663399`,
@@ -55,6 +55,8 @@ module.exports = {
 			resolve: `gatsby-transformer-remark`,
 			options: {
 				plugins: [
+					`gatsby-remark-code-titles`,
+					`gatsby-remark-prismjs`,
 					`gatsby-remark-relative-images`,
 					{
 						resolve: `gatsby-remark-images`,
@@ -87,8 +89,6 @@ module.exports = {
 							rel: "noopener noreferrer",
 						},
 					},
-					`gatsby-remark-code-titles`,
-					`gatsby-remark-prismjs`,
 					"gatsby-remark-copy-linked-files",
 				],
 			},

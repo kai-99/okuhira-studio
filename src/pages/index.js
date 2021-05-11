@@ -13,7 +13,7 @@ const IndexPage = () => {
 				<main className="lg:w-3/4 lg:mr-8">
 					<AllArticles />
 				</main>
-				<aside className="hidden lg:block lg:w-1/4 lg:sticky lg:top-20">
+				<aside className="block mt-8 lg:mt-0 lg:w-1/4 lg:sticky lg:top-20">
 					<SideBar />
 				</aside>
 			</Layout>

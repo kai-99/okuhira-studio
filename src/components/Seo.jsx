@@ -27,7 +27,7 @@ const Seo = (props) => {
 	const description =
 		props.pagedescription || data.site.siteMetadata.description;
 	// og:image
-	const imgurl = `${data.site.siteMetadata.siteUrl}/thumbnail.png`;
+	const imgurl = `${data.site.siteMetadata.siteUrl}/icon.png`;
 	const imgw = props.pageimgw || 1280;
 	const imgh = props.pageimgh || 640;
 
@@ -43,9 +43,9 @@ const Seo = (props) => {
 			<meta property="og:description" content={description} />
 			<meta property="og:locale" content={data.site.siteMetadata.locale} />
 			<meta property="og:type" content="website" />
-			<meta property="og:img" content={imgurl} />
-			<meta property="og:img:width" content={imgw} />
-			<meta property="og:img:height" content={imgh} />
+			<meta property="og:image" content={imgurl} />
+			<meta property="og:image:width" content={imgw} />
+			<meta property="og:image:height" content={imgh} />
 			<meta name="twitter:card" content="summary" />
 			{/* <meta name="twitter:site" content="" /> */}
 			{/* <meta name="twitter:creator" content="" /> */}

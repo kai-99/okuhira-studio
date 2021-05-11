@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Layout = (props) => {
 	const data = useStaticQuery(
@@ -25,9 +26,25 @@ const Layout = (props) => {
 		return (
 			<header className="w-full border-b bg-white top-0 h-12 z-50 fixed">
 				<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
-					<h1 className="font-bold text-xl ls:text-2xl text-gray-800 items-center flex h-12 site-title">
-						<Link to="/">{data.site.siteMetadata.title}</Link>
-					</h1>
+					<Link to="/">
+						<h1 className="font-bold italic text-xl ls:text-2xl text-gray-900 site-title flex items-center h-12">
+							<StaticImage
+								src="../images/icon.png"
+								alt={`${data.site.siteMetadata.title}のロゴ画像`}
+								width={40}
+								height={40}
+								className="opacity-60"
+							/>
+							<StaticImage
+								src="../images/icon.png"
+								alt={`${data.site.siteMetadata.title}のロゴ画像`}
+								width={40}
+								height={40}
+								className="opacity-50 -ml-6 z-10"
+							/>
+							<span className="-ml-8 z-20">{data.site.siteMetadata.title}</span>
+						</h1>
+					</Link>
 					<a
 						href={data.site.siteMetadata.social.twitter.id}
 						target="_blank"
@@ -58,10 +75,10 @@ const Layout = (props) => {
 	};
 	// Layout Component
 	return (
-		<div className="bg-purple-50">
+		<div className="bg-gray-50">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto">
-				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
+				<div className="container md:px-2 py-8 mt-12 mx-auto lg:flex">
 					{props.children}
 				</div>
 			</div>

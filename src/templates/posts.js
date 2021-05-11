@@ -156,7 +156,7 @@ const Posts = ({ data }) => {
 						to="/"
 					>
 						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom text-gray-700" />
-						{/* トップページにいく */}
+						トップページにいく
 					</Link>
 				</div>
 			</main>
