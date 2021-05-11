@@ -10,7 +10,7 @@ module.exports = {
 		title: `LAZULI`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `LAZULIはWeb・IT初学者に向けてわかりやすく解説し、情報発信をしているメディアです。`,
+		description: `本サイト LAZULI（ラズリ）はWeb・ITに関する情報発信をしているサイトです。`,
 		siteUrl: `https://lapis-lazuli.dev/`,
 		social: {
 			twitter: {
@@ -38,11 +38,11 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `LAZULI`,
+				name: `LAZULI（ラズリ）`,
 				short_name: `LAZULI`,
 				start_url: `/`,
 				background_color: `#ffffff`,
-				theme_color: `#663399`,
+				theme_color: `#ffffff`,
 				display: `minimal-ui`,
 				icon: `src/images/icon.png`, // This path is relative to the root of the site.
 				icon_options: {

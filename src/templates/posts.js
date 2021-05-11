@@ -5,10 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
 	RefreshIcon,
 	PencilAltIcon,
-	// ClipboardListIcon,
 	HashtagIcon,
-	// ShareIcon,
-	// ScissorsIcon,
 	HomeIcon,
 } from "@heroicons/react/outline";
 import { ClipboardListIcon, ScissorsIcon } from "@heroicons/react/solid";
@@ -49,30 +46,29 @@ const Posts = ({ data }) => {
 			<div className="pb-10 px-8">
 				<p className="text-center font-bold text-lg mb-2 italic">Share</p>
 				<div className="flex items-center justify-center">
-					{/* <ShareIcon className="h-6 w-6 inline-block mr-4 text-purple-400 align-text-bottom" /> */}
 					<TwitterShareButton
-						url={data.markdownRemark.fields.slug}
+						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
 						title={data.markdownRemark.frontmatter.title}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<TwitterIcon round size={48} />
 					</TwitterShareButton>
 					<FacebookShareButton
-						url={data.markdownRemark.fields.slug}
+						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
 						title={data.markdownRemark.frontmatter.title}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<FacebookIcon round size={48} />
 					</FacebookShareButton>
 					<LineShareButton
-						url={data.markdownRemark.fields.slug}
+						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
 						title={data.markdownRemark.frontmatter.title}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<LineIcon round size={48} />
 					</LineShareButton>
 					<LinkedinShareButton
-						url={data.markdownRemark.fields.slug}
+						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
 						title={data.markdownRemark.frontmatter.title}
 						className="hover:opacity-60 duration-300"
 					>
@@ -207,6 +203,11 @@ export const query = graphql`
 						)
 					}
 				}
+			}
+		}
+		site {
+			siteMetadata {
+				siteUrl
 			}
 		}
 	}
