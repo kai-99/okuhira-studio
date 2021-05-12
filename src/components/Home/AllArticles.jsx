@@ -13,7 +13,7 @@ const PopularPostList = () => {
 		graphql`
 			{
 				allMarkdownRemark(
-					sort: { order: DESC, fields: [frontmatter___updateAt] }
+					sort: { order: DESC, fields: [frontmatter___createdAt] }
 				) {
 					nodes {
 						html

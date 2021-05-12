@@ -33,7 +33,7 @@ const SideBar = () => {
 			<div>
 				<ul className="py-4">
 					{data.allMarkdownRemark.group.map((tag) => (
-						<li key={tag.fieldValue}>
+						<li className="p-2" key={tag.fieldValue}>
 							<Link
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
 								className="flex items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold italic text-gray-700 hover:shadow-xl"

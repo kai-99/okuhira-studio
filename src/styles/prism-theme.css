@@ -1,3 +1,24 @@
+/* ***** Code Title ***** */
+.gatsby-code-title {
+	@apply inline-block rounded-t-md mt-1 mb-px;
+	font-size: 13px;
+	color: #d4d4d4;
+	background: #121828;
+	padding: 4px 13px;
+	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+		"Courier New", monospace;
+}
+
+.gatsby-highlight-code-line {
+	background-color: #374251;
+	display: block;
+	margin-right: -1em;
+	margin-left: -1em;
+	padding-right: 1em;
+	padding-left: 0.75em;
+	border-left: 0.25em solid #7d48ee;
+}
+
 pre[class*="language-"],
 code[class*="language-"] {
 	color: #d4d4d4;
@@ -11,9 +32,9 @@ code[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	line-height: 1.5;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
@@ -40,14 +61,14 @@ pre[class*="language-"] {
 	margin: 0 0 0.5em 0;
 	overflow: auto;
 	background: rgb(17, 24, 39);
-	@apply rounded-b-sm;
+	@apply rounded;
 }
 
 :not(pre) > code[class*="language-"] {
 	padding: 0.1em 0.3em;
 	border-radius: 0.3em;
-	color: #db4c69;
-	background: #f9f2f4;
+	color: #374251;
+	background: #f9fafb;
 }
 /*********************************************************
 * Tokens

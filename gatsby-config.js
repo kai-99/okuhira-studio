@@ -4,7 +4,7 @@ module.exports = {
 		PRESERVE_WEBPACK_CACHE: true,
 		DEV_SSR: false,
 		PARALLEL_SOURCING: true,
-		FUNCTIONS: true,
+		FUNCTIONS: false,
 	},
 	siteMetadata: {
 		title: `LAZULI`,
@@ -56,7 +56,16 @@ module.exports = {
 			options: {
 				plugins: [
 					`gatsby-remark-code-titles`,
-					`gatsby-remark-prismjs`,
+					{
+						resolve: `gatsby-remark-prismjs`,
+						options: {
+							classPrefix: "language-",
+							inlineCodeMarker: null,
+							aliases: {},
+							showLineNumbers: true,
+							noInlineHighlight: false,
+						},
+					},
 					`gatsby-remark-relative-images`,
 					{
 						resolve: `gatsby-remark-images`,
