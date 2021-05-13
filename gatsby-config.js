@@ -3,7 +3,7 @@ module.exports = {
 		PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PRESERVE_WEBPACK_CACHE: true,
 		DEV_SSR: false,
-		PARALLEL_SOURCING: true,
+		PARALLEL_SOURCING: false,
 		FUNCTIONS: false,
 	},
 	siteMetadata: {
@@ -59,7 +59,6 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-prismjs`,
 						options: {
-							classPrefix: "language-",
 							inlineCodeMarker: null,
 							aliases: {},
 							showLineNumbers: true,

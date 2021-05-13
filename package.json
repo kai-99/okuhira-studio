@@ -19,7 +19,7 @@
 		"@fortawesome/free-solid-svg-icons": "^5.15.3",
 		"@fortawesome/react-fontawesome": "^0.1.14",
 		"@heroicons/react": "^1.0.0",
-		"gatsby": "^3.2.1",
+		"gatsby": "^3.5.0",
 		"gatsby-plugin-canonical-urls": "^3.4.0",
 		"gatsby-plugin-catch-links": "^3.4.0",
 		"gatsby-plugin-gatsby-cloud": "^2.4.1",
