@@ -2,7 +2,7 @@ import React from "react";
 // Custom Components
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
-import AllArticles from "../components/Home/AllArticles";
+import AllArticles from "../components/AllArticles";
 import SideBar from "../components/SideBar";
 
 const IndexPage = () => {

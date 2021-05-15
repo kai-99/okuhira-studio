@@ -32,7 +32,7 @@ const Posts = ({ data }) => {
 		return (
 			<div className="toc">
 				<div
-					className="toc__content"
+					className="toc__content text-sm"
 					dangerouslySetInnerHTML={{
 						__html: props.data,
 					}}
@@ -84,6 +84,7 @@ const Posts = ({ data }) => {
 			<Seo
 				pagetitle={data.markdownRemark.frontmatter.title}
 				pagedescription={data.markdownRemark.frontmatter.description}
+				ogthumbnail={data.markdownRemark.frontmatter.thumbnail}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
 				<h1 className="font-bold text-center text-xl lg:text-2xl my-4 text-gray-800">
