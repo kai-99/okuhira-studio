@@ -44,7 +44,7 @@ const Tags = ({ pageContext, data }) => {
 										<GatsbyImage
 											image={getImage(node.frontmatter.thumbnail)}
 											alt={node.frontmatter.title}
-											className="w-full h-72 md:w-36 md:h-24 object-cover"
+											className="w-full h-72 md:w-36 md:h-24 object-cover bg-purple-50"
 										/>
 										<div className="flex flex-col p-2 md:flex-1">
 											<h2 className="font-bold text-sm md:text-lg text-gray-800 mb-4">

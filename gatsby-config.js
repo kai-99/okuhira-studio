@@ -7,15 +7,15 @@ module.exports = {
 		FUNCTIONS: false,
 	},
 	siteMetadata: {
-		title: `LAZULI`,
+		title: `Lazuli Coder`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `本サイト LAZULI（ラズリ）はWeb・ITに関する情報発信をしているサイトです。`,
+		description: `本サイト Lazuli Coder（ラズリ コーダー）はWeb・ITに関する情報発信をしているサイトです。`,
 		siteUrl: `https://lapis-lazuli.dev/`,
 		social: {
 			twitter: {
-				name: `LAZULI`,
-				id: `https://twitter.com/web_lazuli`,
+				name: `Lazuli Coder`,
+				id: `https://twitter.com/lazuli_coder`,
 			},
 		},
 	},
@@ -38,8 +38,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `LAZULI（ラズリ）`,
-				short_name: `LAZULI`,
+				name: `Lazuli Coder`,
+				short_name: `Lazuli`,
 				start_url: `/`,
 				background_color: `#ffffff`,
 				theme_color: `#ffffff`,

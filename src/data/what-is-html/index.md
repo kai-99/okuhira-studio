@@ -35,7 +35,7 @@ HTML とは、Web サイトの<mark>文章（テキスト）や構造に意味�
    [Google のリンク！](https://google.com)
   （クリックすると Google の検索ページにジャンプします。）
 
-これは一例に過ぎないですが、このように HTML ではただのテキストをマークアップすることで、上記のリンクテキストのように<mark>役割を持ったテキスト</mark>を作成することが簡単にできるようになります！
+これは一例に過ぎないですが、このように HTML ではただのテキストをマークアップすることで、上記のテキストリンクのように<mark>役割を持ったテキスト</mark>を作成することが簡単にできるようになります！
 
 ---
 
@@ -202,16 +202,7 @@ Web サイトを閲覧した際、上記のような表示が出た経験があ�
 
 ![html基本型の実際のプレビュー画面](./html-preview.png)
 
-## まとめ
-
-1. HTML とは文章や構造に意味を持たせる**マークアップ言語**
-1. サイトによって日本語サイトなのか、英語のサイトなのかを指定できる
-1. HTML の`<head></head>`で囲まれている所は実際の画面に<mark>表示されない！</mark>
-1. HTML の`<body></body>`で囲まれている所は実際の画面に<mark>表示される！</mark>
-
 ## おすすめの記事
 
-- a タグについての解説記事  
-  [a href とは？a タグに使用する href 属性の使い方について徹底解説！](../what-is-ahref/)
-- MDN Web Docs  
-  [HTML の基本 | MDN](https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
+1. [a href とは？a タグに使用する href 属性の使い方について徹底解説！](../what-is-ahref/)
+1. [HTML の基本 | MDN](https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)

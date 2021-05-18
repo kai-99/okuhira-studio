@@ -116,12 +116,11 @@ const Posts = ({ data }) => {
 					</div>
 				</div>
 				<article className="bg-white rounded shadow-sm">
-					<figure className="text-center md:mb-4">
-						<GatsbyImage
-							image={image}
-							alt={data.markdownRemark.frontmatter.title}
-						/>
-					</figure>
+					<GatsbyImage
+						image={image}
+						alt={data.markdownRemark.frontmatter.title}
+						className="md:mb-4 bg-purple-50"
+					/>
 					{/* 目次 SP */}
 					<div className="lg:hidden bg-white my-6 px-2">
 						<div className="bg-gray-700 text-center py-3 rounded-t-md">

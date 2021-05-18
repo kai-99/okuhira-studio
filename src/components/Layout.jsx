@@ -52,7 +52,7 @@ const Layout = (props) => {
 		return (
 			<footer className="w-full">
 				<div className="py-4 text-center bg-white">
-					<small className="text-gray-800">
+					<small className="text-gray-800 font-extrabold">
 						&copy;{new Date().getFullYear()} {data.site.siteMetadata.title}
 					</small>
 				</div>
