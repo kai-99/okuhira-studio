@@ -3,7 +3,7 @@ title: "絶対パスと相対パスについての解説！"
 description: ""
 createdAt: "2021-05-16"
 updateAt: "2021-05-16"
-thumbnail: "./r0749.png"
+thumbnail: "./hero.png"
 tags: ["HTML"]
 ---
 
@@ -29,11 +29,11 @@ HTML で Web サイトのページ作成などをする際、画像やリンク�
 ※現段階で理解している必要は全くありません。
 
 ```html:title=HTMLで画像を表示させる例（相対パス）
-<img src="../images/cat.png" alt="猫の画像">
+<img src="../images/snow.png" alt="雪の結晶の画像">
 ```
 
 - 実際の表示  
-  ![猫の画像](./cat.png)
+  ![雪の結晶の画像](./snow.png)
 
 ```html:title=HTMLでリンクを作成する例（絶対パス）
 <a href="https://google.com/">Googleの検索ページ</a>
@@ -69,7 +69,7 @@ HTML で Web サイトのページ作成などをする際、画像やリンク�
 自分が作業しているフォルダやファイルをスタート地点として、目的のフォルダやファイルまでのゴール地点までの経路示す url（パス）を**相対パス**といいます。
 
 ```html:title=相対パスでリンクを指定
-<img src="../images/cat.png" alt="猫の画像">
+<img src="../images/snow.png" alt="雪の結晶の画像">
 ```
 
-上記の例でいうと、自分の作業フォルダから見て一階層上の`images`というフォルダの中にある、`cat.png`を指定していると言うことになります。
+記事冒頭の[はじめに](#はじめに)の章で紹介した画像を表示させた HTML コードの例でいうと、自分の作業フォルダから見て一階層上の`images`というフォルダの中にある、`snow.png`を指定していると言うことになります。

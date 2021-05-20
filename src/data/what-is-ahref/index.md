@@ -1,9 +1,9 @@
 ---
 title: "a hrefとは？aタグに使用するhref属性の使い方について徹底解説！"
-description: ""
+description: "HTMLのa hrefについて解説します。HTMLのhref属性はWebサイトを作成したり運用する上では必須の知識です。hrefによるリンクの作り方について解説します。"
 createdAt: "2021-05-15"
 updateAt: "2021-05-15"
-thumbnail: "./n0599.png"
+thumbnail: "./hero.png"
 tags: ["HTML"]
 ---
 
