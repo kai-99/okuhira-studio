@@ -44,7 +44,7 @@ const Posts = ({ data }) => {
 	const SnsShare = () => {
 		return (
 			<div className="pb-10 px-8">
-				<p className="text-center font-bold text-lg mb-2 italic">Share</p>
+				<p className="text-center font-bold text-lg mb-2 italic">SHARE</p>
 				<div className="flex items-center justify-center">
 					<TwitterShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
@@ -84,7 +84,6 @@ const Posts = ({ data }) => {
 			<Seo
 				pagetitle={data.markdownRemark.frontmatter.title}
 				pagedescription={data.markdownRemark.frontmatter.description}
-				ogthumbnail={data.markdownRemark.frontmatter.thumbnail}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
 				<h1 className="font-bold text-center text-xl lg:text-2xl my-4 text-gray-800">
@@ -115,14 +114,14 @@ const Posts = ({ data }) => {
 						</time>
 					</div>
 				</div>
-				<article className="bg-white rounded shadow-sm">
+				<article className="bg-white rounded shadow-sm p-4">
 					<GatsbyImage
 						image={image}
 						alt={data.markdownRemark.frontmatter.title}
 						className="md:mb-4 bg-purple-50"
 					/>
 					{/* 目次 SP */}
-					<div className="lg:hidden bg-white my-6 px-2">
+					<div className="lg:hidden bg-white my-6">
 						<div className="bg-gray-700 text-center py-3 rounded-t-md">
 							<p className="font-bold text-gray-100">
 								<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
@@ -137,18 +136,18 @@ const Posts = ({ data }) => {
 						className="markdown"
 						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 					/>
-					<div className="px-10 relative">
+					<div className="relative">
 						<hr className="my-10 border-t-4 border-dotted border-gray-400 block" />
 						<ScissorsIcon
 							className="absolute z-10 w-6 h-6 inline-block text-gray-700 bg-white"
-							style={{ top: `-10px`, left: `49%` }}
+							style={{ top: `-10px`, left: `0` }}
 						/>
 					</div>
 					<SnsShare />
 				</article>
 				<div className="mt-8 text-center">
 					<Link
-						className="text-lg font-bold border-2 border-gray-50 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow-sm"
+						className="text-lg font-bold border-2 border-gray-100 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow-sm"
 						to="/"
 					>
 						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom text-gray-700" />

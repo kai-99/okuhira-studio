@@ -30,6 +30,14 @@ module.exports = {
 		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-plugin-catch-links`,
 		{
+			resolve: "gatsby-plugin-robots-txt",
+			options: {
+				host: "https://lapis-lazuli.dev",
+				sitemap: "https://lapis-lazuli.dev/sitemap.xml",
+				policy: [{ userAgent: "*", allow: "/" }],
+			},
+		},
+		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
 				siteUrl: `https://lapis-lazuli.dev`,
@@ -59,7 +67,6 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-prismjs`,
 						options: {
-							inlineCodeMarker: null,
 							aliases: {},
 							showLineNumbers: true,
 							noInlineHighlight: false,

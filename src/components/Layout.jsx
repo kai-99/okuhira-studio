@@ -27,8 +27,8 @@ const Layout = (props) => {
 				<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
 					<Link to="/">
 						<h1 className="font-bold italic text-xl ls:text-2xl text-gray-900 site-title flex items-center h-12">
-							<span className="inline-block w-10 h-10 rounded-full bg-purple-400 opacity-40 z-10"></span>
-							<span className="-ml-4">{data.site.siteMetadata.title}</span>
+							<span className="inline-block w-10 h-10 rounded-full bg-purple-400 opacity-40"></span>
+							<span className="-ml-4 z-0">{data.site.siteMetadata.title}</span>
 						</h1>
 					</Link>
 					<a
@@ -36,7 +36,7 @@ const Layout = (props) => {
 						target="_blank"
 						rel="noopener noreferrer"
 						className="bg-white rounded-full h-10 w-10 flex items-center justify-center"
-						aria-label="うぇぶこーだーTwitterアカウント"
+						aria-label="Lazuli Coder Twitterアカウント"
 					>
 						<FontAwesomeIcon
 							className="text-blue-400 text-2xl"
@@ -64,7 +64,7 @@ const Layout = (props) => {
 		<div className="bg-gray-50">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto">
-				<div className="container md:px-2 py-8 mt-12 mx-auto lg:flex">
+				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
 					{props.children}
 				</div>
 			</div>

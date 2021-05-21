@@ -9,7 +9,7 @@
 }
 @layer components {
 	.markdown {
-		@apply px-2 py-4 lg:px-8 lg:py-4 text-gray-900;
+		@apply text-gray-900 md:p-4;
 	}
 
 	.markdown > h2 {
@@ -17,18 +17,8 @@
 		scroll-margin-block-start: 4rem;
 	}
 
-	.markdown > h3 {
-		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 bg-purple-50 px-4 py-2 lg:py-3 shadow;
-		scroll-margin-block-start: 4rem;
-	}
-
-	.markdown > h4 {
-		@apply text-xl lg:text-2xl font-bold mt-12 mb-8 px-4 py-2 border-l-4 border-purple-600;
-		scroll-margin-block-start: 4rem;
-	}
-
 	.markdown a {
-		@apply text-blue-600 border-b border-blue-500 hover:text-blue-500 hover:border-blue-400 duration-300;
+		@apply text-blue-600 hover:underline;
 	}
 
 	.markdown p {
@@ -36,7 +26,10 @@
 	}
 
 	.markdown span.caution {
-		@apply text-gray-600 text-sm text-center block;
+		@apply text-gray-600 text-sm block;
+	}
+	.markdown span.caption {
+		@apply text-gray-600 text-center text-sm block;
 	}
 
 	.markdown blockquote {
@@ -55,17 +48,13 @@
 		content: "";
 	}
 
-	/* .markdown ul li::marker {
-		@apply text-gray-600 font-bold;
-	} */
-
 	.markdown > ol {
 		@apply my-4 list-inside;
 		counter-reset: number;
 	}
 
 	.markdown > ol li {
-		@apply relative pl-10 mb-4 flex items-center;
+		@apply relative pl-10 mb-4 leading-8;
 	}
 
 	.markdown > ol li::before {
@@ -87,11 +76,7 @@
 	}
 
 	.markdown hr {
-		@apply border-purple-200 my-8 border-t-4 border-dotted;
-	}
-
-	.markdown > .hogehoge {
-		@apply bg-gray-500 p-6;
+		@apply border-purple-200 my-8 border-t-4 border-dotted block;
 	}
 
 	/* h2 */
@@ -103,6 +88,6 @@
 		content: " ";
 	}
 	.toc .toc__content ul li a:hover {
-		@apply text-gray-600 duration-300;
+		@apply text-gray-600 duration-300 underline;
 	}
 }

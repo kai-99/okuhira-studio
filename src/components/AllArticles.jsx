@@ -56,11 +56,11 @@ const PopularPostList = () => {
 				{data.allMarkdownRemark.nodes.map((node) => {
 					return (
 						<div
-							className="bg-white mb-16 md:mb-4 relative"
+							className="bg-white mb-16 md:mb-4 relative border-8 border-white md:border-none"
 							key={node.frontmatter.title}
 						>
 							<Link
-								className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300"
+								className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
 								to={node.fields.slug}
 							>
 								<GatsbyImage
