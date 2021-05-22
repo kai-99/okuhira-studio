@@ -38,6 +38,17 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+				trackingIds: [
+					"G-47L0EF8PQS", // Google Analytics / GA
+				],
+				pluginConfig: {
+					head: true,
+				},
+			},
+		},
+		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
 				siteUrl: `https://lapis-lazuli.dev`,
@@ -67,7 +78,7 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-prismjs`,
 						options: {
-							aliases: {},
+							// aliases: {},
 							showLineNumbers: true,
 							noInlineHighlight: false,
 						},
@@ -83,8 +94,8 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images-medium-zoom`,
 						options: {
-							margin: 24,
-							background: "#f9fafb",
+							margin: 48,
+							background: "rgba(249, 250, 251, 0.8)",
 							scrollOffset: 40,
 						},
 					},
