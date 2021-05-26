@@ -1,5 +1,5 @@
 import React from "react";
-import { HashtagIcon, LightBulbIcon } from "@heroicons/react/solid";
+import { HashtagIcon } from "@heroicons/react/solid";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 
@@ -23,11 +23,11 @@ const SideBar = () => {
 	);
 
 	return (
-		<div className="bg-white border border-gray-100 mb-8 rounded shadow-sm">
-			<div className="bg-gray-700 rounded-t-md py-6 text-center">
+		<div className="bg-white border border-gray-100 rounded-md mb-8 shadow-sm">
+			<div className="bg-gray-700 rounded-t-md py-8 text-center">
 				<p className="font-bold italic text-gray-100">
-					<LightBulbIcon className="h-6 w-6 inline-block text-yellow-400 mr-2 align-bottom" />
-					キーワード
+					<HashtagIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
+					ハッシュタグ
 				</p>
 			</div>
 			<div>

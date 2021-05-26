@@ -28,7 +28,7 @@
 	.markdown span.caution {
 		@apply text-gray-600 text-sm block;
 	}
-	.markdown span.caption {
+	.markdown p > span.caption {
 		@apply text-gray-600 text-center text-sm block;
 	}
 
@@ -75,7 +75,7 @@
 		@apply p-2 border-2 border-white bg-gray-50;
 	}
 
-	.markdown hr {
+	.markdown > hr {
 		@apply border-purple-200 my-8 border-t-4 border-dotted block;
 	}
 

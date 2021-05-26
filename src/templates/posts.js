@@ -86,10 +86,10 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
-				<h1 className="font-bold text-center text-xl lg:text-2xl my-4 text-gray-800">
+				<h1 className="font-bold text-center text-xl py-8 text-gray-900 bg-white rounded shadow-sm">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
-				<div className="flex items-center justify-between mb-1 font-bold">
+				<div className="flex items-center justify-between my-2 font-bold">
 					<Link
 						className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full"
 						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
@@ -147,7 +147,7 @@ const Posts = ({ data }) => {
 				</article>
 				<div className="mt-8 text-center">
 					<Link
-						className="text-lg font-bold border-2 border-gray-100 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow-sm"
+						className="text-lg font-bold border-2 border-gray-100 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow"
 						to="/"
 					>
 						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom text-gray-700" />
@@ -158,10 +158,10 @@ const Posts = ({ data }) => {
 			{/* 目次 PC */}
 			<aside className="hidden lg:block lg:w-1/4">
 				<div className="sticky top-20">
-					<div className="bg-white border border-gray-100 mb-8 rounded shadow-sm">
+					<div className="bg-white border border-gray-100 mb-8 rounded-md shadow-sm">
 						<div className="bg-gray-700 text-center py-8 rounded-t-md">
 							<p className="font-bold text-gray-100">
-								<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
+								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
 								もくじ
 							</p>
 						</div>
