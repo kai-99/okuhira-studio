@@ -86,7 +86,7 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
-				<h1 className="font-bold text-center text-xl py-8 text-gray-900 bg-white rounded shadow-sm">
+				<h1 className="font-bold text-center text-xl py-6 md:py-8 border-l-4 border-purple-800 text-gray-900 bg-white rounded">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
 				<div className="flex items-center justify-between my-2 font-bold">
@@ -114,7 +114,7 @@ const Posts = ({ data }) => {
 						</time>
 					</div>
 				</div>
-				<article className="bg-white rounded shadow-sm p-4">
+				<article className="bg-white rounded shadow-sm">
 					<GatsbyImage
 						image={image}
 						alt={data.markdownRemark.frontmatter.title}
@@ -136,7 +136,7 @@ const Posts = ({ data }) => {
 						className="markdown"
 						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 					/>
-					<div className="relative">
+					<div className="relative pr-4 md:pr-8">
 						<hr className="my-10 border-t-4 border-dotted border-gray-400 block" />
 						<ScissorsIcon
 							className="absolute z-10 w-6 h-6 inline-block text-gray-700 bg-white"
