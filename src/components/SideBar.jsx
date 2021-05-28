@@ -25,7 +25,7 @@ const SideBar = () => {
 	return (
 		<div className="bg-white border border-gray-100 rounded-md mb-8 shadow-sm">
 			<div className="bg-gray-700 rounded-t-md py-8 text-center">
-				<p className="font-bold italic text-gray-100">
+				<p className="font-bold text-gray-100">
 					<HashtagIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
 					ハッシュタグ
 				</p>
@@ -36,7 +36,7 @@ const SideBar = () => {
 						<li className="p-2" key={tag.fieldValue}>
 							<Link
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
-								className="flex items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold italic text-gray-700 hover:shadow-xl"
+								className="flex items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold text-gray-700 hover:shadow-xl"
 							>
 								<span className="px-4">
 									<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />

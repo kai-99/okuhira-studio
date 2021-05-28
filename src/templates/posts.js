@@ -94,7 +94,7 @@ const Posts = ({ data }) => {
 						className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full"
 						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
 					>
-						<span className="inline-block italic">
+						<span className="inline-block">
 							<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
 							{data.markdownRemark.frontmatter.tags}
 						</span>

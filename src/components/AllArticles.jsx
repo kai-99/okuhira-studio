@@ -69,12 +69,12 @@ const PopularPostList = () => {
 									className="w-auto h-auto md:w-36 md:h-24 object-cover bg-purple-50"
 								/>
 								<div className="flex flex-col p-2 md:flex-1">
-									<h2 className="font-bold text-sm md:text-lg text-gray-800 mb-4">
+									<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4">
 										{node.frontmatter.title}
 									</h2>
 									<div className="flex justify-between items-center font-bold">
 										<div className="border-2 bg-white inline-block px-2 py-1 text-sm text-gray-700 rounded-full">
-											<span className="inline-block italic">
+											<span className="inline-block">
 												<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
 												{node.frontmatter.tags}
 											</span>
