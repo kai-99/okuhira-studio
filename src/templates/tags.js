@@ -25,7 +25,7 @@ const Tags = ({ pageContext, data }) => {
 			<main className="md:w-3/4 lg:mr-8">
 				<section>
 					<div>
-						<h2 className="text-gray800 text-xl md:text-2xl font-bold italic mb-4">
+						<h2 className="text-gray800 text-xl md:text-2xl font-bold mb-4">
 							<HashtagIcon className="inline-block w-6 h-6 text-blue-500 align-text-bottom" />
 							{tagHeader}
 						</h2>

@@ -61,7 +61,7 @@ const Layout = (props) => {
 	};
 	// Layout Component
 	return (
-		<div className="bg-gray-50">
+		<div className="bg-gray-100">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto">
 				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">

@@ -21,7 +21,7 @@
 		@apply text-blue-600 hover:underline;
 	}
 
-	.markdown p {
+	.markdown > p {
 		@apply my-8 leading-relaxed;
 	}
 
