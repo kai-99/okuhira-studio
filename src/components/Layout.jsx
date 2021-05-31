@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Layout = (props) => {
 	const data = useStaticQuery(
@@ -27,8 +28,13 @@ const Layout = (props) => {
 				<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
 					<Link to="/">
 						<h1 className="font-bold italic text-xl ls:text-2xl text-gray-900 site-title flex items-center h-12">
-							<span className="inline-block w-10 h-10 rounded-full bg-purple-400 opacity-40"></span>
-							<span className="-ml-4 z-0">{data.site.siteMetadata.title}</span>
+							<StaticImage
+								src="../images/icon.jpg"
+								alt="LazuliCoder"
+								className="inline-block w-12 h-12"
+								placeholder="blurred"
+							/>
+							<span className="ml-2 z-0">{data.site.siteMetadata.title}</span>
 						</h1>
 					</Link>
 					<a

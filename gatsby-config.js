@@ -10,7 +10,7 @@ module.exports = {
 		title: `Lazuli Coder`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `本サイト Lazuli Coder（ラズリ コーダー）はWeb・ITに関する情報発信をしているサイトです。`,
+		description: `Lazuli Coder（ラズリ コーダー）は、Web制作で役に立つ知識をコーダーやWebデザイナーに向けて情報発信しているメディアです`,
 		siteUrl: `https://lapis-lazuli.dev/`,
 		social: {
 			twitter: {
@@ -63,7 +63,7 @@ module.exports = {
 				background_color: `#ffffff`,
 				theme_color: `#ffffff`,
 				display: `minimal-ui`,
-				icon: `src/images/icon.png`, // This path is relative to the root of the site.
+				icon: `src/images/icon.jpg`, // This path is relative to the root of the site.
 				icon_options: {
 					purpose: `maskable`,
 				},
