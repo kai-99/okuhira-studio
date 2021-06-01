@@ -48,7 +48,7 @@ const Posts = ({ data }) => {
 				<div className="flex items-center justify-center">
 					<TwitterShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
-						title={data.markdownRemark.frontmatter.title}
+						title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.social.twitter.id}`}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<TwitterIcon round size={48} />
@@ -84,10 +84,7 @@ const Posts = ({ data }) => {
 			<Seo
 				pagetitle={data.markdownRemark.frontmatter.title}
 				pagedescription={data.markdownRemark.frontmatter.description}
-				ogImage={
-					data.markdownRemark.frontmatter.thumbnail.childImageSharp
-						.gatsbyImageData
-				}
+				ogImage={image}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
 				<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
@@ -211,6 +208,10 @@ export const query = graphql`
 		site {
 			siteMetadata {
 				siteUrl
+				social {
+					twitter {
+						id
+					}
 			}
 		}
 	}
