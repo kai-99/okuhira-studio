@@ -48,7 +48,7 @@ const Posts = ({ data }) => {
 				<div className="flex items-center justify-center">
 					<TwitterShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
-						title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.social.twitter.id}`}
+						title={`${data.markdownRemark.frontmatter.title} | @lazuli_coder`}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<TwitterIcon round size={48} />
@@ -208,10 +208,6 @@ export const query = graphql`
 		site {
 			siteMetadata {
 				siteUrl
-				social {
-					twitter {
-						id
-					}
 			}
 		}
 	}
