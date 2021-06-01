@@ -10,7 +10,7 @@ module.exports = {
 		title: `Lazuli Coder`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `Lazuli Coder（ラズリ コーダー）は、Web制作で役に立つ知識をコーダーやWebデザイナーに向けて情報発信しているメディアです`,
+		description: `Lazuli Coder（ラズリ コーダー）は、Web制作で役に立つ知識を、Web制作初学者の方、コーダーやWebデザイナーに向けて情報発信しているメディアです`,
 		siteUrl: `https://lapis-lazuli.dev/`,
 		social: {
 			twitter: {

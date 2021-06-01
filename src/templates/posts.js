@@ -84,9 +84,13 @@ const Posts = ({ data }) => {
 			<Seo
 				pagetitle={data.markdownRemark.frontmatter.title}
 				pagedescription={data.markdownRemark.frontmatter.description}
+				ogImage={
+					data.markdownRemark.frontmatter.thumbnail.childImageSharp
+						.gatsbyImageData
+				}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
-				<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-800 text-gray-900 bg-white rounded">
+				<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
 				<div className="flex items-center justify-between my-2 font-bold">
