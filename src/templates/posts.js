@@ -27,6 +27,7 @@ import SideBar from "../components/SideBar";
 const Posts = ({ data }) => {
 	// GatsbyImage Component
 	const image = getImage(data.markdownRemark.frontmatter.thumbnail);
+	const ogImage = `${data.site.siteMetadata.siteUrl}${data.markdownRemark.frontmatter.thumbnail.childImageSharp.original.src}`;
 	// TableOfContents Component
 	const Toc = (props) => {
 		return (
@@ -84,7 +85,7 @@ const Posts = ({ data }) => {
 			<Seo
 				pagetitle={data.markdownRemark.frontmatter.title}
 				pagedescription={data.markdownRemark.frontmatter.description}
-				ogImage={data.markdownRemark.frontmatter.thumbnail.absolutePath}
+				ogImage={ogImage}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
 				<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
@@ -193,7 +194,6 @@ export const query = graphql`
 				updateAt(formatString: "YYYY.MM.DD")
 				tags
 				thumbnail {
-					absolutePath
 					childImageSharp {
 						gatsbyImageData(
 							placeholder: TRACED_SVG
@@ -202,6 +202,9 @@ export const query = graphql`
 							width: 732
 							height: 500
 						)
+						original {
+							src
+						}
 					}
 				}
 			}
