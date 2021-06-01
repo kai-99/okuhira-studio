@@ -84,7 +84,7 @@ const Posts = ({ data }) => {
 			<Seo
 				pagetitle={data.markdownRemark.frontmatter.title}
 				pagedescription={data.markdownRemark.frontmatter.description}
-				ogImage={image}
+				ogImage={data.markdownRemark.frontmatter.thumbnail.absolutePath}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
 				<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
@@ -193,6 +193,7 @@ export const query = graphql`
 				updateAt(formatString: "YYYY.MM.DD")
 				tags
 				thumbnail {
+					absolutePath
 					childImageSharp {
 						gatsbyImageData(
 							placeholder: TRACED_SVG
