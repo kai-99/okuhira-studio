@@ -200,7 +200,7 @@ export const query = graphql`
 							formats: [AUTO, WEBP, AVIF]
 							layout: CONSTRAINED
 							width: 732
-							height: 500
+							height: 452
 						)
 						original {
 							src
