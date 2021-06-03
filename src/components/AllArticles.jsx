@@ -56,7 +56,7 @@ const PopularPostList = () => {
 				{data.allMarkdownRemark.nodes.map((node) => {
 					return (
 						<div
-							className="bg-white mb-16 md:mb-4 relative border-8 border-white md:border-none"
+							className="bg-white mb-4 md:mb-4 relative border-8 border-white md:border-none"
 							key={node.frontmatter.title}
 						>
 							<Link
@@ -66,7 +66,7 @@ const PopularPostList = () => {
 								<GatsbyImage
 									image={getImage(node.frontmatter.thumbnail)}
 									alt={node.frontmatter.title}
-									className="w-auto h-auto md:w-36 md:h-24 object-cover bg-purple-50"
+									className="w-auto h-auto md:w-40 md:h-24 object-cover bg-purple-50"
 								/>
 								<div className="flex flex-col p-2 md:flex-1">
 									<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4">

@@ -7,15 +7,15 @@ module.exports = {
 		FUNCTIONS: false,
 	},
 	siteMetadata: {
-		title: `Lazuli Coder`,
+		title: `Lazuli`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `Lazuli Coder（ラズリ コーダー）は、Web制作で役に立つ知識を、Web制作初学者の方、コーダーやWebデザイナーに向けて情報発信しているメディアです`,
+		description: `Lazuli は、Web制作で役に立つ知識をWebコーダーやWebデザイナーに向けて現場で使えるTipsや役に立つ情報を発信しているWebメディアです`,
 		siteUrl: `https://lapis-lazuli.dev/`,
 		social: {
 			twitter: {
-				name: `Lazuli Coder`,
-				id: `https://twitter.com/lazuli_coder`,
+				name: `Lazuli`,
+				id: `https://twitter.com/lap_lap_`,
 			},
 		},
 	},

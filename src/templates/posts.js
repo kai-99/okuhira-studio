@@ -49,7 +49,7 @@ const Posts = ({ data }) => {
 				<div className="flex items-center justify-center">
 					<TwitterShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
-						title={`${data.markdownRemark.frontmatter.title} | @lazuli_coder`}
+						title={`${data.markdownRemark.frontmatter.title} | @lap_lap_`}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<TwitterIcon round size={48} />
@@ -123,14 +123,14 @@ const Posts = ({ data }) => {
 						className="md:mb-4 bg-purple-50"
 					/>
 					{/* 目次 SP */}
-					<div className="lg:hidden bg-white my-6">
-						<div className="bg-gray-700 text-center py-3 rounded-t-md">
+					<div className="lg:hidden bg-white mt-2 mx-2 mb-6 shadow-md">
+						<div className="bg-gray-700 text-center py-3">
 							<p className="font-bold text-gray-100">
 								<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
 								もくじ
 							</p>
 						</div>
-						<nav className="p-4 border-2 border-gray-700 rounded-b-md">
+						<nav className="p-4">
 							<Toc data={data.markdownRemark.tableOfContents} />
 						</nav>
 					</div>
