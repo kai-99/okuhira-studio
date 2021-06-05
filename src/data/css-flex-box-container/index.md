@@ -2,7 +2,7 @@
 title: "30枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）"
 description: "CSS flexbox (display: flex;) のコンテナ要素について30枚以上の図を用いて基礎から解説します。このflexboxを使いこなせるようになると、複雑なレイアウトを構築できたり、Web制作でとても役に立つ知識になります。"
 createdAt: "2021-05-31"
-updateAt: "2021-05-31"
+updateAt: "2021-06-06"
 thumbnail: "./hero.png"
 tags: ["CSS"]
 ---
@@ -979,14 +979,19 @@ CSS はコンテナ要素に高さを、アイテム要素に幅の指定を追�
 
 ![align-content: space-evenly;](./a-content-8.jpg)
 
----
+## まとめ
 
 CSS flexbox のコンテナ要素に対して指定できるプロパティとその値について解説しました。
 
 以前投稿した [もう迷わない！役に立つ CSS 中央寄せ 5 選](../css-center-reference/) の記事では、今回解説した **flexbox** のプロパティや値をうまく活用してレイアウトを構築している章もあるので、気になる方はチェックしてみてください。
 
-次回投稿する記事では、CSS flexbox の **アイテム要素（子要素）** について指定できるプロパティやその値について基礎から解説していきます。
+次の記事では、CSS flexbox の **アイテム要素（子要素）** について指定できるプロパティやその値について基礎から解説したので、ぜひチェックしてみてください。
+
+![もう怖くない！基礎から学ぶ CSS flexbox （アイテム要素編）](./flexbox-item.png)
+
+- 次の記事： [もう怖くない！基礎から学ぶ CSS flexbox （アイテム要素編）](../css-flex-box-item/)
 
 ## おすすめの記事
 
+1. [基礎から学ぶ CSS flexbox （アイテム要素編）](../css-flex-box-item/)
 1. [もう迷わない！役に立つ CSS 中央寄せ 5 選](../css-center-reference/)

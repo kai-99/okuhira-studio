@@ -33,21 +33,18 @@ const Tags = ({ pageContext, data }) => {
 					<div>
 						{edges.map(({ node }) => {
 							return (
-								<div
-									className="bg-white mb-8 md:mb-4 relative"
-									key={node.fields.slug}
-								>
+								<div className="bg-white mb-4 relative" key={node.fields.slug}>
 									<Link
-										className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300"
+										className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
 										to={node.fields.slug}
 									>
 										<GatsbyImage
 											image={getImage(node.frontmatter.thumbnail)}
 											alt={node.frontmatter.title}
-											className="w-full h-72 md:w-36 md:h-24 object-cover bg-purple-50"
+											className="w-auto h-auto md:w-40 md:h-24 object-cover focus:bg-purple-50"
 										/>
 										<div className="flex flex-col p-2 md:flex-1">
-											<h2 className="font-bold text-sm md:text-lg text-gray-800 mb-4">
+											<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4">
 												{node.frontmatter.title}
 											</h2>
 											<div className="md:flex md:justify-end font-bold">
@@ -74,7 +71,7 @@ const Tags = ({ pageContext, data }) => {
 					</div>
 				</section>
 			</main>
-			<aside className="hidden lg:block lg:w-1/4 lg:sticky lg:top-20">
+			<aside className="block lg:w-1/4 lg:sticky lg:top-20">
 				<SideBar />
 			</aside>
 		</Layout>
