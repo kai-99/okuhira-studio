@@ -1,5 +1,5 @@
 ---
-title: "もう怖くない！基礎から学ぶ CSS flexbox （アイテム要素編）"
+title: "もう悩まない！基礎から学ぶ CSS flexbox （アイテム要素編）"
 description: "CSS flexbox のアイテム要素について基礎から解説していきます。flex: grow; flex-shrink; などの複雑な比率で指定するプロパティについても図を用いて解説しました。CSS flexbox を理解することでWeb制作に役立ちます。"
 createdAt: "2021-06-06"
 updateAt: "2021-06-06"

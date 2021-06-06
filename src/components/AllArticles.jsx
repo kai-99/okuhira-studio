@@ -69,7 +69,7 @@ const PopularPostList = () => {
 									className="w-auto h-auto md:w-40 md:h-24 object-cover bg-purple-50"
 								/>
 								<div className="flex flex-col p-2 md:flex-1">
-									<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4">
+									<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4 md:mb-0 flex-1">
 										{node.frontmatter.title}
 									</h2>
 									<div className="flex justify-between items-center font-bold">

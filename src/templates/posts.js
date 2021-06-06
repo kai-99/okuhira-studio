@@ -7,6 +7,7 @@ import {
 	PencilAltIcon,
 	HashtagIcon,
 	HomeIcon,
+	ChevronRightIcon,
 } from "@heroicons/react/outline";
 import { ClipboardListIcon, ScissorsIcon } from "@heroicons/react/solid";
 import {
@@ -39,6 +40,51 @@ const Posts = ({ data }) => {
 					}}
 				/>
 			</div>
+		);
+	};
+	// パンクず
+	const Breadcrumb = () => {
+		return (
+			<ol
+				itemScope
+				itemType="https://schema.org/BreadcrumbList"
+				className="flex items-center gap-1 p-1 rounded text-gray-700 font-bold"
+			>
+				<li
+					itemProp="itemListElement"
+					itemScope
+					itemType="https://schema.org/ListItem"
+				>
+					<Link
+						itemProp="item"
+						to="/"
+						className="flex items-center gap-1 hover:underline"
+					>
+						<HomeIcon className="w-6 h-6 inline-block text-gray-700 align-bottom" />
+						<span>Home</span>
+						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
+					</Link>
+					<meta itemProp="position" content="1" />
+				</li>
+				<li
+					itemProp="itemListElement"
+					itemScope
+					itemType="https://schema.org/ListItem"
+				>
+					<Link
+						itemProp="item"
+						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
+						className="flex items-center gap-1 hover:underline"
+					>
+						<HashtagIcon className="w-4 h-4 inline-block text-blue-500" />
+						<span className="inline-block">
+							{data.markdownRemark.frontmatter.tags}
+						</span>
+						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-600" />
+					</Link>
+					<meta itemProp="position" content="2" />
+				</li>
+			</ol>
 		);
 	};
 	// SNS shareicon&link Component
@@ -88,6 +134,9 @@ const Posts = ({ data }) => {
 				ogImage={ogImage}
 			/>
 			<main className="lg:w-3/4 lg:mr-8">
+				<nav className="mb-2">
+					<Breadcrumb />
+				</nav>
 				<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
 					{data.markdownRemark.frontmatter.title}
 				</h1>
@@ -116,6 +165,9 @@ const Posts = ({ data }) => {
 						</time>
 					</div>
 				</div>
+				{/* <nav className="mb-2">
+					<Breadcrumb />
+				</nav> */}
 				<article className="bg-white rounded shadow-sm">
 					<GatsbyImage
 						image={image}

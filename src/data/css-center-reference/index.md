@@ -2,7 +2,7 @@
 title: "もう迷わない！役に立つ CSS 中央寄せ5選"
 description: "CSSでWebサイトを作成する際、対象の要素に対してCSSで中央寄せに配置したい場面は多々あるかと思います。その際に使えるテキストの中央寄せ、コンテントの中央寄せ、絶対値（position）での中央揃せ等、CSSの中央揃えについて解説します。Web制作でとても役に立つ知識です。"
 createdAt: "2021-05-27"
-updateAt: "2021-05-31"
+updateAt: "2021-06-06"
 thumbnail: "./hero.png"
 tags: ["CSS"]
 ---
@@ -146,7 +146,9 @@ Web サイト全体の横幅の指定する際によく使用します。
 今解説した flexbox について詳し知りたい方は以下の記事をチェックしてみてください。  
 使えるようになるととても便利です。flexbox の基礎から徹底的に解説しています。
 
-[30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](../css-flex-box-reference/)
+![30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](./flexbox-container.png)
+
+- 関連記事：[30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](../css-flex-box-reference/)
 
 ---
 
