@@ -70,9 +70,9 @@ const Layout = (props) => {
 		<div className="bg-gray-100">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto">
-				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
-					{props.children}
-				</div>
+				{/* <div className="container px-2 py-8 mt-12 mx-auto lg:flex"> */}
+				{props.children}
+				{/* </div> */}
 			</div>
 			<Footer />
 		</div>

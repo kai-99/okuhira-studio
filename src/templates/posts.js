@@ -8,8 +8,14 @@ import {
 	HashtagIcon,
 	HomeIcon,
 	ChevronRightIcon,
+	DocumentIcon,
+	FolderOpenIcon,
 } from "@heroicons/react/outline";
-import { ClipboardListIcon, ScissorsIcon } from "@heroicons/react/solid";
+import {
+	ClipboardListIcon,
+	ScissorsIcon,
+	LightningBoltIcon,
+} from "@heroicons/react/solid";
 import {
 	FacebookShareButton,
 	TwitterShareButton,
@@ -24,6 +30,7 @@ import kebabCase from "lodash/kebabCase";
 // Custom Component
 import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
+import AllArticles from "../components/AllArticles";
 
 const Posts = ({ data }) => {
 	// GatsbyImage Component
@@ -42,7 +49,7 @@ const Posts = ({ data }) => {
 			</div>
 		);
 	};
-	// パンクず
+	// パンくず
 	const Breadcrumb = () => {
 		return (
 			<ol
@@ -60,7 +67,7 @@ const Posts = ({ data }) => {
 						to="/"
 						className="flex items-center gap-1 hover:underline"
 					>
-						<HomeIcon className="w-6 h-6 inline-block text-gray-700 align-bottom" />
+						<HomeIcon className="w-4 h-4 inline-block text-gray-700 align-bottom" />
 						<span itemProp="name">Home</span>
 						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
 					</Link>
@@ -76,13 +83,30 @@ const Posts = ({ data }) => {
 						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
 						className="flex items-center gap-1 hover:underline"
 					>
-						<HashtagIcon className="w-4 h-4 inline-block text-blue-500" />
+						<FolderOpenIcon className="w-4 h-4 inline-block" />
 						<span itemProp="name" className="inline-block">
 							{data.markdownRemark.frontmatter.tags}
 						</span>
 						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-600" />
 					</Link>
 					<meta itemProp="position" content="2" />
+				</li>
+				<li
+					itemProp="itemListElement"
+					itemScope
+					itemType="https://schema.org/ListItem"
+				>
+					<Link
+						itemProp="item"
+						to={data.markdownRemark.fields.slug}
+						className="flex items-center gap-1 hover:underline"
+					>
+						<DocumentIcon className="w-4 h-4 inline-block text-purple-500" />
+						<span itemProp="name" className="hidden md:block">
+							{data.markdownRemark.frontmatter.title}
+						</span>
+					</Link>
+					<meta itemProp="position" content="3" />
 				</li>
 			</ol>
 		);
@@ -133,73 +157,99 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 				ogImage={ogImage}
 			/>
-			<main className="lg:w-3/4 lg:mr-8">
-				<nav className="mb-2">
-					<Breadcrumb />
-				</nav>
-				<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
-					{data.markdownRemark.frontmatter.title}
-				</h1>
-				<div className="flex items-center justify-between my-2 font-bold">
-					<Link
-						className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full"
-						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
-					>
-						<span className="inline-block">
-							<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
-							{data.markdownRemark.frontmatter.tags}
-						</span>
-					</Link>
-					<div className="flex">
-						<time className="text-gray-600 block text-right text-xs lg:text-sm mr-4">
-							<span className="mr-1">
-								<PencilAltIcon className="inline-block w-4 h-4" />
+			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
+				<main className="lg:w-3/4 lg:mr-8">
+					<nav className="mb-2">
+						<Breadcrumb />
+					</nav>
+					<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
+						{data.markdownRemark.frontmatter.title}
+					</h1>
+					<div className="flex items-center justify-between my-2 font-bold">
+						<Link
+							className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full"
+							to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
+						>
+							<span className="inline-block">
+								<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
+								{data.markdownRemark.frontmatter.tags}
 							</span>
-							{data.markdownRemark.frontmatter.createdAt}
-						</time>
-						<time className="text-gray-600 block text-right text-xs lg:text-sm">
-							<span className="mr-1">
-								<RefreshIcon className="inline-block w-4 h-4" />
-							</span>
-							{data.markdownRemark.frontmatter.updateAt}
-						</time>
-					</div>
-				</div>
-				{/* <nav className="mb-2">
-					<Breadcrumb />
-				</nav> */}
-				<article className="bg-white rounded shadow-sm">
-					<GatsbyImage
-						image={image}
-						alt={data.markdownRemark.frontmatter.title}
-						className="md:mb-4 bg-purple-50"
-					/>
-					{/* 目次 SP */}
-					<div className="lg:hidden bg-white mt-2 mx-2 mb-6 shadow-md">
-						<div className="bg-gray-700 text-center py-3">
-							<p className="font-bold text-gray-100">
-								<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
-								もくじ
-							</p>
+						</Link>
+						<div className="flex">
+							<time className="text-gray-600 block text-right text-xs lg:text-sm mr-4">
+								<span className="mr-1">
+									<PencilAltIcon className="inline-block w-4 h-4" />
+								</span>
+								{data.markdownRemark.frontmatter.createdAt}
+							</time>
+							<time className="text-gray-600 block text-right text-xs lg:text-sm">
+								<span className="mr-1">
+									<RefreshIcon className="inline-block w-4 h-4" />
+								</span>
+								{data.markdownRemark.frontmatter.updateAt}
+							</time>
 						</div>
-						<nav className="p-4">
-							<Toc data={data.markdownRemark.tableOfContents} />
-						</nav>
 					</div>
-					<div
-						className="markdown"
-						dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-					/>
-					<div className="relative pr-4 md:pr-8">
-						<hr className="my-10 border-t-4 border-dotted border-gray-400 block" />
-						<ScissorsIcon
-							className="absolute z-10 w-6 h-6 inline-block text-gray-700 bg-white"
-							style={{ top: `-10px`, left: `0` }}
+					<article className="bg-white rounded shadow-sm">
+						<GatsbyImage
+							image={image}
+							alt={data.markdownRemark.frontmatter.title}
+							className="md:mb-4 bg-purple-50"
 						/>
+						{/* 目次 SP */}
+						<div className="lg:hidden bg-white mt-2 mx-2 mb-6 shadow-md">
+							<div className="bg-gray-700 text-center py-3">
+								<p className="font-bold text-gray-100">
+									<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
+									もくじ
+								</p>
+							</div>
+							<nav className="p-4">
+								<Toc data={data.markdownRemark.tableOfContents} />
+							</nav>
+						</div>
+						<div
+							className="markdown"
+							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+						/>
+						<div className="relative pr-4 md:pr-8">
+							<hr className="my-10 border-t-4 border-dotted border-gray-400 block" />
+							<ScissorsIcon
+								className="absolute z-10 w-6 h-6 inline-block text-gray-700 bg-white"
+								style={{ top: `-10px`, left: `0` }}
+							/>
+						</div>
+						<SnsShare />
+					</article>
+					{/* 目次 PC */}
+				</main>
+				<aside className="hidden lg:block lg:w-1/4">
+					<div className="sticky top-20">
+						<div className="bg-white border border-gray-100 mb-8 rounded-md shadow-sm">
+							<div className="bg-gray-700 text-center py-8 rounded-t-md">
+								<p className="font-bold text-gray-100">
+									<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
+									もくじ
+								</p>
+							</div>
+							<nav className="p-4">
+								<Toc data={data.markdownRemark.tableOfContents} />
+							</nav>
+						</div>
+						<SideBar />
 					</div>
-					<SnsShare />
-				</article>
-				<div className="mt-8 text-center">
+				</aside>
+			</div>
+			{/* 新着記事 */}
+			<div className="lg:w-3/4 lg:mr-8 px-2 pb-10">
+				<div className="mb-8">
+					<h3 className="text-gray-700 text-lg font-bold italic px-2 mb-2">
+						新着記事
+						<LightningBoltIcon className="inline-block w-6 h-6 ml-1 align-text-bottom text-yellow-400" />
+					</h3>
+					<AllArticles />
+				</div>
+				<div className="text-center">
 					<Link
 						className="text-lg font-bold border-2 border-gray-100 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow"
 						to="/"
@@ -208,24 +258,7 @@ const Posts = ({ data }) => {
 						トップページにいく
 					</Link>
 				</div>
-			</main>
-			{/* 目次 PC */}
-			<aside className="hidden lg:block lg:w-1/4">
-				<div className="sticky top-20">
-					<div className="bg-white border border-gray-100 mb-8 rounded-md shadow-sm">
-						<div className="bg-gray-700 text-center py-8 rounded-t-md">
-							<p className="font-bold text-gray-100">
-								<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
-								もくじ
-							</p>
-						</div>
-						<nav className="p-4">
-							<Toc data={data.markdownRemark.tableOfContents} />
-						</nav>
-					</div>
-					<SideBar />
-				</div>
-			</aside>
+			</div>
 		</Layout>
 	);
 };

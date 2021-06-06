@@ -1,5 +1,4 @@
 import React from "react";
-import { CheckIcon } from "@heroicons/react/solid";
 import {
 	RefreshIcon,
 	PencilAltIcon,
@@ -8,7 +7,7 @@ import {
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
-const PopularPostList = () => {
+const AllArticles = () => {
 	const data = useStaticQuery(
 		graphql`
 			{
@@ -42,68 +41,54 @@ const PopularPostList = () => {
 	);
 
 	return (
-		<section>
-			<div>
-				<p className="pl-2 font-bold text-gray-600 text-sm italic">
-					記事一覧
-					<CheckIcon className="h-5 w-5 ml-1 text-purple-400 inline-block align-bottom" />
-				</p>
-				<h2 className="text-gray800 text-2xl font-bold italic pt-0 pb-2 px-2 mb-2">
-					All articles
-				</h2>
-			</div>
-			<div>
-				{data.allMarkdownRemark.nodes.map((node) => {
-					return (
-						<div
-							className="bg-white mb-4 relative"
-							key={node.frontmatter.title}
+		<div>
+			{data.allMarkdownRemark.nodes.map((node) => {
+				return (
+					<div className="bg-white mb-4 relative" key={node.frontmatter.title}>
+						<Link
+							className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
+							to={node.fields.slug}
 						>
-							<Link
-								className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
-								to={node.fields.slug}
-							>
-								<GatsbyImage
-									image={getImage(node.frontmatter.thumbnail)}
-									alt={node.frontmatter.title}
-									className="w-auto h-auto md:w-40 md:h-24 object-cover bg-purple-50"
-								/>
-								<div className="flex flex-col p-2 md:flex-1">
-									<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4 md:mb-0 flex-1">
-										{node.frontmatter.title}
-									</h2>
-									<div className="flex justify-between items-center font-bold">
-										<div className="border-2 bg-white inline-block px-2 py-1 text-sm text-gray-700 rounded-full">
-											<span className="inline-block">
-												<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
-												{node.frontmatter.tags}
+							<GatsbyImage
+								image={getImage(node.frontmatter.thumbnail)}
+								alt={node.frontmatter.title}
+								className="w-auto h-auto md:w-40 md:h-24 object-cover bg-purple-50"
+							/>
+							<div className="flex flex-col p-2 md:flex-1">
+								<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4 md:mb-0 flex-1">
+									{node.frontmatter.title}
+								</h2>
+								<div className="flex justify-between items-center font-bold">
+									<div className="border-2 bg-white inline-block px-2 py-1 text-sm text-gray-700 rounded-full">
+										<span className="inline-block">
+											<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
+											{node.frontmatter.tags}
+										</span>
+									</div>
+									<div className="md:flex md:justify-end">
+										<time className="text-gray-600 block text-right text-xs md:mr-4">
+											<span className="md:hidden">投稿日</span>{" "}
+											<span className="mr-1">
+												<PencilAltIcon className="inline-block w-3 h-3" />
 											</span>
-										</div>
-										<div className="md:flex md:justify-end">
-											<time className="text-gray-600 block text-right text-xs md:mr-4">
-												<span className="md:hidden">投稿日</span>{" "}
-												<span className="mr-1">
-													<PencilAltIcon className="inline-block w-3 h-3" />
-												</span>
-												{node.frontmatter.createdAt}
-											</time>
-											<time className="text-gray-600 block text-right text-xs">
-												<span className="md:hidden">更新日</span>{" "}
-												<span className="mr-1">
-													<RefreshIcon className="inline-block w-3 h-3" />
-												</span>
-												{node.frontmatter.updateAt}
-											</time>
-										</div>
+											{node.frontmatter.createdAt}
+										</time>
+										<time className="text-gray-600 block text-right text-xs">
+											<span className="md:hidden">更新日</span>{" "}
+											<span className="mr-1">
+												<RefreshIcon className="inline-block w-3 h-3" />
+											</span>
+											{node.frontmatter.updateAt}
+										</time>
 									</div>
 								</div>
-							</Link>
-						</div>
-					);
-				})}
-			</div>
-		</section>
+							</div>
+						</Link>
+					</div>
+				);
+			})}
+		</div>
 	);
 };
 
-export default PopularPostList;
+export default AllArticles;
