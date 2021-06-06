@@ -61,7 +61,7 @@ const Posts = ({ data }) => {
 						className="flex items-center gap-1 hover:underline"
 					>
 						<HomeIcon className="w-6 h-6 inline-block text-gray-700 align-bottom" />
-						<span>Home</span>
+						<span itemProp="name">Home</span>
 						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
 					</Link>
 					<meta itemProp="position" content="1" />
@@ -77,7 +77,7 @@ const Posts = ({ data }) => {
 						className="flex items-center gap-1 hover:underline"
 					>
 						<HashtagIcon className="w-4 h-4 inline-block text-blue-500" />
-						<span className="inline-block">
+						<span itemProp="name" className="inline-block">
 							{data.markdownRemark.frontmatter.tags}
 						</span>
 						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-600" />
