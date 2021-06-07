@@ -7,12 +7,15 @@ import {
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
-const AllArticles = () => {
+const NewArticles = () => {
+	// 記事の並び順は投稿日を基準
+	// 新着記事は最新5件表示
 	const data = useStaticQuery(
 		graphql`
 			{
 				allMarkdownRemark(
 					sort: { order: DESC, fields: [frontmatter___createdAt] }
+					limit: 5
 				) {
 					nodes {
 						html
@@ -41,7 +44,7 @@ const AllArticles = () => {
 	);
 
 	return (
-		<div className="article-wrapper">
+		<div>
 			{data.allMarkdownRemark.nodes.map((node) => {
 				return (
 					<div className="bg-white mb-4 relative" key={node.frontmatter.title}>
@@ -91,4 +94,4 @@ const AllArticles = () => {
 	);
 };
 
-export default AllArticles;
+export default NewArticles;

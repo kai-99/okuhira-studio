@@ -27,11 +27,11 @@ const Tags = ({ pageContext, data }) => {
 					<section>
 						<div>
 							<h2 className="text-gray800 md:text-xl font-bold mb-4">
-								<HashtagIcon className="inline-block w-4 h-4 text-blue-500 align-text-bottom" />
+								<HashtagIcon className="inline-block w-4 h-4 md:w-6 md:h-6 text-blue-500 align-text-bottom" />
 								{tagHeader}
 							</h2>
 						</div>
-						<div>
+						<div className="article-wrapper">
 							{edges.map(({ node }) => {
 								return (
 									<div

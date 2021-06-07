@@ -148,7 +148,7 @@ Web サイト全体の横幅の指定する際によく使用します。
 
 ![30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](./flexbox-container.png)
 
-- 関連記事：[30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](../css-flex-box-reference/)
+- 関連記事：[30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](../css-flex-box-container/)
 
 ---
 
@@ -214,4 +214,4 @@ CSS で中央寄せする方法は今回紹介した方法以外にもありま�
 
 ## おすすめの記事
 
-1. [30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](../css-flex-box-reference/)
+1. [30 枚以上の図で解説！基礎から学ぶ CSS flexbox （コンテナ要素編）](../css-flex-box-container/)

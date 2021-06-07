@@ -13,7 +13,7 @@ import {
 } from "@heroicons/react/outline";
 import {
 	ClipboardListIcon,
-	ScissorsIcon,
+	// ScissorsIcon,
 	LightningBoltIcon,
 } from "@heroicons/react/solid";
 import {
@@ -30,7 +30,7 @@ import kebabCase from "lodash/kebabCase";
 // Custom Component
 import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
-import AllArticles from "../components/AllArticles";
+import NewArticles from "../components/NewArticles";
 
 const Posts = ({ data }) => {
 	// GatsbyImage Component
@@ -55,7 +55,7 @@ const Posts = ({ data }) => {
 			<ol
 				itemScope
 				itemType="https://schema.org/BreadcrumbList"
-				className="flex items-center gap-1 p-1 rounded text-gray-700 font-bold"
+				className="flex items-center gap-1 p-1 rounded text-gray-700 font-bold w-full"
 			>
 				<li
 					itemProp="itemListElement"
@@ -87,7 +87,7 @@ const Posts = ({ data }) => {
 						<span itemProp="name" className="inline-block">
 							{data.markdownRemark.frontmatter.tags}
 						</span>
-						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-600" />
+						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
 					</Link>
 					<meta itemProp="position" content="2" />
 				</li>
@@ -95,6 +95,7 @@ const Posts = ({ data }) => {
 					itemProp="itemListElement"
 					itemScope
 					itemType="https://schema.org/ListItem"
+					className="overflow-hidden overflow-ellipsis whitespace-nowrap"
 				>
 					<Link
 						itemProp="item"
@@ -102,9 +103,7 @@ const Posts = ({ data }) => {
 						className="flex items-center gap-1 hover:underline"
 					>
 						<DocumentIcon className="w-4 h-4 inline-block text-purple-500" />
-						<span itemProp="name" className="hidden md:block">
-							{data.markdownRemark.frontmatter.title}
-						</span>
+						<span itemProp="name">{data.markdownRemark.frontmatter.title}</span>
 					</Link>
 					<meta itemProp="position" content="3" />
 				</li>
@@ -114,8 +113,10 @@ const Posts = ({ data }) => {
 	// SNS shareicon&link Component
 	const SnsShare = () => {
 		return (
-			<div className="pb-10 px-8">
-				<p className="text-center font-bold text-lg mb-2 italic">SHARE</p>
+			<div className="py-10 px-8 bg-purple-100 border-dashed border-purple-400 border">
+				<p className="text-center font-bold text-lg mb-2 text-gray-800">
+					SHARE
+				</p>
 				<div className="flex items-center justify-center">
 					<TwitterShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
@@ -159,10 +160,10 @@ const Posts = ({ data }) => {
 			/>
 			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
 				<main className="lg:w-3/4 lg:mr-8">
-					<nav className="mb-2">
+					<nav>
 						<Breadcrumb />
 					</nav>
-					<h1 className="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
+					<h1 className="font-bold text-center md:text-xl px-1 py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white shadow rounded">
 						{data.markdownRemark.frontmatter.title}
 					</h1>
 					<div className="flex items-center justify-between my-2 font-bold">
@@ -190,11 +191,11 @@ const Posts = ({ data }) => {
 							</time>
 						</div>
 					</div>
-					<article className="bg-white rounded shadow-sm">
+					<article className="bg-white rounded shadow-sm article-wrapper">
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
-							className="md:mb-4 bg-purple-50"
+							className="bg-purple-50"
 						/>
 						{/* 目次 SP */}
 						<div className="lg:hidden bg-white mt-2 mx-2 mb-6 shadow-md">
@@ -212,13 +213,9 @@ const Posts = ({ data }) => {
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
-						<div className="relative pr-4 md:pr-8">
-							<hr className="my-10 border-t-4 border-dotted border-gray-400 block" />
-							<ScissorsIcon
-								className="absolute z-10 w-6 h-6 inline-block text-gray-700 bg-white"
-								style={{ top: `-10px`, left: `0` }}
-							/>
-						</div>
+						{/* <nav>
+							<Breadcrumb />
+						</nav> */}
 						<SnsShare />
 					</article>
 					{/* 目次 PC */}
@@ -242,12 +239,12 @@ const Posts = ({ data }) => {
 			</div>
 			{/* 新着記事 */}
 			<div className="lg:w-3/4 lg:mr-8 px-2 pb-10">
-				<div className="mb-8">
+				<div className="my-8">
 					<h3 className="text-gray-700 text-lg font-bold italic px-2 mb-2">
 						新着記事
 						<LightningBoltIcon className="inline-block w-6 h-6 ml-1 align-text-bottom text-yellow-400" />
 					</h3>
-					<AllArticles />
+					<NewArticles />
 				</div>
 				<div className="text-center">
 					<Link

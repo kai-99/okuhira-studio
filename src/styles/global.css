@@ -8,6 +8,30 @@
 	}
 }
 @layer components {
+	/* レイアウト */
+	.global-wrapper {
+		animation: fadein 0.8s forwards;
+	}
+	@keyframes fadein {
+		0% {
+			opacity: 0.8;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	/* 記事 */
+	.article-wrapper {
+		animation: translate 0.8s forwards;
+	}
+	@keyframes translate {
+		0% {
+			transform: translateY(24px);
+		}
+		100% {
+			transform: translateY(0px);
+		}
+	}
 	.markdown {
 		@apply text-gray-900 p-4 md:p-8;
 	}
