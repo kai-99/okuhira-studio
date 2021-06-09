@@ -6,15 +6,16 @@
 	html {
 		scroll-behavior: smooth;
 	}
-}
-@layer components {
+	div.gatsby-resp-iframe-wrapper {
+		@apply mb-4 shadow-md border-2 border-gray-400 rounded-lg;
+	}
 	/* レイアウト */
 	.global-wrapper {
 		animation: fadein 0.8s forwards;
 	}
 	@keyframes fadein {
 		0% {
-			opacity: 0.8;
+			opacity: 0.4;
 		}
 		100% {
 			opacity: 1;
@@ -32,8 +33,18 @@
 			transform: translateY(0px);
 		}
 	}
+}
+
+@layer components {
 	.markdown {
 		@apply text-gray-900 p-4 md:p-8;
+	}
+
+	.markdown strong {
+		background-image: linear-gradient(
+			rgba(0, 0, 0, 0) 70%,
+			rgb(253, 230, 138) 70%
+		);
 	}
 
 	.markdown > h2 {
@@ -60,8 +71,11 @@
 	.markdown > ul {
 		@apply my-4 list-inside;
 	}
+	.markdown > ul li {
+		@apply mb-4 leading-6;
+	}
 	.markdown > ul li::before {
-		@apply inline-block w-2 h-2 bg-purple-400 mr-2 rounded-full;
+		@apply inline-block w-2 h-2 bg-gray-700 mr-2 rounded-full;
 		content: "";
 	}
 
@@ -75,7 +89,7 @@
 	}
 
 	.markdown > ol li::before {
-		@apply bg-purple-400 w-5 h-5 mr-2 rounded-full absolute left-0 inline-flex items-center justify-center p-4 text-gray-100 font-bold italic;
+		@apply bg-purple-50 w-5 h-5 mr-2 rounded-full absolute left-0 inline-flex items-center justify-center p-4 text-gray-700 font-bold border border-purple-200;
 		counter-increment: number;
 		content: counter(number);
 	}
