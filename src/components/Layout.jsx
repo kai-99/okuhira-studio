@@ -24,43 +24,53 @@ const Layout = (props) => {
 	// Header Componet
 	const Header = () => {
 		return (
-			<header className="w-full border-b bg-white top-0 h-12 z-50 fixed">
-				<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
-					<Link to="/">
-						<h1 className="font-bold italic text-xl ls:text-2xl text-gray-900 site-title flex items-center h-12">
-							<StaticImage
-								src="../images/icon.jpg"
-								alt="LazuliCoder"
-								className="inline-block w-12 h-12"
-								placeholder="blurred"
+			<>
+				<header className="w-full border-b bg-white top-0 h-12 z-50 fixed">
+					<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
+						<Link to="/">
+							<h1>
+								<StaticImage
+									src="../images/logo.png"
+									alt="LazuliCreative"
+									className="inline-block"
+									placeholder="tracedSVG"
+								/>
+								{/* <span className="ml-2 z-0">{data.site.siteMetadata.title}</span> */}
+							</h1>
+						</Link>
+						<a
+							href={data.site.siteMetadata.social.twitter.id}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="bg-white rounded-full h-10 w-10 flex items-center justify-center"
+							aria-label="Lazuli Creative Twitterアカウント"
+						>
+							<FontAwesomeIcon
+								className="text-blue-400 text-2xl"
+								icon={faTwitter}
 							/>
-							<span className="ml-2 z-0">{data.site.siteMetadata.title}</span>
-						</h1>
-					</Link>
-					<a
-						href={data.site.siteMetadata.social.twitter.id}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="bg-white rounded-full h-10 w-10 flex items-center justify-center"
-						aria-label="Lazuli Coder Twitterアカウント"
-					>
-						<FontAwesomeIcon
-							className="text-blue-400 text-2xl"
-							icon={faTwitter}
-						/>
-					</a>
-				</div>
-			</header>
+						</a>
+					</div>
+				</header>
+			</>
 		);
 	};
 	// Footer Component
 	const Footer = () => {
 		return (
-			<footer className="w-full">
-				<div className="py-4 text-center bg-white">
-					<small className="text-gray-800 font-extrabold">
-						&copy;{new Date().getFullYear()} {data.site.siteMetadata.title}
-					</small>
+			<footer className="w-full h-12">
+				<div className="text-center bg-white flex items-center justify-center px-2">
+					<time className="text-gray-700 italic block mr-2">
+						&copy;{new Date().getFullYear()}
+					</time>
+					<Link to="/">
+						<StaticImage
+							src="../images/logo.png"
+							alt="LazuliCreative"
+							className="inline-block"
+							placeholder="tracedSVG"
+						/>
+					</Link>
 				</div>
 			</footer>
 		);

@@ -69,14 +69,20 @@ const NewArticles = () => {
 										</span>
 									</div>
 									<div className="md:flex md:justify-end">
-										<time className="text-gray-600 block text-right text-xs md:mr-4">
+										<time
+											itemProp="datepublished"
+											className="text-gray-600 block text-right text-xs md:mr-4"
+										>
 											<span className="md:hidden">投稿日</span>{" "}
 											<span className="mr-1">
 												<PencilAltIcon className="inline-block w-3 h-3" />
 											</span>
 											{node.frontmatter.createdAt}
 										</time>
-										<time className="text-gray-600 block text-right text-xs">
+										<time
+											itemProp="modified"
+											className="text-gray-600 block text-right text-xs"
+										>
 											<span className="md:hidden">更新日</span>{" "}
 											<span className="mr-1">
 												<RefreshIcon className="inline-block w-3 h-3" />

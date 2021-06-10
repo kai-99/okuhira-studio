@@ -120,7 +120,7 @@ const Posts = ({ data }) => {
 				<div className="flex items-center justify-center">
 					<TwitterShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
-						title={`${data.markdownRemark.frontmatter.title} | @lap_lap_`}
+						title={`${data.markdownRemark.frontmatter.title} @lazuli_creative より`}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<TwitterIcon round size={48} />
