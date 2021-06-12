@@ -58,7 +58,7 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `Lazuli Creative`,
-				short_name: `Lazuli`,
+				short_name: `Lazuli Creative`,
 				start_url: `/`,
 				background_color: `#ffffff`,
 				theme_color: `#ffffff`,
@@ -69,21 +69,26 @@ module.exports = {
 				},
 			},
 		},
-		`gatsby-plugin-offline`,
+		{
+			resolve: "gatsby-plugin-offline",
+			options: {
+				workboxConfig: {
+					runtimeCaching: [
+						{
+							urlPattern: /^https?:.*\/page-data\/.*\.json/,
+							handler: "NetworkFirst",
+						},
+					],
+				},
+			},
+		},
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
 				plugins: [
 					`gatsby-remark-responsive-iframe`,
 					`gatsby-remark-code-titles`,
-					{
-						resolve: `gatsby-remark-prismjs`,
-						options: {
-							// aliases: {},
-							showLineNumbers: true,
-							noInlineHighlight: false,
-						},
-					},
+					`gatsby-remark-prismjs`,
 					`gatsby-remark-relative-images`,
 					{
 						resolve: `gatsby-remark-images`,
