@@ -75,12 +75,12 @@ module.exports = {
 			options: {
 				workboxConfig: {
 					globPatterns: ["**/icon-path*"],
-					runtimeCaching: [
-						{
-							urlPattern: /^https?:.*\/page-data\/.*\.json/,
-							handler: "NetworkFirst",
-						},
-					],
+					// runtimeCaching: [
+					// 	{
+					// 		urlPattern: /^https?:.*\/page-data\/.*\.json/,
+					// 		handler: "NetworkFirst",
+					// 	},
+					// ],
 				},
 			},
 		},
