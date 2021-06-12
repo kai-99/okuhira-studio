@@ -64,26 +64,27 @@ module.exports = {
 				theme_color: `#ffffff`,
 				display: `minimal-ui`,
 				icon: `src/images/icon.jpg`, // This path is relative to the root of the site.
-				cache_busting_mode: "none",
+				// cache_busting_mode: "none",
 				icon_options: {
 					purpose: `maskable`,
 				},
 			},
 		},
-		{
-			resolve: "gatsby-plugin-offline",
-			options: {
-				workboxConfig: {
-					globPatterns: ["**/icon-path*"],
-					// runtimeCaching: [
-					// 	{
-					// 		urlPattern: /^https?:.*\/page-data\/.*\.json/,
-					// 		handler: "NetworkFirst",
-					// 	},
-					// ],
-				},
-			},
-		},
+		"gatsby-plugin-offline",
+		// {
+		// 	resolve: "gatsby-plugin-offline",
+		// 	options: {
+		// 		workboxConfig: {
+		// 			globPatterns: ["**/icon-path*"],
+		// 			runtimeCaching: [
+		// 				{
+		// 					urlPattern: /^https?:.*\/page-data\/.*\.json/,
+		// 					handler: "NetworkFirst",
+		// 				},
+		// 			],
+		// 		},
+		// 	},
+		// },
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
