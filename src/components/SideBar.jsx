@@ -26,7 +26,7 @@ const SideBar = () => {
 		<div className="my-8">
 			<div className="mb-4">
 				<h3 className="pb-2 border-b border-purple-100">
-					<HashtagIcon className="h-4 w-4 inline-block text-blue-400 mr-2" />
+					<HashtagIcon className="h-4 w-4 inline-block text-blue-500 mr-1" />
 					<span className="text-sm font-bold text-gray-800">ハッシュタグ</span>
 				</h3>
 			</div>
@@ -38,10 +38,10 @@ const SideBar = () => {
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
 								className="flex bg-white items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold text-gray-700 hover:shadow-xl"
 							>
-								<span className="px-4">
-									<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
-									{tag.fieldValue}
-								</span>
+								<p className="px-4">
+									<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
+									<span className="inline-block text-sm">{tag.fieldValue}</span>
+								</p>
 								<span className="font-bold w-10 h-10 bg-gray-600 text-gray-100 flex items-center justify-center p-2 rounded-full">
 									{tag.totalCount}
 								</span>

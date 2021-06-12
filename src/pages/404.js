@@ -15,7 +15,7 @@ const NotFoundPage = () => {
 			<Seo pagetitle="お探しのページが見つかりません" />
 			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
 				<main className="lg:w-3/4 lg:mr-8">
-					<h1 class="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded">
+					<h1 class="font-bold text-center md:text-xl py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white rounded tracking-wide">
 						お探しのページが見つかりません
 					</h1>
 					<p className="text-center my-2">
@@ -46,8 +46,10 @@ const NotFoundPage = () => {
 						<NewArticles />
 					</div>
 				</main>
-				<aside className="block mt-8 lg:mt-0 lg:w-1/4 lg:sticky lg:top-20">
-					<SideBar />
+				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
+					<div className="lg:sticky lg:top-20">
+						<SideBar />
+					</div>
 				</aside>
 			</div>
 		</Layout>

@@ -41,7 +41,7 @@ const AllArticles = () => {
 	);
 
 	return (
-		<div className="article-wrapper">
+		<div>
 			{data.allMarkdownRemark.nodes.map((node) => {
 				return (
 					<div className="bg-white mb-4 relative" key={node.frontmatter.title}>

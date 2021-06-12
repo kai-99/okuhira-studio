@@ -119,7 +119,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 
 それでは次の章から解説していきます。
 
-## `flex-direction`
+## flex-direction
 
 `flex-direction` は、指定する値によってアイテム要素の方向を指定できたり、アイテム要素の並び順を反転させたりする事ができるプロパティです。
 
@@ -212,7 +212,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 
 この使い方は Web サイトのデザインにもよりますが、色々な場面で使えるので頭に入れておくとよいでしょう。
 
-## `flex-wrap`
+## flex-wrap
 
 `flex-wrap` は、アイテム要素を 1 行で配置するか、またはアイテム要素を途中で折り返し複数行で表示するかを指定できるプロパティです。
 
@@ -383,7 +383,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 
 ![flex-wrap: wrap-reverse;](./flexbox-3-11.jpg)
 
-## `flex-flow`
+## flex-flow
 
 こちらのプロパティは先程解説した `flex-direction` と `flex-wrap` を一括で指定することができる、ショートハンドプロパティです。
 
@@ -405,7 +405,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 
 こちらは初めから使おうとせず、`flex-direction` と `flex-wrap` に慣れてから使っていくのがおすすめです。
 
-## `justify-content`
+## justify-content
 
 `justify-content` は、アイテム要素の水平ラインの配置や、各アイテム要素の間隔を指定できます。
 
@@ -577,7 +577,7 @@ HTML コードは変更ありませんので、引き続きこれまでと同じ
 
 ![justify-content: space-evenly;](./justify-6.jpg)
 
-## `align-items`
+## align-items
 
 `align-items` は、アイテム要素の垂直ラインの配置を指定できます。
 
@@ -756,7 +756,7 @@ CSS のコードも、高さの指定を取るなど少し変更した箇所が�
 
 ![align-items: baseline;](./align-6.jpg)
 
-## `align-content`
+## align-content
 
 `align-content` は、アイテム要素の垂直ラインの配置や、各アイテム要素の間隔を指定できます。
 

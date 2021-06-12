@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
 	RefreshIcon,
 	PencilAltIcon,
-	HashtagIcon,
 	HomeIcon,
 	ChevronRightIcon,
 	DocumentIcon,
@@ -27,6 +26,7 @@ import kebabCase from "lodash/kebabCase";
 import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
 import NewArticles from "../components/NewArticles";
+import Hashtag from "../components/Hashtag";
 
 const Posts = ({ data }) => {
 	// GatsbyImage Component
@@ -51,7 +51,7 @@ const Posts = ({ data }) => {
 			<ol
 				itemScope
 				itemType="https://schema.org/BreadcrumbList"
-				className="flex items-center gap-1 p-1 rounded text-gray-700 font-bold w-full"
+				className="flex items-center gap-1 p-1 text-gray-600 w-full text-sm font-bold"
 			>
 				<li
 					itemProp="itemListElement"
@@ -154,26 +154,20 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 				ogImage={ogImage}
 			/>
-			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
+			<div className="container px-2 pb-8 lg:pt-8 mt-12 mx-auto lg:flex">
 				<main className="lg:w-3/4 lg:mr-8">
 					<nav>
 						<Breadcrumb />
 					</nav>
-					<h1 className="font-bold text-center md:text-xl px-1 py-6 md:py-8 border-l-4 border-purple-400 text-gray-900 bg-white shadow rounded">
+					<h1 className="font-bold text-center md:text-xl px-2 py-4 md:py-8 border-l-4 border-purple-400 text-gray-800 bg-white shadow rounded tracking-wide fast-fadein-animation">
 						{data.markdownRemark.frontmatter.title}
 					</h1>
 					<div className="flex items-center justify-between my-2 font-bold">
-						<Link
-							className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full"
-							to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
-						>
-							<span className="inline-block">
-								<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
-								{data.markdownRemark.frontmatter.tags}
-							</span>
-						</Link>
+						<div className="slow-fadein-animation">
+							<Hashtag />
+						</div>
 						<div className="flex">
-							<time className="text-gray-600 block text-right text-xs lg:text-sm mr-4">
+							<time className="text-gray-400 block text-right text-xs lg:text-sm mr-4">
 								<span className="mr-1">
 									<PencilAltIcon className="inline-block w-4 h-4" />
 								</span>
@@ -187,7 +181,7 @@ const Posts = ({ data }) => {
 							</time>
 						</div>
 					</div>
-					<article className="bg-white rounded shadow-sm article-wrapper">
+					<article className="bg-white rounded shadow-sm slow-fadein-animation">
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}

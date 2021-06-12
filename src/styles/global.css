@@ -7,7 +7,7 @@
 		scroll-behavior: smooth;
 	}
 	/* レイアウト */
-	.global-wrapper {
+	.opacity-animation {
 		animation: fadein 0.8s forwards;
 	}
 	@keyframes fadein {
@@ -19,12 +19,15 @@
 		}
 	}
 	/* 記事 */
-	.article-wrapper {
-		animation: translate 0.8s forwards;
+	.fast-fadein-animation {
+		animation: translate 0.5s forwards;
+	}
+	.slow-fadein-animation {
+		animation: translate 1.25s forwards;
 	}
 	@keyframes translate {
 		0% {
-			transform: translateY(24px);
+			transform: translateY(32px);
 		}
 		100% {
 			transform: translateY(0px);
@@ -35,11 +38,6 @@
 @layer components {
 	.markdown {
 		@apply text-gray-900 p-4 md:p-8;
-	}
-
-	/* iframe */
-	.markdown > .gatsby-resp-iframe-wrapper {
-		@apply mb-4 shadow-md border-2 border-gray-400 rounded-lg;
 	}
 
 	.markdown strong {
@@ -120,7 +118,7 @@
 		@apply font-bold text-gray-700 px-0 py-1;
 	}
 	.toc .toc__content ul li::before {
-		@apply inline-block w-2 h-2 bg-purple-100 rounded-full mr-2 border-2 border-purple-300;
+		@apply inline-block w-2 h-2 bg-white rounded-full mr-2 border-2 border-purple-300;
 		content: " ";
 	}
 	.toc .toc__content ul li a:hover {

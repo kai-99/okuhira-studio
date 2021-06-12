@@ -1,5 +1,5 @@
 ---
-title: "もう悩まない！基礎から学ぶ CSS flexbox （アイテム要素編）"
+title: "基礎から学ぶ CSS flexbox （アイテム要素編）"
 description: "CSS flexbox のアイテム要素について基礎から解説していきます。flex: grow; flex-shrink; などの複雑な比率で指定するプロパティについても図を用いて解説しました。CSS flexbox を理解することでWeb制作に役立ちます。"
 createdAt: "2021-06-06"
 updateAt: "2021-06-06"
@@ -127,7 +127,7 @@ flexbox のコンテナ要素の中で、アイテム要素に対して `order: 
 指定する数値は必ずしも順序よく指定するというルールはありません。  
 値で指定した **数値が高い方が優先される** という仕組みなのでしっかり覚えときましょう。
 
-## `flex-grow`
+## flex-grow
 
 flexbox コンテナ内の要素でアイテム要素に対して `flex-grow: 数値;` を指定することで、アイテム要素の伸び率を設定できます。
 
@@ -217,7 +217,7 @@ flexbox コンテナ内の要素でアイテム要素に対して `flex-grow: �
 | item-3 , item-4 | 100px  | 200px  | **+ 100px** | 200px |
 | item-5 , item-6 | 100px  | 250px  | **+ 150px** | 300px |
 
-## `flex-shrink`
+## flex-shrink
 
 flexbox コンテナ内の要素でアイテム要素に対して `flex-shrink: 数値;` を指定することで、アイテム要素の縮む率を設定できます。先程の `flex-grow` の逆と考えるとすんなり理解できます。
 
@@ -307,7 +307,7 @@ flexbox コンテナ内の要素でアイテム要素に対して `flex-shrink: 
 | item-3 , item-4 | 200px  | 100px  | **- 100px** | 200px |
 | item-5 , item-6 | 200px  | 50px   | **- 150px** | 300px |
 
-## `flex-basis`
+## flex-basis
 
 flexbox コンテナ内の要素でアイテム要素に対して `flex-basis: 数値;` を指定することで、アイテム要素の横幅を指定することができます。初期値は `flex-basis: auto;` です。
 
@@ -322,7 +322,7 @@ flexbox コンテナ内の要素でアイテム要素に対して `flex-basis: �
 }
 ```
 
-## `flex`
+## flex
 
 これまで解説した `flex-grow`, `flex-shrink`, `flex-basis` の値を一括で指定できるプロパティです。  
 `flex` の初期値はそれぞれのプロパティの初期値の値になります。
@@ -334,7 +334,7 @@ flexbox コンテナ内の要素でアイテム要素に対して `flex-basis: �
 }
 ```
 
-## `align-self`
+## align-self
 
 `align-self` はコンテナ内のアイテム要素に対して指定プロパティで、コンテナ要素で指定できる `align-items` と同じ動きをします。
 

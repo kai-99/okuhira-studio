@@ -13,7 +13,7 @@ tags: ["CSS"]
 
 **デモ**
 
-<iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
+<iframe title="CSS position sample" class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
 
 現時点では全く理解出来ていなくても大丈夫です。少しおかしな動きをする要素や他の Web サイトでみたことのあるような動きをする要素がいくつかあると思います。
 
@@ -68,7 +68,7 @@ div {
 
 次の章からは、これらの基礎的な使い方から実際の Web サイトでよく使われているパターンを例に解説していきます。
 
-## `static`
+## static
 
 `position: static;` は **初期値** です。
 
@@ -92,7 +92,7 @@ div {
 1. `top, right, bottom, left` など位置の指定をしても動かない
 1. `z-index` を指定しても要素の重なり順を変更できない
 
-## `fixed`
+## fixed
 
 `position: fixed` は **ブラウザの画面幅を基準** として、位置を指定できます。  
 よく使われている場面としては、サイトのヘッダーをイメージすると実感しやすいかと思います。
@@ -101,7 +101,7 @@ div {
 
 **デモ**
 
-<iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
+<iframe title="CSS position sample" class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
 
 1 番上の fixed と記述されている要素 **スクロールしてもその位置から動かない** のがわかるかとおもいます。  
 上記の fixed の要素に指定されている HTML と CSS は以下のようになります。
@@ -146,11 +146,11 @@ div {
 
 **z-index を指定しなかった場合**
 
-<iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/z-index-0.html" width="600" height="400"></iframe>
+<iframe title="CSS position sample" class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/z-index-0.html" width="600" height="400"></iframe>
 
 `z-index: 999;` は大胆ですが、ヘッダーなど他の要素よりも優先度が高くあるべき要素に対しては、`z-index` の数値も高めに設定することでしっかりその役割を果たしてくれます。
 
-## `relative`
+## relative
 
 `position: relative;` は要素に対して指定した際、今いる要素の位置から `top, left, botttom, right` で指定した値に基づき、その要素を配置することができます。
 
@@ -158,7 +158,7 @@ div {
 
 **デモ**
 
-<iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
+<iframe title="CSS position sample" class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
 
 2 つの item と書かれた要素があります。  
 1 つめの item は `position` を指定していない例で、2 つめのアイテム要素が `position` を使用した例になります。  
@@ -208,7 +208,7 @@ div {
 
 `position: relative;` と合わせて `top, left` を使って値を指定することで、**元いた位置から指定した値の分だけ移動する** のがこの `position: relative;` ということになります。
 
-## `absolute`
+## absolute
 
 `position: absolute;` は、親要素で指定された `position: relative;` を基準として、`top, left, bottom, right` で指定した値に基づき要素を配置します。
 
@@ -218,7 +218,7 @@ div {
 
 **デモ**
 
-<iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
+<iframe title="CSS position sample" class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
 
 4 枚の猫の画像があり、 Animal と書かれた要素が各画像に配置されています。  
 これらの HTML と CSS は以下のようになります。
@@ -276,7 +276,7 @@ div {
 
 ---
 
-## `sticky`
+## sticky
 
 `position: sticky;` は親要素に依存し、`top, left, bottom, right` で指定した値に基づき要素を配置します。
 
@@ -285,7 +285,7 @@ div {
 
 **デモ**
 
-<iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
+<iframe title="CSS position sample" class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
 
 **sticky** という文字を通り過ぎた後、サイドバーの目次欄が固定され、スクロールを続けると固定さていたものが解除されます。
 
@@ -367,7 +367,7 @@ div {
 }
 ```
 
-<iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/sticky.html" width="600" height="400"></iframe>
+<iframe title="CSS position sample" class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/sticky.html" width="600" height="400"></iframe>
 
 このように、`<aside></aside>` タグが画面内から上にスクロールしていくと同時に `position: sticky;` で指定した要素も固定されていたものが解除され、通常の要素と同じ動きに戻ります。
 

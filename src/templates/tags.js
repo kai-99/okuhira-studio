@@ -2,11 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import {
-	RefreshIcon,
-	PencilAltIcon,
-	HashtagIcon,
-} from "@heroicons/react/outline";
+import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
+import { HashtagIcon } from "@heroicons/react/solid";
 // Custom Components
 import Layout from "../components/Layout";
 import SideBar from "../components/SideBar";
@@ -26,12 +23,14 @@ const Tags = ({ pageContext, data }) => {
 				<main className="md:w-3/4 lg:mr-8">
 					<section>
 						<div>
-							<h2 className="text-gray800 md:text-xl font-bold mb-4">
-								<HashtagIcon className="inline-block w-4 h-4 md:w-6 md:h-6 text-blue-500 align-text-bottom" />
-								{tagHeader}
+							<h2 className="mb-4 flex items-center justify-start">
+								<HashtagIcon className="inline-block w-4 h-4 md:w-6 md:h-6 text-blue-500 align-text-bottom mr-1" />
+								<span className="inline-block text-gray-800 md:text-xl font-bold">
+									{tagHeader}
+								</span>
 							</h2>
 						</div>
-						<div className="article-wrapper">
+						<div>
 							{edges.map(({ node }) => {
 								return (
 									<div
