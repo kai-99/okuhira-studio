@@ -64,6 +64,7 @@ module.exports = {
 				theme_color: `#ffffff`,
 				display: `minimal-ui`,
 				icon: `src/images/icon.jpg`, // This path is relative to the root of the site.
+				cache_busting_mode: "none",
 				icon_options: {
 					purpose: `maskable`,
 				},
@@ -73,6 +74,7 @@ module.exports = {
 			resolve: "gatsby-plugin-offline",
 			options: {
 				workboxConfig: {
+					globPatterns: ["**/icon-path*"],
 					runtimeCaching: [
 						{
 							urlPattern: /^https?:.*\/page-data\/.*\.json/,
