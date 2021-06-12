@@ -6,9 +6,6 @@
 	html {
 		scroll-behavior: smooth;
 	}
-	div.gatsby-resp-iframe-wrapper {
-		@apply mb-4 shadow-md border-2 border-gray-400 rounded-lg;
-	}
 	/* レイアウト */
 	.global-wrapper {
 		animation: fadein 0.8s forwards;
@@ -38,6 +35,11 @@
 @layer components {
 	.markdown {
 		@apply text-gray-900 p-4 md:p-8;
+	}
+
+	/* iframe */
+	.markdown > .gatsby-resp-iframe-wrapper {
+		@apply mb-4 shadow-md border-2 border-gray-400 rounded-lg;
 	}
 
 	.markdown strong {

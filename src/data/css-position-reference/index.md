@@ -11,6 +11,8 @@ tags: ["CSS"]
 
 今回の解説で使用するデモを用意したので、一度スクロールしてみてください。
 
+**デモ**
+
 <iframe class="lazuli-reference" src="https://lazuli-examples.netlify.app/position/index.html" width="600" height="400"></iframe>
 
 現時点では全く理解出来ていなくても大丈夫です。少しおかしな動きをする要素や他の Web サイトでみたことのあるような動きをする要素がいくつかあると思います。
@@ -413,6 +415,13 @@ div {
 1. `relative`
 1. `absolute`
 1. `sticky`
+
+**position と一緒に使うプロパティ**
+
+1. top
+1. left
+1. right
+1. bottom
 
 ## おすすめ記事
 
