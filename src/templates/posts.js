@@ -11,11 +11,7 @@ import {
 	DocumentIcon,
 	FolderOpenIcon,
 } from "@heroicons/react/outline";
-import {
-	ClipboardListIcon,
-	// ScissorsIcon,
-	LightningBoltIcon,
-} from "@heroicons/react/solid";
+import { ViewListIcon, LightningBoltIcon } from "@heroicons/react/solid";
 import {
 	FacebookShareButton,
 	TwitterShareButton,
@@ -198,13 +194,12 @@ const Posts = ({ data }) => {
 							className="bg-purple-50"
 						/>
 						{/* 目次 SP */}
-						<div className="lg:hidden bg-white mt-2 mx-2 mb-6 shadow-md">
-							<div className="bg-gray-700 text-center py-3">
-								<p className="font-bold text-gray-100">
-									<ClipboardListIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
-									もくじ
-								</p>
-							</div>
+						<div className="lg:hidden mt-2 mx-2 mb-6">
+							<h2 className="pb-2 border-b border-purple-100 text-center">
+								{/* <h2 className="font-bold text-gray-800 text-center"> */}
+								<ViewListIcon className="h-4 w-4 inline-block text-purple-400 mr-2" />
+								<span className="text-sm font-bold text-gray-800">目次</span>
+							</h2>
 							<nav className="p-4">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
@@ -222,14 +217,12 @@ const Posts = ({ data }) => {
 				</main>
 				<aside className="hidden lg:block lg:w-1/4">
 					<div className="sticky top-20">
-						<div className="bg-white border border-gray-100 mb-8 rounded-md shadow-sm">
-							<div className="bg-gray-700 text-center py-8 rounded-t-md">
-								<p className="font-bold text-gray-100">
-									<ClipboardListIcon className="h-6 w-6 inline-block text-purple-400 mr-2 align-bottom" />
-									もくじ
-								</p>
-							</div>
-							<nav className="p-4">
+						<div className="my-8">
+							<h2 className="pb-2 border-b border-purple-100">
+								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
+								<span className="text-sm font-bold text-gray-800">目次</span>
+							</h2>
+							<nav className="pl-1">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>

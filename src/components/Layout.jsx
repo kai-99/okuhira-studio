@@ -58,18 +58,13 @@ const Layout = (props) => {
 	// Footer Component
 	const Footer = () => {
 		return (
-			<footer className="w-full h-12">
-				<div className="text-center bg-white flex items-center justify-center px-2">
-					<time className="text-gray-700 italic block mr-2">
+			<footer className="w-full">
+				<div className="text-center bg-white flex items-center justify-center px-2 text-gray-700 h-12">
+					<time itemProp="datepublished" className="block mr-2">
 						&copy;{new Date().getFullYear()}
 					</time>
 					<Link to="/">
-						<StaticImage
-							src="../images/logo.png"
-							alt="LazuliCreative"
-							className="inline-block"
-							placeholder="tracedSVG"
-						/>
+						<span>{data.site.siteMetadata.title}</span>
 					</Link>
 				</div>
 			</footer>

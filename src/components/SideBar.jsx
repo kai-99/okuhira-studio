@@ -23,20 +23,20 @@ const SideBar = () => {
 	);
 
 	return (
-		<div className="bg-white border border-gray-100 rounded-md mb-8 shadow-sm">
-			<div className="bg-gray-700 rounded-t-md py-8 text-center">
-				<p className="font-bold text-gray-100">
-					<HashtagIcon className="h-6 w-6 inline-block text-blue-400 mr-2 align-bottom" />
-					ハッシュタグ
-				</p>
+		<div className="my-8">
+			<div className="mb-4">
+				<h3 className="pb-2 border-b border-purple-100">
+					<HashtagIcon className="h-4 w-4 inline-block text-blue-400 mr-2" />
+					<span className="text-sm font-bold text-gray-800">ハッシュタグ</span>
+				</h3>
 			</div>
-			<div>
-				<ul className="py-4">
+			<nav>
+				<ul>
 					{data.allMarkdownRemark.group.map((tag) => (
-						<li className="p-2" key={tag.fieldValue}>
+						<li className="pb-2" key={tag.fieldValue}>
 							<Link
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
-								className="flex items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold text-gray-700 hover:shadow-xl"
+								className="flex bg-white items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold text-gray-700 hover:shadow-xl"
 							>
 								<span className="px-4">
 									<HashtagIcon className="inline-block w-4 h-4 text-blue-500" />
@@ -49,7 +49,13 @@ const SideBar = () => {
 						</li>
 					))}
 				</ul>
-			</div>
+			</nav>
+			{/* <p className="text-sm text-gray-600 mt-2 text-center">
+				右の数字は記事の数を表しています
+				<span role="img" aria-label="emoji">
+					💭
+				</span>
+			</p> */}
 		</div>
 	);
 };

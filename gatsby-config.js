@@ -7,15 +7,15 @@ module.exports = {
 		FUNCTIONS: false,
 	},
 	siteMetadata: {
-		title: `Lazuli`,
+		title: `Lazuli Creative`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `Lazuli は、Web制作で役に立つ知識をWebコーダーやWebデザイナーに向けて現場で使えるTipsや役に立つ情報を発信しているWebメディアです`,
+		description: `Lazuli Creativeは、Web制作で役に立つ知識をWebコーダーやWebデザイナーに向けて現場で使えるTipsや役に立つ情報を発信しているWebメディアです`,
 		siteUrl: `https://lapis-lazuli.dev/`,
 		social: {
 			twitter: {
 				name: `Lazuli`,
-				id: `https://twitter.com/lap_lap_`,
+				id: `https://twitter.com/lazuli_creative`,
 			},
 		},
 	},
@@ -57,7 +57,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Lazuli Coder`,
+				name: `Lazuli Creative`,
 				short_name: `Lazuli`,
 				start_url: `/`,
 				background_color: `#ffffff`,
@@ -74,6 +74,7 @@ module.exports = {
 			resolve: `gatsby-transformer-remark`,
 			options: {
 				plugins: [
+					`gatsby-remark-responsive-iframe`,
 					`gatsby-remark-code-titles`,
 					{
 						resolve: `gatsby-remark-prismjs`,
