@@ -7,7 +7,7 @@ module.exports = {
 		FUNCTIONS: false,
 	},
 	siteMetadata: {
-		title: `Lazuli Creative`,
+		title: `Web Jr`,
 		lang: `ja`,
 		locale: `ja_JP`,
 		description: `Lazuli Creativeは、Web制作で役に立つ知識をWebコーダーやWebデザイナーに向けて現場で使えるTipsや役に立つ情報を発信しているWebメディアです`,
@@ -86,14 +86,6 @@ module.exports = {
 						},
 					},
 					{
-						resolve: `gatsby-remark-images-medium-zoom`,
-						options: {
-							margin: 8,
-							background: "rgba(249, 250, 251, 0.8)",
-							scrollOffset: 40,
-						},
-					},
-					{
 						resolve: `gatsby-remark-autolink-headers`,
 						options: {
 							icon: false,
@@ -124,7 +116,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `blog`,
-				path: `${__dirname}/src/data`,
+				path: `${__dirname}/contents`,
 			},
 		},
 		{

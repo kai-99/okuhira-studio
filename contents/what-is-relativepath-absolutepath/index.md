@@ -5,6 +5,7 @@ createdAt: "2021-05-16"
 updateAt: "2021-06-03"
 thumbnail: "./hero.png"
 tags: ["HTML"]
+categories: "Programing"
 ---
 
 ## はじめに

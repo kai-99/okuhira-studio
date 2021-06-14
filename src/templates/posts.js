@@ -9,6 +9,7 @@ import {
 	ChevronRightIcon,
 	DocumentIcon,
 	FolderOpenIcon,
+	HashtagIcon,
 } from "@heroicons/react/outline";
 import { ViewListIcon, LightningBoltIcon } from "@heroicons/react/solid";
 import {
@@ -26,7 +27,6 @@ import kebabCase from "lodash/kebabCase";
 import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
 import NewArticles from "../components/NewArticles";
-import Hashtag from "../components/Hashtag";
 
 const Posts = ({ data }) => {
 	// GatsbyImage Component
@@ -76,12 +76,14 @@ const Posts = ({ data }) => {
 				>
 					<Link
 						itemProp="item"
-						to={`/tags/${kebabCase(data.markdownRemark.frontmatter.tags)}/`}
+						to={`/categories/${kebabCase(
+							data.markdownRemark.frontmatter.categories
+						)}/`}
 						className="flex items-center gap-1 hover:underline"
 					>
 						<FolderOpenIcon className="w-4 h-4 inline-block" />
 						<span itemProp="name" className="inline-block">
-							{data.markdownRemark.frontmatter.tags}
+							{data.markdownRemark.frontmatter.categories}
 						</span>
 						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
 					</Link>
@@ -164,7 +166,19 @@ const Posts = ({ data }) => {
 					</h1>
 					<div className="flex items-center justify-between my-2 font-bold">
 						<div className="slow-fadein-animation">
-							<Hashtag />
+							{data.markdownRemark.frontmatter.tags.map((tag) => {
+								return (
+									<Link
+										className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
+										to={`/tags/${kebabCase(tag)}/`}
+									>
+										<p className="inline-block">
+											<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
+											<span className="inline-block text-sm">{tag}</span>
+										</p>
+									</Link>
+								);
+							})}
 						</div>
 						<div className="flex">
 							<time className="text-gray-400 block text-right text-xs lg:text-sm mr-4">
@@ -262,6 +276,7 @@ export const query = graphql`
 				createdAt(formatString: "YYYY.MM.DD")
 				updateAt(formatString: "YYYY.MM.DD")
 				tags
+				categories
 				thumbnail {
 					childImageSharp {
 						gatsbyImageData(

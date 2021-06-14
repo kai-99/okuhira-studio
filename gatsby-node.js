@@ -19,24 +19,33 @@ exports.createPages = async ({ graphql, actions }) => {
 	const { createPage } = actions;
 	const result = await graphql(`
 		query {
-			allMarkdownRemark {
+			postsRemark: allMarkdownRemark {
 				edges {
 					node {
 						fields {
 							slug
 						}
+						frontmatter {
+							tags
+							categories
+						}
 					}
 				}
 			}
-			tags: allMarkdownRemark(limit: 1000) {
+			tagsGroup: allMarkdownRemark(limit: 1000) {
 				group(field: frontmatter___tags) {
+					fieldValue
+				}
+			}
+			categoryGroup: allMarkdownRemark(limit: 1000) {
+				group(field: frontmatter___categories) {
 					fieldValue
 				}
 			}
 		}
 	`);
 
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	result.data.postsRemark.edges.forEach(({ node }) => {
 		createPage({
 			path: node.fields.slug,
 			component: path.resolve(`./src/templates/posts.js`),
@@ -46,12 +55,22 @@ exports.createPages = async ({ graphql, actions }) => {
 		});
 	});
 
-	result.data.tags.group.forEach((tag) => {
+	result.data.tagsGroup.group.forEach((tag) => {
 		createPage({
 			path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
 			component: path.resolve(`./src/templates/tags.js`),
 			context: {
 				tag: tag.fieldValue,
+			},
+		});
+	});
+
+	result.data.categoryGroup.group.forEach((category) => {
+		createPage({
+			path: `/categories/${_.kebabCase(category.fieldValue)}/`,
+			component: path.resolve(`./src/templates/categories.js`),
+			context: {
+				category: category.fieldValue,
 			},
 		});
 	});

@@ -2,7 +2,6 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { StaticImage } from "gatsby-plugin-image";
 
 const Layout = (props) => {
 	const data = useStaticQuery(
@@ -27,15 +26,9 @@ const Layout = (props) => {
 			<>
 				<header className="w-full border-b bg-white top-0 h-12 z-50 fixed">
 					<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
-						<Link to="/">
-							<h1>
-								<StaticImage
-									src="../images/logo.png"
-									alt="LazuliCreative"
-									className="inline-block"
-									placeholder="tracedSVG"
-								/>
-								{/* <span className="ml-2 z-0">{data.site.siteMetadata.title}</span> */}
+						<Link to="/" className="flex items-center">
+							<h1 className="font-mono font-bold text-xl">
+								{data.site.siteMetadata.title}
 							</h1>
 						</Link>
 						<a
@@ -64,7 +57,9 @@ const Layout = (props) => {
 						&copy;{new Date().getFullYear()}
 					</time>
 					<Link to="/">
-						<span>{data.site.siteMetadata.title}</span>
+						<span className="font-mono font-bold">
+							{data.site.siteMetadata.title}
+						</span>
 					</Link>
 				</div>
 			</footer>
@@ -72,7 +67,7 @@ const Layout = (props) => {
 	};
 	// Layout Component
 	return (
-		<div className="bg-gray-100">
+		<div className="bg-white">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto opacity-animation">
 				{/* <div className="container px-2 py-8 mt-12 mx-auto lg:flex"> */}

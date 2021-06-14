@@ -5,6 +5,7 @@ createdAt: "2021-06-06"
 updateAt: "2021-06-06"
 thumbnail: "./hero.png"
 tags: ["CSS"]
+categories: "Programing"
 ---
 
 ---

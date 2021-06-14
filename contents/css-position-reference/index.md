@@ -5,6 +5,7 @@ createdAt: "2021-06-12"
 updateAt: "2021-06-12"
 thumbnail: "./hero.png"
 tags: ["CSS"]
+categories: "Programing"
 ---
 
 この記事では、CSS の `position` プロパティについて基礎から解説し、色々な Web サイトで `position` が使われている例やその仕組み、実践的な使い方まで解説します。

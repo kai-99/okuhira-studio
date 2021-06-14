@@ -4,7 +4,8 @@ description: "HTMLとは？Webサイトを作成するうえで必須の知識�
 createdAt: "2021-05-14"
 updateAt: "2021-05-14"
 thumbnail: "./hero.png"
-tags: ["HTML"]
+tags: ["HTML", "TailwindCSS"]
+categories: "Programing"
 ---
 
 ## HTML とは？

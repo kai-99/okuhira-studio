@@ -5,6 +5,7 @@ createdAt: "2021-05-27"
 updateAt: "2021-06-12"
 thumbnail: "./hero.png"
 tags: ["CSS"]
+categories: "プログラミング"
 ---
 
 ## はじめに
