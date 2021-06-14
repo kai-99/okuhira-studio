@@ -10,12 +10,12 @@ module.exports = {
 		title: `Web Jr`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `Lazuli Creativeは、Web制作で役に立つ知識をWebコーダーやWebデザイナーに向けて現場で使えるTipsや役に立つ情報を発信しているWebメディアです`,
-		siteUrl: `https://lapis-lazuli.dev/`,
+		description: `Web Jr`,
+		siteUrl: `https://webjr.gatsbyjs.io/`,
 		social: {
 			twitter: {
 				name: `Lazuli`,
-				id: `https://twitter.com/lazuli_creative`,
+				id: `https://twitter.com/`,
 			},
 		},
 	},
@@ -32,8 +32,8 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
-				host: "https://lapis-lazuli.dev",
-				sitemap: "https://lapis-lazuli.dev/sitemap.xml",
+				host: "https://webjr.gatsbyjs.io",
+				sitemap: "https://webjr.gatsbyjs.io/sitemap.xml",
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
@@ -51,14 +51,14 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
-				siteUrl: `https://lapis-lazuli.dev`,
+				siteUrl: `https://webjr.gatsbyjs.io`,
 			},
 		},
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Lazuli Creative`,
-				short_name: `Lazuli Creative`,
+				name: `Web Jr`,
+				short_name: `Web Jr`,
 				start_url: `/`,
 				background_color: `#ffffff`,
 				theme_color: `#A78BFA`,
@@ -69,7 +69,32 @@ module.exports = {
 				},
 			},
 		},
-		`gatsby-plugin-offline`,
+		{
+			resolve: `gatsby-plugin-offline`,
+			options: {
+				workboxConfig: {
+					runtimeCaching: [
+						{
+							urlPattern: /(\.js$|\.css$|static\/)/,
+							handler: `CacheFirst`,
+						},
+						{
+							urlPattern: /^https?:.*\/page-data\/.*\.json/,
+							handler: `NetwoekFirst`,
+						},
+						{
+							urlPattern:
+								/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+							handler: `StaleWhileRevalidate`,
+						},
+						{
+							urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+							handler: `StaleWhileRevalidate`,
+						},
+					],
+				},
+			},
+		},
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {

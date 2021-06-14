@@ -74,8 +74,10 @@ const Tags = ({ pageContext, data }) => {
 						</div>
 					</section>
 				</main>
-				<aside className="block lg:w-1/4 lg:sticky lg:top-20">
-					<SideBar />
+				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
+					<div className="lg:sticky lg:top-20">
+						<SideBar />
+					</div>
 				</aside>
 			</div>
 		</Layout>
