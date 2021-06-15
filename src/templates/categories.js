@@ -1,8 +1,12 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { RefreshIcon, PencilAltIcon } from "@heroicons/react/outline";
-import { FolderOpenIcon, HashtagIcon } from "@heroicons/react/solid";
+import {
+	RefreshIcon,
+	PencilAltIcon,
+	FolderOpenIcon,
+} from "@heroicons/react/outline";
+import { HashtagIcon } from "@heroicons/react/solid";
 import kebabCase from "lodash/kebabCase";
 // Custom Components
 import Layout from "../components/Layout";
@@ -22,8 +26,8 @@ const Categories = ({ pageContext, data }) => {
 				<main className="md:w-3/4 lg:mr-8">
 					<section>
 						<div>
-							<h2 className="mb-4 flex items-center justify-start">
-								<FolderOpenIcon className="inline-block w-4 h-4 md:w-6 md:h-6 text-gray-600 align-text-bottom mr-1" />
+							<h2 className="mb-4 flex items-center justify-center">
+								<FolderOpenIcon className="inline-block w-4 h-4 md:w-6 md:h-6 text-blue-500 align-text-bottom mr-1" />
 								<span className="inline-block text-gray-800 md:text-xl font-bold">
 									{category}
 								</span>
@@ -37,7 +41,7 @@ const Categories = ({ pageContext, data }) => {
 										key={node.fields.slug}
 									>
 										<Link
-											className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
+											className="md:flex lg:hover:shadow hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
 											to={node.fields.slug}
 										>
 											<GatsbyImage
@@ -53,17 +57,21 @@ const Categories = ({ pageContext, data }) => {
 													<div className="slow-fadein-animation">
 														{node.frontmatter.tags.map((tag) => {
 															return (
-																<Link
-																	className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
-																	to={`/tags/${kebabCase(tag)}/`}
+																<React.Fragment
+																	key={`/tags/${kebabCase(tag)}/`}
 																>
-																	<p className="inline-block">
-																		<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
-																		<span className="inline-block text-sm">
-																			{tag}
-																		</span>
-																	</p>
-																</Link>
+																	<Link
+																		className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
+																		to={`/tags/${kebabCase(tag)}/`}
+																	>
+																		<p className="inline-block">
+																			<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
+																			<span className="inline-block text-sm">
+																				{tag}
+																			</span>
+																		</p>
+																	</Link>
+																</React.Fragment>
 															);
 														})}
 													</div>

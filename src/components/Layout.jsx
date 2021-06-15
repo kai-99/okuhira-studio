@@ -36,7 +36,7 @@ const Layout = (props) => {
 							target="_blank"
 							rel="noopener noreferrer"
 							className="bg-white rounded-full h-10 w-10 flex items-center justify-center"
-							aria-label="Lazuli Creative Twitterアカウント"
+							aria-label="Twitter"
 						>
 							<FontAwesomeIcon
 								className="text-blue-400 text-2xl"
@@ -52,7 +52,7 @@ const Layout = (props) => {
 	const Footer = () => {
 		return (
 			<footer className="w-full">
-				<div className="text-center bg-white flex items-center justify-center px-2 text-gray-700 h-12">
+				<div className="text-center flex items-center justify-center px-2 text-gray-700 h-12">
 					<time itemProp="datepublished" className="block mr-2">
 						&copy;{new Date().getFullYear()}
 					</time>

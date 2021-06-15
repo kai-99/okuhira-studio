@@ -10,23 +10,26 @@ import {
 	DocumentIcon,
 	FolderOpenIcon,
 	HashtagIcon,
+	LightningBoltIcon,
 } from "@heroicons/react/outline";
-import { ViewListIcon, LightningBoltIcon } from "@heroicons/react/solid";
+import { ViewListIcon } from "@heroicons/react/solid";
 import {
 	FacebookShareButton,
 	TwitterShareButton,
 	LineShareButton,
-	LinkedinShareButton,
+	HatenaShareButton,
 	FacebookIcon,
 	TwitterIcon,
 	LineIcon,
-	LinkedinIcon,
+	HatenaIcon,
 } from "react-share";
 import kebabCase from "lodash/kebabCase";
 // Custom Component
 import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
 import NewArticles from "../components/NewArticles";
+
+/////////////////////  Post Components  ////////////////////
 
 const Posts = ({ data }) => {
 	// GatsbyImage Component
@@ -81,7 +84,7 @@ const Posts = ({ data }) => {
 						)}/`}
 						className="flex items-center gap-1 hover:underline"
 					>
-						<FolderOpenIcon className="w-4 h-4 inline-block" />
+						<FolderOpenIcon className="w-4 h-4 inline-block text-blue-500" />
 						<span itemProp="name" className="inline-block">
 							{data.markdownRemark.frontmatter.categories}
 						</span>
@@ -100,7 +103,7 @@ const Posts = ({ data }) => {
 						to={data.markdownRemark.fields.slug}
 						className="flex items-center gap-1 hover:underline"
 					>
-						<DocumentIcon className="w-4 h-4 inline-block text-purple-500" />
+						<DocumentIcon className="w-4 h-4 inline-block text-gray-700" />
 						<span itemProp="name">{data.markdownRemark.frontmatter.title}</span>
 					</Link>
 					<meta itemProp="position" content="3" />
@@ -137,17 +140,19 @@ const Posts = ({ data }) => {
 					>
 						<LineIcon round size={48} />
 					</LineShareButton>
-					<LinkedinShareButton
+					<HatenaShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
 						title={data.markdownRemark.frontmatter.title}
 						className="hover:opacity-60 duration-300"
 					>
-						<LinkedinIcon round size={48} />
-					</LinkedinShareButton>
+						<HatenaIcon round size={48} />
+					</HatenaShareButton>
 				</div>
 			</div>
 		);
 	};
+
+	/////////////////////  Post Page  ////////////////////
 
 	return (
 		<Layout>
@@ -161,50 +166,32 @@ const Posts = ({ data }) => {
 					<nav>
 						<Breadcrumb />
 					</nav>
-					<h1 className="font-bold text-center md:text-xl px-2 py-4 md:py-8 border-l-4 border-purple-400 text-gray-800 bg-white shadow rounded tracking-wide fast-fadein-animation">
+					<h1 className="font-bold text-center md:text-xl px-2 py-4 md:py-8 text-gray-800 tracking-wide fast-fadein-animation">
 						{data.markdownRemark.frontmatter.title}
 					</h1>
-					<div className="flex items-center justify-between my-2 font-bold">
-						<div className="slow-fadein-animation">
-							{data.markdownRemark.frontmatter.tags.map((tag) => {
-								return (
-									<Link
-										className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
-										to={`/tags/${kebabCase(tag)}/`}
-									>
-										<p className="inline-block">
-											<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
-											<span className="inline-block text-sm">{tag}</span>
-										</p>
-									</Link>
-								);
-							})}
-						</div>
-						<div className="flex">
-							<time className="text-gray-400 block text-right text-xs lg:text-sm mr-4">
-								<span className="mr-1">
-									<PencilAltIcon className="inline-block w-4 h-4" />
-								</span>
-								{data.markdownRemark.frontmatter.createdAt}
-							</time>
-							<time className="text-gray-600 block text-right text-xs lg:text-sm">
-								<span className="mr-1">
-									<RefreshIcon className="inline-block w-4 h-4" />
-								</span>
-								{data.markdownRemark.frontmatter.updateAt}
-							</time>
-						</div>
+					<div className="flex items-center justify-end font-bold text-right text-xs lg:text-sm">
+						<time className="text-gray-400 block">
+							<span className="mr-1">
+								<PencilAltIcon className="inline-block w-4 h-4" />
+							</span>
+							{data.markdownRemark.frontmatter.createdAt}
+						</time>
+						<time className="text-gray-600 block ml-2">
+							<span className="mr-1">
+								<RefreshIcon className="inline-block w-4 h-4" />
+							</span>
+							{data.markdownRemark.frontmatter.updateAt}
+						</time>
 					</div>
-					<article className="bg-white rounded shadow-sm slow-fadein-animation">
+					<article className="slow-fadein-animation">
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
-							className="bg-purple-50"
+							className="bg-purple-50 shadow-md"
 						/>
 						{/* 目次 SP */}
-						<div className="lg:hidden mt-2 mx-2 mb-6">
+						<div className="mt-2 mx-2 mb-6 lg:mb-0">
 							<h2 className="pb-2 border-b border-purple-100 text-center">
-								{/* <h2 className="font-bold text-gray-800 text-center"> */}
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-400 mr-2" />
 								<span className="text-sm font-bold text-gray-800">目次</span>
 							</h2>
@@ -220,11 +207,39 @@ const Posts = ({ data }) => {
 							<Breadcrumb />
 						</nav> */}
 						<SnsShare />
+						<div className="mt-2 flex justify-start">
+							<Link
+								to={`/categories/${kebabCase(
+									data.markdownRemark.frontmatter.categories
+								)}/`}
+								className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
+							>
+								<FolderOpenIcon className="text-blue-500 w-4 h-4 mr-1 inline-block" />
+								<span itemProp="name" className="inline-block">
+									{data.markdownRemark.frontmatter.categories}
+								</span>
+							</Link>
+							{data.markdownRemark.frontmatter.tags.map((tag) => {
+								return (
+									<React.Fragment key={`/tags/${kebabCase(tag)}/`}>
+										<Link
+											className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
+											to={`/tags/${kebabCase(tag)}/`}
+										>
+											<p className="inline-block">
+												<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
+												<span className="inline-block text-sm">{tag}</span>
+											</p>
+										</Link>
+									</React.Fragment>
+								);
+							})}
+						</div>
 					</article>
 					{/* 目次 PC */}
 				</main>
 				<aside className="hidden lg:block lg:w-1/4">
-					<div className="sticky top-20">
+					<div className="sticky top-20 mb-8">
 						<div className="my-8">
 							<h2 className="pb-2 border-b border-purple-100">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />

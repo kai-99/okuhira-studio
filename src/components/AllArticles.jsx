@@ -2,7 +2,7 @@ import React from "react";
 import {
 	RefreshIcon,
 	PencilAltIcon,
-	HashtagIcon,
+	FolderOpenIcon,
 } from "@heroicons/react/outline";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
@@ -25,6 +25,7 @@ const AllArticles = () => {
 							updateAt(formatString: "YYYY.MM.DD")
 							title
 							tags
+							categories
 							thumbnail {
 								childImageSharp {
 									gatsbyImageData(
@@ -47,7 +48,7 @@ const AllArticles = () => {
 				return (
 					<div className="bg-white mb-4 relative" key={node.frontmatter.title}>
 						<Link
-							className="md:flex hover:shadow-xl hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
+							className="md:flex lg:hover:shadow hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
 							to={node.fields.slug}
 						>
 							<GatsbyImage
@@ -61,19 +62,19 @@ const AllArticles = () => {
 								</h2>
 								<div className="flex justify-between items-center font-bold">
 									<div>
-										{node.frontmatter.tags.map((tag) => {
-											return (
-												<Link
-													className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
-													to={`/tags/${kebabCase(tag)}/`}
-												>
-													<p className="inline-block">
-														<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
-														<span className="inline-block text-sm">{tag}</span>
-													</p>
-												</Link>
-											);
-										})}
+										<Link
+											className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
+											to={`/categories/${kebabCase(
+												node.frontmatter.categories
+											)}/`}
+										>
+											<p className="inline-block">
+												<FolderOpenIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
+												<span className="inline-block text-sm">
+													{node.frontmatter.categories}
+												</span>
+											</p>
+										</Link>
 									</div>
 									<div className="md:flex md:justify-end">
 										<time
