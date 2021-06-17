@@ -70,24 +70,15 @@ const SideBar = () => {
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
 								className="flex bg-white items-center justify-between text-blue-500 hover:underline"
 							>
-								<p className="px-4">
+								<p className="pl-4">
 									<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />
 									<span className="inline-block text-sm">{tag.fieldValue}</span>
 								</p>
-								{/* <span className="font-bold w-10 h-10 bg-gray-600 text-gray-100 flex items-center justify-center p-2 rounded-full">
-									{tag.totalCount}
-								</span> */}
 							</Link>
 						</li>
 					))}
 				</ul>
 			</nav>
-			{/* <p className="text-sm text-gray-600 mt-2 text-center">
-				右の数字は記事の数を表しています
-				<span role="img" aria-label="emoji">
-					💭
-				</span>
-			</p> */}
 		</div>
 	);
 };
