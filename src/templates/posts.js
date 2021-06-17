@@ -11,8 +11,8 @@ import {
 	FolderOpenIcon,
 	HashtagIcon,
 	LightningBoltIcon,
+	ViewListIcon,
 } from "@heroicons/react/outline";
-import { ViewListIcon } from "@heroicons/react/solid";
 import {
 	FacebookShareButton,
 	TwitterShareButton,
@@ -28,6 +28,7 @@ import kebabCase from "lodash/kebabCase";
 import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
 import NewArticles from "../components/NewArticles";
+import TemplateTitle from "../components/TemplateTitle";
 
 /////////////////////  Post Components  ////////////////////
 
@@ -84,7 +85,7 @@ const Posts = ({ data }) => {
 						)}/`}
 						className="flex items-center gap-1 hover:underline"
 					>
-						<FolderOpenIcon className="w-4 h-4 inline-block text-blue-500" />
+						<FolderOpenIcon className="w-4 h-4 inline-block text-gray-500" />
 						<span itemProp="name" className="inline-block">
 							{data.markdownRemark.frontmatter.categories}
 						</span>
@@ -166,10 +167,10 @@ const Posts = ({ data }) => {
 					<nav>
 						<Breadcrumb />
 					</nav>
-					<h1 className="font-bold text-center md:text-xl px-2 py-4 md:py-8 text-gray-800 tracking-wide fast-fadein-animation">
-						{data.markdownRemark.frontmatter.title}
-					</h1>
-					<div className="flex items-center justify-end font-bold text-right text-xs lg:text-sm">
+					<TemplateTitle
+						TemplateTitle={data.markdownRemark.frontmatter.title}
+					/>
+					<div className="flex items-center justify-end font-bold text-right text-xs lg:text-xs">
 						<time className="text-gray-400 block">
 							<span className="mr-1">
 								<PencilAltIcon className="inline-block w-4 h-4" />
@@ -192,7 +193,7 @@ const Posts = ({ data }) => {
 						{/* 目次 SP */}
 						<div className="mt-2 mx-2 mb-6 lg:mb-0">
 							<h2 className="pb-2 border-b border-purple-100 text-center">
-								<ViewListIcon className="h-4 w-4 inline-block text-purple-400 mr-2" />
+								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-800">目次</span>
 							</h2>
 							<nav className="p-4">
@@ -207,33 +208,35 @@ const Posts = ({ data }) => {
 							<Breadcrumb />
 						</nav> */}
 						<SnsShare />
-						<div className="mt-2 flex justify-start">
-							<Link
-								to={`/categories/${kebabCase(
-									data.markdownRemark.frontmatter.categories
-								)}/`}
-								className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
-							>
-								<FolderOpenIcon className="text-blue-500 w-4 h-4 mr-1 inline-block" />
-								<span itemProp="name" className="inline-block">
-									{data.markdownRemark.frontmatter.categories}
-								</span>
-							</Link>
-							{data.markdownRemark.frontmatter.tags.map((tag) => {
-								return (
-									<React.Fragment key={`/tags/${kebabCase(tag)}/`}>
+						<div className="mt-2">
+							<nav>
+								<ul className="flex items-center">
+									<li className="p-1">
 										<Link
-											className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
-											to={`/tags/${kebabCase(tag)}/`}
+											to={`/categories/${kebabCase(
+												data.markdownRemark.frontmatter.categories
+											)}/`}
+											className="text-sm text-gray-700"
 										>
-											<p className="inline-block">
-												<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
-												<span className="inline-block text-sm">{tag}</span>
-											</p>
+											<FolderOpenIcon className="text-gray-500 w-4 h-4 mr-1 inline-block" />
+											<span className="inline-block">
+												{data.markdownRemark.frontmatter.categories}
+											</span>
 										</Link>
-									</React.Fragment>
-								);
-							})}
+									</li>
+									{data.markdownRemark.frontmatter.tags.map((tag) => (
+										<li className="p-1" key={`/tags/${kebabCase(tag)}/`}>
+											<Link
+												to={`/tags/${kebabCase(tag)}/`}
+												className="text-blue-500 hover:underline"
+											>
+												<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />
+												<span className="inline-block text-sm">{tag}</span>
+											</Link>
+										</li>
+									))}
+								</ul>
+							</nav>
 						</div>
 					</article>
 					{/* 目次 PC */}

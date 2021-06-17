@@ -6,7 +6,6 @@ import {
 } from "@heroicons/react/outline";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import kebabCase from "lodash/kebabCase";
 
 const AllArticles = () => {
 	const data = useStaticQuery(
@@ -62,19 +61,10 @@ const AllArticles = () => {
 								</h2>
 								<div className="flex justify-between items-center font-bold">
 									<div>
-										<Link
-											className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
-											to={`/categories/${kebabCase(
-												node.frontmatter.categories
-											)}/`}
-										>
-											<p className="inline-block">
-												<FolderOpenIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
-												<span className="inline-block text-sm">
-													{node.frontmatter.categories}
-												</span>
-											</p>
-										</Link>
+										<FolderOpenIcon className="inline-block w-4 h-4 text-gray-500 mr-1" />
+										<span className="inline-block text-sm text-gray-700">
+											{node.frontmatter.categories}
+										</span>
 									</div>
 									<div className="md:flex md:justify-end">
 										<time

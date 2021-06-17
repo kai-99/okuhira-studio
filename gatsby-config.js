@@ -27,7 +27,6 @@ module.exports = {
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-twitter`,
-		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-plugin-catch-links`,
 		{
 			resolve: "gatsby-plugin-robots-txt",
@@ -124,6 +123,15 @@ module.exports = {
 			options: {
 				color: `#A78BFA`,
 				showSpinner: true,
+			},
+		},
+		{
+			// https://www.gatsbyjs.com/plugins/gatsby-plugin-gatsby-cloud/
+			resolve: `gatsby-plugin-gatsby-cloud`,
+			options: {
+				allPageHeaders: [
+					"Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+				],
 			},
 		},
 	],

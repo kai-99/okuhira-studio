@@ -2,11 +2,10 @@ import React from "react";
 import {
 	RefreshIcon,
 	PencilAltIcon,
-	HashtagIcon,
+	FolderOpenIcon,
 } from "@heroicons/react/outline";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import kebabCase from "lodash/kebabCase";
 
 const NewArticles = () => {
 	// 記事の並び順は投稿日を基準
@@ -16,7 +15,7 @@ const NewArticles = () => {
 			{
 				allMarkdownRemark(
 					sort: { order: DESC, fields: [frontmatter___createdAt] }
-					limit: 5
+					limit: 3
 				) {
 					nodes {
 						html
@@ -27,7 +26,7 @@ const NewArticles = () => {
 							createdAt(formatString: "YYYY.MM.DD")
 							updateAt(formatString: "YYYY.MM.DD")
 							title
-							tags
+							categories
 							thumbnail {
 								childImageSharp {
 									gatsbyImageData(
@@ -64,23 +63,10 @@ const NewArticles = () => {
 								</h2>
 								<div className="flex justify-between items-center font-bold">
 									<div>
-										{node.frontmatter.tags.map((tag) => {
-											return (
-												<React.Fragment key={`/tags/${kebabCase(tag)}/`}>
-													<Link
-														className="border-2 bg-white hover:bg-yellow-50 duration-300 hover:border-yellow-200 px-2 py-1 text-sm text-gray-700 rounded-full mr-1"
-														to={`/tags/${kebabCase(tag)}/`}
-													>
-														<p className="inline-block">
-															<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-1" />
-															<span className="inline-block text-sm">
-																{tag}
-															</span>
-														</p>
-													</Link>
-												</React.Fragment>
-											);
-										})}
+										<FolderOpenIcon className="inline-block w-4 h-4 text-gray-500 mr-1" />
+										<span className="inline-block text-sm text-gray-700">
+											{node.frontmatter.categories}
+										</span>
 									</div>
 									<div className="md:flex md:justify-end">
 										<time
