@@ -37,7 +37,7 @@
 
 @layer components {
 	.markdown {
-		@apply text-gray-900 p-4 md:p-8;
+		@apply text-sm md:text-base text-gray-900 md:p-8;
 	}
 
 	.markdown strong {

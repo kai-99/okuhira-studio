@@ -170,14 +170,22 @@ const Posts = ({ data }) => {
 					<TemplateTitle
 						TemplateTitle={data.markdownRemark.frontmatter.title}
 					/>
-					<div className="flex items-center justify-end font-bold text-right text-xs lg:text-xs">
-						<time className="text-gray-400 block">
+					<div className="flex items-center justify-end font-bold text-right text-xs">
+						<time
+							className="text-gray-400 block"
+							itemProp="datepublished"
+							dateTime={data.markdownRemark.createdAt}
+						>
 							<span className="mr-1">
 								<PencilAltIcon className="inline-block w-4 h-4" />
 							</span>
 							{data.markdownRemark.frontmatter.createdAt}
 						</time>
-						<time className="text-gray-600 block ml-2">
+						<time
+							className="text-gray-600 block ml-2"
+							itemProp="modified"
+							dateTime={data.markdownRemark.frontmatter.updateAt}
+						>
 							<span className="mr-1">
 								<RefreshIcon className="inline-block w-4 h-4" />
 							</span>
@@ -196,10 +204,16 @@ const Posts = ({ data }) => {
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-800">目次</span>
 							</h2>
-							<nav className="p-4">
+							<nav className="p-4 flex items-center justify-center bg-purple-100">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
+							<p className="text-right text-sm text-gray-800">
+								この記事の目安時間：約 <b>{data.markdownRemark.timeToRead}</b>{" "}
+								分
+							</p>
 						</div>
+						{/* <div className="mt-2 text-right text-sm text-gray-700">
+						</div> */}
 						<div
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
@@ -288,11 +302,12 @@ export const query = graphql`
 			fields {
 				slug
 			}
+			timeToRead
 			frontmatter {
 				title
 				description
-				createdAt(formatString: "YYYY.MM.DD")
-				updateAt(formatString: "YYYY.MM.DD")
+				createdAt(formatString: "YYYY-MM-DD")
+				updateAt(formatString: "YYYY-MM-DD")
 				tags
 				categories
 				thumbnail {

@@ -20,8 +20,8 @@ const AllArticles = () => {
 							slug
 						}
 						frontmatter {
-							createdAt(formatString: "YYYY.MM.DD")
-							updateAt(formatString: "YYYY.MM.DD")
+							createdAt(formatString: "YYYY-MM-DD")
+							updateAt(formatString: "YYYY-MM-DD")
 							title
 							tags
 							categories
@@ -69,6 +69,7 @@ const AllArticles = () => {
 									<div className="md:flex md:justify-end">
 										<time
 											itemProp="datepublished"
+											dateTime={node.frontmatter.createdAt}
 											className="text-gray-600 block text-right text-xs md:mr-4"
 										>
 											<span className="md:hidden">投稿日</span>{" "}
@@ -79,6 +80,7 @@ const AllArticles = () => {
 										</time>
 										<time
 											itemProp="modified"
+											dateTime={node.frontmatter.updateAt}
 											className="text-gray-600 block text-right text-xs"
 										>
 											<span className="md:hidden">更新日</span>{" "}

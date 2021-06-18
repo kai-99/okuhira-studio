@@ -58,7 +58,6 @@ const Categories = ({ pageContext, data }) => {
 						<span itemProp="name" className="inline-block">
 							{category}
 						</span>
-						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
 					</Link>
 					<meta itemProp="position" content="2" />
 				</li>
