@@ -42,7 +42,7 @@ const Posts = ({ data }) => {
 		return (
 			<div className="toc">
 				<div
-					className="toc__content text-sm"
+					className="text-sm"
 					dangerouslySetInnerHTML={{
 						__html: props.data,
 					}}
@@ -208,10 +208,9 @@ const Posts = ({ data }) => {
 							<nav className="p-4 flex items-center justify-center bg-purple-100">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
-							<p className="text-right text-sm text-gray-800 mt-4">
+							<p className="text-right font-mono text-sm text-gray-800 mt-4">
 								<ClockIcon className="h-4 w-4 inline-block mr-1" />
-								この記事は 約 <b>{data.markdownRemark.timeToRead}</b>{" "}
-								分で読めます！
+								この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
 							</p>
 						</div>
 						<div

@@ -57,7 +57,7 @@
 	}
 
 	.markdown > p {
-		@apply my-8 leading-relaxed;
+		@apply my-8 leading-loose;
 	}
 
 	.markdown blockquote {
@@ -72,11 +72,7 @@
 		@apply my-4 list-inside;
 	}
 	.markdown > ul li {
-		@apply mb-4 leading-6;
-	}
-	.markdown > ul li::before {
-		@apply inline-block w-2 h-2 bg-purple-50 border-2 border-purple-300 mr-2 rounded-full;
-		content: "";
+		@apply mb-4 leading-6 before:inline-block before:w-2 before:h-2 before:border-2 before:border-purple-300 before:mr-2 before:rounded-full;
 	}
 
 	.markdown > ol {
@@ -85,11 +81,10 @@
 	}
 
 	.markdown > ol li {
-		@apply relative pl-10 mb-4 leading-8;
+		@apply relative pl-10 mb-4 leading-8 before:bg-purple-50 before:w-5 before:h-5 before:mr-2 before:rounded-full before:absolute before:left-0 before:inline-flex before:items-center before:justify-center before:p-4 before:text-gray-800 before:border before:border-purple-300 before:font-mono;
 	}
 
 	.markdown > ol li::before {
-		@apply bg-purple-50 w-5 h-5 mr-2 rounded-full absolute left-0 inline-flex items-center justify-center p-4 text-gray-700 font-bold border border-purple-300;
 		counter-increment: number;
 		content: counter(number);
 	}
@@ -111,17 +106,14 @@
 	}
 
 	/* h2 */
-	.toc .toc__content ul {
+	.toc ul {
 		@apply mt-1;
 	}
-	.toc .toc__content ul li {
-		@apply font-bold text-gray-700 px-0 py-1;
+	.toc ul li {
+		@apply font-bold text-gray-700 px-0 py-1 before:content-[''] before:inline-block before:w-2 before:h-2 before:bg-white before:rounded-full before:mr-2 before:border-2 before:border-purple-300;
 	}
-	.toc .toc__content ul li::before {
-		@apply inline-block w-2 h-2 bg-white rounded-full mr-2 border-2 border-purple-300;
-		content: " ";
-	}
-	.toc .toc__content ul li a:hover {
-		@apply text-gray-600 duration-300 underline;
+
+	.toc ul li a {
+		@apply hover:text-gray-600 hover:duration-300 hover:underline;
 	}
 }
