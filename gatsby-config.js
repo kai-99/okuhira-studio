@@ -7,15 +7,15 @@ module.exports = {
 		FUNCTIONS: false,
 	},
 	siteMetadata: {
-		title: `Kaito Note`,
+		title: `OKUHIRA STUDIO`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `Kaito Note`,
-		siteUrl: `https://webjr.gatsbyjs.io/`,
+		description: `OKUHIRA STUDIO`,
+		siteUrl: `https://okuhira.studio/`,
 		social: {
 			twitter: {
-				name: `Lazuli`,
-				id: `https://twitter.com/`,
+				name: `OKUHIRA STUDIO`,
+				id: `https://twitter.com/okuhira_studio`,
 			},
 		},
 	},
@@ -31,8 +31,8 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
-				host: "https://webjr.gatsbyjs.io",
-				sitemap: "https://webjr.gatsbyjs.io/sitemap.xml",
+				host: "https://okuhira.studio",
+				sitemap: "https://okuhira.studio/sitemap.xml",
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
@@ -40,7 +40,7 @@ module.exports = {
 			resolve: `gatsby-plugin-google-gtag`,
 			options: {
 				trackingIds: [
-					"G-47L0EF8PQS", // Google Analytics / GA
+					"G-X5KQSXH9LS", // Google Analytics / GA
 				],
 				pluginConfig: {
 					head: true,
@@ -50,7 +50,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
-				siteUrl: `https://webjr.gatsbyjs.io`,
+				siteUrl: `https://okuhira.studio`,
 			},
 		},
 		{

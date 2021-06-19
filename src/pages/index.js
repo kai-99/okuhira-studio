@@ -1,9 +1,9 @@
 import React from "react";
-import { CheckIcon, LightningBoltIcon } from "@heroicons/react/outline";
+import { CheckIcon } from "@heroicons/react/outline";
 // Custom Components
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
-import NewArticles from "../components/NewArticles";
+// import NewArticles from "../components/NewArticles"; LightningBoltIcon
 import AllArticles from "../components/AllArticles";
 import SideBar from "../components/SideBar";
 
@@ -14,7 +14,7 @@ const IndexPage = () => {
 				<Seo />
 				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
 					<main className="lg:w-3/4 lg:mr-8">
-						<section>
+						{/* <section>
 							<div className="pl-2 italic font-bold mb-2">
 								<p className="text-gray-600 text-sm">
 									新着記事
@@ -24,7 +24,7 @@ const IndexPage = () => {
 							</div>
 						</section>
 						<NewArticles />
-						<hr className="block border-t-4 border-dotted border-purple-200 my-10" />
+						<hr className="block border-t-4 border-dotted border-purple-200 my-10" /> */}
 						<section>
 							<div className="pl-2 italic font-bold mb-2">
 								<p className="text-gray-600 text-sm">

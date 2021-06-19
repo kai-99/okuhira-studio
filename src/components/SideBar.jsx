@@ -42,7 +42,7 @@ const SideBar = () => {
 						<li className="pb-2" key={cat.fieldValue}>
 							<Link
 								to={`/categories/${kebabCase(cat.fieldValue)}/`}
-								className="flex bg-white items-center justify-between border-2 hover:bg-yellow-50 duration-300 hover:border-yellow-200 rounded-full font-bold text-gray-700 hover:shadow-lg"
+								className="flex bg-white items-center justify-between border-2 hover:bg-purple-50 duration-300 hover:border-purple-200 rounded-full font-bold text-gray-700 hover:shadow-lg"
 							>
 								<p className="px-4">
 									<FolderOpenIcon className="inline-block w-4 h-4 text-gray-500 mr-1" />

@@ -123,7 +123,7 @@ const Posts = ({ data }) => {
 				<div className="flex items-center justify-center">
 					<TwitterShareButton
 						url={`${data.site.siteMetadata.siteUrl}${data.markdownRemark.fields.slug}`}
-						title={`${data.markdownRemark.frontmatter.title} @lazuli_creative より`}
+						title={`${data.markdownRemark.frontmatter.title} @okuhira_studio より`}
 						className="mr-2 hover:opacity-60 duration-300"
 					>
 						<TwitterIcon round size={48} />
@@ -200,7 +200,7 @@ const Posts = ({ data }) => {
 							className="bg-purple-50 shadow-md"
 						/>
 						{/* 目次 SP */}
-						<div className="mt-2 mx-2 mb-6 lg:mb-0">
+						<div className="my-2 mx-2 lg:mb-0">
 							<h2 className="pb-2 border-b border-purple-100 text-center">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-800">目次</span>
@@ -208,45 +208,43 @@ const Posts = ({ data }) => {
 							<nav className="p-4 flex items-center justify-center bg-purple-100">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
-							<p className="text-right font-mono text-sm text-gray-800 mt-4">
-								<ClockIcon className="h-4 w-4 inline-block mr-1" />
-								この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
-							</p>
 						</div>
+						<p className="text-center font-mono text-sm text-gray-800 my-8 md:mb-0">
+							<ClockIcon className="h-4 w-4 inline-block mr-1" />
+							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
+						</p>
 						<div
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
 						<SnsShare />
 						<div className="mt-2">
-							<nav>
-								<ul className="flex items-center">
-									<li className="p-1">
+							<ul className="flex items-center">
+								<li className="p-1">
+									<Link
+										to={`/categories/${kebabCase(
+											data.markdownRemark.frontmatter.categories
+										)}/`}
+										className="text-sm text-gray-700"
+									>
+										<FolderOpenIcon className="text-gray-500 w-4 h-4 mr-1 inline-block" />
+										<span className="inline-block">
+											{data.markdownRemark.frontmatter.categories}
+										</span>
+									</Link>
+								</li>
+								{data.markdownRemark.frontmatter.tags.map((tag) => (
+									<li className="p-1" key={`/tags/${kebabCase(tag)}/`}>
 										<Link
-											to={`/categories/${kebabCase(
-												data.markdownRemark.frontmatter.categories
-											)}/`}
-											className="text-sm text-gray-700"
+											to={`/tags/${kebabCase(tag)}/`}
+											className="text-blue-500 hover:underline"
 										>
-											<FolderOpenIcon className="text-gray-500 w-4 h-4 mr-1 inline-block" />
-											<span className="inline-block">
-												{data.markdownRemark.frontmatter.categories}
-											</span>
+											<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />
+											<span className="inline-block text-sm">{tag}</span>
 										</Link>
 									</li>
-									{data.markdownRemark.frontmatter.tags.map((tag) => (
-										<li className="p-1" key={`/tags/${kebabCase(tag)}/`}>
-											<Link
-												to={`/tags/${kebabCase(tag)}/`}
-												className="text-blue-500 hover:underline"
-											>
-												<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />
-												<span className="inline-block text-sm">{tag}</span>
-											</Link>
-										</li>
-									))}
-								</ul>
-							</nav>
+								))}
+							</ul>
 						</div>
 					</article>
 					{/* 目次 PC */}

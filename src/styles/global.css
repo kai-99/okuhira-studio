@@ -47,6 +47,9 @@
 		);
 	}
 
+	.markdown > h2:first-of-type {
+		@apply mt-0;
+	}
 	.markdown > h2 {
 		@apply text-xl lg:text-2xl font-bold mt-20 mb-12 bg-purple-50 px-4 py-2 lg:py-3 border-l-4 border-purple-600 shadow;
 		scroll-margin-block-start: 4rem;
@@ -56,6 +59,9 @@
 		@apply text-blue-600 hover:underline;
 	}
 
+	.markdown > p:first-of-type {
+		@apply mt-0;
+	}
 	.markdown > p {
 		@apply my-8 leading-loose;
 	}
