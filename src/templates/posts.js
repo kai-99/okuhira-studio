@@ -12,6 +12,7 @@ import {
 	HashtagIcon,
 	LightningBoltIcon,
 	ViewListIcon,
+	ClockIcon,
 } from "@heroicons/react/outline";
 import {
 	FacebookShareButton,
@@ -68,7 +69,7 @@ const Posts = ({ data }) => {
 						className="flex items-center gap-1 hover:underline"
 					>
 						<HomeIcon className="w-4 h-4 inline-block text-gray-700 align-bottom" />
-						<span itemProp="name">Home</span>
+						<span itemProp="name">Top</span>
 						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
 					</Link>
 					<meta itemProp="position" content="1" />
@@ -170,7 +171,7 @@ const Posts = ({ data }) => {
 					<TemplateTitle
 						TemplateTitle={data.markdownRemark.frontmatter.title}
 					/>
-					<div className="flex items-center justify-end font-bold text-right text-xs">
+					<div className="flex items-center justify-end font-bold text-right text-xs mb-4">
 						<time
 							className="text-gray-400 block"
 							itemProp="datepublished"
@@ -207,20 +208,16 @@ const Posts = ({ data }) => {
 							<nav className="p-4 flex items-center justify-center bg-purple-100">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
-							<p className="text-right text-sm text-gray-800">
-								この記事の目安時間：約 <b>{data.markdownRemark.timeToRead}</b>{" "}
-								分
+							<p className="text-right text-sm text-gray-800 mt-4">
+								<ClockIcon className="h-4 w-4 inline-block mr-1" />
+								この記事は 約 <b>{data.markdownRemark.timeToRead}</b>{" "}
+								分で読めます！
 							</p>
 						</div>
-						{/* <div className="mt-2 text-right text-sm text-gray-700">
-						</div> */}
 						<div
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
-						{/* <nav>
-							<Breadcrumb />
-						</nav> */}
 						<SnsShare />
 						<div className="mt-2">
 							<nav>

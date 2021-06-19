@@ -56,7 +56,7 @@ const AllArticles = () => {
 								className="w-auto h-auto md:w-40 md:h-24 object-cover bg-purple-50"
 							/>
 							<div className="flex flex-col p-2 md:flex-1">
-								<h2 className="font-bold text-sm md:text-base text-gray-800 mb-4 md:mb-0 flex-1">
+								<h2 className="font-bold text-sm md:text-base text-gray-800 flex-1">
 									{node.frontmatter.title}
 								</h2>
 								<div className="flex justify-between items-center font-bold">
@@ -70,9 +70,8 @@ const AllArticles = () => {
 										<time
 											itemProp="datepublished"
 											dateTime={node.frontmatter.createdAt}
-											className="text-gray-600 block text-right text-xs md:mr-4"
+											className="text-gray-400 block text-right text-xs md:mr-4"
 										>
-											<span className="md:hidden">投稿日</span>{" "}
 											<span className="mr-1">
 												<PencilAltIcon className="inline-block w-3 h-3" />
 											</span>
@@ -83,7 +82,6 @@ const AllArticles = () => {
 											dateTime={node.frontmatter.updateAt}
 											className="text-gray-600 block text-right text-xs"
 										>
-											<span className="md:hidden">更新日</span>{" "}
 											<span className="mr-1">
 												<RefreshIcon className="inline-block w-3 h-3" />
 											</span>

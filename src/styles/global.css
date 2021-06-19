@@ -75,7 +75,7 @@
 		@apply mb-4 leading-6;
 	}
 	.markdown > ul li::before {
-		@apply inline-block w-2 h-2 bg-gray-700 mr-2 rounded-full;
+		@apply inline-block w-2 h-2 bg-purple-50 border-2 border-purple-300 mr-2 rounded-full;
 		content: "";
 	}
 

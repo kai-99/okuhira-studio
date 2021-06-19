@@ -37,7 +37,7 @@ const Tags = ({ pageContext, data }) => {
 						className="flex items-center gap-1 hover:underline"
 					>
 						<HomeIcon className="w-4 h-4 inline-block text-gray-700 align-bottom" />
-						<span itemProp="name">Home</span>
+						<span itemProp="name">Top</span>
 						<ChevronRightIcon className="w-4 h-4 inline-block text-gray-700" />
 					</Link>
 					<meta itemProp="position" content="1" />
@@ -66,7 +66,7 @@ const Tags = ({ pageContext, data }) => {
 	return (
 		<Layout>
 			<Seo pagetitle={seoTitle} pagedescription={seoTitle} />
-			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
+			<div className="container px-2 pb-8 lg:pt-8 mt-12 mx-auto lg:flex">
 				<main className="md:w-3/4 lg:mr-8">
 					<Breadcrumb />
 					<section>
@@ -91,7 +91,7 @@ const Tags = ({ pageContext, data }) => {
 												className="w-auto h-auto md:w-40 md:h-24 object-cover focus:bg-purple-50"
 											/>
 											<div className="flex flex-col p-2 md:flex-1">
-												<h2 className="font-bold text-sm md:text-base text-gray-800 mb-2 md:mb-0 flex-1">
+												<h2 className="font-bold text-sm md:text-base text-gray-800 flex-1">
 													{node.frontmatter.title}
 												</h2>
 												<div className="mt-2">

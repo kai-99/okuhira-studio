@@ -7,10 +7,10 @@ module.exports = {
 		FUNCTIONS: false,
 	},
 	siteMetadata: {
-		title: `Web Jr`,
+		title: `Kaito Note`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `Web Jr`,
+		description: `Kaito Note`,
 		siteUrl: `https://webjr.gatsbyjs.io/`,
 		social: {
 			twitter: {
