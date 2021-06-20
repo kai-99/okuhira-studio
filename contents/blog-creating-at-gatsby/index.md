@@ -1,6 +1,6 @@
 ---
 title: "Gatsby.js + Tailwind CSS で爆速なブログ作ってみた"
-description: ""
+description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSSという構成で表示速度の早いブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
 updateAt: "2021-06-20"
 thumbnail: "./hero.png"
@@ -12,9 +12,6 @@ categories: "プログラミング"
 
 タイトルの通り、つい最近 Gatsby.js と Tailwind CSS の構成でブログを作成しました。  
 その最中で工夫した点や参考リンク等をまとめましたので、この記事を読みに来てくれた方の参考になれば幸いです。
-
-<!-- 詳しくは後述しますが、このブログは `npm gatsby init` でまっさらな状態から始めました。
-Gatsby.js といえば、公式で用意されている [スターターテンプレート](https://www.gatsbyjs.com/starters/) の種類が豊富でその中から選んで作成するパターンが多いかと思いますが、今回そちらは一切使用していません。 -->
 
 ## 主要技術
 
