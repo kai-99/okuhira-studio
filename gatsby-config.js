@@ -63,20 +63,12 @@ module.exports = {
 				theme_color: `#A78BFA`,
 				display: `minimal-ui`,
 				icon: `src/images/icon.jpg`, // This path is relative to the root of the site.
-				cache_busting_mode: "none",
 				icon_options: {
 					purpose: `maskable`,
 				},
 			},
 		},
-		{
-			resolve: "gatsby-plugin-offline",
-			options: {
-				workboxConfig: {
-					globPatterns: ["**/src/images/icon-path*"],
-				},
-			},
-		},
+		`gatsby-plugin-offline`,
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
