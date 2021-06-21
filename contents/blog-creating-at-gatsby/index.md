@@ -10,37 +10,48 @@ categories: "プログラミング"
 
 ## はじめに
 
-タイトルの通り、つい最近 Gatsby.js と Tailwind CSS の構成でブログを作成しました。  
+タイトルの通り、つい最近 Gatsby.js と Tailwind CSS の構成で当ブログを作成しました。  
 その最中で工夫した点や参考リンク等をまとめましたので、この記事を読みに来てくれた方の参考になれば幸いです。
 
-## 主要技術
-
-このブログで使用している主要な技術周りについて軽く概要だけ触れます。  
-概要だけ触れる理由としては、Gatsby.js やその周りのエコシステムの踏み込んだ内容は既にインターネット上に良質な記事が沢山あり、そちらを参考にする方が良いからです。  
-参考リンクはこの記事の最後の章に記載しています。
+## 使用している技術とサービス
 
 **フレームワーク**
 
 - [Gatsby.js](https://www.gatsbyjs.com/)
 
 React ベースで作られた静的サイトジェネレータです。  
-豊富なプラグインが用意されており、必要な機能に応じてプラグインを導入することで柔軟に拡張することが出来ます。  
-おすすめのプラグインに関しては、今後別の記事で紹介したいと思います。
+作成したサイトは、SPA で生成され内部リンクのページ遷移が高速になります。  
+又、Gatsby.js では豊富なプラグインが用意されており、必要な機能に応じてプラグインを導入することで柔軟に拡張することが出来ます。  
+当ブログで使用しているプラグインや、使用用途に応じたおすすめのプラグインに関しては、今後別の記事で紹介したいと思います。
 
 - [Tailwind CSS](https://tailwindcss.com/)
 
 昨今賑わっているユーティリティーファーストの CSS フレームワークです。  
-色々意見が分かれるかと思いますが、私はとても使いやすく今後も採用していきたいと思っています。
+ブログの記事は markdown で記述しており、Gatsby.js はこれらをビルド時に静的な HTML, CSS に生成する仕組みですが、それらのスタイリングも Tailwind CSS で対応しています。  
+HTML を生成する記事のラッパー要素に `className="markdown"` を指定し、それ以下に対して @apply でスタイリングしています。
+
+```jsx
+<div
+	className="markdown"
+	dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+/>
+```
+
+```css
+.markdown > h2 {
+	@apply text-xl font-bold mt-20 mb-12 bg-purple-50 px-4 py-2 border-l-4 border-purple-600 shadow lg:text-2xl lg:py-3;
+}
+```
 
 先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、v2.1 -> v2.2 にアップデートしました。  
-魅力的な機能がいくつか追加されたので、そこら辺は今後別の記事で紹介したいと思います。
+魅力的な機能がいくつか追加されたので、こちらも今後別の記事で紹介したいと思います。
 
 **アイコン**
 
 - [Font Awesome](https://fontawesome.com/v5.15/icons)
 
-有料アイコンもありますが、ある程度無料の範囲内 で使える有名な SVG アイコンです。  
-現状 Twitter 等のブランドロゴのみ使用していて、それ以外の SVG アイコンは heroicons を使用しています。
+一部有料アイコンもありますが、十分無料の範囲内 で使用できる有名な SVG アイコンです。  
+現状 Twitter のブランドロゴのみ使用していて、それ以外の SVG アイコンは heroicons を使用しています。
 
 - [heroicons](https://heroicons.com/)
 
@@ -48,37 +59,35 @@ React ベースで作られた静的サイトジェネレータです。
 > by the makers of Tailwind CSS.
 > <cite>[heroicons](https://heroicons.com/) 公式より引用</cite>
 
-Tailwind CSS が作成している SVG アイコンで、相性が良かったので選択しました。
+Tailwind CSS が作成している SVG アイコンで、使用する全てのアイコンは 2 種類（枠線のみ・塗り潰し）から自由に選ぶ事ができ、可愛らしかったのでこちらをメインで使用する事にしました。
 
 **ホスティング**
 
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
 
 Netlify や Vercel、Cloudflare Pages の記事が多かったですが、今後のアップデート等の期待も含め Gatsby Cloud を選択しました。  
-デプロイ後に Gatsby Cloud のダッシュボードにて、Lighthouse のスコアが自動で計測後、スコアが表示されるので極端にスコアが低い場合の異変等に気付きやすいと思いました。
-
-**その他**
-
-記事の作成は CMS を使用せず、Markdown で記述しています。  
-今後 CMS を導入する機会があれば、日本製ヘッドレス CMS の [micro CMS](https://microcms.io/) を検討しています。
+デプロイ後に Gatsby Cloud のダッシュボードにて、Lighthouse のスコアが自動で計測後、スコアが表示されるので極端にスコアが低い場合の異変等に気付きやすい点が気に入っています。
 
 ## 工夫した点
 
 - ページ遷移時のアニメーション
 
-SPA で構築されており、内部リンクのページ遷移がはやい分変わったことに気づきにくいので、ページ遷移時にはコンテンツ領域にのみ CSS でアニメーションを付与しました。
+作成したサイトは SPA で生成されており、内部リンクのページ遷移が高速な分変わったことに気づきにくい為、ページ遷移時にはコンテンツ領域にのみ CSS で一瞬チカっとするようなアニメーションを付与しました。
 
-```jsx{4}:title=LayoutComponent
-return (
-	<div>
-		<Header />
-		  <main className="fadein">{props.children}</main>
-		<Footer />
-	</div>
-);
+```jsx{5}:title=LayoutComponentの一部
+const Layout = ({children}) => {
+	return (
+		<div>
+			<Header />
+				<main className="fadein">{children}</main>
+			<Footer />
+		</div>
+	);
+}
+export default Layout
 ```
 
-```css:title=CSS
+```css:title=ページ遷移時のCSSアニメーション
 .fadein {
 	animation: fadein 0.8s forwards;
 }
@@ -99,12 +108,12 @@ return (
 
 - SEO を意識したマークアップ
 
-こちらは Gatsby.js と直接的には関係のない話ですが、ブログを作ったからには色々な方に読んでいただきたいので SEO 周りもしっかりと対応しました。  
+こちらは Gatsby.js と直接的には関係のない話ですが、ブログを作ったからには色々な方に読んでいただきたいので基本的な SEO 周りもしっかりと対応しました。  
 HTML タグ と SEO は関係ないんだぜ？みたいな話題は多々上がりますが、やらないよりはやったほうがいいよね。という個人的なスタンスであります。
 
 ## まとめ
 
-Gatsby.js 最高！Tailwind CSS 最高！
+Gatsby.js をもっと上手に扱えるように、node.js や GraphQL 周りの知見も深めていきたいと思います。
 
 ## 参考リンク
 

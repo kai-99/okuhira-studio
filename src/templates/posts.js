@@ -94,11 +94,14 @@ const Posts = ({ data }) => {
 					</Link>
 					<meta itemProp="position" content="2" />
 				</li>
+				<li className="lg:hidden">
+					<DocumentIcon className="w-4 h-4 inline-block text-gray-700" />
+				</li>
 				<li
 					itemProp="itemListElement"
 					itemScope
 					itemType="https://schema.org/ListItem"
-					className="overflow-hidden overflow-ellipsis whitespace-nowrap"
+					className="overflow-hidden overflow-ellipsis whitespace-nowrap hidden lg:block"
 				>
 					<Link
 						itemProp="item"
@@ -209,7 +212,7 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						<p className="text-center font-mono text-sm text-gray-800 my-8 md:mb-0">
+						<p className="text-sm text-gray-800 my-8 md:mb-0 flex items-center justify-center">
 							<ClockIcon className="h-4 w-4 inline-block mr-1" />
 							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
 						</p>
@@ -228,7 +231,7 @@ const Posts = ({ data }) => {
 										className="text-sm text-gray-700"
 									>
 										<FolderOpenIcon className="text-gray-500 w-4 h-4 mr-1 inline-block" />
-										<span className="inline-block">
+										<span className="inline-block font-bold">
 											{data.markdownRemark.frontmatter.categories}
 										</span>
 									</Link>
@@ -310,8 +313,8 @@ export const query = graphql`
 							placeholder: TRACED_SVG
 							formats: [AUTO, WEBP, AVIF]
 							layout: CONSTRAINED
-							width: 732
-							height: 452
+							width: 756
+							height: 467
 						)
 						original {
 							src
