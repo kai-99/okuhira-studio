@@ -10,25 +10,56 @@ categories: "プログラミング"
 
 ## はじめに
 
-タイトルの通り、つい最近 Gatsby.js と Tailwind CSS の構成で当ブログを作成しました。  
-その最中で工夫した点や参考リンク等をまとめましたので、この記事を読みに来てくれた方の参考になれば幸いです。
+個人ブログを作りたいなと前々から思っており、つい最近 Gatsby.js + Tailwind CSS + Gatsby Cloud の構成で当ブログを作成しました。  
+このような構成にした理由としては、私は本業で Web 制作をしておりそれの延長でスキルアップ出来るのがないか模索していたところ、Gatsby.js がとても魅力的に感じたのが経緯です。
 
-## 使用している技術とサービス
+この記事では、当ブログを作成していく最中工夫した点や、これから個人ブログを作ろうと思っている方に向けて使用している各技術の概要やそれらの参考リンク等をまとめましたので、この記事を読みに来てくれた方の参考になれば幸いです。
+
+## 使用技術とサービス
 
 **フレームワーク**
 
 - [Gatsby.js](https://www.gatsbyjs.com/)
 
-React ベースで作られた静的サイトジェネレータです。  
-作成したサイトは、SPA で生成され内部リンクのページ遷移が高速になります。  
-又、Gatsby.js では豊富なプラグインが用意されており、必要な機能に応じてプラグインを導入することで柔軟に拡張することが出来ます。  
-当ブログで使用しているプラグインや、使用用途に応じたおすすめのプラグインに関しては、今後別の記事で紹介したいと思います。
+![Gatsbyjs](./gatsbyjs.png)
+
+Gatsby.js とは、、、、
+
+> The hardest parts of the web, made simple.  
+> Gatsby is unbelievably fast & smooth.  
+> Everything just feels...there.  
+> <cite>[Gatsby.js](https://www.gatsbyjs.com/)公式より一部引用</cite>
+
+- 翻訳
+
+> Web の最も難しい部分をシンプルにしました。  
+> Gatsby は信じられないほど速く、スムーズです。  
+> すべてが「そこにある」という感じです。
+
+Gatsby.js は、JavaScript のライブラリである React をベースに作成されています。  
+魅力としては、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグイン（拡張機能）が用意されている事です。  
+スターターテンプレートを使用し、一瞬で自分のブログを作成する事もできれば、実装したい機能に応じてプラグインを導入することで難しい事を殆ど考えず、柔軟にカスタマイズする事ができます。  
+当ブログで実際に使用しているプラグインや、機能用途に応じたおすすめのプラグインに関しては、今後別の記事で紹介したいと思います。
+
+---
 
 - [Tailwind CSS](https://tailwindcss.com/)
 
+![Tailwind CSS](./tailwindcss.png)
+
 昨今賑わっているユーティリティーファーストの CSS フレームワークです。  
-ブログの記事は markdown で記述しており、Gatsby.js はこれらをビルド時に静的な HTML, CSS に生成する仕組みですが、それらのスタイリングも Tailwind CSS で対応しています。  
-HTML を生成する記事のラッパー要素に `className="markdown"` を指定し、それ以下に対して @apply でスタイリングしています。
+使い方としては、予め Tailwind CSS で用意されている最小単位のクラス名を自分で組み合わせてスタイルを当てていく仕組みです。  
+クラス名をいちいち考える必要はありません。
+
+```jsx:title=TailwindCSSの使用例
+<p className="font-bold">Hello!<span class="text-blue-500">Tailwind CSS</span></p>
+```
+
+Tailwind CSS を使用した事がない方でも、付与されているクラス名からある程度、スタイルの状態が推測出来るのではないでしょうか。
+
+又、Tailwind CSS は生の CSS を書くように、要素にクラス名を付けてスタイルを当てていく事もできます。  
+それを使っている場面としては、当ブログの記事は Markdown で書いており、 Gatsby.js は この Markdown で書いた記事を最終的に HTML, CSS に生成する仕組みですが、それらのスタイリングはクラス名を付けて対応しています。  
+HTML を生成する記事のラッパー要素に `className="markdown"` を指定し、それ以下に対して `@apply` （自前のクラス名を付けて TailwindCSS のスタイルを定義出来る機能）を使用し、スタイリングしています。
 
 ```jsx
 <div
@@ -37,16 +68,19 @@ HTML を生成する記事のラッパー要素に `className="markdown"` を指
 />
 ```
 
-```css
+```css:title=各章の見出しの例
 .markdown > h2 {
 	@apply text-xl font-bold mt-20 mb-12 bg-purple-50 px-4 py-2 border-l-4 border-purple-600 shadow lg:text-2xl lg:py-3;
 }
 ```
 
-先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、v2.1 -> v2.2 にアップデートしました。  
-魅力的な機能がいくつか追加されたので、こちらも今後別の記事で紹介したいと思います。
+先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、当ブログも v2.1 -> v2.2 にアップデートしました。今回リリースした v2.2 ではこれまで使えなかった、 `before`, `after`, `marker` 等の擬似要素が沢山サポートされました。
 
-**アイコン**
+- 参考：[Tailwind CSS v2.2 - Tailwind CSS](https://blog.tailwindcss.com/tailwindcss-2-2)
+
+---
+
+**SVG アイコン**
 
 - [Font Awesome](https://fontawesome.com/v5.15/icons)
 
@@ -61,18 +95,39 @@ HTML を生成する記事のラッパー要素に `className="markdown"` を指
 
 Tailwind CSS が作成している SVG アイコンで、使用する全てのアイコンは 2 種類（枠線のみ・塗り潰し）から自由に選ぶ事ができ、可愛らしかったのでこちらをメインで使用する事にしました。
 
+```jsx:title=heroiconsの使用例
+/**
+  塗り潰しのアイコンは末尾がsolid
+	import { HashtagIcon } from "@heroicons/react/solid";
+*/
+
+import { HashtagIcon } from "@heroicons/react/outline"; // 枠線アイコン
+
+const TagIcon = () => {
+	return (
+		<div>
+			<HashtagIcon className="h-4 w-4 inline-block text-blue-500" />
+		</div>
+	);
+};
+
+export default TagIcon
+```
+
+---
+
 **ホスティング**
 
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
 
 Netlify や Vercel、Cloudflare Pages の記事が多かったですが、今後のアップデート等の期待も含め Gatsby Cloud を選択しました。  
-デプロイ後に Gatsby Cloud のダッシュボードにて、Lighthouse のスコアが自動で計測後、スコアが表示されるので極端にスコアが低い場合の異変等に気付きやすい点が気に入っています。
+デプロイ後に Gatsby Cloud のダッシュボードにて、Lighthouse のスコアが自動で計測され表示されるので極端にスコアが低い場合の異変等に気付きやすい点が気に入っています。
 
 ## 工夫した点
 
 - ページ遷移時のアニメーション
 
-作成したサイトは SPA で生成されており、内部リンクのページ遷移が高速な分変わったことに気づきにくい為、ページ遷移時にはコンテンツ領域にのみ CSS で一瞬チカっとするようなアニメーションを付与しました。
+Gatsby.js で作成したサイトは SPA で生成されており、内部リンクのページ遷移が高速な分変わったことに気づきにくい為、ページ遷移時にはコンテンツ領域にのみ CSS で一瞬チカっとするようなアニメーションを付与しました。こちらは生の CSS で書いています。
 
 ```jsx{5}:title=LayoutComponentの一部
 const Layout = ({children}) => {
@@ -109,11 +164,11 @@ export default Layout
 - SEO を意識したマークアップ
 
 こちらは Gatsby.js と直接的には関係のない話ですが、ブログを作ったからには色々な方に読んでいただきたいので基本的な SEO 周りもしっかりと対応しました。  
-HTML タグ と SEO は関係ないんだぜ？みたいな話題は多々上がりますが、やらないよりはやったほうがいいよね。という個人的なスタンスであります。
+HTML タグ と SEO は関係ないんだぜ？みたいな話題は多々上がりますが、やらないよりはやったほうがいいという考えるタイプです。 <s>とは言いつつも、一部デザインを優先してアクセシビリティガン無視</s>
 
 ## まとめ
 
-Gatsby.js をもっと上手に扱えるように、node.js や GraphQL 周りの知見も深めていきたいと思います。
+Gatsby.js をもっと上手に扱えるように、React の値の受け渡し（UI が同じようなコンポーネントも、props での値の受け渡しが上手くいかなく重複して記述している箇所がいくつかある）、node.js や GraphQL 周りの知見も深めていきたいと思います。
 
 ## 参考リンク
 
