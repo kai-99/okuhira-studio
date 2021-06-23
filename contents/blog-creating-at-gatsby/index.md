@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS で爆速なブログ作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSSという構成で表示速度の早いブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-06-20"
+updateAt: "2021-06-23"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -37,8 +37,12 @@ Gatsby.js とは、、、、
 > すべてが「そこにある」という感じです。
 
 Gatsby.js は、JavaScript のライブラリである React をベースに作成されています。  
-魅力としては、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグイン（拡張機能）が用意されている事です。  
-スターターテンプレートを使用し、一瞬で自分のブログを作成する事もできれば、実装したい機能に応じてプラグインを導入することで難しい事を殆ど考えず、柔軟にカスタマイズする事ができます。  
+魅力としては、Gatsby.js で作成したサイトは SPA（Single Page Application） で生成される為、内部リンクのページ遷移が非常に高速になります。又、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグインが用意されている事です。
+
+- [Gatsby Starters](https://www.gatsbyjs.com/starters/)
+- [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins)
+
+スターターテンプレートを使用し、一瞬で自分のブログを作成する事もできれば、実装したい機能に応じてプラグインを導入することで難しい事を殆ど考えず、機能を追加する事が出来ます。  
 当ブログで実際に使用しているプラグインや、機能用途に応じたおすすめのプラグインに関しては、今後別の記事で紹介したいと思います。
 
 ---
@@ -47,34 +51,20 @@ Gatsby.js は、JavaScript のライブラリである React をベースに作�
 
 ![Tailwind CSS](./tailwindcss.png)
 
-昨今賑わっているユーティリティーファーストの CSS フレームワークです。  
-使い方としては、予め Tailwind CSS で用意されている最小単位のクラス名を自分で組み合わせてスタイルを当てていく仕組みです。  
-クラス名をいちいち考える必要はありません。
+TailwindCSS とは、ユーティリティーファーストの CSS フレームワークです。
 
 ```jsx:title=TailwindCSSの使用例
-<p className="font-bold">Hello!<span class="text-blue-500">Tailwind CSS</span></p>
+<p className="font-bold">Hello!<span class="text-blue-500 pl-1">Tailwind CSS</span></p>
 ```
 
-Tailwind CSS を使用した事がない方でも、付与されているクラス名からある程度、スタイルの状態が推測出来るのではないでしょうか。
+**実際の表示**
 
-又、Tailwind CSS は生の CSS を書くように、要素にクラス名を付けてスタイルを当てていく事もできます。  
-それを使っている場面としては、当ブログの記事は Markdown で書いており、 Gatsby.js は この Markdown で書いた記事を最終的に HTML, CSS に生成する仕組みですが、それらのスタイリングはクラス名を付けて対応しています。  
-HTML を生成する記事のラッパー要素に `className="markdown"` を指定し、それ以下に対して `@apply` （自前のクラス名を付けて TailwindCSS のスタイルを定義出来る機能）を使用し、スタイリングしています。
+<p class="tailwind-sample-text">Hello!<span>Tailwind CSS</span></p>
 
-```jsx
-<div
-	className="markdown"
-	dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-/>
-```
+Tailwind CSS を使用した事がない方でも、付与されているクラス名からある程度、スタイルの状態が推測出来るのではないでしょうか。  
+上記の例のように、予め Tailwind CSS で用意されている最小単位のクラス名を自分で組み合わせて UI を構築していく仕組みです。
 
-```css:title=各章の見出しの例
-.markdown > h2 {
-	@apply text-xl font-bold mt-20 mb-12 bg-purple-50 px-4 py-2 border-l-4 border-purple-600 shadow lg:text-2xl lg:py-3;
-}
-```
-
-先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、当ブログも v2.1 -> v2.2 にアップデートしました。今回リリースした v2.2 ではこれまで使えなかった、 `before`, `after`, `marker` 等の擬似要素が沢山サポートされました。
+先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、当ブログで使用している Tailwind CSS のバージョンも も v2.1 -> v2.2 にアップデートしました。今回リリースした v2.2 ではこれまで使えなかった、 `before`, `after`, `marker` 等の擬似要素が沢山サポートされました。
 
 - 参考：[Tailwind CSS v2.2 - Tailwind CSS](https://blog.tailwindcss.com/tailwindcss-2-2)
 
@@ -158,13 +148,13 @@ export default Layout
 
 - カテゴリー・タグ機能の実装
 
-今回、公式で用意されているスターターテンプレートを使用していなく`$ npm gatsby init` でまっさらな状態から始めたので、実装する以前の前提知識（node.js, GraphQL 周り等）が不足していた為少し詰まりました。  
+今回、公式で用意されているスターターテンプレートを使用していなく`$ npm gatsby init` でまっさらな状態から始めたので、実装する以前の前提知識（node.js, GraphQL 周り等）が不足していた為少し苦戦しました。  
 詰まった際は、公式で用意されているスターターテンプレートのソースコードが GitHub 上で公開されているので、実装したい機能に応じて適宜参考にすると良いと思います。
 
 - SEO を意識したマークアップ
 
 こちらは Gatsby.js と直接的には関係のない話ですが、ブログを作ったからには色々な方に読んでいただきたいので基本的な SEO 周りもしっかりと対応しました。  
-HTML タグ と SEO は関係ないんだぜ？みたいな話題は多々上がりますが、やらないよりはやったほうがいいという考えるタイプです。 <s>とは言いつつも、一部デザインを優先してアクセシビリティガン無視</s>
+HTML タグ と SEO は関係ないんだぜ？みたいな話題は多々上がりますが、やらないよりはやったほうがいいよねと考えるタイプ <s>とは言いつつも、一部デザインを優先してアクセシビリティガン無視</s> です。
 
 ## まとめ
 

@@ -122,4 +122,16 @@
 	.toc ul li a {
 		@apply hover:text-gray-600 hover:duration-300 hover:underline;
 	}
+
+	/*******************
+	Markdown sample styling
+	********************/
+
+	/* at | blog-creating-at-gatsby */
+	.markdown .tailwind-sample-text {
+		@apply font-bold;
+	}
+	.markdown .tailwind-sample-text > span {
+		@apply text-blue-500 pl-1;
+	}
 }
