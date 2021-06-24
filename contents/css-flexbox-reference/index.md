@@ -1,6 +1,6 @@
 ---
 title: "CSS flexbox 完全攻略ガイド"
-description: "-"
+description: "CSS flexbox について基礎から徹底的に解説しました。Web制作やWebデザインで、身につけておいた方が良いCSSの技術ですので、この記事で読んでフレックスボックスについて理解を深めてみてください。"
 createdAt: "2021-06-24"
 updateAt: "2021-06-24"
 thumbnail: "./hero.png"
