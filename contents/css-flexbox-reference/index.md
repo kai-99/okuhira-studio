@@ -1,36 +1,36 @@
 ---
-title: "CSS flexbox 完全攻略ガイド"
-description: "CSS flexbox について基礎から徹底的に解説しました。Web制作やWebデザインで、身につけておいた方が良いCSSの技術ですので、この記事で読んでフレックスボックスについて理解を深めてみてください。"
+title: "CSS Flexbox 完全攻略ガイド"
+description: "CSS Flexbox について基礎から徹底的に解説しました。Web制作やWebデザインで、身につけておいた方が良いCSSの技術ですので、この記事で読んでフレックスボックスについて理解を深めてみてください。"
 createdAt: "2021-06-24"
 updateAt: "2021-06-24"
 thumbnail: "./hero.png"
-tags: ["CSS", "flexbox"]
+tags: ["CSS", "Flexbox"]
 categories: "Develop"
 ---
 
 ## はじめに
 
-この記事では CSS の flexbox に関する知識を、基礎から徹底解説していきます。
+この記事では CSS の Flexbox に関する知識を、基礎から徹底解説していきます。
 
-この flexbox を理解する上で必要なポイントはたったの **2 つの要素** だけです。  
+この Flexbox を理解する上で必要なポイントはたったの **2 つの要素** だけです。  
 その 2 つの要素というのは、 **コンテナ要素** と **アイテム要素** です。
 
-それぞれの役割さえ理解することができれば、flexbox を使い自分の思い通りにレイアウトを構築していく事が可能になります。
+それぞれの役割さえ理解することができれば、Flexbox を使い自分の思い通りにレイアウトを構築していく事が可能になります。
 
-## CSS flexbox とは
+## CSS Flexbox とは
 
-flexbox とは CSS の**レイアウトモジュール**です。  
+Flexbox とは CSS の**レイアウトモジュール**です。  
 モジュールとは機能を持つ要素（かたまり）のことです。なので、レイアウトモジュールというとレイアウトの機能を持つ要素と考えることができます。
 
 以下のように複数の要素を横並びにしたり、各デバイスの画面幅によって要素の並び順を変更できるなど、少ないコード量で多彩な表現がかんたんにできます。
 
-![flexboxを使った横並び](./flexbox-1.jpg)
+![Flexboxを使った横並び](./Flexbox-1.jpg)
 
-## flexbox の基礎
+## Flexbox の基礎
 
-冒頭で少し触れましたが、 flexbox は**コンテナ要素**（親要素）と**アイテム要素**（子要素）という 2 つの要素によりレイアウトを構成します。考え方としては、以下の図を参照下さい。
+冒頭で少し触れましたが、 Flexbox は**コンテナ要素**（親要素）と**アイテム要素**（子要素）という 2 つの要素によりレイアウトを構成します。考え方としては、以下の図を参照下さい。
 
-![flexboxのコンテナ要素とアイテム要素](./flexbox-2.jpg)
+![Flexboxのコンテナ要素とアイテム要素](./Flexbox-2.jpg)
 
 ---
 
@@ -63,13 +63,13 @@ flexbox とは CSS の**レイアウトモジュール**です。
 
 **現在の表示**
 
-![flexbox解説用コード](./flexbox-3.jpg)
+![Flexbox解説用コード](./Flexbox-3.jpg)
 
-## flexbox の使い方
+## Flexbox の使い方
 
-flexbox を使って下記のように縦積みになっている要素を横並びにする方法は非常にシンプルで、**コンテナ要素**（親要素）に対して、`display: flex;` を指定するだけです。
+Flexbox を使って下記のように縦積みになっている要素を横並びにする方法は非常にシンプルで、**コンテナ要素**（親要素）に対して、`display: flex;` を指定するだけです。
 
-![flexboxを使う前](./flexbox-3.jpg)
+![Flexboxを使う前](./Flexbox-3.jpg)
 
 ```css{2-4}:title=親要素に指定しているCSSに注目
 /* 親要素 */
@@ -92,7 +92,7 @@ flexbox を使って下記のように縦積みになっている要素を横並
 }
 ```
 
-![flexboxで要素を横並びにする](./flexbox-3-2.jpg)
+![Flexboxで要素を横並びにする](./Flexbox-3-2.jpg)
 
 このように **コンテナ要素**（親要素）に対して `display: flex;` を指定するだけでアイテム要素（子要素）を横並びにする事ができます。  
 それでは、前半部分はコンテナ要素に対して指定できるプロパティとその値について詳しく解説していきます。
@@ -114,7 +114,7 @@ flexbox を使って下記のように縦積みになっている要素を横並
 }
 ```
 
-flexbox を理解し使いこなすコツとしては、これら初期値の値をふんわりとでもいいので頭に入れておくことです。
+Flexbox を理解し使いこなすコツとしては、これら初期値の値をふんわりとでもいいので頭に入れておくことです。
 
 CSS のコード上だと `display: flex;` しか指定されていないので、自分の思い通りのレイアウトが構築出来ない時は初期値の値を確認し、そのレイアウトに対して適切な値がないか調べて実装していくのがコツになります。
 
@@ -143,7 +143,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: row;](./flexbox-3-2.jpg)
+![flex-direction: row;](./Flexbox-3-2.jpg)
 
 ---
 
@@ -158,7 +158,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: row-reverse;](./flexbox-3-3.jpg)
+![flex-direction: row-reverse;](./Flexbox-3-3.jpg)
 
 ---
 
@@ -174,7 +174,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: column;](./flexbox-3.jpg)
+![flex-direction: column;](./Flexbox-3.jpg)
 
 この `flex-direction: column;` 、一見すると動きに変化がなく意味が感じられないかと思いますが、レスポンシブ対応する際にその恩恵を受けることができます。
 
@@ -196,7 +196,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: column;](./flexbox-3-4.jpg)
+![flex-direction: column;](./Flexbox-3-4.jpg)
 
 ---
 
@@ -211,7 +211,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: column-reverse](./flexbox-3-5.jpg)
+![flex-direction: column-reverse](./Flexbox-3-5.jpg)
 
 ## flex-wrap
 
@@ -265,7 +265,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 
 **現在の表示**
 
-![flex-box](./flexbox-3-6.jpg)
+![flex-box](./Flexbox-3-6.jpg)
 
 ---
 
@@ -283,7 +283,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: nowrap;](./flexbox-3-6.jpg)
+![flex-wrap: nowrap;](./Flexbox-3-6.jpg)
 
 ---
 
@@ -299,7 +299,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap;](./flexbox-3-7.jpg)
+![flex-wrap: wrap;](./Flexbox-3-7.jpg)
 
 このように、全てのアイテム要素が縦積みになっているのがわかるかと思います。
 
@@ -333,7 +333,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap;](./flexbox-3-8.jpg)
+![flex-wrap: wrap;](./Flexbox-3-8.jpg)
 
 ```css{8}:title=すベてのアイテム要素の横幅を1/4に指定
 .container {
@@ -347,7 +347,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap;](./flexbox-3-9.jpg)
+![flex-wrap: wrap;](./Flexbox-3-9.jpg)
 
 このように、`flex-wrap: wrap;` を指定することでアイテム要素の折り返しをかんたんに指定でき、使い慣れていくとより複雑なレイアウトも構築していく事が可能になります。
 
@@ -369,7 +369,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap-reverse;](./flexbox-3-10.jpg)
+![flex-wrap: wrap-reverse;](./Flexbox-3-10.jpg)
 
 ```css{3,8}:title=すべてのアイテム要素の横幅を1/4に指定
 .container {
@@ -383,7 +383,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap-reverse;](./flexbox-3-11.jpg)
+![flex-wrap: wrap-reverse;](./Flexbox-3-11.jpg)
 
 ## flex-flow
 
@@ -977,10 +977,10 @@ CSS はコンテナ要素に高さを、アイテム要素に幅の指定を追�
 
 ---
 
-CSS flexbox のコンテナ要素に対しての解説は以上になります。  
-次の章からは、flexbox のアイテム要素に対しての解説をしていきます。
+CSS Flexbox のコンテナ要素に対しての解説は以上になります。  
+次の章からは、Flexbox のアイテム要素に対しての解説をしていきます。
 
-## flexbox アイテム要素
+## Flexbox アイテム要素
 
 今回のアイテム要素の解説に使用するコードは下記になります。
 
@@ -1027,7 +1027,7 @@ CSS flexbox のコンテナ要素に対しての解説は以上になります�
 
 **現在の表示**
 
-![flexboxアイテム要素解説のサンプルコードプレビュー](./sample-preview.jpg)
+![Flexboxアイテム要素解説のサンプルコードプレビュー](./sample-preview.jpg)
 
 ## アイテム要素の初期値
 
@@ -1046,7 +1046,7 @@ CSS flexbox のコンテナ要素に対しての解説は以上になります�
 
 ## order
 
-flexbox のコンテナ要素の中で、アイテム要素に対して `order: 数値;` と振り分けることで HTML の記述に関わらず、アイテム要素の順序を設定できます。
+Flexbox のコンテナ要素の中で、アイテム要素に対して `order: 数値;` と振り分けることで HTML の記述に関わらず、アイテム要素の順序を設定できます。
 
 マイナスの値も指定する事ができます。
 
@@ -1077,14 +1077,14 @@ flexbox のコンテナ要素の中で、アイテム要素に対して `order: 
 }
 ```
 
-![flexboxアイテム要素にorderを指定した例](./order.jpg)
+![Flexboxアイテム要素にorderを指定した例](./order.jpg)
 
 指定する数値は必ずしも順序よく指定するというルールはありません。  
 値で指定した **数値が高い方が優先される** という仕組みなのでしっかり覚えときましょう。
 
 ## flex-grow
 
-flexbox コンテナ内の要素でアイテム要素に対して `flex-grow: 数値;` を指定することで、アイテム要素の伸び率を設定できます。
+Flexbox コンテナ内の要素でアイテム要素に対して `flex-grow: 数値;` を指定することで、アイテム要素の伸び率を設定できます。
 
 これから詳しく解説していきますが、`flex-grow` は **余ったスペースを各アイテム要素で分け合う** 際に使うプロパティです。
 
@@ -1168,7 +1168,7 @@ flexbox コンテナ内の要素でアイテム要素に対して `flex-grow: �
 
 ## flex-shrink
 
-flexbox コンテナ内の要素でアイテム要素に対して `flex-shrink: 数値;` を指定することで、アイテム要素の縮む率を設定できます。先程の `flex-grow` の逆と考えるとすんなり理解できます。
+Flexbox コンテナ内の要素でアイテム要素に対して `flex-shrink: 数値;` を指定することで、アイテム要素の縮む率を設定できます。先程の `flex-grow` の逆と考えるとすんなり理解できます。
 
 これから詳しく解説していきますが、`flex-shrink` は **アイテム要素がコンテナ要素の幅より大きい** 際に使うプロパティです。
 
@@ -1258,7 +1258,7 @@ flexbox コンテナ内の要素でアイテム要素に対して `flex-shrink: 
 
 ## flex-basis
 
-flexbox コンテナ内の要素でアイテム要素に対して `flex-basis: 数値;` を指定することで、アイテム要素の横幅を指定することができます。初期値は `flex-basis: auto;` です。
+Flexbox コンテナ内の要素でアイテム要素に対して `flex-basis: 数値;` を指定することで、アイテム要素の横幅を指定することができます。初期値は `flex-basis: auto;` です。
 
 指定できる数値は `width` と同じく `px rem em` や `%` で値を決めることができます。  
 `width` との違いは `width` と `flex-basis` を同じアイテム要素に指定した場合、`flex-basis` の値が優先して表示されます。
@@ -1299,9 +1299,9 @@ flexbox コンテナ内の要素でアイテム要素に対して `flex-basis: �
 
 ## まとめ
 
-CSS flexbox について、基礎から徹底的に解説しました。
+CSS Flexbox について、基礎から徹底的に解説しました。
 
-CSS で要素を横並びにする方法は、今回解説した flexbox 以外にもいくつかありますが、状況に応じて使い分けていくと良いと思います。
+CSS で要素を横並びにする方法は、今回解説した Flexbox 以外にもいくつかありますが、状況に応じて使い分けていくと良いと思います。
 
 今回記事の量が多くなってしまい、誤字脱字・表現ミス等、もしかすると出てくると思いますので見つけた方は、[Twitter の DM](https://twitter.com/okuhira_studio) にて教えてくれると幸いです。  
 読んで頂きありがとうございました。
