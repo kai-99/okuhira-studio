@@ -1,5 +1,5 @@
 ---
-title: "Gatsby.js + Tailwind CSS で爆速なブログ作ってみた"
+title: "Gatsby.js + Tailwind CSS で個人ブログ作成"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSSという構成で表示速度の早いブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
 updateAt: "2021-06-23"

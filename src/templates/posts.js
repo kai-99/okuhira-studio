@@ -157,6 +157,32 @@ const Posts = ({ data }) => {
 		);
 	};
 
+	const Ad = () => {
+		return (
+			<div className="pb-8 md:px-8">
+				<a
+					href="https://px.a8.net/svt/ejp?a8mat=3HEGYR+2N9DKI+50+2HLY9D"
+					rel="nofollow"
+				>
+					<img
+						border="0"
+						width="728"
+						height="90"
+						alt="お名前.com"
+						src="https://www27.a8.net/svt/bgt?aid=210627171160&wid=001&eno=01&mid=s00000000018015051000&mc=1"
+					/>
+				</a>
+				<img
+					border="0"
+					width="1"
+					height="1"
+					src="https://www15.a8.net/0.gif?a8mat=3HEGYR+2N9DKI+50+2HLY9D"
+					alt="お名前.com"
+				/>
+			</div>
+		);
+	};
+
 	/////////////////////  Post Page  ////////////////////
 
 	return (
@@ -220,6 +246,7 @@ const Posts = ({ data }) => {
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
+						<Ad />
 						<SnsShare />
 						<div className="mt-2">
 							<ul className="flex items-center">
@@ -252,9 +279,9 @@ const Posts = ({ data }) => {
 					</article>
 					{/* 目次 PC */}
 				</main>
-				<aside className="hidden lg:block lg:w-1/4">
+				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
 					<div className="sticky top-20 mb-8">
-						<div className="my-8">
+						<div className="hidden lg:block my-8">
 							<h2 className="pb-2 border-b border-purple-100">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-800">目次</span>

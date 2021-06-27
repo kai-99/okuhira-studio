@@ -45,16 +45,16 @@ const AllArticles = () => {
 						className="md:mr-4 mb-4 relative md:w-1/2"
 						key={node.frontmatter.title}
 					>
-						<Link to={node.fields.slug} className="hover:shadow-md">
+						<Link to={node.fields.slug}>
 							<GatsbyImage
 								image={getImage(node.frontmatter.thumbnail)}
 								alt={node.frontmatter.title}
-								className="w-auto h-auto md:w-full object-cover bg-purple-50 hover:shadow-lg hover:duration-300"
+								className="w-auto h-auto md:w-full object-cover bg-purple-50 shadow hover:duration-300 hover:opacity-80"
 							/>
 						</Link>
 						<div className="flex flex-col p-2 md:flex-1">
 							<Link to={node.fields.slug} className="hover:underline">
-								<h2 className="font-bold text-sm md:text-base text-gray-800 flex-1">
+								<h2 className="font-bold text-sm md:text-base text-gray-800 my-1 flex-1">
 									{node.frontmatter.title}
 								</h2>
 							</Link>
@@ -71,7 +71,7 @@ const AllArticles = () => {
 								<time
 									itemProp="datepublished"
 									dateTime={node.frontmatter.createdAt}
-									className="text-gray-600 block text-xs"
+									className="text-gray-700 block text-xs"
 								>
 									<span className="mr-1">
 										<PencilAltIcon className="inline-block w-3 h-3" />
