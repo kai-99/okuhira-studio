@@ -68,7 +68,7 @@ module.exports = {
 				},
 			},
 		},
-		`gatsby-plugin-offline`,
+		`gatsby-plugin-remove-serviceworker`,
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
