@@ -56,8 +56,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Web Jr`,
-				short_name: `Web Jr`,
+				name: `OKUHIRA STUDIO`,
+				short_name: `OKUHIRA STUDIO`,
 				start_url: `/`,
 				background_color: `#ffffff`,
 				theme_color: `#A78BFA`,
