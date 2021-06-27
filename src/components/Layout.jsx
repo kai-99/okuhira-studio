@@ -31,18 +31,6 @@ const Layout = (props) => {
 								{data.site.siteMetadata.title}
 							</h1>
 						</Link>
-						<a
-							href={data.site.siteMetadata.social.twitter.id}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="bg-white rounded-full h-10 w-10 flex items-center justify-center"
-							aria-label="Twitter"
-						>
-							<FontAwesomeIcon
-								className="text-blue-400 text-2xl"
-								icon={faTwitter}
-							/>
-						</a>
 					</div>
 				</header>
 			</>
@@ -53,14 +41,32 @@ const Layout = (props) => {
 		return (
 			<footer className="w-full bg-gray-700">
 				<div className="max-w-5xl mx-auto">
-					<div className="flex items-center justify-center px-2 text-gray-100 text-sm h-12">
-						<span>Copyright &copy; </span>
-						<time itemProp="datepublished" dateTime={new Date().getFullYear()}>
-							{new Date().getFullYear()}
-						</time>
-						<Link to="/" className="px-3">
-							{data.site.siteMetadata.title}
-						</Link>{" "}
+					<div className="flex items-center justify-between px-2 text-gray-100 text-sm h-12">
+						<p>
+							<span>Copyright &copy;</span>
+							<time
+								itemProp="datepublished"
+								dateTime={new Date().getFullYear()}
+							>
+								{new Date().getFullYear()}
+							</time>
+							<Link to="/" className="px-1">
+								{data.site.siteMetadata.title}
+							</Link>
+						</p>
+						<a
+							href={data.site.siteMetadata.social.twitter.id}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center"
+							aria-label="Twitter"
+						>
+							<span className="mr-1">Twitter</span>
+							<FontAwesomeIcon
+								className="text-blue-400 text-2xl"
+								icon={faTwitter}
+							/>
+						</a>
 					</div>
 				</div>
 			</footer>

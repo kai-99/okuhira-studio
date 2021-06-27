@@ -13,7 +13,7 @@ const IndexPage = () => {
 			<Layout>
 				<Seo />
 				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
-					<main className="lg:w-3/4 lg:mr-8">
+					<main className="lg:w-3/4">
 						{/* <section>
 							<div className="pl-2 italic font-bold mb-2">
 								<p className="text-gray-600 text-sm">

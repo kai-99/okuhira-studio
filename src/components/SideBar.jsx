@@ -18,7 +18,7 @@ const SideBar = () => {
 						totalCount
 					}
 				}
-				postsRemaek: allMarkdownRemark(limit: 2000) {
+				tagGroup: allMarkdownRemark(limit: 2000) {
 					group(field: frontmatter___tags) {
 						fieldValue
 						totalCount
@@ -64,7 +64,7 @@ const SideBar = () => {
 			</div>
 			<nav>
 				<ul className="flex flex-wrap">
-					{data.postsRemaek.group.map((tag) => (
+					{data.tagGroup.group.map((tag) => (
 						<li className="pb-2" key={tag.fieldValue}>
 							<Link
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
