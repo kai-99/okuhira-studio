@@ -10,7 +10,7 @@ module.exports = {
 		title: `OKUHIRA STUDIO`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `OKUHIRA STUDIO はWebの技術をメインに情報発信している個人ブログです。`,
+		description: `当サイトはOKUHIRAが運営している、個人ブログです。`,
 		siteUrl: `https://okuhira.studio/`,
 		social: {
 			twitter: {

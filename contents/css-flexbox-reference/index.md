@@ -24,13 +24,13 @@ Flexbox とは CSS の**レイアウトモジュール**です。
 
 以下のように複数の要素を横並びにしたり、各デバイスの画面幅によって要素の並び順を変更できるなど、少ないコード量で多彩な表現がかんたんにできます。
 
-![Flexboxを使った横並び](./Flexbox-1.jpg)
+![Flexboxを使った横並び](./flexbox-1.jpg)
 
 ## Flexbox の基礎
 
 冒頭で少し触れましたが、 Flexbox は**コンテナ要素**（親要素）と**アイテム要素**（子要素）という 2 つの要素によりレイアウトを構成します。考え方としては、以下の図を参照下さい。
 
-![Flexboxのコンテナ要素とアイテム要素](./Flexbox-2.jpg)
+![Flexboxのコンテナ要素とアイテム要素](./flexbox-2.jpg)
 
 ---
 
@@ -63,13 +63,13 @@ Flexbox とは CSS の**レイアウトモジュール**です。
 
 **現在の表示**
 
-![Flexbox解説用コード](./Flexbox-3.jpg)
+![Flexbox解説用コード](./flexbox-3.jpg)
 
 ## Flexbox の使い方
 
 Flexbox を使って下記のように縦積みになっている要素を横並びにする方法は非常にシンプルで、**コンテナ要素**（親要素）に対して、`display: flex;` を指定するだけです。
 
-![Flexboxを使う前](./Flexbox-3.jpg)
+![Flexboxを使う前](./flexbox-3.jpg)
 
 ```css{2-4}:title=親要素に指定しているCSSに注目
 /* 親要素 */
@@ -92,7 +92,7 @@ Flexbox を使って下記のように縦積みになっている要素を横並
 }
 ```
 
-![Flexboxで要素を横並びにする](./Flexbox-3-2.jpg)
+![Flexboxで要素を横並びにする](./flexbox-3-2.jpg)
 
 このように **コンテナ要素**（親要素）に対して `display: flex;` を指定するだけでアイテム要素（子要素）を横並びにする事ができます。  
 それでは、前半部分はコンテナ要素に対して指定できるプロパティとその値について詳しく解説していきます。
@@ -143,7 +143,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: row;](./Flexbox-3-2.jpg)
+![flex-direction: row;](./flexbox-3-2.jpg)
 
 ---
 
@@ -158,7 +158,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: row-reverse;](./Flexbox-3-3.jpg)
+![flex-direction: row-reverse;](./flexbox-3-3.jpg)
 
 ---
 
@@ -174,7 +174,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: column;](./Flexbox-3.jpg)
+![flex-direction: column;](./flexbox-3.jpg)
 
 この `flex-direction: column;` 、一見すると動きに変化がなく意味が感じられないかと思いますが、レスポンシブ対応する際にその恩恵を受けることができます。
 
@@ -196,7 +196,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: column;](./Flexbox-3-4.jpg)
+![flex-direction: column;](./flexbox-3-4.jpg)
 
 ---
 
@@ -211,7 +211,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-direction: column-reverse](./Flexbox-3-5.jpg)
+![flex-direction: column-reverse](./flexbox-3-5.jpg)
 
 ## flex-wrap
 
@@ -265,7 +265,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 
 **現在の表示**
 
-![flex-box](./Flexbox-3-6.jpg)
+![flex-box](./flexbox-3-6.jpg)
 
 ---
 
@@ -283,7 +283,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: nowrap;](./Flexbox-3-6.jpg)
+![flex-wrap: nowrap;](./flexbox-3-6.jpg)
 
 ---
 
@@ -299,7 +299,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap;](./Flexbox-3-7.jpg)
+![flex-wrap: wrap;](./flexbox-3-7.jpg)
 
 このように、全てのアイテム要素が縦積みになっているのがわかるかと思います。
 
@@ -333,7 +333,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap;](./Flexbox-3-8.jpg)
+![flex-wrap: wrap;](./flexbox-3-8.jpg)
 
 ```css{8}:title=すベてのアイテム要素の横幅を1/4に指定
 .container {
@@ -347,7 +347,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap;](./Flexbox-3-9.jpg)
+![flex-wrap: wrap;](./flexbox-3-9.jpg)
 
 このように、`flex-wrap: wrap;` を指定することでアイテム要素の折り返しをかんたんに指定でき、使い慣れていくとより複雑なレイアウトも構築していく事が可能になります。
 
@@ -369,7 +369,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap-reverse;](./Flexbox-3-10.jpg)
+![flex-wrap: wrap-reverse;](./flexbox-3-10.jpg)
 
 ```css{3,8}:title=すべてのアイテム要素の横幅を1/4に指定
 .container {
@@ -383,7 +383,7 @@ CSS のコード上だと `display: flex;` しか指定されていないので�
 }
 ```
 
-![flex-wrap: wrap-reverse;](./Flexbox-3-11.jpg)
+![flex-wrap: wrap-reverse;](./flexbox-3-11.jpg)
 
 ## flex-flow
 
