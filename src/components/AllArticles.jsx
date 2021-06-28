@@ -38,11 +38,11 @@ const AllArticles = () => {
 	);
 
 	return (
-		<div className="md:flex">
+		<div className="md:flex md:flex-wrap">
 			{data.allMarkdownRemark.nodes.map((node) => {
 				return (
 					<div
-						className="md:mr-4 mb-4 relative md:w-1/2"
+						className="md:pr-4 pb-4 relative md:w-1/2"
 						key={node.frontmatter.title}
 					>
 						<Link to={node.fields.slug}>
