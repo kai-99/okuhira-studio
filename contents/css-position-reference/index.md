@@ -269,14 +269,6 @@ div {
 
 `position: absolute;` を使うときは、基準にしたい親要素に対して `position: relative;` を指定し、子要素に `position: absolute;` を指定して **2 つセットで一緒に使う** ということを意識しましょう。
 
----
-
-`position: absolute;` のテクニックを使った解説も以下の記事でしてますのでチェックしてみてください！
-
-- 関連記事：[もう迷わない！役に立つ CSS 中央寄せ 5 選](../css-center-reference/)
-
----
-
 ## sticky
 
 `position: sticky;` は親要素に依存し、`top, left, bottom, right` で指定した値に基づき要素を配置します。

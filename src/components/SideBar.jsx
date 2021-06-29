@@ -7,38 +7,38 @@ import {
 	LinkIcon,
 } from "@heroicons/react/outline";
 
-const Ad = () => {
-	return (
-		<div className="mb-4">
-			<h3 className="pb-2 border-b border-purple-100">
-				<LinkIcon className="h-4 w-4 inline-block text-yellow-500 mr-1" />
-				<span className="text-sm font-bold text-gray-800">
-					スポンサーリンク
-				</span>
-			</h3>
-			<a
-				href="https://px.a8.net/svt/ejp?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
-				rel="nofollow"
-				className="hover:opacity-80"
-			>
-				<img
-					border="0"
-					width="300"
-					height="250"
-					alt=""
-					src="https://www22.a8.net/svt/bgt?aid=210628183445&wid=001&eno=01&mid=s00000017938001006000&mc=1"
-				/>
-			</a>
-			<img
-				border="0"
-				width="1"
-				height="1"
-				src="https://www18.a8.net/0.gif?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
-				alt=""
-			/>
-		</div>
-	);
-};
+// const Ad = () => {
+// 	return (
+// 		<div className="mb-4">
+// 			<h3 className="pb-2 border-b border-purple-100">
+// 				<LinkIcon className="h-4 w-4 inline-block text-yellow-500 mr-1" />
+// 				<span className="text-sm font-bold text-gray-800">
+// 					スポンサーリンク
+// 				</span>
+// 			</h3>
+// 			<a
+// 				href="https://px.a8.net/svt/ejp?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
+// 				rel="nofollow"
+// 				className="hover:opacity-80"
+// 			>
+// 				<img
+// 					border="0"
+// 					width="300"
+// 					height="250"
+// 					alt=""
+// 					src="https://www22.a8.net/svt/bgt?aid=210628183445&wid=001&eno=01&mid=s00000017938001006000&mc=1"
+// 				/>
+// 			</a>
+// 			<img
+// 				border="0"
+// 				width="1"
+// 				height="1"
+// 				src="https://www18.a8.net/0.gif?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
+// 				alt=""
+// 			/>
+// 		</div>
+// 	);
+// };
 
 const SideBar = () => {
 	const data = useStaticQuery(
@@ -67,7 +67,7 @@ const SideBar = () => {
 
 	return (
 		<div className="my-8">
-			<Ad />
+			{/* <Ad /> */}
 			<div className="mb-4">
 				<h3 className="pb-2 border-b border-purple-100">
 					<FolderOpenIcon className="h-4 w-4 inline-block text-gray-500 mr-1" />

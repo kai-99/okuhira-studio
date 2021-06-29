@@ -157,31 +157,31 @@ const Posts = ({ data }) => {
 		);
 	};
 
-	const Ad = () => {
-		return (
-			<div className="pb-8 md:px-8">
-				<a
-					href="https://px.a8.net/svt/ejp?a8mat=3HEHQU+9W18J6+3GOM+65ME9"
-					rel="nofollow"
-				>
-					<img
-						border="0"
-						width="728"
-						height="90"
-						alt=""
-						src="https://www23.a8.net/svt/bgt?aid=210628182598&wid=001&eno=01&mid=s00000016159001034000&mc=1"
-					/>
-				</a>
-				<img
-					border="0"
-					width="1"
-					height="1"
-					src="https://www18.a8.net/0.gif?a8mat=3HEHQU+9W18J6+3GOM+65ME9"
-					alt=""
-				/>
-			</div>
-		);
-	};
+	// const Ad = () => {
+	// 	return (
+	// 		<div className="pb-8 md:px-8">
+	// 			<a
+	// 				href="https://px.a8.net/svt/ejp?a8mat=3HEHQU+9W18J6+3GOM+65ME9"
+	// 				rel="nofollow"
+	// 			>
+	// 				<img
+	// 					border="0"
+	// 					width="728"
+	// 					height="90"
+	// 					alt=""
+	// 					src="https://www23.a8.net/svt/bgt?aid=210628182598&wid=001&eno=01&mid=s00000016159001034000&mc=1"
+	// 				/>
+	// 			</a>
+	// 			<img
+	// 				border="0"
+	// 				width="1"
+	// 				height="1"
+	// 				src="https://www18.a8.net/0.gif?a8mat=3HEHQU+9W18J6+3GOM+65ME9"
+	// 				alt=""
+	// 			/>
+	// 		</div>
+	// 	);
+	// };
 
 	/////////////////////  Post Page  ////////////////////
 
@@ -246,7 +246,7 @@ const Posts = ({ data }) => {
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
-						<Ad />
+						{/* <Ad /> */}
 						<SnsShare />
 						<div className="mt-2">
 							<ul className="flex items-center">
