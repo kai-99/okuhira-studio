@@ -1,6 +1,6 @@
 ---
 title: "Photoshop の便利機能【マッチフォント】"
-description: "-"
+description: "Adobe Photoshopの便利な機能であるマッチフォントの解説をします。画像内で使われているテキストのフォントを判別できる便利な機能で使い方も簡単です。この記事では、マッチフォントの基本的な使い方から応用までを図を用いて解説していきます。"
 createdAt: "2021-06-29"
 updateAt: "2021-06-29"
 thumbnail: "./hero.png"
