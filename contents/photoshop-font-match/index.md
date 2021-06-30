@@ -1,12 +1,14 @@
 ---
 title: "Photoshop の便利機能【マッチフォント】"
-description: "Adobe Photoshopの便利な機能であるマッチフォントの解説をします。画像内で使われているテキストのフォントを判別できる便利な機能で使い方も簡単です。この記事では、マッチフォントの基本的な使い方から応用までを図を用いて解説していきます。"
+description: "Adobe Photoshopの便利な機能であるマッチフォントの解説をします。画像内で使われているテキストのフォントを判別できる便利な機能で使い方も簡単です。この記事では、マッチフォントの基本的な使い方から応用までを図を用いて解説していきます。Webデザインで役に立ちます。"
 createdAt: "2021-06-29"
-updateAt: "2021-06-29"
+updateAt: "2021-06-30"
 thumbnail: "./hero.png"
 tags: ["Photoshop"]
 categories: "Design"
 ---
+
+<a href="//af.moshimo.com/af/c/click?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36329&url=https%3A%2F%2Fonline.dhw.co.jp%2Fcourse%2Fadobe%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://image.moshimo.com/af-img/2262/000000036329.png" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36329" width="1" height="1" style="border:none;">
 
 ## はじめに
 
@@ -17,16 +19,16 @@ Photoshop の知ってると便利な機能、**マッチフォント** につ�
 
 これらの使い所としては、PSD, AI データが無く画像データしかないような状況で  
 「画像内にこの文言追加して！」みたいな場面がまさにそれです。  
-「あ、画像内と同じフォントで！」とか言われても何のフォントか知らねえよ。  
-という怒りの感情が無くなりますので、是非この記事で使い方をマスターしましょう！
+「あ、画像内と同じフォントで！」とか言われても何のフォントかわからなくて困る。。  
+という状況が無くなりますので、是非この記事で使い方をマスターしましょう。
 
 ## マッチフォントの使い方
 
-マッチフォントの使い方は非常に簡単です。
+Photoshop マッチフォント機能の使い方は非常に簡単です。
 
 1. 対象となる画像を用意
 1. 長方形選択ツールでテキストを囲む
-1. オプションバー -> 書式 -> マッチフォント
+1. オプションバー → 書式 → マッチフォント → 候補となるフォント一覧が自動表示
 
 の簡単なステップで画像内のテキストが何のフォントかを判別する事ができます。  
 例として、この記事のサムネイル画像内で使われているフォントを調べてみたいと思います。
@@ -54,9 +56,9 @@ Photoshop の知ってると便利な機能、**マッチフォント** につ�
 例として、この記事のサムネイル画像内に、新しくテキストを追加してみます。  
 手順は先程と殆ど変わらないので、以下図で作業手順を解説していきます。
 
-![Photoshopマッチフォントの使い方を解説その5](./step05.png)
+今回「マッチフォント」の左側に、「便利な機能」というテキストを追加しました。
 
-今回「マッチフォント」の左側に、「便利な機能」という文言を追加しました。
+![Photoshopマッチフォントの使い方を解説その5](./step05.png)
 
 ![Photoshopマッチフォントの使い方を解説その6](./step06.png)
 
@@ -68,11 +70,14 @@ Photoshop の知ってると便利な機能、**マッチフォント** につ�
 
 ![Photoshopマッチフォントの使い方](./finish.png)
 
-このように Photoshop のマッチフォントを使うことで、画像内で使われているフォントの種類を判別し、新しく文言を追加する場面でも同じフォントを使用し、違和感なく追加する事ができました。
+このように Photoshop のマッチフォントを使うことで、画像内で使われているフォントの種類を判別し、新しくテキストを追加する場面でも同じフォントを使用し、違和感なく追加する事ができました。
 
 ## まとめ
 
-Photoshop は沢山の機能があり、一つずつ覚えて使いこなすのは時間がかかると思いますがしっかり身に付けていきましょう！
+Photoshop は沢山の機能があり、一つずつ覚えて使いこなすのは時間がかります。
+
+**より効率的に**、**より早く実践的なスキルを身に付けたい**なら
+<a href="//af.moshimo.com/af/c/click?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330&url=https%3A%2F%2Fonline.dhw.co.jp%2Fcourse%2Fadobe%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">デジタルハリウッド</a><img src="//i.moshimo.com/af/i/impression?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330" width="1" height="1" style="border:none;">が非常におすすめです。Web デザインのスキルだけでなく、普通に購入すると少し高い Adobe 製品も、安く購入できたりするので気になる方はチェックしてみてください！
 
 - <a href="//af.moshimo.com/af/c/click?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330&url=https%3A%2F%2Fonline.dhw.co.jp%2Fcourse%2Fadobe%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">Adobe（アドビ）マスター講座 ｜デジタルハリウッド</a><img src="//i.moshimo.com/af/i/impression?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330" width="1" height="1" style="border:none;">
 

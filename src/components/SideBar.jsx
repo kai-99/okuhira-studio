@@ -4,7 +4,7 @@ import kebabCase from "lodash/kebabCase";
 import {
 	FolderOpenIcon,
 	HashtagIcon,
-	LinkIcon,
+	// LinkIcon,
 } from "@heroicons/react/outline";
 
 // const Ad = () => {
