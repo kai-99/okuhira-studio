@@ -2,11 +2,13 @@
 title: "実践！CSS position をしっかり理解する"
 description: "CSS position（絶対値）で使える5つの値を解説します。static relative absolute fiexd sticky の5つは top left right bottom とうまく組み合わせることでWeb制作やWebデザインをする上で非常に役に立つプロパティや値なので是非使いこなせるようにしましょう"
 createdAt: "2021-06-28"
-updateAt: "2021-06-28"
+updateAt: "2021-07-01"
 thumbnail: "./hero.png"
 tags: ["CSS"]
 categories: "Develop"
 ---
+
+## はじめに
 
 この記事では、CSS の `position` プロパティについて基礎から解説し、色々な Web サイトで `position` が使われている例やその仕組み、実践的な使い方まで解説します。
 
@@ -85,13 +87,28 @@ div {
 }
 ```
 
-こちらの `static` は意図して記述する場面は特に無いかと思いますので、以下の 特徴 だけ頭に入れておくと良いでしょう。
+こちらの `static` は意図して使用する場面は非常少ないと思いますので、以下の 特徴 だけ頭に入れておくと良いでしょう。
 
 **特徴**
 
 1. CSS で `position` をしていない要素は、全て初期値で `static` になっている
 1. `top, right, bottom, left` など位置の指定をしても動かない
 1. `z-index` を指定しても要素の重なり順を変更できない
+
+---
+
+意図して記述する場面は非常に少ないと言いましたが、使用する場面がある例としては、レスポンシブ対応の Web サイトを特定のデバイスでは `position` の指定を解除したいという場面くらいかと思いますので、頭に入れておくと良いと思います。
+
+```css:title=対応デバイスの切り替えの際に指定する例
+div {
+	position: static;
+}
+@media (min-width: 768px) {
+	div {
+		position: absolute;
+	}
+}
+```
 
 ## fixed
 
@@ -397,7 +414,7 @@ div {
 </aside>
 ```
 
-このように sticky は少し癖がありますが、使い慣れればとても便利な値ですのでぜひ覚えるようにしましょう。
+このように sticky は少し癖がありますが、使い慣れればとても便利な値ですので是非習得してください！
 
 ## まとめ
 

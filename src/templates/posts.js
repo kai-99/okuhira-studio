@@ -157,31 +157,51 @@ const Posts = ({ data }) => {
 		);
 	};
 
-	// const Ad = () => {
-	// 	return (
-	// 		<div className="pb-8 md:px-8">
-	// 			<a
-	// 				href="https://px.a8.net/svt/ejp?a8mat=3HEHQU+9W18J6+3GOM+65ME9"
-	// 				rel="nofollow"
-	// 			>
-	// 				<img
-	// 					border="0"
-	// 					width="728"
-	// 					height="90"
-	// 					alt=""
-	// 					src="https://www23.a8.net/svt/bgt?aid=210628182598&wid=001&eno=01&mid=s00000016159001034000&mc=1"
-	// 				/>
-	// 			</a>
-	// 			<img
-	// 				border="0"
-	// 				width="1"
-	// 				height="1"
-	// 				src="https://www18.a8.net/0.gif?a8mat=3HEHQU+9W18J6+3GOM+65ME9"
-	// 				alt=""
-	// 			/>
-	// 		</div>
-	// 	);
-	// };
+	const Ad = () => {
+		return (
+			<React.Fragment>
+				<div className="mb-4 mt-[36px]">
+					<a
+						href="//af.moshimo.com/af/c/click?a_id=2702509&p_id=2322&pc_id=4990&pl_id=30713&url=https%3A%2F%2Fliginc.co.jp%2Fstudioueno%2F"
+						rel="nofollow"
+						referrerPolicy="no-referrer-when-downgrade"
+					>
+						<img
+							src="https://image.moshimo.com/af-img/1797/000000030713.png"
+							alt=""
+						/>
+					</a>
+					<img
+						src="//i.moshimo.com/af/i/impression?a_id=2702509&p_id=2322&pc_id=4990&pl_id=30713"
+						width="1"
+						height="1"
+						alt=""
+					/>
+				</div>
+				<div>
+					<a
+						href="https://px.a8.net/svt/ejp?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
+						rel="nofollow"
+					>
+						<img
+							border="0"
+							width="300"
+							height="250"
+							alt=""
+							src="https://www24.a8.net/svt/bgt?aid=210628183445&wid=001&eno=01&mid=s00000017938001006000&mc=1"
+						/>
+					</a>
+					<img
+						border="0"
+						width="1"
+						height="1"
+						src="https://www13.a8.net/0.gif?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
+						alt=""
+					/>
+				</div>
+			</React.Fragment>
+		);
+	};
 
 	/////////////////////  Post Page  ////////////////////
 
@@ -192,7 +212,7 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 				ogImage={ogImage}
 			/>
-			<div className="container px-2 pb-8 lg:pt-8 mt-12 mx-auto lg:flex">
+			<div className="container px-2 pb-8 pt-8 mt-12 mx-auto lg:flex">
 				<main className="lg:w-3/4 lg:mr-8">
 					<nav>
 						<Breadcrumb />
@@ -246,7 +266,6 @@ const Posts = ({ data }) => {
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
-						{/* <Ad /> */}
 						<SnsShare />
 						<div className="mt-2">
 							<ul className="flex items-center">
@@ -295,23 +314,30 @@ const Posts = ({ data }) => {
 				</aside>
 			</div>
 			{/* 新着記事 */}
-			<div className="lg:w-3/4 lg:mr-8 px-2 pb-10">
-				<div className="my-8">
-					<h3 className="text-gray-700 text-lg font-bold italic px-2 mb-2">
-						新着記事
-						<LightningBoltIcon className="inline-block w-6 h-6 ml-1 align-text-bottom text-yellow-400" />
-					</h3>
-					<NewArticles />
+			<div className="container px-2 py-8 mx-auto lg:flex">
+				<div className="lg:w-3/4 px-2 pb-10 lg:px-0">
+					<div className="mb-8">
+						<h3 className="text-gray-700 text-lg font-bold italic px-2 mb-2">
+							新着記事
+							<LightningBoltIcon className="inline-block w-6 h-6 ml-1 align-text-bottom text-yellow-400" />
+						</h3>
+						<NewArticles />
+					</div>
+					<div className="text-center">
+						<Link
+							className="text-lg font-bold border-2 border-gray-100 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow"
+							to="/"
+						>
+							<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom text-gray-700" />
+							トップページにいく
+						</Link>
+					</div>
 				</div>
-				<div className="text-center">
-					<Link
-						className="text-lg font-bold border-2 border-gray-100 block bg-white text-gray-700 w-full p-4 hover:bg-purple-50 hover:border-purple-200 duration-300 rounded shadow"
-						to="/"
-					>
-						<HomeIcon className="w-6 h-6 mr-1 inline-block align-text-bottom text-gray-700" />
-						トップページにいく
-					</Link>
-				</div>
+				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
+					<div className="lg:sticky lg:top-20">
+						<Ad />
+					</div>
+				</aside>
 			</div>
 		</Layout>
 	);
