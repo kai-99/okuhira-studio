@@ -160,7 +160,15 @@ const Posts = ({ data }) => {
 	const Ad = () => {
 		return (
 			<React.Fragment>
-				<div className="mb-4 mt-[36px]">
+				<p className="pb-2 border-b border-purple-100 text-center">
+					<span className="text-sm font-bold text-gray-800">
+						おすすめPR &#x1f680;
+					</span>
+				</p>
+				<div>
+					<li className="text-sm font-bold text-gray-800 my-2 marker:text-purple-400">
+						Webデザインスクール
+					</li>
 					<a
 						href="//af.moshimo.com/af/c/click?a_id=2702509&p_id=2322&pc_id=4990&pl_id=30713&url=https%3A%2F%2Fliginc.co.jp%2Fstudioueno%2F"
 						rel="nofollow"
@@ -169,6 +177,7 @@ const Posts = ({ data }) => {
 						<img
 							src="https://image.moshimo.com/af-img/1797/000000030713.png"
 							alt=""
+							className="hover:opacity-80 duration-300"
 						/>
 					</a>
 					<img
@@ -179,6 +188,9 @@ const Posts = ({ data }) => {
 					/>
 				</div>
 				<div>
+					<li className="text-sm font-bold text-gray-800 my-2 marker:text-purple-400">
+						フリーランス案件
+					</li>
 					<a
 						href="https://px.a8.net/svt/ejp?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
 						rel="nofollow"
@@ -189,6 +201,7 @@ const Posts = ({ data }) => {
 							height="250"
 							alt=""
 							src="https://www24.a8.net/svt/bgt?aid=210628183445&wid=001&eno=01&mid=s00000017938001006000&mc=1"
+							className="hover:opacity-80 duration-300"
 						/>
 					</a>
 					<img
@@ -315,7 +328,7 @@ const Posts = ({ data }) => {
 			</div>
 			{/* 新着記事 */}
 			<div className="container px-2 py-8 mx-auto lg:flex">
-				<div className="lg:w-3/4 px-2 pb-10 lg:px-0">
+				<div className="lg:w-3/4 lg:mr-4 px-2 pb-10 lg:px-0">
 					<div className="mb-8">
 						<h3 className="text-gray-700 text-lg font-bold italic px-2 mb-2">
 							新着記事

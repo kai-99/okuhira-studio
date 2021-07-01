@@ -74,45 +74,47 @@ const Tags = ({ pageContext, data }) => {
 							<HashtagIcon className="inline-block w-4 h-4 md:w-6 md:h-6 text-blue-500 align-text-bottom mr-1" />
 							<TemplateTitle TemplateTitle={tag} />
 						</div>
-						<div>
+						<div className="md:flex md:flex-wrap">
 							{edges.map(({ node }) => {
 								return (
 									<div
-										className="bg-white mb-4 relative"
-										key={node.fields.slug}
+										className="md:pr-4 pb-4 relative md:w-1/2"
+										key={node.frontmatter.title}
 									>
-										<Link
-											className="md:flex lg:hover:shadow hover:bg-purple-50 md:border-2 hover:border-purple-200 duration-300 block"
-											to={node.fields.slug}
-										>
+										<Link to={node.fields.slug}>
 											<GatsbyImage
 												image={getImage(node.frontmatter.thumbnail)}
 												alt={node.frontmatter.title}
-												className="w-auto h-auto md:w-40 md:h-24 object-cover focus:bg-purple-50"
+												className="w-auto h-auto md:w-full object-cover bg-purple-50 shadow hover:duration-300 hover:opacity-80"
 											/>
-											<div className="flex flex-col p-2 md:flex-1">
-												<h2 className="font-bold text-sm md:text-base text-gray-800 flex-1">
+										</Link>
+										<div className="flex flex-col p-2 md:flex-1">
+											<Link to={node.fields.slug} className="hover:underline">
+												<h2 className="font-bold text-sm md:text-base text-gray-800 my-1 flex-1">
 													{node.frontmatter.title}
 												</h2>
-												<div className="mt-2">
-													<ul className="flex items-center ">
-														{node.frontmatter.tags.map((tag) => {
-															return (
-																<li
-																	className="mr-1"
-																	key={`/tags/${kebabCase(tag)}/`}
-																>
-																	<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />
-																	<span className="inline-block text-sm text-blue-500">
-																		{tag}
-																	</span>
-																</li>
-															);
-														})}
-													</ul>
-												</div>
-											</div>
-										</Link>
+											</Link>
+											<ul className="flex items-center ">
+												{node.frontmatter.tags.map((tag) => {
+													return (
+														<li
+															className="mr-1"
+															key={`/tags/${kebabCase(tag)}/`}
+														>
+															<Link
+																to={`/tags/${kebabCase(tag)}/`}
+																className="hover:opacity-80"
+															>
+																<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />
+																<span className="inline-block text-sm text-blue-500">
+																	{tag}
+																</span>
+															</Link>
+														</li>
+													);
+												})}
+											</ul>
+										</div>
 									</div>
 								);
 							})}
@@ -145,11 +147,8 @@ export const pageQuery = graphql`
 						slug
 					}
 					frontmatter {
-						createdAt(formatString: "YYYY.MM.DD")
-						updateAt(formatString: "YYYY.MM.DD")
 						title
 						tags
-						categories
 						thumbnail {
 							childImageSharp {
 								gatsbyImageData(
