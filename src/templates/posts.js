@@ -225,7 +225,7 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 				ogImage={ogImage}
 			/>
-			<div className="container px-2 pb-8 pt-8 mt-12 mx-auto lg:flex">
+			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
 				<main className="lg:w-3/4 lg:mr-8">
 					<nav>
 						<Breadcrumb />
