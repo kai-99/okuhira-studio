@@ -69,7 +69,7 @@ const Categories = ({ pageContext, data }) => {
 		<Layout>
 			<Seo pagetitle={seoTitle} pagedescription={seoTitle} />
 			<div className="container py-8 mt-12 mx-auto lg:flex">
-				<main className="md:w-3/4 lg:mr-8">
+				<main className="md:w-3/4">
 					<Breadcrumb />
 					<section>
 						<div className="mb-4 flex items-center justify-center">
