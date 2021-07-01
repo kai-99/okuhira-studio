@@ -32,7 +32,7 @@ module.exports = {
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
 				host: "https://okuhira.studio",
-				sitemap: "https://okuhira.studio/sitemap.xml",
+				sitemap: "https://okuhira.studio/sitemap/sitemap-0.xml",
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
