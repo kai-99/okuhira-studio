@@ -5,7 +5,7 @@ createdAt: "2021-06-24"
 updateAt: "2021-06-24"
 thumbnail: "./hero.png"
 tags: ["CSS", "Flexbox"]
-categories: "Develop"
+categories: "Design"
 ---
 
 ## はじめに

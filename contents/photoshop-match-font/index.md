@@ -8,8 +8,6 @@ tags: ["Photoshop"]
 categories: "Design"
 ---
 
-<a href="//af.moshimo.com/af/c/click?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36329&url=https%3A%2F%2Fonline.dhw.co.jp%2Fcourse%2Fadobe%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://image.moshimo.com/af-img/2262/000000036329.png" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36329" width="1" height="1" style="border:none;">
-
 ## はじめに
 
 Photoshop の知ってると便利な機能、**マッチフォント** について解説していきます。
@@ -71,14 +69,3 @@ Photoshop マッチフォント機能の使い方は非常に簡単です。
 ![Photoshopマッチフォントの使い方](./finish.png)
 
 このように Photoshop のマッチフォントを使うことで、画像内で使われているフォントの種類を判別し、新しくテキストを追加する場面でも同じフォントを使用し、違和感なく追加する事ができました。
-
-## まとめ
-
-Photoshop は沢山の機能があり、一つずつ覚えて使いこなすのは時間がかります。
-
-**より効率的に**、**より早く実践的なスキルを身に付けたい**なら
-<a href="//af.moshimo.com/af/c/click?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330&url=https%3A%2F%2Fonline.dhw.co.jp%2Fcourse%2Fadobe%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">デジタルハリウッド</a><img src="//i.moshimo.com/af/i/impression?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330" width="1" height="1" style="border:none;">が非常におすすめです。Web デザインのスキルだけでなく、普通に購入すると少し高い Adobe 製品も、安く購入できたりするので気になる方はチェックしてみてください！
-
-- <a href="//af.moshimo.com/af/c/click?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330&url=https%3A%2F%2Fonline.dhw.co.jp%2Fcourse%2Fadobe%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">Adobe（アドビ）マスター講座 ｜デジタルハリウッド</a><img src="//i.moshimo.com/af/i/impression?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36330" width="1" height="1" style="border:none;">
-
-<a href="//af.moshimo.com/af/c/click?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36329&url=https%3A%2F%2Fonline.dhw.co.jp%2Fcourse%2Fadobe%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://image.moshimo.com/af-img/2262/000000036329.png" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2698789&p_id=2842&pc_id=6482&pl_id=36329" width="1" height="1" style="border:none;">

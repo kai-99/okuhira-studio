@@ -5,7 +5,7 @@ createdAt: "2021-06-28"
 updateAt: "2021-07-01"
 thumbnail: "./hero.png"
 tags: ["CSS"]
-categories: "Develop"
+categories: "Design"
 ---
 
 ## はじめに

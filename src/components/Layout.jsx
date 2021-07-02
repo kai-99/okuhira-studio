@@ -22,7 +22,7 @@ const Layout = (props) => {
 	const Header = () => {
 		return (
 			<>
-				<header className="w-full border-b top-0 h-12 z-50 fixed shadow-sm bg-purple-400">
+				<header className="w-full top-0 h-12 z-50 fixed shadow-sm bg-purple-400">
 					<div className="max-w-5xl mx-auto h-12 flex items-center justify-center px-2">
 						<Link to="/">
 							<h1 className="font-mono text-xl text-gray-100">
