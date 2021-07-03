@@ -96,15 +96,15 @@
 	}
 
 	.markdown table {
-		@apply mx-0 my-4 w-full;
+		@apply mx-0 my-4 w-full overflow-x-scroll whitespace-nowrap block;
 	}
 
 	.markdown table th {
-		@apply p-2 bg-purple-200 text-gray-800 font-semibold border-2 border-white;
+		@apply p-2 text-gray-800 font-semibold border-2 border-purple-200;
 	}
 
 	.markdown table td {
-		@apply p-2 border-2 border-white bg-gray-50;
+		@apply p-2 border-2 border-purple-200;
 	}
 
 	.markdown > hr {
@@ -121,17 +121,5 @@
 
 	.toc ul li a {
 		@apply hover:text-gray-600 hover:duration-300 hover:underline;
-	}
-
-	/*******************
-	Markdown sample styling
-	********************/
-
-	/* at | blog-creating-at-gatsby */
-	.markdown .tailwind-sample-text {
-		@apply font-bold;
-	}
-	.markdown .tailwind-sample-text > span {
-		@apply text-blue-500 pl-1;
 	}
 }

@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS で個人ブログ作成"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSSという構成で表示速度の早いブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-06-23"
+updateAt: "2021-07-03"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "Develop"
@@ -19,11 +19,7 @@ categories: "Develop"
 
 **フレームワーク**
 
-- [Gatsby.js](https://www.gatsbyjs.com/)
-
-![Gatsbyjs](./gatsbyjs.png)
-
-Gatsby.js とは、、、、
+![Gatsbyjs](./gatsby-js.png)
 
 > The hardest parts of the web, made simple.  
 > Gatsby is unbelievably fast & smooth.  
@@ -36,8 +32,8 @@ Gatsby.js とは、、、、
 > Gatsby は信じられないほど速く、スムーズです。  
 > すべてが「そこにある」という感じです。
 
-Gatsby.js は、JavaScript のライブラリである React をベースに作成されています。  
-魅力としては、Gatsby.js で作成したサイトは SPA（Single Page Application） で生成される為、内部リンクのページ遷移が非常に高速になります。又、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグインが用意されている事です。
+[Gatsby.js](https://www.gatsbyjs.com/) は、JavaScript のライブラリである React をベースに作成されています。  
+魅力としては、Gatsby.js で作成したサイトは SPA（Single Page Application） で生成される為、内部リンクのページ遷移が非常に高速であり、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグイン（拡張機能）が用意されている点です。
 
 - [Gatsby Starters](https://www.gatsbyjs.com/starters/)
 - [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins)
@@ -47,21 +43,25 @@ Gatsby.js は、JavaScript のライブラリである React をベースに作�
 
 ---
 
-- [Tailwind CSS](https://tailwindcss.com/)
+![Tailwind CSS](./tailwind-css.png)
 
-![Tailwind CSS](./tailwindcss.png)
-
-TailwindCSS とは、ユーティリティーファーストの CSS フレームワークです。
+[Tailwind CSS](https://tailwindcss.com/) とは、ユーティリティーファーストの CSS フレームワークです。  
+簡単な使用例と、そのクラスに当たるスタイルの詳細を記載します。
 
 ```jsx:title=TailwindCSSの使用例
-<p className="font-bold">Hello!<span class="text-blue-500 pl-1">Tailwind CSS</span></p>
+<p className="font-bold text-center">Hello!<span class="text-blue-500 pl-1">Tailwind CSS</span></p>
 ```
 
-**実際の表示**
+実際の表示
 
-<p class="tailwind-sample-text">Hello!<span>Tailwind CSS</span></p>
+<p class="font-bold text-center">Hello!<span class="text-blue-500 pl-1">Tailwind CSS</span></p>
 
-Tailwind CSS を使用した事がない方でも、付与されているクラス名からある程度、スタイルの状態が推測出来るのではないでしょうか。  
+| Tailwind CSS |     `font-bold`      |     `text-center`     |  `text-blue-500`  |        `pl-1`        |
+| :----------: | :------------------: | :-------------------: | :---------------: | :------------------: |
+|   Pure CSS   | `font-weight: bold;` | `text-align: center;` | `color: #3B82F6;` | `padding-left: 4px;` |
+
+Tailwind CSS を使用した事がない方でも、付与されているクラス名からある程度、スタイルの状態が推測出来るのではないでしょうか。
+
 上記の例のように、予め Tailwind CSS で用意されている最小単位のクラス名を自分で組み合わせて UI を構築していく仕組みです。
 
 先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、当ブログで使用している Tailwind CSS のバージョンも も v2.1 -> v2.2 にアップデートしました。今回リリースした v2.2 ではこれまで使えなかった、 `before`, `after`, `marker` 等の擬似要素が沢山サポートされました。
@@ -72,18 +72,9 @@ Tailwind CSS を使用した事がない方でも、付与されているクラ�
 
 **SVG アイコン**
 
-- [Font Awesome](https://fontawesome.com/v5.15/icons)
-
-一部有料アイコンもありますが、十分無料の範囲内 で使用できる有名な SVG アイコンです。  
-現状 Twitter のブランドロゴのみ使用していて、それ以外の SVG アイコンは heroicons を使用しています。
-
 - [heroicons](https://heroicons.com/)
 
-> Beautiful hand-crafted SVG icons,  
-> by the makers of Tailwind CSS.
-> <cite>[heroicons](https://heroicons.com/) 公式より引用</cite>
-
-Tailwind CSS が作成している SVG アイコンで、使用する全てのアイコンは 2 種類（枠線のみ・塗り潰し）から自由に選ぶ事ができ、可愛らしかったのでこちらをメインで使用する事にしました。
+Tailwind CSS（のグループ？） が作成している SVG アイコンで、使用する全てのアイコンは 2 種類（枠線のみ・塗り潰し）から自由に選ぶ事ができ、見た目・使い勝手の良さからこちらをメインで使用する事にしました。
 
 ```jsx:title=heroiconsの使用例
 /**
@@ -110,8 +101,12 @@ export default TagIcon
 
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
 
-Netlify や Vercel、Cloudflare Pages の記事が多かったですが、今後のアップデート等の期待も含め Gatsby Cloud を選択しました。  
+Netlify や Vercel、Cloudflare Pages の記事が多かったですが、Gatsby Cloud を選択しました。  
+これまでビルド機能をメインにサービスを提供していた Gatsby Cloud ですが、2021 年 3 月 3 日に [ホスティング機能をリリース](https://www.gatsbyjs.com/blog/gatsby-cloud-hosting-pricing-plan) したようです。
+
 デプロイ後に Gatsby Cloud のダッシュボードにて、Lighthouse のスコアが自動で計測され表示されるので極端にスコアが低い場合の異変等に気付きやすい点が気に入っています。
+
+![Gatsby Cloud ダッシュボードにてスコア計測](./gatsby-cloud.png)
 
 ## 工夫した点
 
@@ -154,7 +149,14 @@ export default Layout
 - SEO を意識したマークアップ
 
 こちらは Gatsby.js と直接的には関係のない話ですが、ブログを作ったからには色々な方に読んでいただきたいので基本的な SEO 周りもしっかりと対応しました。  
-HTML タグ と SEO は関係ないんだぜ？みたいな話題は多々上がりますが、やらないよりはやったほうがいいよねと考えるタイプ <s>とは言いつつも、一部デザインを優先してアクセシビリティガン無視</s> です。
+SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https://developers.google.com/web/tools/lighthouse?hl=ja) でサイトのスコアを計測 ⇨ 指摘された箇所を修正 のサイクルで対策していくと良いと思います。
+
+![当サイトのLighthouseのスコア](./Lighthouse-score.png)
+<span class="text-gray-600 text-sm">当サイト TOP ページのスコア（計測時の記事数 5）</span>
+
+より専門的な SEO に関する知識は以下のブログを参考にすると良いと思います。
+
+- [海外 SEO 情報ブログ](https://www.suzukikenichi.com/blog/)
 
 ## まとめ
 
@@ -162,7 +164,6 @@ Gatsby.js をもっと上手に扱えるように、React の値の受け渡し�
 
 ## 参考リンク
 
-- [「静的サイトジェネレーター」について網羅的に説明します | Dyno](https://dyno.design/articles/what-is-static-site-generator/)
 - [React ベース静的サイトジェネレータ Gatsby の真の力をお見せします | Qiita](https://qiita.com/uehaj/items/1b7f0a86596353587466)
 - [React の最強フレームワーク Gatsby.js の良さを伝えたい！！ | Qiita](https://qiita.com/hppRC/items/00739eaf9ae7fc95c1ca)
 - [基礎から始める GatsbyJS 入門 | アールエフェクト](https://reffect.co.jp/react/gatsby-basic-tutorial-for-beginners)
