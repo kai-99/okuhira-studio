@@ -287,7 +287,7 @@ const Posts = ({ data }) => {
 							className="bg-purple-50 shadow-md"
 						/>
 						{/* 目次 SP */}
-						<div className="my-2 mx-2 lg:mb-0">
+						<div className="my-2 lg:mb-0">
 							<h2 className="pb-2 border-b border-purple-100 text-center">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-800">目次</span>
