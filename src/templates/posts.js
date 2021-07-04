@@ -56,7 +56,7 @@ const Posts = ({ data }) => {
 			<ol
 				itemScope
 				itemType="https://schema.org/BreadcrumbList"
-				className="flex items-center gap-1 p-1 text-gray-600 w-full text-sm font-bold"
+				className="flex items-center gap-1 p-1 text-gray-600 w-full text-sm font-bold whitespace-nowrap overflow-x-scroll"
 			>
 				<li
 					itemProp="itemListElement"
@@ -94,14 +94,11 @@ const Posts = ({ data }) => {
 					</Link>
 					<meta itemProp="position" content="2" />
 				</li>
-				<li className="lg:hidden">
-					<DocumentIcon className="w-4 h-4 inline-block text-gray-700" />
-				</li>
 				<li
 					itemProp="itemListElement"
 					itemScope
 					itemType="https://schema.org/ListItem"
-					className="overflow-hidden overflow-ellipsis whitespace-nowrap hidden lg:block"
+					// className="overflow-hidden overflow-ellipsis whitespace-nowrap hidden lg:block"
 				>
 					<Link
 						itemProp="item"
@@ -154,90 +151,6 @@ const Posts = ({ data }) => {
 					</HatenaShareButton>
 				</div>
 			</div>
-		);
-	};
-
-	const Ad = () => {
-		return (
-			<React.Fragment>
-				<p className="pb-2 border-b border-purple-100 text-center">
-					<span className="text-sm font-bold text-gray-800">
-						おすすめPR &#x1f680;
-					</span>
-				</p>
-				<div>
-					<li className="text-sm font-bold text-gray-800 my-2 marker:text-purple-400">
-						フリーランス案件獲得
-					</li>
-					<a
-						href="https://px.a8.net/svt/ejp?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
-						rel="nofollow"
-					>
-						<img
-							border="0"
-							width="300"
-							height="250"
-							alt=""
-							src="https://www24.a8.net/svt/bgt?aid=210628183445&wid=001&eno=01&mid=s00000017938001006000&mc=1"
-							className="hover:opacity-80 duration-300"
-						/>
-					</a>
-					<img
-						border="0"
-						width="1"
-						height="1"
-						src="https://www13.a8.net/0.gif?a8mat=3HEHQV+7CXWZ6+3UES+5ZMCH"
-						alt=""
-					/>
-				</div>
-				<div>
-					<li className="text-sm font-bold text-gray-800 my-2 marker:text-purple-400">
-						プログラミングスクール
-					</li>
-					<a
-						href="https://px.a8.net/svt/ejp?a8mat=3HG2W1+ANF6CY+4RCW+609HT"
-						rel="nofollow"
-					>
-						<img
-							border="0"
-							width="300"
-							height="250"
-							alt=""
-							src="https://www22.a8.net/svt/bgt?aid=210702241644&wid=001&eno=01&mid=s00000022208001009000&mc=1"
-							className="hover:opacity-80 duration-300"
-						/>
-					</a>
-					<img
-						border="0"
-						width="1"
-						height="1"
-						src="https://www11.a8.net/0.gif?a8mat=3HG2W1+ANF6CY+4RCW+609HT"
-						alt=""
-					/>
-				</div>
-				<div>
-					<li className="text-sm font-bold text-gray-800 my-2 marker:text-purple-400">
-						デザインスクール
-					</li>
-					<a
-						href="//af.moshimo.com/af/c/click?a_id=2702509&p_id=2322&pc_id=4990&pl_id=30713&url=https%3A%2F%2Fliginc.co.jp%2Fstudioueno%2F"
-						rel="nofollow"
-						referrerPolicy="no-referrer-when-downgrade"
-					>
-						<img
-							src="https://image.moshimo.com/af-img/1797/000000030713.png"
-							alt=""
-							className="hover:opacity-80 duration-300"
-						/>
-					</a>
-					<img
-						src="//i.moshimo.com/af/i/impression?a_id=2702509&p_id=2322&pc_id=4990&pl_id=30713"
-						width="1"
-						height="1"
-						alt=""
-					/>
-				</div>
-			</React.Fragment>
 		);
 	};
 
@@ -371,11 +284,11 @@ const Posts = ({ data }) => {
 						</Link>
 					</div>
 				</div>
-				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
+				{/* <aside className="block mt-8 lg:mt-0 lg:w-1/4">
 					<div className="lg:sticky lg:top-20">
 						<Ad />
 					</div>
-				</aside>
+				</aside> */}
 			</div>
 		</Layout>
 	);
