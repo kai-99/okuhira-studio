@@ -1,8 +1,8 @@
 ---
-title: "今すぐ使える！CSS 中央寄せ集"
+title: "色々な場面で使える【CSS 中央寄せ集】"
 description: "CSSでWebサイトを作成する際、対象の要素に対してCSSで中央寄せに配置したい場面は多々あるかと思います。その際に使えるテキストの中央寄せ、コンテントの中央寄せ、絶対値（css position）での中央揃せ等、CSSの中央揃えについて解説します。Web制作でとても役に立つ知識です。"
 createdAt: "2021-07-02"
-updateAt: "2021-07-02"
+updateAt: "2021-07-04"
 thumbnail: "./hero.png"
 tags: ["CSS"]
 categories: "Design"

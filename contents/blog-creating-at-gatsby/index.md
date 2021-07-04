@@ -154,9 +154,9 @@ SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https
 ![当サイトのLighthouseのスコア](./Lighthouse-score.png)
 <span class="text-gray-600 text-sm">当サイト TOP ページのスコア（計測時の記事数 5）</span>
 
-より専門的な SEO に関する知識は以下のブログを参考にすると良いと思います。
+当サイトで使用している Gatsby.js の SEO に関するプラグインは以下の記事で紹介していますので、気になる方はチェックしてみてください。
 
-- [海外 SEO 情報ブログ](https://www.suzukikenichi.com/blog/)
+- 関連記事：[Gatsby.js SEO 対策におすすめのプラグイン](../gatsby-js-seo-plugins/)
 
 ## まとめ
 

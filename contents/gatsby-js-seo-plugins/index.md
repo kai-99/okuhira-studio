@@ -4,8 +4,8 @@ description:
 createdAt: 2021-07-04
 updateAt: 2021-07-04
 thumbnail: ./hero.png
-tags: ["Gatsby.js", "SEO"]
-categories: Develop
+tags: ["Gatsby.js"]
+categories: SEO
 ---
 
 ## はじめに
@@ -63,7 +63,7 @@ module.exports = {
 npm install gatsby-plugin-react-helmet react-helmet
 ```
 
-```jsx:title=gatsby-config.js
+```jsx
 module.exports = {
 	plugins: [`gatsby-plugin-react-helmet`],
 };
