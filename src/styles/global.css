@@ -47,11 +47,8 @@
 		);
 	}
 
-	.markdown > h2:first-of-type {
-		@apply mt-0;
-	}
 	.markdown > h2 {
-		@apply text-xl lg:text-2xl font-bold mt-20 mb-12 bg-purple-50 px-4 py-2 lg:py-3 border-l-4 border-purple-600 shadow;
+		@apply text-xl lg:text-2xl font-bold mt-20 mb-12 bg-purple-50 px-4 py-2 lg:py-3 border-l-4 border-purple-600 shadow first-of-type:mt-0;
 		scroll-margin-block-start: 4rem;
 	}
 
@@ -59,11 +56,8 @@
 		@apply text-blue-600 hover:underline;
 	}
 
-	.markdown > p:first-of-type {
-		@apply mt-0;
-	}
 	.markdown > p {
-		@apply my-8 leading-loose selection:bg-purple-100;
+		@apply my-8 leading-loose selection:bg-purple-100 first-of-type:mt-0;
 	}
 
 	.markdown blockquote {
@@ -78,18 +72,16 @@
 		@apply my-4 list-inside;
 	}
 	.markdown > ul li {
-		@apply mb-4 leading-6 before:inline-block before:w-2 before:h-2 before:border-2 before:border-purple-300 before:mr-2 before:rounded-full;
+		@apply mb-4 leading-6 before:inline-block before:w-2 before:h-2 before:border-2 before:border-purple-300 before:mr-2 before:rounded-full last-of-type:mb-8;
 	}
 
 	.markdown > ol {
 		@apply my-4 list-inside;
 		counter-reset: number;
 	}
-
 	.markdown > ol li {
-		@apply relative pl-10 mb-4 leading-8 before:bg-purple-50 before:w-5 before:h-5 before:mr-2 before:rounded-full before:absolute before:left-0 before:inline-flex before:items-center before:justify-center before:p-4 before:text-gray-800 before:border before:border-purple-300 before:font-mono;
+		@apply relative pl-10 mb-4 leading-8 before:bg-purple-50 before:w-5 before:h-5 before:mr-2 before:rounded-full before:absolute before:left-0 before:inline-flex before:items-center before:justify-center before:p-4 before:text-gray-800 before:border before:border-purple-300 before:font-mono last-of-type:mb-8;
 	}
-
 	.markdown > ol li::before {
 		counter-increment: number;
 		content: counter(number);
@@ -98,11 +90,9 @@
 	.markdown table {
 		@apply mx-0 my-4 w-full overflow-x-scroll whitespace-nowrap block;
 	}
-
 	.markdown table th {
 		@apply p-2 text-gray-800 font-semibold border-2 border-purple-200;
 	}
-
 	.markdown table td {
 		@apply p-2 border-2 border-purple-200;
 	}
@@ -111,7 +101,7 @@
 		@apply border-purple-300 my-10 border-dashed block;
 	}
 
-	/* h2 */
+	/* h2 目次 */
 	.toc ul {
 		@apply mt-1;
 	}
