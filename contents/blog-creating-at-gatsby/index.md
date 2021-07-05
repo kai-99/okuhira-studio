@@ -5,7 +5,7 @@ createdAt: "2021-06-20"
 updateAt: "2021-07-03"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
-categories: "Develop"
+categories: "プログラミング"
 ---
 
 ## はじめに

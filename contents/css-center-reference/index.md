@@ -4,8 +4,8 @@ description: "CSSでWebサイトを作成する際、対象の要素に対して
 createdAt: "2021-07-02"
 updateAt: "2021-07-04"
 thumbnail: "./hero.png"
-tags: ["CSS"]
-categories: "Design"
+tags: ["CSS", "Webデザイン"]
+categories: "デザイン"
 ---
 
 ## はじめに
