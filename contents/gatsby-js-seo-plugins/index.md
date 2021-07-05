@@ -85,16 +85,15 @@ module.exports = {
 };
 ```
 
-生成されたサイトマップは、 `/sitemap/sitemap-0.xml` で確認出来ます。  
+生成されたサイトマップは、 `/sitemap.xml` で確認出来ます。  
 サイトマップの生成はビルド後にしか確認できないので、そこだけ注意が必要です。
 
 ```bash:title=ビルド後の確認方法
-$ gatsby build
-$ gatsby serve
-# http://localhost:9000/sitemap/sitemap-0.xml にアクセスし、確認できます。
+$ gatsby build && gatsby serve
+# http://localhost:9000/sitemap.xml にアクセスし、確認できます。
 ```
 
-デプロイ後のサイトマップは `https://www.example.com/sitemap/sitempa-0.xml` で確認できます。同様に、Google Serch Console にサイトマップを送信する際は、`https://www.example.com/sitemap/sitempa-0.xml` で送信します。
+デプロイ後のサイトマップは `https://www.example.com/sitemap.xml` で確認できます。同様に、Google Serch Console にサイトマップを送信する際は、`https://www.example.com/sitemap.xml` で送信します。
 
 **gatsby-plugin-robots-txt**
 
@@ -113,7 +112,7 @@ module.exports = {
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
 				host: "https://www.example.com",
-				sitemap: "https://www.example.com/sitemap/sitemap-index.xml",
+				sitemap: "https://www.example.com/sitemap.xml",
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
