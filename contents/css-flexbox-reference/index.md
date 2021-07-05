@@ -2,7 +2,7 @@
 title: "CSS Flexbox の使い方を基礎から理解する"
 description: "display: flex; で使える、CSS Flexbox の使い方を基礎から徹底的に解説しました。Web制作やWebデザインを行う上で、Flexbox を身につけておくと表現できる幅がとても広がります。Webコーダー・Webデザイナーの方は確実に身に付けた方が良いCSSのスキルですので、この記事で読んでフレックスボックスについて理解を深めてみてください。"
 createdAt: "2021-06-24"
-updateAt: "2021-07-04"
+updateAt: "2021-07-05"
 thumbnail: "./hero.png"
 tags: ["CSS", "Webデザイン", "Flexbox"]
 categories: "デザイン"
@@ -1307,4 +1307,7 @@ CSS で要素を横並びにする方法は、今回解説した Flexbox 以外�
 
 今回解説した Flexbox を使ったテクニック等も解説している記事もありますので、気になる方はチェックしてみてください。
 
-- 関連記事：[今すぐ使える！CSS 中央寄せ集](../css-cneter-reference/)
+**関連記**
+
+- [【コスパ最強】Web デザイン独学の手助けになる学習サイト教えます](../chot-design-study-site/)
+- [今すぐ使える！CSS 中央寄せ集](../css-cneter-reference/)

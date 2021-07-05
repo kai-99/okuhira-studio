@@ -1,8 +1,8 @@
 ---
 title: Gatsby.js SEO 対策におすすめのプラグイン
 description:
-createdAt: 2021-07-04
-updateAt: 2021-07-04
+createdAt: "2021-07-04"
+updateAt: "2021-07-05"
 thumbnail: ./hero.png
 tags: ["Gatsby.js"]
 categories: SEO対策
@@ -143,3 +143,7 @@ module.exports = {
 	],
 };
 ```
+
+## Gatsby.js を学べる書籍
+
+- [Web サイト高速化のための 静的サイトジェネレーター活用入門](https://amzn.to/2UqDR3X)
