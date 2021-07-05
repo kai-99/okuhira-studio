@@ -113,7 +113,7 @@ module.exports = {
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
 				host: "https://www.example.com",
-				sitemap: "https://www.example.com/sitemap/sitemap-0.xml",
+				sitemap: "https://www.example.com/sitemap/sitemap-index.xml",
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
