@@ -30,6 +30,7 @@ import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
 import NewArticles from "../components/NewArticles";
 import TemplateTitle from "../components/TemplateTitle";
+import { AffiliateTypeB } from "../components/Affiliate";
 
 /////////////////////  Post Components  ////////////////////
 
@@ -164,7 +165,7 @@ const Posts = ({ data }) => {
 				ogImage={ogImage}
 			/>
 			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
-				<main className="lg:w-3/4 lg:mr-8">
+				<main className="lg:w-3/4 lg:mr-4">
 					<nav>
 						<Breadcrumb />
 					</nav>
@@ -250,6 +251,8 @@ const Posts = ({ data }) => {
 					{/* 目次 PC */}
 				</main>
 				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
+					<SideBar />
+					{/* <AffiliateTypeA /> */}
 					<div className="sticky top-20 mb-8">
 						<div className="hidden lg:block my-8">
 							<h2 className="pb-2 border-b border-purple-100">
@@ -260,7 +263,7 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						<SideBar />
+						<AffiliateTypeB />
 					</div>
 				</aside>
 			</div>
