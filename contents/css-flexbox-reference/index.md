@@ -4,8 +4,8 @@ description: "display: flex; で使える、CSS Flexbox の使い方を基礎か
 createdAt: "2021-06-24"
 updateAt: "2021-07-05"
 thumbnail: "./hero.png"
-tags: ["CSS", "Webデザイン", "Flexbox"]
-categories: "デザイン"
+tags: ["CSS", "Flexbox"]
+categories: "Webデザイン"
 ---
 
 ## はじめに

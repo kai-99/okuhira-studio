@@ -5,7 +5,7 @@ createdAt: "2021-06-29"
 updateAt: "2021-07-05"
 thumbnail: "./hero.png"
 tags: ["Photoshop"]
-categories: "デザイン"
+categories: "デザインツール"
 ---
 
 ## はじめに

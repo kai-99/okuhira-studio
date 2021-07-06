@@ -3,7 +3,7 @@ import React from "react";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import AllArticles from "../components/AllArticles";
-import NewArticles from "../components/NewArticles";
+// import NewArticles from "../components/NewArticles";
 import SideBar from "../components/SideBar";
 
 const IndexPage = () => {
@@ -11,16 +11,16 @@ const IndexPage = () => {
 		<>
 			<Layout>
 				<Seo />
-				<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
+				<div className="container px-2 py-8 mx-auto lg:flex">
 					<main className="lg:w-3/4">
-						<section className="mb-8">
+						{/* <section className="mb-8">
 							<div className="pl-2 flex justify-start items-center font-bold mb-2">
 								<h2 className="text-gray-800 text-2xl italic">
 									New articles &#x1f680;
 								</h2>
 							</div>
 							<NewArticles />
-						</section>
+						</section> */}
 						<section className="mb-8">
 							<div className="pl-2 flex justify-start items-center font-bold mb-2">
 								<h2 className="text-gray-800 text-2xl italic">
@@ -31,7 +31,7 @@ const IndexPage = () => {
 						</section>
 					</main>
 					<aside className="block mt-8 lg:mt-0 lg:w-1/4">
-						<div className="lg:sticky lg:top-20">
+						<div className="lg:sticky lg:top-10">
 							<SideBar />
 						</div>
 					</aside>

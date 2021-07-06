@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import { ChevronUpIcon } from "@heroicons/react/outline";
 
 const Layout = (props) => {
 	const data = useStaticQuery(
@@ -22,7 +23,7 @@ const Layout = (props) => {
 	const Header = () => {
 		return (
 			<>
-				<header className="w-full top-0 h-12 z-50 fixed shadow-sm bg-purple-300">
+				<header className="w-full top-0 h-12 z-50 fixed lg:static shadow-sm bg-purple-300">
 					<div className="max-w-5xl mx-auto h-12 flex items-center justify-center px-2">
 						<Link to="/">
 							<h1 className="font-mono text-xl text-white">
@@ -59,10 +60,16 @@ const Layout = (props) => {
 	};
 	// Layout Component
 	return (
-		<div className="bg-white">
+		<div className="bg-white" id="#top">
 			<Header />
-			<div className="max-w-5xl lg:mx-auto opacity-animation">
+			<div className="max-w-5xl lg:mx-auto opacity-animation relative">
 				{props.children}
+				<a
+					href="#top"
+					className="w-14 h-14 fixed bottom-10 right-5 lg:right-40 text-center border-2 border-purple-400 bg-white text-purple-400 flex items-center justify-center rounded-full shadow transform hover:-translate-y-1.5 duration-300"
+				>
+					<ChevronUpIcon className="inline-block w-6 h-6" />
+				</a>
 			</div>
 			<Footer />
 		</div>

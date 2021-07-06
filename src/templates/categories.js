@@ -68,7 +68,7 @@ const Categories = ({ pageContext, data }) => {
 	return (
 		<Layout>
 			<Seo pagetitle={seoTitle} pagedescription={seoTitle} />
-			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
+			<div className="container px-2 py-8 mx-auto lg:flex">
 				<main className="md:w-3/4">
 					<Breadcrumb />
 					<section>
@@ -124,7 +124,7 @@ const Categories = ({ pageContext, data }) => {
 					</section>
 				</main>
 				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
-					<div className="lg:sticky lg:top-20">
+					<div className="lg:sticky lg:top-10">
 						<SideBar />
 					</div>
 				</aside>

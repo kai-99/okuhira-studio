@@ -4,8 +4,8 @@ description: "CSS position（絶対値）で使える5つの値を解説しま�
 createdAt: "2021-06-28"
 updateAt: "2021-07-05"
 thumbnail: "./hero.png"
-tags: ["CSS", "Webデザイン"]
-categories: "デザイン"
+tags: ["CSS"]
+categories: "Webデザイン"
 ---
 
 ## はじめに

@@ -164,7 +164,7 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 				ogImage={ogImage}
 			/>
-			<div className="container px-2 py-8 mt-12 mx-auto lg:flex">
+			<div className="container px-2 py-8 mx-auto lg:flex">
 				<main className="lg:w-3/4 lg:mr-4">
 					<nav>
 						<Breadcrumb />
@@ -253,7 +253,7 @@ const Posts = ({ data }) => {
 				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
 					<SideBar />
 					{/* <AffiliateTypeA /> */}
-					<div className="sticky top-20 mb-8">
+					<div className="sticky top-10 mb-8">
 						<div className="hidden lg:block my-8">
 							<h2 className="pb-2 border-b border-purple-100">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
