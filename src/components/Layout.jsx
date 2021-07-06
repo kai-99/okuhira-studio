@@ -62,7 +62,7 @@ const Layout = (props) => {
 	return (
 		<div className="bg-white" id="#top">
 			<Header />
-			<div className="max-w-5xl lg:mx-auto opacity-animation relative">
+			<div className="max-w-5xl lg:mx-auto mt-12 lg:mt-0 opacity-animation relative">
 				{props.children}
 				<a
 					href="#top"
