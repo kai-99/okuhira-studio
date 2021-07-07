@@ -1,8 +1,8 @@
 ---
-title: "Gatsby.js + Tailwind CSS で個人ブログ作成"
+title: "Gatsby.js + Tailwind + Gatsby Cloud の構成で個人ブログを作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSSという構成で表示速度の早いブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-07-05"
+updateAt: "2021-07-07"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -101,12 +101,14 @@ export default TagIcon
 
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
 
-Netlify や Vercel、Cloudflare Pages の記事が多かったですが、Gatsby Cloud を選択しました。  
 これまでビルド機能をメインにサービスを提供していた Gatsby Cloud ですが、2021 年 3 月 3 日に [ホスティング機能をリリース](https://www.gatsbyjs.com/blog/gatsby-cloud-hosting-pricing-plan) したようです。
 
 デプロイ後に Gatsby Cloud のダッシュボードにて、Lighthouse のスコアが自動で計測され表示されるので極端にスコアが低い場合の異変等に気付きやすい点が気に入っています。
 
 ![Gatsby Cloud ダッシュボードにてスコア計測](./gatsby-cloud.png)
+
+Gatsby Cloud は [incremental builds](https://www.gatsbyjs.com/blog/2020-04-22-announcing-incremental-builds/) がとても魅力的です。  
+変更ファイルの差分を検知してビルドを行うので、ビルド時間が大幅に削減できます。
 
 ## 工夫した点
 
