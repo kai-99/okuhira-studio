@@ -2,7 +2,7 @@
 title: "【コスパ最強】Webデザイン独学の手助けになる学習サイト教えます"
 description: "Webデザイナーを独学で目指している方必見のWebデザイン学習サイト。プログラミングが学べる Progate や ドットインストール のデザイン版ともいえる魅力的なサービス、chot.design を紹介します。Web制作・Webデザイン・Webディレクターを独学で勉強する方は、それらの知識が学べる講座が沢山あるのでおすすめです。"
 createdAt: "2021-07-05"
-updateAt: "2021-07-06"
+updateAt: "2021-07-07"
 thumbnail: "./hero.png"
 tags: ["学習サービス"]
 categories: "Webデザイン"
@@ -10,25 +10,32 @@ categories: "Webデザイン"
 
 ## はじめに
 
-この記事では、本業で Web 制作をしている私自身が利用しているサービスでもあり、Web 制作・Web デザインを学習している方、 いま実際に現場で働いている方にも、ぜひ利用して欲しい Web デザインの学習サービスを紹介します。
+この記事では、本業で Web 制作をしている私自身が利用しているサービスでもあり、Web 制作・Web デザインを学習している方はもちろん、 いま実際に現場で働いている方にもおすすめしたい Web デザインの学習サービスを紹介します。
 
 これから Web 制作・Web デザインを学ぶ方の、お役に立てれば幸いです。
 
 **こんな人におすすめ**
 
+1. Web デザインの学習を何からしていいかわからない
 1. Web デザインスクールは料金が高くて受講できない
 1. SNS 等を見て、他人と自分の成長速度と比較してしまう
 1. デザインはある程度できるけどコーディングが苦手
 1. コーディングはある程度できるけどデザインが苦手
-1. 扱うデザインツールが多すぎて何を優先に学習すべきかわからない
+1. 扱うデザインツールが多すぎて何を優先に学習すべきか悩んでいる
 
-一つでも当てはまる方は、今回紹介するサービスを利用すると解決できる可能性があります。
+一つでも当てはまる方は、今回紹介するサービスで学習する事によって抱えている悩みを解決できる可能性がありますので、最後まで読んで頂けると幸いです。
 
 ## 学習サービスの紹介
 
-早速ですが、今回紹介するおすすめの Web デザイン学習サービスとは、<a href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47616&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" alt="chot.design" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design</a> です。
+早速ですが、今回紹介するおすすめの Web デザイン学習サービスとは、**chot.design** です。
 
-<p class="text-center"><a class="chot-design" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47616&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" alt="chot.design" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトをみる</a></p>
+<!-- af img -->
+
+<a href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img class="hover:opacity-80 mx-auto" src="https://image.moshimo.com/af-img/2742/000000047670.jpg" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;">
+
+<!-- /af img -->
+
+<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトをみる</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
 
 chot.design とは「毎日ちょっとずつデザインを学ぼう」をコンセプトとしている、 **月額 1,100 円で学び放題** の Web デザイン学習サービスです。  
 プログラミング学習サービスの Progate や ドットインストールの、デザイン版と考えるとわかりやすいでしょう。
@@ -61,13 +68,7 @@ CMS で有名な WordPress 入門講座、コードを書かずに Web サイト
 
 - 現在公開中のカリキュラムはこちらチェックできます ↓
 
-<!-- af img -->
-
-<a href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://image.moshimo.com/af-img/2742/000000047670.jpg" class="mx-auto hover:opacity-80" style="border:none;" alt="chot.design"></a>
-
-<!-- /af img -->
-
-<p class="text-center"><a class="chot-design" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47616&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" alt="chot.design" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a></p>
+<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
 
 ## カリキュラム以外の魅力
 
@@ -75,7 +76,9 @@ CMS で有名な WordPress 入門講座、コードを書かずに Web サイト
 
 これまで紹介したカリキュラムも非常に魅力的ですが、chot.design では IT・Web 業界のデザイナーに特化した転職・求人情報も掲載されており、正社員・フリーランス（業務委託）・アルバイト・副業など、様々な雇用形態の求人を探す事ができます。
 
-![](./chot-design-01.png)
+![chot.design しごとさがし](./chot-design-01.png)
+
+<p class="text-right italic text-gray-600">出典：<a href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
 
 先程も述べましたが、学んだ先まで充実しているサービスはとても魅力的です。
 
@@ -95,7 +98,9 @@ CMS で有名な WordPress 入門講座、コードを書かずに Web サイト
 
 仮に年間プランを利用してしっかり学習できた方は、一年後にはサービスに支払った料金以上を稼げる実力がついています。投資対効果の面から考えても非常に良いですね 💭
 
-**月額 1,100 円 学び放題** で効率よく学習できますので、是非ご利用してみてください！  
-今回紹介した記事が、初学者の方のお役に立てれば幸いです。
+ちなみに私は、HTML や CSS はある程度できますが、Photoshop や Figma 等のデザインツールの学習したくて chot.design で学んでいます！
 
-<p class="text-center"><a class="chot-design" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47616&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" alt="chot.design" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a></p>
+**月額 1,100 円 学び放題** で効率よく学習できますので、是非ご利用してみてください！  
+今回紹介した記事が、読んでくれた方のお役に立てれば幸いです。
+
+<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>

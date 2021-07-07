@@ -114,9 +114,15 @@
 	}
 
 	/**
-	* chot.design BtnStyle 
+	* All Btn
 	*/
-	.markdown > p > a.chot-design {
-		@apply no-underline px-8 py-4 bg-pink-100 border-2 border-pink-200 text-gray-800 hover:border-pink-300 duration-300 rounded-full;
+	.markdown > p.btn-wrapper {
+		@apply text-center my-12;
+	}
+	/**
+	* Color Type Btn
+	*/
+	.markdown > p.btn-wrapper > a.pink-btn {
+		@apply no-underline px-8 py-4 bg-pink-100 border-2 border-pink-200 text-gray-800 hover:border-pink-300 duration-300 rounded-full shadow ease-in-out;
 	}
 }
