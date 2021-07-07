@@ -175,7 +175,7 @@ const Posts = ({ data }) => {
 					<div className="flex items-center justify-end font-bold text-right text-xs mb-4">
 						<time
 							className="text-gray-400 block"
-							itemProp="datepublished"
+							// itemProp="datePublished"
 							dateTime={data.markdownRemark.createdAt}
 						>
 							<span className="mr-1">
@@ -185,7 +185,7 @@ const Posts = ({ data }) => {
 						</time>
 						<time
 							className="text-gray-600 block ml-2"
-							itemProp="modified"
+							// itemProp="modified"
 							dateTime={data.markdownRemark.frontmatter.updateAt}
 						>
 							<span className="mr-1">
@@ -259,7 +259,7 @@ const Posts = ({ data }) => {
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-800">目次</span>
 							</h2>
-							<nav className="pl-1">
+							<nav className="pl-1 max-h-80 overflow-y-scroll">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>

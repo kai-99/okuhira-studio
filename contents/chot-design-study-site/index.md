@@ -4,7 +4,7 @@ description: "Webデザイナーを独学で目指している方必見のWebデ
 createdAt: "2021-07-05"
 updateAt: "2021-07-07"
 thumbnail: "./hero.png"
-tags: ["学習サービス"]
+tags: ["オンライン学習"]
 categories: "Webデザイン"
 ---
 

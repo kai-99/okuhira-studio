@@ -69,7 +69,6 @@ const AllArticles = () => {
 									</span>
 								</Link>
 								<time
-									itemProp="datepublished"
 									dateTime={node.frontmatter.createdAt}
 									className="text-gray-700 block text-xs"
 								>
