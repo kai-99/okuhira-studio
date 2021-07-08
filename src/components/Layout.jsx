@@ -60,12 +60,13 @@ const Layout = (props) => {
 	};
 	// Layout Component
 	return (
-		<div className="bg-purple-50" id="#top">
+		<div className="bg-white lg:bg-purple-50" id="#top">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto mt-12 lg:mt-0 opacity-animation relative">
 				{props.children}
 				<a
 					href="#top"
+					aria-label="上に戻る"
 					className="w-14 h-14 fixed bottom-10 right-5 lg:right-40 text-center border-2 border-purple-400 bg-white text-purple-400 flex items-center justify-center rounded-full shadow transform hover:-translate-y-1.5 duration-300"
 				>
 					<ChevronUpIcon className="inline-block w-6 h-6" />
