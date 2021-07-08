@@ -103,7 +103,7 @@
 
 	/* h2 目次 */
 	.toc ul {
-		@apply mt-1;
+		@apply mt-1 pl-4;
 	}
 	.toc ul li {
 		@apply font-bold text-gray-700 px-0 py-1 before:content-[''] before:inline-block before:w-2 before:h-2 before:bg-white before:rounded-full before:mr-2 before:border-2 before:border-purple-300;

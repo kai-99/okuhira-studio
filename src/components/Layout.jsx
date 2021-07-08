@@ -23,12 +23,12 @@ const Layout = (props) => {
 	const Header = () => {
 		return (
 			<>
-				<header className="w-full top-0 h-12 z-50 fixed lg:static shadow-sm bg-purple-300">
-					<div className="max-w-5xl mx-auto h-12 flex items-center justify-center px-2">
+				<header className="bg-white w-full top-0 h-12 z-50 fixed lg:static shadow-sm">
+					<div className="max-w-5xl mx-auto h-12 flex items-center justify-center lg:justify-start px-2">
 						<Link to="/">
-							<h1 className="font-mono text-xl text-white">
-								{data.site.siteMetadata.title}
-							</h1>
+							<p className="font-mono text-xl text-gray-900">
+								{data.site.siteMetadata.title} &#128640;
+							</p>
 						</Link>
 					</div>
 				</header>
@@ -60,7 +60,7 @@ const Layout = (props) => {
 	};
 	// Layout Component
 	return (
-		<div className="bg-white" id="#top">
+		<div className="bg-purple-50" id="#top">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto mt-12 lg:mt-0 opacity-animation relative">
 				{props.children}

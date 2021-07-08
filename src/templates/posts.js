@@ -57,7 +57,7 @@ const Posts = ({ data }) => {
 			<ol
 				itemScope
 				itemType="https://schema.org/BreadcrumbList"
-				className="flex items-center gap-1 p-1 text-gray-600 w-full text-sm font-bold whitespace-nowrap overflow-x-scroll"
+				className="-mt-6 flex items-center gap-1 text-gray-700 font-bold w-full text-sm whitespace-nowrap overflow-x-scroll"
 			>
 				<li
 					itemProp="itemListElement"
@@ -118,7 +118,7 @@ const Posts = ({ data }) => {
 	const SnsShare = () => {
 		return (
 			<div className="py-10 px-8 bg-purple-100 border-dashed border-purple-400 border">
-				<p className="text-center font-bold text-lg mb-2 text-gray-800">
+				<p className="text-center font-bold text-lg mb-2 text-gray-900">
 					SHARE
 				</p>
 				<div className="flex items-center justify-center">
@@ -172,7 +172,7 @@ const Posts = ({ data }) => {
 					<TemplateTitle
 						TemplateTitle={data.markdownRemark.frontmatter.title}
 					/>
-					<div className="flex items-center justify-end font-bold text-right text-xs mb-4">
+					<div className="flex items-center justify-start font-bold text-right text-xs mb-4">
 						<time
 							className="text-gray-400 block"
 							// itemProp="datePublished"
@@ -194,7 +194,7 @@ const Posts = ({ data }) => {
 							{data.markdownRemark.frontmatter.updateAt}
 						</time>
 					</div>
-					<article className="slow-fadein-animation">
+					<article className="slow-fadein-animation bg-white">
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
@@ -204,13 +204,13 @@ const Posts = ({ data }) => {
 						<div className="my-2 lg:mb-0">
 							<h2 className="pb-2 border-b border-purple-100 text-center">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
-								<span className="text-sm font-bold text-gray-800">目次</span>
+								<span className="text-sm font-bold text-gray-900">目次</span>
 							</h2>
 							<nav className="p-4 flex items-center justify-center bg-purple-100">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						<p className="text-sm text-gray-800 my-8 md:mb-0 flex items-center justify-center">
+						<p className="text-sm text-gray-900 my-8 md:mb-0 flex items-center justify-center">
 							<ClockIcon className="h-4 w-4 inline-block mr-1" />
 							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
 						</p>
@@ -219,7 +219,7 @@ const Posts = ({ data }) => {
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
 						<SnsShare />
-						<div className="mt-2">
+						<div className="bg-purple-50">
 							<ul className="flex items-center">
 								<li className="p-1">
 									<Link
@@ -257,7 +257,7 @@ const Posts = ({ data }) => {
 						<div className="hidden lg:block my-8">
 							<h2 className="pb-2 border-b border-purple-100">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
-								<span className="text-sm font-bold text-gray-800">目次</span>
+								<span className="text-sm font-bold text-gray-900">目次</span>
 							</h2>
 							<nav className="pl-1 max-h-80 overflow-y-scroll">
 								<Toc data={data.markdownRemark.tableOfContents} />

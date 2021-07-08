@@ -4,6 +4,7 @@ import kebabCase from "lodash/kebabCase";
 import {
 	FolderOpenIcon,
 	HashtagIcon,
+	// TrendingUpIcon,
 	// LinkIcon,
 } from "@heroicons/react/outline";
 
@@ -12,7 +13,7 @@ import {
 // 		<div className="mb-4">
 // 			<h3 className="pb-2 border-b border-purple-100">
 // 				<LinkIcon className="h-4 w-4 inline-block text-yellow-500 mr-1" />
-// 				<span className="text-sm font-bold text-gray-800">
+// 				<span className="text-sm font-bold text-gray-900">
 // 					スポンサーリンク
 // 				</span>
 // 			</h3>
@@ -71,10 +72,10 @@ const SideBar = () => {
 			<div className="mb-4">
 				<h3 className="pb-2 border-b border-purple-100">
 					<FolderOpenIcon className="h-4 w-4 inline-block text-gray-500 mr-1" />
-					<span className="text-sm font-bold text-gray-800">カテゴリー</span>
+					<span className="text-sm font-bold text-gray-900">カテゴリー</span>
 				</h3>
 			</div>
-			<nav className="mb-4">
+			<nav className="mb-4 lg:mb-8">
 				<ul className="flex flex-wrap lg:flex-col">
 					{data.categoryGroup.group.map((cat) => (
 						<li className="pb-2" key={cat.fieldValue}>
@@ -94,10 +95,30 @@ const SideBar = () => {
 					))}
 				</ul>
 			</nav>
+			{/* <div className="mb-4">
+				<h3 className="pb-2 border-b border-purple-100">
+					<TrendingUpIcon className="h-4 w-4 inline-block text-red-500 mr-1" />
+					<span className="text-sm font-bold text-gray-900">人気記事</span>
+				</h3>
+			</div>
+			<div className="mb-4 lg:mb-8">
+				<ul>
+					<li className="pb-2 text-sm pl-4">
+						<Link to="/chot-design-study-site/" className="hover:underline">
+							【コスパ最強】Webデザイン独学の手助けになる学習サイト教えます
+						</Link>
+					</li>
+					<li className="pb-2 text-sm pl-4">
+						<Link to="/photoshop-match-font/" className="hover:underline">
+							Photoshop の便利機能【マッチフォント】
+						</Link>
+					</li>
+				</ul>
+			</div> */}
 			<div className="mb-4">
 				<h3 className="pb-2 border-b border-purple-100">
 					<HashtagIcon className="h-4 w-4 inline-block text-blue-500 mr-1" />
-					<span className="text-sm font-bold text-gray-800">ハッシュタグ</span>
+					<span className="text-sm font-bold text-gray-900">ハッシュタグ</span>
 				</h3>
 			</div>
 			<nav>
@@ -106,7 +127,7 @@ const SideBar = () => {
 						<li className="pb-2" key={tag.fieldValue}>
 							<Link
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
-								className="flex bg-white items-center justify-between text-blue-500 hover:underline"
+								className="flex items-center justify-between text-blue-500 hover:underline"
 							>
 								<p className="pl-4">
 									<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />

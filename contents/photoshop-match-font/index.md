@@ -73,5 +73,4 @@ Photoshop マッチフォント機能の使い方は非常に簡単です。
 **関連記事**
 
 - [【コスパ最強】Web デザイン独学の手助けになる学習サイト教えます](../chot-design-study-site/)
-- [CSS Flexbox の使い方を完全攻略しよう！](../css-flexbox-reference/)
-- [実践！CSS position をしっかり理解する](../css-position-reference/)
+- [CSS Flexbox の使い方を基礎から理解する](../css-flexbox-reference/)

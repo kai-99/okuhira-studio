@@ -22,10 +22,8 @@ const IndexPage = () => {
 							<NewArticles />
 						</section> */}
 						<section className="mb-8">
-							<div className="pl-2 flex justify-start items-center font-bold mb-2">
-								<h2 className="text-gray-800 text-2xl italic">
-									All articles &#x1f680;
-								</h2>
+							<div className="pl-2 flex justify-start items-center mb-2">
+								<h2 className="text-gray-900 text-xl font-mono">Articles</h2>
 							</div>
 							<AllArticles />
 						</section>

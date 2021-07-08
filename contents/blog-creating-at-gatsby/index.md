@@ -1,6 +1,6 @@
 ---
-title: "Gatsby.js + Tailwind + Gatsby Cloud の構成で個人ブログを作ってみた"
-description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSSという構成で表示速度の早いブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
+title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
+description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
 updateAt: "2021-07-07"
 thumbnail: "./hero.png"
