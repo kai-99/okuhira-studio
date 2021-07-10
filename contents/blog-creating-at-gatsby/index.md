@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-07-07"
+updateAt: "2021-07-10"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -10,7 +10,7 @@ categories: "プログラミング"
 
 ## はじめに
 
-個人ブログを作りたいなと前々から思っており、つい最近 Gatsby.js + Tailwind CSS + Gatsby Cloud の構成で当ブログを作成しました。  
+つい最近 Gatsby.js + Tailwind CSS + Gatsby Cloud の構成で当ブログを作成しました。  
 このような構成にした理由としては、私は本業で Web 制作をしておりその延長で技術的にスキルアップしたいと模索していたところ、Gatsby.js がとても魅力的に感じたのが経緯です。
 
 この記事では当ブログを作成していく最中工夫した点や、これから個人ブログを作ろうと思っている方に向けて、使用している各技術の概要・参考リンク等をまとめましたので、記事を読みに来てくれた方の参考になれば幸いです。
@@ -154,7 +154,7 @@ export default Layout
 SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https://developers.google.com/web/tools/lighthouse?hl=ja) でサイトのスコアを計測 ⇨ 指摘された箇所を修正 のサイクルで対策していくと良いと思います。
 
 ![当サイトのLighthouseのスコア](./Lighthouse-score.png)
-<span class="text-gray-600 text-sm">当サイト TOP ページのスコア（計測時の記事数 5）</span>
+<span class="text-gray-600 text-sm">当サイト TOP ページのスコア（計測時の記事数 8）</span>
 
 当サイトで使用している Gatsby.js の SEO に関するプラグインは以下の記事で紹介していますので、気になる方はチェックしてみてください。
 

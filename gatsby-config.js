@@ -32,7 +32,7 @@ module.exports = {
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
 				host: "https://okuhira.studio",
-				sitemap: "https://okuhira.studio/sitemap/sitemap-index.xml",
+				sitemap: "https://okuhira.studio/sitemap/sitemap-0.xml",
 				policy: [{ userAgent: "*", allow: "/" }],
 			},
 		},
@@ -121,7 +121,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-nprogress`,
 			options: {
-				color: `#f3f4f6`,
+				color: `#C4B5FD`,
 				showSpinner: true,
 			},
 		},
