@@ -56,11 +56,6 @@ const NewArticles = () => {
 							/>
 						</Link>
 						<div className="flex flex-col p-2 md:flex-1">
-							<Link to={node.fields.slug} className="hover:underline">
-								<h2 className="font-bold text-sm md:text-base text-gray-800 my-1 flex-1">
-									{node.frontmatter.title}
-								</h2>
-							</Link>
 							<div className="flex justify-between items-center font-bold">
 								<Link
 									className="block hover:opacity-80"
@@ -81,6 +76,11 @@ const NewArticles = () => {
 									{node.frontmatter.createdAt}
 								</time>
 							</div>
+							<Link to={node.fields.slug} className="hover:underline">
+								<h2 className="font-bold text-sm md:text-base text-gray-800 mt-1 flex-1">
+									{node.frontmatter.title}
+								</h2>
+							</Link>
 						</div>
 					</div>
 				);

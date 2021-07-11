@@ -2,7 +2,7 @@
 title: "【初心者向け】Progateが終わったら次やる事"
 description: "Progateの次に何をやればいいか分からない人に向けての記事です。Progateやドットインストールを学習してWebデザイナーやWebエンジニアになりたい人は無料で相談できるオンラインスクールがあるのでそちらを紹介します。"
 createdAt: "2021-07-10"
-updateAt: "2021-07-10"
+updateAt: "2021-07-12"
 thumbnail: "./hero.png"
 tags: ["オンライン学習"]
 categories: "プログラミング"
@@ -18,7 +18,19 @@ Progate や ドットインストールを 1, 2 周してある程度プログ�
 
 ---
 
-Progate を一通り学習したけど、自分は Web エンジニアではなく Web デザイナーに興味がある・なりたいと思った方は、以下の記事もチェックしてみてください！
+Progate を一通り学習したけど、自分は Web エンジニアではなく Web デザイナーに興味がある・なりたいと思った方は、Progate や ドットインストール の Web デザイン版とも言える学習サービスである、chot.design を使ってみるのをおすすめします。
+
+<!-- af img -->
+
+<a href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img class="hover:opacity-80 mx-auto" src="https://image.moshimo.com/af-img/2742/000000047670.jpg" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;">
+
+<!-- /af img -->
+
+<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
+
+chot.design は私も使っている学習サービスで、Photoshop・Figma などのデザインツールや、ノーコードで Web サイトが作れる STUDIO を使った学習カリキュラムが用意されています。
+
+実際に使ってみた感想や学習カリキュラムの魅力は以下の記事で紹介しているので、気になる方はチェックしてみてください！
 
 - [【コスパ最強】Web デザイン独学の手助けになる学習サイト教えます](../chot-design-study-site/)
 
@@ -26,7 +38,7 @@ Progate を一通り学習したけど、自分は Web エンジニアではな�
 
 ![Progate の次にやること](./Progate-next-1.png)
 
-早速ですが、結論は **自分が作りたいものを作る！** です。
+早速ですが、結論は **自分が作りたいものを作る** です。
 
 | **例**                                           |
 | ------------------------------------------------ |

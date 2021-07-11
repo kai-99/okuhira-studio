@@ -26,7 +26,7 @@ const Categories = ({ pageContext, data }) => {
 			<ol
 				itemScope
 				itemType="https://schema.org/BreadcrumbList"
-				className="flex items-center gap-1 p-1 text-gray-600 w-full text-sm font-bold"
+				className="border-b-2 border-purple-100 border-dashed pb-2 flex items-center gap-1 text-gray-700 font-bold w-full text-sm whitespace-nowrap overflow-x-scroll"
 			>
 				<li
 					itemProp="itemListElement"

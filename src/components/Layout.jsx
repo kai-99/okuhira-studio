@@ -23,7 +23,7 @@ const Layout = (props) => {
 	const Header = () => {
 		return (
 			<>
-				<header className="bg-white w-full top-0 h-12 z-50 fixed lg:static shadow-sm">
+				<header className="bg-white w-full top-0 h-12 z-50 fixed lg:static">
 					<div className="max-w-5xl mx-auto h-12 flex items-center justify-center lg:justify-start px-2">
 						<Link to="/">
 							<p className="font-mono text-xl text-gray-900">

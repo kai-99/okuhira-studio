@@ -57,7 +57,7 @@ const Posts = ({ data }) => {
 			<ol
 				itemScope
 				itemType="https://schema.org/BreadcrumbList"
-				className="-mt-6 flex items-center gap-1 text-gray-700 font-bold w-full text-sm whitespace-nowrap overflow-x-scroll"
+				className="border-b-2 border-purple-100 border-dashed pb-2 flex items-center gap-1 text-gray-700 font-bold w-full text-sm whitespace-nowrap overflow-x-scroll"
 			>
 				<li
 					itemProp="itemListElement"
@@ -219,7 +219,7 @@ const Posts = ({ data }) => {
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
 						<SnsShare />
-						<div className="bg-purple-50">
+						<div className="lg:bg-purple-50">
 							<ul className="flex items-center">
 								<li className="p-1">
 									<Link
