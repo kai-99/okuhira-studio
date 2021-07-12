@@ -27,7 +27,7 @@ const Seo = (props) => {
 	const description =
 		props.pagedescription || data.site.siteMetadata.description;
 	// og:image
-	const imgurl = props.ogImage || `${data.site.siteMetadata.siteUrl}/thumb.jpg`;
+	const imgurl = props.ogImage || `${data.site.siteMetadata.siteUrl}/thumb.png`;
 	const imgw = props.pageimgw || 1280;
 	const imgh = props.pageimgh || 640;
 
