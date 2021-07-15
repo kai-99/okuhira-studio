@@ -136,11 +136,11 @@ const Layout = (props) => {
 						</div>
 					</div>
 				</div>
-				<div className="flex items-center justify-center px-2 text-gray-800 text-sm h-12 bg-purple-50">
+				<div className="flex items-center justify-center px-2 text-gray-400 text-sm h-16 border-t border-gray-400">
 					<p>
-						<span>Copyright &copy;</span>
+						<span>Copyright &copy; </span>
 						<time itemProp="datepublished" dateTime={new Date().getFullYear()}>
-							{new Date().getFullYear()}
+							{new Date().getFullYear()} -
 						</time>
 						<Link to="/" className="px-1">
 							{data.site.siteMetadata.title}
