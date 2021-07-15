@@ -2,7 +2,7 @@
 title: "【初心者向け】Progateが終わったら次やる事"
 description: "Progateの次に何をやればいいか分からない人に向けての記事です。Progateやドットインストールを学習してWebデザイナーやWebエンジニアになりたい人は無料で相談できるオンラインスクールがあるのでそちらを紹介します。"
 createdAt: "2021-07-10"
-updateAt: "2021-07-12"
+updateAt: "2021-07-15"
 thumbnail: "./hero.png"
 tags: ["オンライン学習"]
 categories: "プログラミング"
