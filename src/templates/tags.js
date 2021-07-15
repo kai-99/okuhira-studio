@@ -67,7 +67,7 @@ const Tags = ({ pageContext, data }) => {
 		<Layout>
 			<Seo pagetitle={seoTitle} pagedescription={seoTitle} />
 			<div className="container px-2 py-8 mx-auto lg:flex">
-				<main className="md:w-3/4">
+				<main className="lg:w-3/4 lg:mr-4">
 					<Breadcrumb />
 					<section>
 						<div className="mb-4 flex items-center justify-center">

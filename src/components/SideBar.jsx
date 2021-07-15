@@ -127,7 +127,7 @@ const SideBar = () => {
 						<li className="pb-2" key={tag.fieldValue}>
 							<Link
 								to={`/tags/${kebabCase(tag.fieldValue)}/`}
-								className="flex items-center justify-between text-blue-500 hover:underline"
+								className="flex items-center justify-between text-blue-500 hover:opacity-80"
 							>
 								<p className="pl-4">
 									<HashtagIcon className="inline-block w-4 h-4 text-blue-500 mr-px" />
