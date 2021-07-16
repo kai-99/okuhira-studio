@@ -211,10 +211,23 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						<p className="text-sm text-gray-900 my-8 md:mb-0 flex items-center justify-center">
+						<p className="text-sm text-gray-900 my-8 flex items-center justify-center">
 							<ClockIcon className="h-4 w-4 inline-block mr-1" />
 							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
 						</p>
+						<GoogleAds>
+							<ins
+								className="adsbygoogle"
+								style={{
+									display: `block`,
+									textAlign: `center`,
+								}}
+								data-ad-layout="in-article"
+								data-ad-format="fluid"
+								data-ad-client="ca-pub-4800021914562133"
+								data-ad-slot="1084873733"
+							></ins>
+						</GoogleAds>
 						<div
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
@@ -256,12 +269,12 @@ const Posts = ({ data }) => {
 						<ins
 							className="adsbygoogle"
 							style={{
-								display: `block`,
+								display: `inline-block`,
+								width: `300px`,
+								height: `212px`,
 							}}
 							data-ad-client="ca-pub-4800021914562133"
-							data-ad-slot="3259804452"
-							data-ad-format="auto"
-							data-full-width-responsive="true"
+							data-ad-slot="3370650941"
 						></ins>
 					</GoogleAds>
 					<SideBar />
@@ -294,7 +307,7 @@ const Posts = ({ data }) => {
 			<div className="container px-2 py-8 mx-auto lg:flex">
 				<div className="lg:w-3/4 lg:mr-4 px-2 pb-10 lg:px-0">
 					<div className="mb-8">
-						<h3 className="text-gray-700 text-lg font-bold italic px-2 mb-2">
+						<h3 className="text-gray-700 text-lg font-bold px-2 mb-2">
 							新着記事
 							<LightningBoltIcon className="inline-block w-6 h-6 ml-1 align-text-bottom text-yellow-400" />
 						</h3>
