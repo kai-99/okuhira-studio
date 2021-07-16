@@ -102,14 +102,14 @@ const Posts = ({ data }) => {
 					itemType="https://schema.org/ListItem"
 					// className="overflow-hidden overflow-ellipsis whitespace-nowrap hidden lg:block"
 				>
-					<Link
+					<p
 						itemProp="item"
 						to={data.markdownRemark.fields.slug}
-						className="flex items-center gap-1 hover:underline"
+						className="flex items-center gap-1"
 					>
 						<DocumentIcon className="w-4 h-4 inline-block text-gray-700" />
 						<span itemProp="name">{data.markdownRemark.frontmatter.title}</span>
-					</Link>
+					</p>
 					<meta itemProp="position" content="3" />
 				</li>
 			</ol>

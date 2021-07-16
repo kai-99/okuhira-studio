@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { ChevronUpIcon } from "@heroicons/react/outline";
 import kebabCase from "lodash/kebabCase";
 import {
 	FolderOpenIcon,
@@ -156,13 +155,6 @@ const Layout = (props) => {
 			<Header />
 			<div className="max-w-5xl lg:mx-auto mt-12 lg:mt-0 opacity-animation relative">
 				{props.children}
-				<a
-					href="#top"
-					aria-label="上に戻る"
-					className="w-14 h-14 fixed bottom-10 right-5 lg:right-40 text-center border-2 border-purple-400 bg-white text-purple-400 flex items-center justify-center rounded-full shadow-md transform hover:-translate-y-1.5 duration-300"
-				>
-					<ChevronUpIcon className="inline-block w-6 h-6" />
-				</a>
 			</div>
 			<Footer />
 		</div>
