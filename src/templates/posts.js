@@ -219,19 +219,6 @@ const Posts = ({ data }) => {
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
-						<GoogleAds>
-							<ins
-								className="adsbygoogle"
-								style={{
-									display: `block`,
-									textAlign: `center`,
-								}}
-								data-ad-layout="in-article"
-								data-ad-format="fluid"
-								data-ad-client="ca-pub-4800021914562133"
-								data-ad-slot="1084873733"
-							></ins>
-						</GoogleAds>
 						<SnsShare />
 						<div className="lg:bg-purple-50">
 							<ul className="flex items-center">
@@ -323,11 +310,22 @@ const Posts = ({ data }) => {
 						</Link>
 					</div>
 				</div>
-				{/* <aside className="block mt-8 lg:mt-0 lg:w-1/4">
+				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
 					<div className="lg:sticky lg:top-20">
-						<Ad />
+						<GoogleAds>
+							<ins
+								className="adsbygoogle"
+								style={{
+									display: `block`,
+								}}
+								data-ad-client="ca-pub-4800021914562133"
+								data-ad-slot="5479414311"
+								data-ad-format="auto"
+								data-full-width-responsive="true"
+							></ins>
+						</GoogleAds>
 					</div>
-				</aside> */}
+				</aside>
 			</div>
 		</Layout>
 	);
