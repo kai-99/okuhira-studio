@@ -211,10 +211,14 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						<p className="text-sm text-gray-900 my-8 flex items-center justify-center">
+						<p className="text-sm text-gray-900 my-8 md:mb-0 flex items-center justify-center">
 							<ClockIcon className="h-4 w-4 inline-block mr-1" />
 							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
 						</p>
+						<div
+							className="markdown"
+							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+						/>
 						<GoogleAds>
 							<ins
 								className="adsbygoogle"
@@ -228,10 +232,6 @@ const Posts = ({ data }) => {
 								data-ad-slot="1084873733"
 							></ins>
 						</GoogleAds>
-						<div
-							className="markdown"
-							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-						/>
 						<SnsShare />
 						<div className="lg:bg-purple-50">
 							<ul className="flex items-center">
