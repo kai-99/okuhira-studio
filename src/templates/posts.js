@@ -118,8 +118,8 @@ const Posts = ({ data }) => {
 	// SNS shareicon&link Component
 	const SnsShare = () => {
 		return (
-			<div className="py-10 px-8 bg-purple-100 border-dashed border-purple-400 border">
-				<p className="text-center font-bold text-lg mb-2 text-gray-900">
+			<div className="py-9 px-8 bg-gray-700">
+				<p className="text-center font-bold text-lg mb-2 text-gray-100">
 					SHARE
 				</p>
 				<div className="flex items-center justify-center">
@@ -252,8 +252,19 @@ const Posts = ({ data }) => {
 					{/* 目次 PC */}
 				</main>
 				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
+					<GoogleAds>
+						<ins
+							className="adsbygoogle"
+							style={{
+								display: `block`,
+							}}
+							data-ad-client="ca-pub-4800021914562133"
+							data-ad-slot="3259804452"
+							data-ad-format="auto"
+							data-full-width-responsive="true"
+						></ins>
+					</GoogleAds>
 					<SideBar />
-					{/* <AffiliateTypeA /> */}
 					<div className="sticky top-10 mb-8">
 						<div className="hidden lg:block my-8">
 							<h2 className="pb-2 border-b border-purple-100">
@@ -264,7 +275,18 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						<GoogleAds />
+						<GoogleAds>
+							<ins
+								className="adsbygoogle"
+								style={{
+									display: `inline-block`,
+									width: `300px`,
+									height: `185px`,
+								}}
+								data-ad-client="ca-pub-4800021914562133"
+								data-ad-slot="3370650941"
+							></ins>
+						</GoogleAds>
 					</div>
 				</aside>
 			</div>
