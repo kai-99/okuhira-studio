@@ -1,13 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AdSense from "react-adsense";
 
 const GoogleAds = () => {
-	useEffect(() => {
-		if (window) {
-			window.adsbygoogle = window.adsbygoogle || [];
-			window.adsbygoogle.push({});
-		}
-	});
 	return (
 		<>
 			<AdSense.Google
