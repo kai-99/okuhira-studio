@@ -30,7 +30,8 @@ import Seo from "../components/Seo";
 import SideBar from "../components/SideBar";
 import NewArticles from "../components/NewArticles";
 import TemplateTitle from "../components/TemplateTitle";
-import { AffiliateTypeB } from "../components/Affiliate";
+// import { AffiliateTypeB } from "../components/Affiliate";
+import GoogleAds from "../components/GoogleAds";
 
 /////////////////////  Post Components  ////////////////////
 
@@ -263,7 +264,7 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						<AffiliateTypeB />
+						<GoogleAds />
 					</div>
 				</aside>
 			</div>
