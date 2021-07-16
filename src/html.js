@@ -26,7 +26,6 @@ export default function HTML(props) {
 					dangerouslySetInnerHTML={{ __html: props.body }}
 				/>
 				{props.postBodyComponents}
-				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 			</body>
 		</html>
 	);
