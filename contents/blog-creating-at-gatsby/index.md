@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-07-13"
+updateAt: "2021-07-17"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -23,14 +23,12 @@ categories: "プログラミング"
 
 > The hardest parts of the web, made simple.  
 > Gatsby is unbelievably fast & smooth.  
-> Everything just feels...there.  
-> <cite>[Gatsby.js](https://www.gatsbyjs.com/)公式より一部引用</cite>
-
-- 翻訳
+> Everything just feels...there.
 
 > Web の最も難しい部分をシンプルにしました。  
 > Gatsby は信じられないほど速く、スムーズです。  
 > すべてが「そこにある」という感じです。
+> <cite>[Gatsby.js](https://www.gatsbyjs.com/)公式より一部引用</cite>
 
 [Gatsby.js](https://www.gatsbyjs.com/) は、JavaScript のライブラリである React をベースに作成されています。  
 魅力としては、Gatsby.js で作成したサイトは SPA（Single Page Application） で生成される為、内部リンクのページ遷移が非常に高速であり、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグイン（拡張機能）が用意されている点です。
@@ -40,8 +38,6 @@ categories: "プログラミング"
 
 スターターテンプレートを使用し、一瞬で自分のブログを作成する事もできれば、実装したい機能に応じてプラグインを導入することで難しい事を殆ど考えず、機能を追加する事が出来ます。  
 当ブログで実際に使用しているプラグインや、機能用途に応じたおすすめのプラグインに関しては、今後別の記事で紹介したいと思います。
-
----
 
 ![Tailwind CSS](./tailwind-css.png)
 
@@ -65,10 +61,6 @@ Tailwind CSS を使用した事がない方でも、付与されているクラ�
 上記の例のように、予め Tailwind CSS で用意されている最小単位のクラス名を自分で組み合わせて UI を構築していく仕組みです。
 
 先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、当ブログで使用している Tailwind CSS のバージョンも も v2.1 -> v2.2 にアップデートしました。今回リリースした v2.2 ではこれまで使えなかった、 `before`, `after`, `marker` 等の擬似要素が沢山サポートされました。
-
-- 参考：[Tailwind CSS v2.2 - Tailwind CSS](https://blog.tailwindcss.com/tailwindcss-2-2)
-
----
 
 **SVG アイコン**
 
@@ -95,13 +87,11 @@ const TagIcon = () => {
 export default TagIcon
 ```
 
----
-
 **ホスティング**
 
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
 
-これまでビルド機能をメインにサービスを提供していた Gatsby Cloud ですが、2021 年 3 月 3 日に [ホスティング機能をリリース](https://www.gatsbyjs.com/blog/gatsby-cloud-hosting-pricing-plan) したようです。
+これまでビルド機能をメインにサービスを提供していた [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) ですが、2021 年 3 月 3 日に [ホスティング機能をリリース](https://www.gatsbyjs.com/blog/gatsby-cloud-hosting-pricing-plan) したようです。
 
 デプロイ後に Gatsby Cloud のダッシュボードにて、Lighthouse のスコアが自動で計測され表示されるので極端にスコアが低い場合の異変等に気付きやすい点が気に入っています。
 
@@ -154,18 +144,12 @@ export default Layout
 SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https://developers.google.com/web/tools/lighthouse?hl=ja) でサイトのスコアを計測 ⇨ 指摘された箇所を修正 のサイクルで対策していくと良いと思います。
 
 ![当サイトのLighthouseのスコア](./Lighthouse-score.png)
-<span class="text-gray-600 text-sm">当サイト TOP ページのスコア（計測時の記事数 8）</span>
 
-当サイトで使用している Gatsby.js の SEO に関するプラグインは以下の記事で紹介していますので、気になる方はチェックしてみてください。
+<p class="text-gray-600 text-sm text-center">当サイト TOP ページのスコア（計測時の記事数 8）</p>
 
-- 関連記事：[Gatsby.js SEO 対策におすすめのプラグイン](../gatsby-js-seo-plugins/)
+当サイトで使用している Gatsby.js の SEO に関するプラグインは、[Gatsby.js SEO 対策におすすめのプラグイン](../gatsby-js-seo-plugins/) で紹介していますので、気になる方はチェックしてみてください。
 
-## 今後検証する事
-
-- 検索ボリュームがそこそこあるキーワードで狙って上位表示できるか
-- Gatsby.js （SPA）は SEO に強いのか
-
-<p class="info">上位表示される要素は他にもドメインパワーやライティング、内部対策、被リンク数などあらゆる要素の合計値だとわかるが、それらも踏まえて色々検証していきたいです</p>
+<p class="notice">追記：）Google Adsense 入れたので、Lighthouseのスコアは結構下がりました</p>
 
 ## 参考リンク
 

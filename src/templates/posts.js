@@ -281,7 +281,7 @@ const Posts = ({ data }) => {
 								style={{
 									display: `inline-block`,
 									width: `300px`,
-									height: `185px`,
+									height: `212px`,
 								}}
 								data-ad-client="ca-pub-4800021914562133"
 								data-ad-slot="3370650941"
