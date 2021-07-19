@@ -86,6 +86,12 @@ Tailwind CSS を使う際に便利な UI コンポーネントや UI キット�
 
 ---
 
+- [Tailwind Templates](https://tailwindtemplates.io/)
+
+![Tailwind Templates](./tailwind-template.png)
+
+---
+
 - [tailwindcompontnes](https://tailwindcomponents.com/)
 
 ![tailwind-components.png](./tailwindcomponents.png)
