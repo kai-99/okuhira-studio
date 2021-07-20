@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-07-17"
+updateAt: "2021-07-20"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -56,11 +56,9 @@ categories: "プログラミング"
 | :----------: | :------------------: | :-------------------: | :---------------: | :------------------: |
 |   Pure CSS   | `font-weight: bold;` | `text-align: center;` | `color: #3B82F6;` | `padding-left: 4px;` |
 
-Tailwind CSS を使用した事がない方でも、付与されているクラス名からある程度、スタイルの状態が推測出来るのではないでしょうか。
-
 上記の例のように、予め Tailwind CSS で用意されている最小単位のクラス名を自分で組み合わせて UI を構築していく仕組みです。
 
-先日 2021 年 6 月 17 日、[Tailwind CSS v2.2](https://blog.tailwindcss.com/tailwindcss-2-2) がリリースされたと同時に、当ブログで使用している Tailwind CSS のバージョンも も v2.1 -> v2.2 にアップデートしました。今回リリースした v2.2 ではこれまで使えなかった、 `before`, `after`, `marker` 等の擬似要素が沢山サポートされました。
+Tailwind CSS に興味がある方は、[Tailwind CSS を使用する際に知ってると便利な参考サイト集](../tailwind-css-reference-resource) も別の記事で書いてますので、チェックしてみてください。
 
 **SVG アイコン**
 

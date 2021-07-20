@@ -148,13 +148,11 @@ const Layout = (props) => {
 				</div>
 				<div className="flex items-center justify-center px-2 text-gray-400 text-sm h-16 border-t border-gray-400">
 					<p>
-						<span>Copyright &copy; </span>
+						&copy; OKUHIRA{" "}
 						<time itemProp="datepublished" dateTime={new Date().getFullYear()}>
 							{new Date().getFullYear()} -
-						</time>
-						<Link to="/" className="px-1">
-							{data.site.siteMetadata.title}
-						</Link>
+						</time>{" "}
+						All rights reserved
 					</p>
 				</div>
 			</footer>
