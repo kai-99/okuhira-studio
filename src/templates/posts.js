@@ -100,16 +100,15 @@ const Posts = ({ data }) => {
 					itemProp="itemListElement"
 					itemScope
 					itemType="https://schema.org/ListItem"
-					// className="overflow-hidden overflow-ellipsis whitespace-nowrap hidden lg:block"
 				>
-					<p
+					<Link
 						itemProp="item"
 						to={data.markdownRemark.fields.slug}
-						className="flex items-center gap-1"
+						className="flex items-center gap-1 cursor-text"
 					>
 						<DocumentIcon className="w-4 h-4 inline-block text-gray-700" />
 						<span itemProp="name">{data.markdownRemark.frontmatter.title}</span>
-					</p>
+					</Link>
 					<meta itemProp="position" content="3" />
 				</li>
 			</ol>
