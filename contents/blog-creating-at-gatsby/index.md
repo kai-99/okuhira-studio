@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-07-20"
+updateAt: "2021-07-25"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -16,6 +16,8 @@ categories: "プログラミング"
 この記事では当ブログを作成していく最中工夫した点や、これから個人ブログを作ろうと思っている方に向けて、使用している各技術の概要・参考リンク等をまとめましたので、記事を読みに来てくれた方の参考になれば幸いです。
 
 ## 使用技術とサービス
+
+この章では、当ブログを作成する際に使用した技術を紹介していきます。
 
 **フレームワーク**
 
@@ -95,7 +97,7 @@ export default TagIcon
 
 ![Gatsby Cloud ダッシュボードにてスコア計測](./gatsby-cloud.png)
 
-Gatsby Cloud は [incremental builds](https://www.gatsbyjs.com/blog/2020-04-22-announcing-incremental-builds/) がとても魅力的です。  
+Gatsby Cloud の魅力は [incremental builds](https://www.gatsbyjs.com/blog/2020-04-22-announcing-incremental-builds/) です。  
 変更ファイルの差分を検知してビルドを行うので、ビルド時間が大幅に削減できます。（有料）
 
 ## 工夫した点
@@ -149,6 +151,11 @@ SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https
 
 <p class="notice">追記：）Google Adsense 入れたので、Lighthouseのスコアは結構下がりました</p>
 
+## まとめ
+
+Gatsby.js をこれから学ぶ方は、[Web サイト高速化のための 静的サイトジェネレーター活用入門](https://amzn.to/2UqDR3X) という書籍が入門書に最適です。  
+生の HTML と CSS から、Gatsby.js で扱う JSX という記述に書き換えて順序よく解説されていて、とてもわかりやすいので興味ある方は是非チャレンジしてみてください。
+
 ## 参考リンク
 
 - [React ベース静的サイトジェネレータ Gatsby の真の力をお見せします | Qiita](https://qiita.com/uehaj/items/1b7f0a86596353587466)
@@ -156,7 +163,3 @@ SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https
 - [基礎から始める GatsbyJS 入門 | アールエフェクト](https://reffect.co.jp/react/gatsby-basic-tutorial-for-beginners)
 - [GatsbyJS で最強のブログを作る | キクナントカドットコム](https://kikunantoka.com/tags/gatsby-js%E3%81%A7%E6%9C%80%E5%BC%B7%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8B/)
 - [GatsbyJS + microCMS で Jamstack なオウンドメディアを作ろう | micro CMS](https://blog.microcms.io/gatsby-microcms-media)
-
-## Gatsby.js を学べる書籍
-
-- [Web サイト高速化のための 静的サイトジェネレーター活用入門](https://amzn.to/2UqDR3X)

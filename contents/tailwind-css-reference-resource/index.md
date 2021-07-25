@@ -176,7 +176,8 @@ SVG アイコン。
 
 - [hero-patterns](https://www.heropatterns.com/)
 
-SVG 背景パターン。
+SVG 背景パターン。  
+とてもおしゃれな背景パターンが用意されています。
 
 ![hero-patterns](./hero-patterns.png)
 
