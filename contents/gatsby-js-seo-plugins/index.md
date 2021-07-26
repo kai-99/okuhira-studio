@@ -1,6 +1,6 @@
 ---
 title: Gatsby.js SEO 対策におすすめのプラグイン
-description:
+description: "Gatsby.jsには普通にやると難しいことを、プラグインを使用することで複雑な処理をよしなやってくれます。この記事では、数あるプラグインの中からGatsby.jsで作成したサイトのSEO対策をする際におすすめのプラグインを紹介します。"
 createdAt: "2021-07-04"
 updateAt: "2021-07-10"
 thumbnail: ./hero.png
