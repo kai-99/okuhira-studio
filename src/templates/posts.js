@@ -200,16 +200,17 @@ const Posts = ({ data }) => {
 							alt={data.markdownRemark.frontmatter.title}
 							className="bg-purple-50 shadow-md"
 						/>
-						{/* 目次 SP */}
-						<div className="my-2 lg:mb-0">
-							<h2 className="pb-2 border-b border-purple-100 text-center">
-								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
-								<span className="text-sm font-bold text-gray-900">目次</span>
-							</h2>
-							<nav className="p-4 flex items-center justify-center bg-purple-100">
-								<Toc data={data.markdownRemark.tableOfContents} />
-							</nav>
+						<div className="my-4">
+							<details className="cursor-pointer">
+								<summary className="lg:text-center pl-4 lg:pl-0 duration-300 hover:bg-purple-50 p-2 font-bold text-sm text-gray-900 marker:text-purple-500 marker:animate-pulse">
+									目次
+								</summary>
+								<nav className="flex items-center justify-start lg:justify-center">
+									<Toc data={data.markdownRemark.tableOfContents} />
+								</nav>
+							</details>
 						</div>
+
 						<p className="text-sm text-gray-900 my-8 md:mb-0 flex items-center justify-center">
 							<ClockIcon className="h-4 w-4 inline-block mr-1" />
 							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
