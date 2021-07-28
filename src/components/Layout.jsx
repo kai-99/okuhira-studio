@@ -121,26 +121,28 @@ const Layout = (props) => {
 									ABOUT
 								</h2>
 								<nav className="list-none mb-10">
-									<li>
-										<a
-											href={data.site.siteMetadata.social.twitter.id}
-											rel="noreferrer"
-											target="_blank"
-											className="flex items-center text-grary-600 hover:opacity-60"
-										>
-											<svg
-												fill="currentColor"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth="2"
-												className="w-4 h-4 mr-1"
-												viewBox="0 0 24 24"
+									<ul className="flex flex-wrap">
+										<li className="pb-2">
+											<a
+												href={data.site.siteMetadata.social.twitter.id}
+												rel="noreferrer"
+												target="_blank"
+												className="flex items-center text-grary-600 hover:opacity-60"
 											>
-												<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-											</svg>
-											<span className="inline-block text-sm">Twitter</span>
-										</a>
-									</li>
+												<svg
+													fill="currentColor"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													strokeWidth="2"
+													className="w-4 h-4 mr-1"
+													viewBox="0 0 24 24"
+												>
+													<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+												</svg>
+												<span className="inline-block text-sm">Twitter</span>
+											</a>
+										</li>
+									</ul>
 								</nav>
 							</div>
 						</div>

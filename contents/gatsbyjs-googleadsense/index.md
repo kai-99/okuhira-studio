@@ -2,7 +2,7 @@
 title: 【Gatsby.js】Google AdSense の導入から広告設置、収益化までを解説
 description: "Gatsby.js で作成したサイトに Google AdSense（アドセンス）を導入し、設置する広告の種類や収益化をするまでの具体的な基準を解説していきます。"
 createdAt: "2021-07-27"
-updateAt: "2021-07-27"
+updateAt: "2021-07-28"
 thumbnail: ./hero.png
 tags: ["Gatsby.js", "Google AdSense"]
 categories: "プログラミング"
@@ -163,9 +163,9 @@ useEffect(() => {
 記事内広告に関しては、Google AdSense の管理画面から **自動広告をオン** にすることで、Google 側が自動で広告を表示してくれます。  
 以上が Gatsby.js サイトに Google AdSense を導入し、収益化するまでの解説になります。
 
-<!-- ## 収益化の選択肢
+## 収益化の選択肢
 
-Google Adense は審査を合格できれば手軽に導入できるものの、余程 PV 数がない限りはあまり収益が見込めないのが事実としてあります。
+Google Adense は審査を合格できれば手軽に導入できるものの、余程 PV 数がない限りあまり収益が見込めないのが事実としてあります。
 また、審査自体の合格ラインが明確に公開されていない為、記事数が多くても審査に落ちることはざらにあるようです。
 
 ---
@@ -173,13 +173,16 @@ Google Adense は審査を合格できれば手軽に導入できるものの、
 そこでおすすめの広告がアフィリエイト広告です。
 Google AdSense がクリック単価の収益に対し、アフィリエイト広告は成果報酬単価で収益を得ることができます。クリックした時点では収益は発生しませんが、紹介したサービスや商品を読者の方が購入した時に収益が発生する広告の仕組みになります。
 
-Google AdSense の審査に中々合格できない方や、収益が低くて悩んでいる方はアフィリエイト広告を使ってみるのいいと思います。
+Google AdSense の審査に中々合格できない方や、収益が低くて悩んでいる方はアフィリエイト広告を使ってみるのをオススメします。
 当サイトでもアフィリエイト広告を使用しており、扱っている ASP は以下の 2 つになります。
 
-- a8
-- moshimo
+1. <a href="https://px.a8.net/svt/ejp?a8mat=3HEGYR+2KVN5E+0K+ZSD6A" rel="nofollow">A8.net</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HEGYR+2KVN5E+0K+ZSD6A" alt="">
+1. <a href="//af.moshimo.com/af/c/click?a_id=2749578&p_id=1&pc_id=1&pl_id=1319&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">もしもアフィリエイト</a><img src="//i.moshimo.com/af/i/impression?a_id=2749578&p_id=1&pc_id=1&pl_id=1319" width="1" height="1" style="border:none;">
 
-無料で利用できるので、是非収益を伸ばしたいと思う方は登録してみてください。 -->
+A8.net は広告主数が多い為、自分にあった広告を探しやすいというメリットがあります。  
+もしもアフィリエイトは「がんばる個人のためのアフィリエイトサイト」をスローガンに掲げており、アフィリエイト初心者にわかりやすい教育コンテンツも無料で用意されています。
+
+いずれも無料で利用できるので、是非収益を伸ばしたいと思う方は是非登録してみてください。
 
 ## まとめ
 
