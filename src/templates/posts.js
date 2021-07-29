@@ -249,7 +249,6 @@ const Posts = ({ data }) => {
 							</ul>
 						</div>
 					</article>
-					{/* 目次 PC */}
 				</main>
 				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
 					<GoogleAds>
@@ -267,11 +266,11 @@ const Posts = ({ data }) => {
 					<SideBar />
 					<div className="sticky top-10 mb-8">
 						<div className="hidden lg:block my-8">
-							<h2 className="pb-2 border-b border-purple-100">
+							<p className="pb-2 mb-4 border-b border-purple-100">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-900">目次</span>
-							</h2>
-							<nav className="pl-1 max-h-80 overflow-y-scroll">
+							</p>
+							<nav className="pl-1 max-h-80 overflow-y-scroll bg-white">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>

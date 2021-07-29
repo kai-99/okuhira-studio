@@ -36,6 +36,17 @@
 }
 
 @layer components {
+	/* ハンバーガー */
+	.nav-content {
+		@apply transform translate-x-full w-4/5 max-w-md;
+	}
+	#nav-checkbox:checked ~ .nav-bg {
+		@apply block opacity-70;
+	}
+	#nav-checkbox:checked ~ .nav-content {
+		@apply transform translate-x-0;
+	}
+
 	.markdown {
 		@apply text-sm md:text-base text-gray-900 md:p-8;
 	}
@@ -103,10 +114,10 @@
 
 	/* h2 目次 */
 	.toc ul {
-		@apply mt-1 pl-4;
+		@apply p-4;
 	}
 	.toc ul li {
-		@apply font-bold text-gray-700 px-0 py-1 before:content-[''] before:inline-block before:w-2 before:h-2 before:bg-white before:rounded-full before:mr-2 before:border-2 before:border-purple-300;
+		@apply font-bold text-gray-700 px-0 pb-2 last:pb-0 before:content-[''] before:inline-block before:w-2 before:h-2 before:bg-white before:rounded-full before:mr-2 before:border-2 before:border-purple-300;
 	}
 
 	.toc ul li a {
