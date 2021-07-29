@@ -73,11 +73,7 @@ const Header = () => {
 								<GoogleAds>
 									<ins
 										className="adsbygoogle"
-										style={{
-											display: `inline-block`,
-											width: `416px`,
-											height: `277px`,
-										}}
+										style={{ display: `block` }}
 										data-ad-client="ca-pub-4800021914562133"
 										data-ad-slot="7073445439"
 										data-ad-format="auto"
