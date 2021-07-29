@@ -80,6 +80,7 @@ const Header = () => {
 										}}
 										data-ad-client="ca-pub-4800021914562133"
 										data-ad-slot="7073445439"
+										data-ad-format="auto"
 									></ins>
 								</GoogleAds>
 							</div>
