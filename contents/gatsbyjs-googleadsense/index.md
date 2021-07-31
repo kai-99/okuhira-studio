@@ -2,7 +2,7 @@
 title: 【Gatsby.js】Google AdSense の導入から広告設置、収益化までを解説
 description: "Gatsby.js で作成したサイトに Google AdSense（アドセンス）を導入し、設置する広告の種類や収益化をするまでの具体的な基準を解説していきます。"
 createdAt: "2021-07-27"
-updateAt: "2021-07-28"
+updateAt: "2021-07-31"
 thumbnail: ./hero.png
 tags: ["Gatsby.js", "Google AdSense"]
 categories: "プログラミング"
@@ -48,6 +48,10 @@ cp .cache/default-html.js src/html.js
 ```
 
 これは何をやっているかと言いますと、デフォルトで吐き出される `<head></head>タグ` を上書きをしています。このカスタム方法は、公式でも案内しているやり方なので、詳しく知りたい方は [Customizing html.js | Gatsby](https://www.gatsbyjs.com/docs/custom-html/) を読んでみてください。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/docs/custom-html/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.gatsbyjs.com%2Fdocs%2Fcustom-html%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
+
+---
 
 ここまで終えると、ルートフォルダにある `html.js` は以下のようになっているかと思います。
 
@@ -189,3 +193,5 @@ A8.net は広告主数が多い為、自分にあった広告を探しやすい�
 Gatsby.js 作成したサイトに、Google AdSense を導入するまでの手順を解説しました。  
 Google AdSense を導入後は、PV 数をあげるためにも検索エンジンで上位表示出来るよう、SEO 対策をすることをおすすめします。  
 Gatsby.js で作成したサイトの SEO 対策については、[Gatsby.js SEO 対策におすすめのプラグイン](../gatsby-js-seo-plugins/) という記事を以前書きましたので、気になる方はチェックしてみて下さい。
+
+<div class="iframely-embed mb-1"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://okuhira.studio/gatsby-js-seo-plugins/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fokuhira.studio%2Fgatsby-js-seo-plugins%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>

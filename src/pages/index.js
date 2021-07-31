@@ -12,10 +12,7 @@ const IndexPage = () => {
 				<Seo />
 				<div className="container px-2 py-8 mx-auto lg:flex">
 					<main className="lg:w-3/4 lg:mr-4">
-						<section className="mb-8">
-							<div className="pl-2 flex justify-start items-center mb-2">
-								<h2 className="text-gray-900 text-xl font-mono">Articles</h2>
-							</div>
+						<section className="my-8">
 							<AllArticles />
 						</section>
 					</main>

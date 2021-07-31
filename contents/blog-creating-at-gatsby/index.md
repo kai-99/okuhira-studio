@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-07-27"
+updateAt: "2021-07-31"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -35,8 +35,9 @@ categories: "プログラミング"
 [Gatsby.js](https://www.gatsbyjs.com/) は、JavaScript のライブラリである React をベースに作成されています。  
 魅力としては、Gatsby.js で作成したサイトは SPA（Single Page Application） で生成される為、内部リンクのページ遷移が非常に高速であり、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグイン（拡張機能）が用意されている点です。
 
-- [Gatsby Starters](https://www.gatsbyjs.com/starters/)
-- [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins)
+<div class="iframely-embed mb-4"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/starters/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.gatsbyjs.com%2Fstarters%2F%3F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/plugins" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.gatsbyjs.com%2Fplugins&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 スターターテンプレートを使用し、一瞬で自分のブログを作成する事もできれば、実装したい機能に応じてプラグインを導入することで難しい事を殆ど考えず、機能を追加する事が出来ます。  
 当ブログで実際に使用しているプラグインや、機能用途に応じたおすすめのプラグインに関しては、今後別の記事で紹介したいと思います。
@@ -149,9 +150,15 @@ SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https
 
 当サイトで使用している Gatsby.js の SEO に関するプラグインは、[Gatsby.js SEO 対策におすすめのプラグイン](../gatsby-js-seo-plugins/) で紹介していますので、気になる方はチェックしてみてください。
 
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://okuhira.studio/gatsby-js-seo-plugins/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fokuhira.studio%2Fgatsby-js-seo-plugins%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
+
 <p class="notice">追記：）Google Adsense 入れたので、Lighthouseのスコアは結構下がりました</p>
 
+---
+
 サイトの収益化については、[【Gatsby.js】Google AdSense の導入から広告設置、収益化までの手順](../gatsbyjs-googleadsense/) という記事で紹介していますので、気になる方はチェックしてみてください。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://okuhira.studio/gatsbyjs-googleadsense/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fokuhira.studio%2Fgatsbyjs-googleadsense%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 ## まとめ
 

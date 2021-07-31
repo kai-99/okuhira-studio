@@ -32,6 +32,7 @@ import NewArticles from "../components/NewArticles";
 import TemplateTitle from "../components/TemplateTitle";
 // import { AffiliateTypeB } from "../components/Affiliate";
 import GoogleAds from "../components/GoogleAds";
+import Iframely from "../components/Iframely";
 
 /////////////////////  Post Components  ////////////////////
 
@@ -164,6 +165,7 @@ const Posts = ({ data }) => {
 				pagedescription={data.markdownRemark.frontmatter.description}
 				ogImage={ogImage}
 			/>
+			<Iframely />
 			<div className="container px-2 py-8 mx-auto lg:flex">
 				<main className="lg:w-3/4 lg:mr-4">
 					<nav>
@@ -351,10 +353,9 @@ export const query = graphql`
 					childImageSharp {
 						gatsbyImageData(
 							placeholder: TRACED_SVG
+							aspectRatio: 1.618
 							formats: [AUTO, WEBP, AVIF]
 							layout: CONSTRAINED
-							width: 756
-							height: 467
 						)
 						original {
 							src

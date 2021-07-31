@@ -1,6 +1,6 @@
 import React from "react";
-// import { PencilAltIcon, FolderOpenIcon } from "@heroicons/react/outline";
-// import kebabCase from "lodash/kebabCase";
+import { PencilAltIcon, FolderOpenIcon } from "@heroicons/react/outline";
+import kebabCase from "lodash/kebabCase";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
@@ -28,6 +28,7 @@ const NewArticles = () => {
 								childImageSharp {
 									gatsbyImageData(
 										placeholder: TRACED_SVG
+										aspectRatio: 1.618
 										formats: [AUTO, WEBP, AVIF]
 										layout: CONSTRAINED
 									)
@@ -41,22 +42,19 @@ const NewArticles = () => {
 	);
 
 	return (
-		<div className="md:flex md:flex-wrap">
+		<div className="md:grid md:grid-cols-2 md:gap-4">
 			{data.allMarkdownRemark.nodes.map((node) => {
 				return (
-					<div
-						className="md:pr-4 pb-4 relative md:w-1/2 lg:w-1/4"
-						key={node.frontmatter.title}
-					>
+					<div className="bg-white mb-4 md:mb-0" key={node.frontmatter.title}>
 						<Link to={node.fields.slug}>
 							<GatsbyImage
 								image={getImage(node.frontmatter.thumbnail)}
 								alt={node.frontmatter.title}
-								className="w-auto h-auto md:w-full object-cover bg-purple-50 shadow hover:duration-300 hover:opacity-80"
+								className="hover:duration-300 hover:opacity-80"
 							/>
 						</Link>
-						<div className="flex flex-col py-2 md:flex-1">
-							{/* <div className="flex justify-between items-center font-bold">
+						<div className="flex flex-col p-4 md:flex-1 border-t border-purple-50">
+							<div className="flex justify-between items-center mb-2 font-bold">
 								<Link
 									className="block hover:opacity-80"
 									to={`/categories/${kebabCase(node.frontmatter.categories)}/`}
@@ -75,9 +73,9 @@ const NewArticles = () => {
 									</span>
 									{node.frontmatter.createdAt}
 								</time>
-							</div> */}
+							</div>
 							<Link to={node.fields.slug} className="hover:underline">
-								<h2 className="font-bold text-sm text-gray-800 mt-1 flex-1">
+								<h2 className="font-bold text-sm md:text-base text-gray-800 flex-1">
 									{node.frontmatter.title}
 								</h2>
 							</Link>

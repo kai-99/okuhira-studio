@@ -82,6 +82,8 @@ module.exports = {
 						options: {
 							maxWidth: 732,
 							linkImagesToOriginal: false,
+							withWebp: true,
+							wrapperStyle: (fluidResult) => (fluidResult.aspectRatio, 1.618),
 						},
 					},
 					{
