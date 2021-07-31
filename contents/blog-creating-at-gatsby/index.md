@@ -2,7 +2,7 @@
 title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-07-31"
+updateAt: "2021-08-01"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -32,7 +32,9 @@ categories: "プログラミング"
 > すべてが「そこにある」という感じです。
 > <cite>[Gatsby.js](https://www.gatsbyjs.com/)公式より一部引用</cite>
 
-[Gatsby.js](https://www.gatsbyjs.com/) は、JavaScript のライブラリである React をベースに作成されています。  
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.gatsbyjs.com%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
+
+Gatsby.js は、JavaScript のライブラリである React をベースに作成されています。  
 魅力としては、Gatsby.js で作成したサイトは SPA（Single Page Application） で生成される為、内部リンクのページ遷移が非常に高速であり、公式よりスターターテンプレート（10 分程度で Web サイトやブログが作れるテンプレート）や、豊富なプラグイン（拡張機能）が用意されている点です。
 
 <div class="iframely-embed mb-4"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/starters/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.gatsbyjs.com%2Fstarters%2F%3F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
@@ -44,7 +46,10 @@ categories: "プログラミング"
 
 ![Tailwind CSS](./tailwind-css.png)
 
-[Tailwind CSS](https://tailwindcss.com/) とは、ユーティリティーファーストの CSS フレームワークです。  
+[Tailwind CSS](https://tailwindcss.com/) とは、ユーティリティーファーストの CSS フレームワークです。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://tailwindcss.com/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Ftailwindcss.com%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
+
 簡単な使用例と、そのクラスに当たるスタイルの詳細を記載します。
 
 ```jsx:title=TailwindCSSの使用例
@@ -66,6 +71,8 @@ Tailwind CSS に興味がある方は、[Tailwind CSS を使用する際に知�
 **SVG アイコン**
 
 - [heroicons](https://heroicons.com/)
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://heroicons.com" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fheroicons.com%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 Tailwind CSS（のグループ？） が作成している SVG アイコンで、使用する全てのアイコンは 2 種類（枠線のみ・塗り潰し）から自由に選ぶ事ができ、見た目・使い勝手の良さからこちらをメインで使用する事にしました。
 
@@ -91,6 +98,8 @@ export default TagIcon
 **ホスティング**
 
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/products/cloud/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.gatsbyjs.com%2Fproducts%2Fcloud%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 これまでビルド機能をメインにサービスを提供していた [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) ですが、2021 年 3 月 3 日に [ホスティング機能をリリース](https://www.gatsbyjs.com/blog/gatsby-cloud-hosting-pricing-plan) したようです。
 
@@ -150,15 +159,9 @@ SEO 対策（各記事の完成度以外） は基本的に、[Lighthouse](https
 
 当サイトで使用している Gatsby.js の SEO に関するプラグインは、[Gatsby.js SEO 対策におすすめのプラグイン](../gatsby-js-seo-plugins/) で紹介していますので、気になる方はチェックしてみてください。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://okuhira.studio/gatsby-js-seo-plugins/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fokuhira.studio%2Fgatsby-js-seo-plugins%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
-
 <p class="notice">追記：）Google Adsense 入れたので、Lighthouseのスコアは結構下がりました</p>
 
----
-
 サイトの収益化については、[【Gatsby.js】Google AdSense の導入から広告設置、収益化までの手順](../gatsbyjs-googleadsense/) という記事で紹介していますので、気になる方はチェックしてみてください。
-
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://okuhira.studio/gatsbyjs-googleadsense/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fokuhira.studio%2Fgatsbyjs-googleadsense%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 ## まとめ
 
