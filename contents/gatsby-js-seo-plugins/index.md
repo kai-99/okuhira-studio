@@ -5,7 +5,7 @@ createdAt: "2021-07-04"
 updateAt: "2021-07-10"
 thumbnail: ./hero.png
 tags: ["Gatsby.js"]
-categories: "SEO"
+categories: "プログラミング"
 ---
 
 ## はじめに
