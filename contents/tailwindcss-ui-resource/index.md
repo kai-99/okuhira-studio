@@ -5,13 +5,14 @@ createdAt: "2021-07-19"
 updateAt: "2021-08-01"
 thumbnail: "./hero.png"
 tags: ["Tailwind CSS"]
-categories: "プログラミング"
+categories: "Webデザイン"
 ---
 
 ## はじめに
 
 Tailwind CSS を使う際に便利な UI コンポーネントや UI キット等の参考サイトまとめました。
 
+- Tailwind CSS
 <div class="iframely-embed mb-4"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://tailwindcss.com/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Ftailwindcss.com%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 ## UI 系
