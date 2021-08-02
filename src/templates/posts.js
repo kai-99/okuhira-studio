@@ -177,7 +177,7 @@ const Posts = ({ data }) => {
 					<div className="flex items-center justify-start font-bold text-right text-xs mb-4">
 						<time
 							className="text-gray-400 block"
-							// itemProp="datePublished"
+							itemProp="datePublished"
 							dateTime={data.markdownRemark.createdAt}
 						>
 							<span className="mr-1">
@@ -187,7 +187,7 @@ const Posts = ({ data }) => {
 						</time>
 						<time
 							className="text-gray-600 block ml-2"
-							// itemProp="modified"
+							itemProp="modified"
 							dateTime={data.markdownRemark.frontmatter.updateAt}
 						>
 							<span className="mr-1">
@@ -196,7 +196,11 @@ const Posts = ({ data }) => {
 							{data.markdownRemark.frontmatter.updateAt}
 						</time>
 					</div>
-					<article className="slow-fadein-animation bg-white">
+					<article
+						className="slow-fadein-animation bg-white"
+						itemScope
+						itemType="http://schema.org/BlogPosting"
+					>
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
@@ -256,11 +260,8 @@ const Posts = ({ data }) => {
 					<GoogleAds>
 						<ins
 							className="adsbygoogle"
-							style={{
-								display: `inline-block`,
-								width: `300px`,
-								height: `212px`,
-							}}
+							style={{ display: `block` }}
+							data-ad-format="auto"
 							data-ad-client="ca-pub-4800021914562133"
 							data-ad-slot="3370650941"
 						></ins>
@@ -279,11 +280,8 @@ const Posts = ({ data }) => {
 						<GoogleAds>
 							<ins
 								className="adsbygoogle"
-								style={{
-									display: `inline-block`,
-									width: `300px`,
-									height: `212px`,
-								}}
+								style={{ display: `block` }}
+								data-ad-format="auto"
 								data-ad-client="ca-pub-4800021914562133"
 								data-ad-slot="3370650941"
 							></ins>
