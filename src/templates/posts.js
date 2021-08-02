@@ -177,7 +177,7 @@ const Posts = ({ data }) => {
 					<div className="flex items-center justify-start font-bold text-right text-xs mb-4">
 						<time
 							className="text-gray-400 block"
-							itemProp="datePublished"
+							itemProp="published"
 							dateTime={data.markdownRemark.createdAt}
 						>
 							<span className="mr-1">
@@ -205,6 +205,7 @@ const Posts = ({ data }) => {
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
 							className="bg-purple-50 shadow-md"
+							itemProp="image"
 						/>
 						<div className="my-4">
 							<details className="cursor-pointer">
@@ -216,7 +217,6 @@ const Posts = ({ data }) => {
 								</nav>
 							</details>
 						</div>
-
 						<p className="text-sm text-gray-900 my-8 md:mb-0 flex items-center justify-center">
 							<ClockIcon className="h-4 w-4 inline-block mr-1" />
 							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
@@ -257,15 +257,6 @@ const Posts = ({ data }) => {
 					</article>
 				</main>
 				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
-					<GoogleAds>
-						<ins
-							className="adsbygoogle"
-							style={{ display: `block` }}
-							data-ad-format="auto"
-							data-ad-client="ca-pub-4800021914562133"
-							data-ad-slot="3370650941"
-						></ins>
-					</GoogleAds>
 					<SideBar />
 					<div className="sticky top-10 mb-8">
 						<div className="hidden lg:block my-8">
@@ -273,17 +264,18 @@ const Posts = ({ data }) => {
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
 								<span className="text-sm font-bold text-gray-900">目次</span>
 							</p>
-							<nav className="pl-1 max-h-80 overflow-y-scroll bg-white">
+							<nav className="max-h-80 overflow-y-scroll bg-white">
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
 						<GoogleAds>
 							<ins
-								className="adsbygoogle"
+								class="adsbygoogle"
 								style={{ display: `block` }}
-								data-ad-format="auto"
 								data-ad-client="ca-pub-4800021914562133"
-								data-ad-slot="3370650941"
+								data-ad-slot="2479254996"
+								data-ad-format="auto"
+								data-full-width-responsive="true"
 							></ins>
 						</GoogleAds>
 					</div>

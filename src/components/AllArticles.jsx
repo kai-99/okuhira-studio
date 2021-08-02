@@ -40,6 +40,14 @@ const AllArticles = () => {
 
 	return (
 		<div className="md:grid md:grid-cols-2 md:gap-4">
+			<ins
+				class="adsbygoogle"
+				style={{ display: `block` }}
+				data-ad-format="fluid"
+				data-ad-layout-key="-75+d6+5+1+9r"
+				data-ad-client="ca-pub-4800021914562133"
+				data-ad-slot="6178471635"
+			></ins>
 			{data.allMarkdownRemark.nodes.map((node) => {
 				return (
 					<div className="bg-white mb-4 md:mb-0" key={node.frontmatter.title}>
