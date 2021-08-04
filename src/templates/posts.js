@@ -268,6 +268,7 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
+						{/* <div className="mb-8"> */}
 						<GoogleAds>
 							<ins
 								class="adsbygoogle"
@@ -278,6 +279,7 @@ const Posts = ({ data }) => {
 								data-full-width-responsive="true"
 							></ins>
 						</GoogleAds>
+						{/* </div> */}
 					</div>
 				</aside>
 			</div>
@@ -301,22 +303,6 @@ const Posts = ({ data }) => {
 						</Link>
 					</div>
 				</div>
-				{/* <aside className="block mt-8 lg:mt-0 lg:w-1/4">
-					<div className="lg:sticky lg:top-20">
-						<GoogleAds>
-							<ins
-								className="adsbygoogle"
-								style={{
-									display: `block`,
-								}}
-								data-ad-client="ca-pub-4800021914562133"
-								data-ad-slot="5479414311"
-								data-ad-format="auto"
-								data-full-width-responsive="true"
-							></ins>
-						</GoogleAds>
-					</div>
-				</aside> */}
 			</div>
 		</Layout>
 	);
