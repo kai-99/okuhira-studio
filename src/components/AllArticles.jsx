@@ -24,7 +24,7 @@ const AllArticles = () => {
 							thumbnail {
 								childImageSharp {
 									gatsbyImageData(
-										placeholder: TRACED_SVG
+										placeholder: BLURRED
 										aspectRatio: 1.618
 										formats: [AUTO, WEBP, AVIF]
 										layout: CONSTRAINED
