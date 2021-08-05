@@ -66,21 +66,6 @@ module.exports = {
 				siteUrl: `https://okuhira.studio`,
 			},
 		},
-		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				name: `OKUHIRA STUDIO`,
-				short_name: `OKUHIRA STUDIO`,
-				start_url: `/`,
-				background_color: `#ffffff`,
-				theme_color: `#A78BFA`,
-				display: `minimal-ui`,
-				icon: `static/thumb.png`, // This path is relative to the root of the site.
-				icon_options: {
-					purpose: `maskable`,
-				},
-			},
-		},
 		`gatsby-plugin-remove-serviceworker`,
 		{
 			resolve: `gatsby-transformer-remark`,
@@ -140,14 +125,6 @@ module.exports = {
 				showSpinner: true,
 			},
 		},
-		{
-			// https://www.gatsbyjs.com/plugins/gatsby-plugin-gatsby-cloud/
-			resolve: `gatsby-plugin-gatsby-cloud`,
-			options: {
-				allPageHeaders: [
-					"Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
-				],
-			},
-		},
+		`gatsby-plugin-gatsby-cloud`,
 	],
 };
