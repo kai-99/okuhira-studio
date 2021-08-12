@@ -259,6 +259,18 @@ const Posts = ({ data }) => {
 				<aside className="block mt-8 lg:mt-0 lg:w-1/4">
 					<SideBar />
 					<div className="sticky top-10 mb-8">
+						<div className="my-8">
+							<GoogleAds>
+								<ins
+									class="adsbygoogle"
+									style={{ display: `block` }}
+									data-ad-client="ca-pub-4800021914562133"
+									data-ad-slot="2479254996"
+									data-ad-format="auto"
+									data-full-width-responsive="true"
+								></ins>
+							</GoogleAds>
+						</div>
 						<div className="hidden lg:block my-8">
 							<p className="pb-2 mb-4 border-b border-purple-100">
 								<ViewListIcon className="h-4 w-4 inline-block text-purple-500 mr-2" />
@@ -268,18 +280,6 @@ const Posts = ({ data }) => {
 								<Toc data={data.markdownRemark.tableOfContents} />
 							</nav>
 						</div>
-						{/* <div className="mb-8"> */}
-						<GoogleAds>
-							<ins
-								class="adsbygoogle"
-								style={{ display: `block` }}
-								data-ad-client="ca-pub-4800021914562133"
-								data-ad-slot="2479254996"
-								data-ad-format="auto"
-								data-full-width-responsive="true"
-							></ins>
-						</GoogleAds>
-						{/* </div> */}
 					</div>
 				</aside>
 			</div>
