@@ -1,13 +1,4 @@
-const tailwindConfig = require("./tailwind.config.js");
-
 module.exports = {
-	// flags: {
-	// 	PRESERVE_FILE_DOWNLOAD_CACHE: true,
-	// 	PRESERVE_WEBPACK_CACHE: true,
-	// 	DEV_SSR: false,
-	// 	PARALLEL_SOURCING: false,
-	// 	FUNCTIONS: false,
-	// },
 	siteMetadata: {
 		title: `OKUHIRA STUDIO`,
 		lang: `ja`,
@@ -23,18 +14,7 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-sitemap`,
-		{
-			resolve: `gatsby-plugin-postcss`,
-			options: {
-				postCssPlugins: [
-					require(`tailwindcss`)(tailwindConfig),
-					require(`autoprefixer`),
-					...(process.env.NODE_ENV === `production`
-						? [require(`cssnano`)]
-						: []),
-				],
-			},
-		},
+		`gatsby-plugin-postcss`,
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-react-helmet`,

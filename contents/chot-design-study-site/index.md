@@ -102,3 +102,5 @@ CMS で有名な WordPress 入門講座、コードを書かずに Web サイト
 今回紹介した記事が、読んでくれた方のお役に立てれば幸いです。
 
 <p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
+
+今回は Web デザインに関する内容でしたが、プログラミングを学びたい方は [こちらで人気プログラミングスクールの情報](https://programming-shikiho.com/) がうまくまとまっていますので参考にしてみて下さい。

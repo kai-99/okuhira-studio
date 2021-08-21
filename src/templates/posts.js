@@ -202,15 +202,15 @@ const Posts = ({ data }) => {
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
-							className="bg-purple-50 shadow-md"
+							className="bg-purple-50"
 							itemProp="image"
 						/>
 						<div className="my-4">
 							<details className="cursor-pointer">
-								<summary className="lg:text-center pl-4 lg:pl-0 duration-300 hover:bg-purple-50 p-2 font-bold text-sm text-gray-900 marker:text-purple-500 marker:animate-pulse">
+								<summary className="lg:pl-8 duration-300 hover:bg-purple-50 p-2 font-bold text-sm text-gray-900 marker:text-purple-500 marker:animate-pulse">
 									目次
 								</summary>
-								<nav className="flex items-center justify-start lg:justify-center">
+								<nav className="flex items-center justify-start lg:pl-4">
 									<Toc data={data.markdownRemark.tableOfContents} />
 								</nav>
 							</details>
