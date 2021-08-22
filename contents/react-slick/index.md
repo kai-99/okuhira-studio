@@ -4,7 +4,7 @@ description: ""
 createdAt: "2021-08-22"
 updateAt: "2021-08-22"
 thumbnail: "./hero.png"
-tags: ["React"]
+tags: ["React", "Gatsby.js"]
 categories: "プログラミング"
 ---
 

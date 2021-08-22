@@ -2,7 +2,7 @@
 title: "【コスパ最強】Webデザイン独学の手助けになる学習サイト教えます"
 description: "Webデザイナーを独学で目指している方必見のWebデザイン学習サイト。プログラミングが学べる Progate や ドットインストール のデザイン版ともいえる魅力的なサービス、chot.design を紹介します。Web制作・Webデザイン・Webディレクターを独学で勉強する方は、それらの知識が学べる講座が沢山あるのでおすすめです。"
 createdAt: "2021-07-05"
-updateAt: "2021-08-01"
+updateAt: "2021-08-22"
 thumbnail: "./hero.png"
 tags: ["オンライン学習"]
 categories: "Webデザイン"
@@ -16,12 +16,12 @@ categories: "Webデザイン"
 
 **こんな人におすすめ**
 
-1. Web デザインの学習を何からしていいかわからない
+1. Web デザイン独学しようと思っても何からしていいかわからない
+1. Web デザイナーを独学で目指している
 1. Web デザインスクールは料金が高くて受講できない
-1. SNS 等を見て、他人と自分の成長速度と比較してしまう
+1. ホームページのデザインができるようになりたい
 1. デザインはある程度できるけどコーディングが苦手
 1. コーディングはある程度できるけどデザインが苦手
-1. 扱うデザインツールが多すぎて何を優先に学習すべきか悩んでいる
 
 一つでも当てはまる方は、今回紹介するサービスで学習する事によって抱えている悩みを解決できる可能性がありますので、最後まで読んで頂けると幸いです。
 
@@ -74,7 +74,7 @@ CMS で有名な WordPress 入門講座、コードを書かずに Web サイト
 
 ![chot.design しごとさがし](./chot-design-01.png)
 
-<p class="text-right italic text-gray-600">出典：<a href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
+<p class="text-right text-sm italic text-gray-600">出典：<a href="https://chot.design/" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design</a></p>
 
 先程も述べましたが、学んだ先まで充実しているサービスはとても魅力的です。
 
