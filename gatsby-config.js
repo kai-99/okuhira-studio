@@ -1,9 +1,9 @@
 module.exports = {
 	siteMetadata: {
-		title: `OKUHIRA STUDIO`,
+		title: `OKUHIRA Blog`,
 		lang: `ja`,
 		locale: `ja_JP`,
-		description: `当サイトはOKUHIRAが運営している、個人ブログです。`,
+		description: `当サイトは、Webの技術やデザインについて発信している個人ブログです。`,
 		siteUrl: `https://okuhira.studio/`,
 		social: {
 			twitter: {
