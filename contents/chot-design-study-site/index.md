@@ -1,8 +1,8 @@
 ---
-title: "【コスパ最強】Webデザイン独学の手助けになる学習サイト教えます"
-description: "Webデザイナーを独学で目指している方必見のWebデザイン学習サイト。プログラミングが学べる Progate や ドットインストール のデザイン版ともいえる魅力的なサービス、chot.design を紹介します。Web制作・Webデザイン・Webディレクターを独学で勉強する方は、それらの知識が学べる講座が沢山あるのでおすすめです。"
+title: "「chot.design」Webデザイン独学の手助けになる学習サイトの実際に使った感想"
+description: "Webデザイナーを独学で目指している方必見のWebデザイン学習サイト。プログラミングが学べる Progate や ドットインストール のデザイン版ともいえる魅力的なサービス、chot.design を紹介します。Web制作・Webデザイン・Webディレクターを独学で勉強する方は、それらの知識が学べる講座が沢山あるのでおすすめです。また、2ヶ月間実際に使ってみた感想も記載してますので、ぜひ参考にしてみて下さい。"
 createdAt: "2021-07-05"
-updateAt: "2021-08-22"
+updateAt: "2021-09-03"
 thumbnail: "./hero.png"
 tags: ["オンライン学習"]
 categories: "Webデザイン"
@@ -29,7 +29,7 @@ categories: "Webデザイン"
 
 早速ですが、今回紹介するおすすめの Web デザイン学習サービスとは、**chot.design** です。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://chot.design/plus/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=http%3A%2F%2Faf.moshimo.com%2Faf%2Fc%2Fclick%3Fa_id%3D2709936%26p_id%3D3354%26pc_id%3D7970%26pl_id%3D47670%26url%3Dhttps%253A%252F%252Fchot.design%252Fplus%252F%253Frd_code%253D%257B%257BCODE%257D%257D&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
+<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイト</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
 
 chot.design とは「毎日ちょっとずつデザインを学ぼう」をコンセプトとしている、 **月額 1,100 円で学び放題** の Web デザイン学習サービスです。  
 プログラミング学習サービスの Progate や ドットインストールの、デザイン版と考えるとわかりやすいでしょう。
@@ -41,8 +41,6 @@ chot.design とは「毎日ちょっとずつデザインを学ぼう」をコ�
 ## 学習カリキュラムの魅力
 
 chot.design で現在公開されているカリキュラムは大きく分けて、以下の 3 つに分類されます。
-
-<div class="iframely-embed mb-4"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://chot.design/plus/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=http%3A%2F%2Faf.moshimo.com%2Faf%2Fc%2Fclick%3Fa_id%3D2709936%26p_id%3D3354%26pc_id%3D7970%26pl_id%3D47670%26url%3Dhttps%253A%252F%252Fchot.design%252Fplus%252F%253Frd_code%253D%257B%257BCODE%257D%257D&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 1. **基礎**
 1. **応用**
@@ -88,7 +86,7 @@ CMS で有名な WordPress 入門講座、コードを書かずに Web サイト
 
 年間プランで登録すると一年間受講した場合、月々プランで登録した場合より **￥ 2,200** 安く受講できるので年間プランもおすすめです！
 
-<div class="iframely-embed mb-4"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://chot.design/plus/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=http%3A%2F%2Faf.moshimo.com%2Faf%2Fc%2Fclick%3Fa_id%3D2709936%26p_id%3D3354%26pc_id%3D7970%26pl_id%3D47670%26url%3Dhttps%253A%252F%252Fchot.design%252Fplus%252F%253Frd_code%253D%257B%257BCODE%257D%257D&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
+<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
 
 ## おわりに
 
@@ -101,6 +99,24 @@ CMS で有名な WordPress 入門講座、コードを書かずに Web サイト
 **月額 1,100 円 学び放題** で効率よく学習できますので、是非ご利用してみてください！  
 今回紹介した記事が、読んでくれた方のお役に立てれば幸いです。
 
-<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイトはこちら</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
-
 今回は Web デザインに関する内容でしたが、プログラミングを学びたい方は [こちらで人気プログラミングスクールの情報](https://programming-shikiho.com/) がうまくまとまっていますので参考にしてみて下さい。
+
+---
+
+↓ 以下 2021 年 9 月 3 日追記
+
+## 有料会員で 2 ヶ月使った感想
+
+chot.design の有料プランを約 2 ヶ月利用してみたので、何を学んで何ができるようになったのかを完全な自己満足ですが紹介していきます！
+
+元々、Figma を学習したくて他に取り扱っている安価なサービスがなかった為、色々探し回っているうちに chot.design を見つけてこれで学習しよう！と決めました。
+
+Figma を一度も触ったことがない状態から、仕事終わりに週 1 回程度の超絶スローペースですが、基本的な機能を理解しブログのサムネイルやバナー等を作れるまでになりました！
+
+![chot.design を2ヶ月使った感想](./chotdesign.png)
+
+色々な関係上、当ブログでしようしている画像ではなく、他のサイトでしているサムネイルやバナーを Figma で制作しているため、ぼかしていますが、実際に使ってみた率直な意見はとてもわかりやすかったです。引き続き有料会員で利用していこうと思っています。
+
+私はデザイナーではないですが、非デザイナーの方も Figma は Photoshop 等と比べると断然扱いやすいので、今後ブログのサムネイルやバナー等を作りたいと思う方は、ぜひ利用してみるのをおすすめします。
+
+<p class="btn-wrapper"><a class="pink-btn" href="//af.moshimo.com/af/c/click?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670&url=https%3A%2F%2Fchot.design%2Fplus%2F%3Frd_code%3D%7B%7BCODE%7D%7D" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">chot.design 公式サイト</a><img src="//i.moshimo.com/af/i/impression?a_id=2709936&p_id=3354&pc_id=7970&pl_id=47670" width="1" height="1" style="border:none;"></p>
