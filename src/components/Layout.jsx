@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const Layout = (props) => {
 	return (
-		<div className="bg-white lg:bg-purple-50" id="#top">
+		<div className="bg-white" id="#top">
 			<Header />
 			<div className="max-w-5xl lg:mx-auto mt-12 lg:mt-0 opacity-animation relative">
 				{props.children}

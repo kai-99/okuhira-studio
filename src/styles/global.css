@@ -102,10 +102,10 @@
 		@apply mx-0 my-4 w-full overflow-x-scroll whitespace-nowrap block;
 	}
 	.markdown table th {
-		@apply p-2 text-gray-800 font-semibold border-2 border-purple-200;
+		@apply p-2 text-gray-800 font-semibold border border-white bg-gray-100;
 	}
 	.markdown table td {
-		@apply p-2 border-2 border-purple-200;
+		@apply p-2 border border-gray-100;
 	}
 
 	.markdown > hr {

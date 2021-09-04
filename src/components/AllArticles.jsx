@@ -39,7 +39,7 @@ const AllArticles = () => {
 	);
 
 	return (
-		<div className="md:grid md:grid-cols-2 md:gap-4">
+		<div className="md:grid md:grid-cols-3 md:gap-4">
 			{data.allMarkdownRemark.nodes.map((node) => {
 				return (
 					<div className="bg-white mb-4 md:mb-0" key={node.frontmatter.title}>
@@ -72,7 +72,7 @@ const AllArticles = () => {
 								</time>
 							</div>
 							<Link to={node.fields.slug} className="hover:underline">
-								<h2 className="font-bold text-sm md:text-base text-gray-800 flex-1">
+								<h2 className="font-bold text-sm text-gray-800 flex-1">
 									{node.frontmatter.title}
 								</h2>
 							</Link>

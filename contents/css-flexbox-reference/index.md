@@ -1,8 +1,8 @@
 ---
-title: "CSS Flexbox の使い方を基礎から理解する"
+title: "CSS Flexbox の使い方を図解30枚で基礎から解説！"
 description: "display: flex; で使える、CSS Flexbox の使い方を基礎から徹底的に解説しました。Web制作やWebデザインを行う上で、Flexbox を身につけておくと表現できる幅がとても広がります。Webコーダー・Webデザイナーの方は確実に身に付けた方が良いCSSのスキルですので、この記事で読んでフレックスボックスについて理解を深めてみてください。"
 createdAt: "2021-06-24"
-updateAt: "2021-07-05"
+updateAt: "2021-09-04"
 thumbnail: "./hero.png"
 tags: ["CSS", "Flexbox"]
 categories: "Webデザイン"

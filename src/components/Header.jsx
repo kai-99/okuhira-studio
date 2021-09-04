@@ -46,7 +46,7 @@ const Header = () => {
 	};
 	return (
 		<>
-			<header className="bg-white w-full top-0 h-12 z-50 fixed lg:static">
+			<header className="bg-white w-full top-0 h-12 z-50 fixed lg:static border-b">
 				<div className="max-w-5xl mx-auto h-12 flex items-center justify-between px-2">
 					<Link to="/">
 						<p className="font-mono text-xl text-gray-900">
@@ -58,8 +58,8 @@ const Header = () => {
 					</Button>
 					{/* 🍔 */}
 					<ActiveBackground />
-					<div className="fixed overflow-auto top-0 right-0 z-50 h-full bg-purple-50 shadow-2xl duration-300 text-left nav-content">
-						<div className="flex items-center justify-end h-12 px-2 lg:px-4 bg-white">
+					<div className="fixed overflow-auto top-0 right-0 z-50 h-full bg-white shadow-2xl duration-300 text-left nav-content">
+						<div className="flex items-center justify-end h-12 px-2 lg:px-4">
 							<Button>
 								<XIcon className="inline-block w-6 h-6" />
 							</Button>

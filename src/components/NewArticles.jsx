@@ -75,7 +75,7 @@ const NewArticles = () => {
 								</time>
 							</div>
 							<Link to={node.fields.slug} className="hover:underline">
-								<h2 className="font-bold text-sm md:text-base text-gray-800 flex-1">
+								<h2 className="font-bold text-sm text-gray-800 flex-1">
 									{node.frontmatter.title}
 								</h2>
 							</Link>

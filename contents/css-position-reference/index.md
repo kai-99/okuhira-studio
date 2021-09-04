@@ -1,8 +1,8 @@
 ---
-title: "CSS position 【5つの値】と使い方を理解する"
+title: "CSS position（絶対値）の使い方を詳しく解説"
 description: "CSS position（絶対値）で使える5つの値を解説します。static relative absolute fiexd sticky の5つは top left right bottom とうまく組み合わせることでWeb制作やWebデザインをする上で非常に役に立つプロパティや値なので是非使いこなせるようにしましょう"
 createdAt: "2021-06-28"
-updateAt: "2021-07-05"
+updateAt: "2021-09-04"
 thumbnail: "./hero.png"
 tags: ["CSS"]
 categories: "Webデザイン"

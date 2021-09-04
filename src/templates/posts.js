@@ -57,7 +57,7 @@ const Posts = ({ data }) => {
 			<ol
 				itemScope
 				itemType="https://schema.org/BreadcrumbList"
-				className="border-b-2 border-purple-100 border-dashed pb-2 flex items-center gap-1 text-gray-700 font-bold w-full text-sm whitespace-nowrap overflow-x-scroll"
+				className="flex items-center gap-1 text-gray-700 font-bold w-full text-xs whitespace-nowrap overflow-x-scroll"
 			>
 				<li
 					itemProp="itemListElement"
@@ -206,8 +206,8 @@ const Posts = ({ data }) => {
 							itemProp="image"
 						/>
 						<div className="my-4">
-							<details className="cursor-pointer">
-								<summary className="lg:pl-8 duration-300 hover:bg-purple-50 p-2 font-bold text-sm text-gray-900 marker:text-purple-500 marker:animate-pulse">
+							<details open className="cursor-pointer">
+								<summary className="lg:pl-8 duration-300 p-2 font-bold text-sm text-gray-900 marker:text-purple-500">
 									目次
 								</summary>
 								<nav className="flex items-center justify-start lg:pl-4">
@@ -224,7 +224,7 @@ const Posts = ({ data }) => {
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
 						/>
 						<SnsShare />
-						<div className="lg:bg-purple-50">
+						<div className="">
 							<ul className="flex items-center">
 								<li className="p-1">
 									<Link
