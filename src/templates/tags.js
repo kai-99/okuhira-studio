@@ -74,7 +74,7 @@ const Tags = ({ pageContext, data }) => {
 							<HashtagIcon className="inline-block w-4 h-4 md:w-6 md:h-6 text-blue-500 align-text-bottom mr-1" />
 							<TemplateTitle TemplateTitle={tag} />
 						</div>
-						<div className="md:grid md:grid-cols-2 md:gap-4">
+						<div className="md:grid md:grid-cols-2 md:gap-4 fast-fadein-animation">
 							{edges.map(({ node }) => {
 								return (
 									<div
@@ -90,7 +90,7 @@ const Tags = ({ pageContext, data }) => {
 										</Link>
 										<div className="flex flex-col p-4 md:flex-1 border-t border-purple-50">
 											<Link to={node.fields.slug} className="hover:underline">
-												<h2 className="font-bold text-sm md:text-base text-gray-800 my-1 flex-1">
+												<h2 className="font-bold text-sm text-gray-800 my-1 flex-1">
 													{node.frontmatter.title}
 												</h2>
 											</Link>

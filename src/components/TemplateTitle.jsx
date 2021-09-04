@@ -5,7 +5,7 @@ const TemplateTitle = (props) => {
 		<>
 			<h1
 				itemProp="headline"
-				className="font-bold md:text-xl py-8 md:py-16 text-gray-800 tracking-wide fast-fadein-animation"
+				className="font-bold md:text-xl py-8 md:py-16 text-gray-800 tracking-wide"
 			>
 				{props.TemplateTitle}
 			</h1>

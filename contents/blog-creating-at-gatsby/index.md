@@ -1,8 +1,8 @@
 ---
-title: "Gatsby.js + Tailwind CSS + Gatsby Cloud の構成でブログを作ってみた"
+title: "Gatsby.js + Tailwind CSS で個人ブログ作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-08-01"
+updateAt: "2021-09-04"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
 categories: "プログラミング"
@@ -107,8 +107,18 @@ export default TagIcon
 
 ![Gatsby Cloud ダッシュボードにてスコア計測](./gatsby-cloud.png)
 
-Gatsby Cloud の魅力は [incremental builds](https://www.gatsbyjs.com/blog/2020-04-22-announcing-incremental-builds/) です。  
-変更ファイルの差分を検知してビルドを行うので、ビルド時間が大幅に削減できます。（有料）
+Gatsby Cloud の魅力は [incremental builds](https://www.gatsbyjs.com/blog/2020-04-22-announcing-incremental-builds/) という機能で有料になりますが、変更ファイルの差分のみビルドを行うので、ビルド時間が大幅に削減できます。
+
+---
+
+<p class="notice">追記：）Cloudflare Pages に移行しました</p>
+
+Gatsby Cloud から静的サイトのホスティングサービス、Cloudflare Pages に移行しました。
+
+この件に関しては、今後別の記事で紹介しようと思います。  
+静的サイトのホスティング先としておすすめなので、気になる方はチェックしてみてください。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://pages.cloudflare.com/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fpages.cloudflare.com%2F&amp;key=d4798a05d91c041893af4b71314755fa"></a></div></div>
 
 ## 工夫した点
 

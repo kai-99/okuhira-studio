@@ -172,37 +172,43 @@ const Posts = ({ data }) => {
 					<TemplateTitle
 						TemplateTitle={data.markdownRemark.frontmatter.title}
 					/>
-					<div className="flex items-center justify-start font-bold text-right text-xs mb-4">
-						<time
-							className="text-gray-400 block"
-							itemProp="published"
-							dateTime={data.markdownRemark.createdAt}
-						>
-							<span className="mr-1">
-								<PencilAltIcon className="inline-block w-4 h-4" />
-							</span>
-							{data.markdownRemark.frontmatter.createdAt}
-						</time>
-						<time
-							className="text-gray-600 block ml-2"
-							itemProp="modified"
-							dateTime={data.markdownRemark.frontmatter.updateAt}
-						>
-							<span className="mr-1">
-								<RefreshIcon className="inline-block w-4 h-4" />
-							</span>
-							{data.markdownRemark.frontmatter.updateAt}
-						</time>
+					<div className="flex items-center justify-between font-bold text-xs mb-4">
+						<div className="flex items-center">
+							<time
+								className="text-gray-400 block"
+								itemProp="published"
+								dateTime={data.markdownRemark.createdAt}
+							>
+								<span className="mr-1">
+									<PencilAltIcon className="inline-block w-4 h-4" />
+								</span>
+								{data.markdownRemark.frontmatter.createdAt}
+							</time>
+							<time
+								className="text-gray-600 block ml-2"
+								itemProp="modified"
+								dateTime={data.markdownRemark.frontmatter.updateAt}
+							>
+								<span className="mr-1">
+									<RefreshIcon className="inline-block w-4 h-4" />
+								</span>
+								{data.markdownRemark.frontmatter.updateAt}
+							</time>
+						</div>
+						<p className="flex items-center justify-center">
+							<ClockIcon className="h-4 w-4 inline-block mr-1" />
+							{data.markdownRemark.timeToRead} 分で読めます！
+						</p>
 					</div>
 					<article
-						className="slow-fadein-animation bg-white"
+						className="fast-fadein-animation bg-white"
 						itemScope
 						itemType="http://schema.org/BlogPosting"
 					>
 						<GatsbyImage
 							image={image}
 							alt={data.markdownRemark.frontmatter.title}
-							className="bg-purple-50"
+							className="bg-purple-50 -mx-2 md:mx-0"
 							itemProp="image"
 						/>
 						<div className="my-4">
@@ -215,10 +221,6 @@ const Posts = ({ data }) => {
 								</nav>
 							</details>
 						</div>
-						<p className="text-sm text-gray-900 my-8 md:mb-0 flex items-center justify-center">
-							<ClockIcon className="h-4 w-4 inline-block mr-1" />
-							この記事は 約 {data.markdownRemark.timeToRead} 分で読めます！
-						</p>
 						<div
 							className="markdown"
 							dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
