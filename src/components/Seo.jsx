@@ -47,8 +47,10 @@ const Seo = (props) => {
 			<meta property="og:image:width" content={imgw} />
 			<meta property="og:image:height" content={imgh} />
 			<meta name="twitter:card" content="summary_large_image" />
-			{/* <meta name="twitter:site" content="" /> */}
-			{/* <meta name="twitter:creator" content="" /> */}
+			<meta
+				name="google-site-verification"
+				content="saWYEcecxP7V3d0RGyjdiJhOJ4p_t_ARtCJtbRSheKQ"
+			/>
 		</Helmet>
 	);
 };
