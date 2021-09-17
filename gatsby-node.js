@@ -2,14 +2,14 @@ const path = require(`path`);
 const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 // Firebase Setting
-const fs = require("fs");
-exports.onPostBuild = () => {
-	fs.copyFile(`./firebase.json`, `./public/firebase.json`, (err) => {
-		if (err) {
-			throw err;
-		}
-	});
-};
+// const fs = require("fs");
+// exports.onPostBuild = () => {
+// 	fs.copyFile(`./firebase.json`, `./public/firebase.json`, (err) => {
+// 		if (err) {
+// 			throw err;
+// 		}
+// 	});
+// };
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
 	const { createNodeField } = actions;
