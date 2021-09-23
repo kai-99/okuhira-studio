@@ -1,7 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
-import { FolderOpenIcon, HashtagIcon } from "@heroicons/react/outline";
+import {
+	FolderOpenIcon,
+	HashtagIcon,
+	LinkIcon,
+} from "@heroicons/react/outline";
 
 const Footer = () => {
 	const data = useStaticQuery(
@@ -32,7 +36,7 @@ const Footer = () => {
 	);
 	return (
 		<footer className="w-full bg-gray-800 text-gray-100 body-font">
-			<div className="max-w-5xl mx-auto">
+			<div className="max-w-7xl mx-auto">
 				<div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
 					<div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
 						<Link to="/">
@@ -45,7 +49,7 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-						<div className="lg:w-1/3 md:w-1/2 w-full px-4">
+						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
 							<h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">
 								CATEGORY
 							</h2>
@@ -69,7 +73,7 @@ const Footer = () => {
 								</ul>
 							</nav>
 						</div>
-						<div className="lg:w-1/3 md:w-1/2 w-full px-4">
+						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
 							<h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">
 								HASHTAG
 							</h2>
@@ -93,7 +97,7 @@ const Footer = () => {
 								</ul>
 							</nav>
 						</div>
-						<div className="lg:w-1/3 md:w-1/2 w-full px-4">
+						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
 							<h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">
 								ABOUT
 							</h2>
@@ -117,6 +121,28 @@ const Footer = () => {
 												<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
 											</svg>
 											<span className="inline-block text-sm">Twitter</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
+							<h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">
+								LINK
+							</h2>
+							<nav className="list-none mb-10">
+								<ul className="flex flex-wrap">
+									<li className="pb-2">
+										<a
+											href="https://programming-shikiho.com/"
+											rel="noreferrer"
+											target="_blank"
+											className="flex items-center text-grary-600 hover:opacity-60"
+										>
+											<LinkIcon className="w-4 h-4 mr-1" />
+											<span className="inline-block text-sm">
+												プログラミング四季報.com
+											</span>
 										</a>
 									</li>
 								</ul>

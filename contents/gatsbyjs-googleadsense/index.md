@@ -183,13 +183,11 @@ Google AdSense の審査に中々合格できない方や、収益が低くて�
 1. <a href="https://px.a8.net/svt/ejp?a8mat=3HEGYR+2KVN5E+0K+ZSD6A" rel="nofollow">A8.net</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HEGYR+2KVN5E+0K+ZSD6A" alt="">
 1. <a href="//af.moshimo.com/af/c/click?a_id=2749578&p_id=1&pc_id=1&pl_id=1319&guid=ON" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">もしもアフィリエイト</a><img src="//i.moshimo.com/af/i/impression?a_id=2749578&p_id=1&pc_id=1&pl_id=1319" width="1" height="1" style="border:none;">
 
-A8.net は広告主数が多い為、自分にあった広告を探しやすいというメリットがあります。  
-もしもアフィリエイトは「がんばる個人のためのアフィリエイトサイト」をスローガンに掲げており、アフィリエイト初心者にわかりやすい教育コンテンツも無料で用意されています。
-
-いずれも無料で利用できるので、是非収益を伸ばしたいと思う方は是非登録してみてください。
+いずれも無料で利用できるので、収益を伸ばしたいと思う方は是非登録してみてください。
 
 ## まとめ
 
 Gatsby.js 作成したサイトに、Google AdSense を導入するまでの手順を解説しました。  
-Google AdSense を導入後は、PV 数をあげるためにも検索エンジンで上位表示出来るよう、SEO 対策をすることをおすすめします。  
+Google AdSense を導入後は、PV 数をあげるためにも検索エンジンで上位表示出来るよう、SEO 対策をすることをおすすめします。
+
 Gatsby.js で作成したサイトの SEO 対策については、[Gatsby.js SEO 対策におすすめのプラグイン](../gatsby-js-seo-plugins/) という記事を以前書きましたので、気になる方はチェックしてみて下さい。
