@@ -2,10 +2,10 @@
 title: "Cloudflare Pages でカスタムドメインを設定する"
 description: ""
 createdAt: "2021-08-15"
-updateAt: "2021-08-15"
+updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["Cloudflare"]
-categories: "プログラミング"
+categories: "Develop"
 ---
 
 [当ブログの 1 番初めの記事](../blog-creating-at-gatsby/)では、Gatsby で作成したサイトを GatsbyCloud にデプロイし本番環境で運用しているという趣旨の記事を書きました。
@@ -32,3 +32,7 @@ Cloudflare Pages の 1 番の魅力は料金体系です。
 - [Cloudflare Pages](https://pages.cloudflare.com/) でアカウントを作成済
 - Cloudflare Pages と GitHub 対象リポジトリ の紐付け
 - [Google Domains](https://domains.google/intl/ja_jp/) でドメインを取得している
+
+---
+
+記事作成途中・・・・

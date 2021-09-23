@@ -2,10 +2,10 @@
 title: "Gatsby.js + Tailwind CSS で個人ブログ作ってみた"
 description: "静的サイトジェネレータのGatsby.jsとCSSフレームワークのTailwind CSS、ホスティングに Gatsby Cloud という構成でブログを作成しました。この記事ではブログを作る際に使用した技術周りの事や、参考になるリンクを紹介しています。"
 createdAt: "2021-06-20"
-updateAt: "2021-09-04"
+updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["Gatsby.js", "Tailwind CSS"]
-categories: "プログラミング"
+categories: "Develop"
 ---
 
 ## はじめに

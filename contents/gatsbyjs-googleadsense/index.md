@@ -2,10 +2,10 @@
 title: 【Gatsby.js】Google AdSense の導入から広告設置、収益化までを解説
 description: "Gatsby.js で作成したサイトに Google AdSense（アドセンス）を導入し、設置する広告の種類や収益化をするまでの具体的な基準を解説していきます。"
 createdAt: "2021-07-27"
-updateAt: "2021-08-01"
+updateAt: "2021-09-23"
 thumbnail: ./hero.png
 tags: ["Gatsby.js", "Google AdSense"]
-categories: "プログラミング"
+categories: "Develop"
 ---
 
 ## はじめに

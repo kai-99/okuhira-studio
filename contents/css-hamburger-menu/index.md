@@ -2,10 +2,10 @@
 title: "【JavaScript不要】CSSだけでつくる！ハンバーガーメニュー"
 description: "JavaScriptやjQueryを使わずに、CSSだけでハンバーガーメニューを作ります。記事の最後には、CSSで作ったハンバーガーメニューをコピペで使える様にサンプルコードを記載してます。"
 createdAt: "2021-08-01"
-updateAt: "2021-08-01"
+updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["CSS"]
-categories: "Webデザイン"
+categories: "Develop"
 ---
 
 ## はじめに

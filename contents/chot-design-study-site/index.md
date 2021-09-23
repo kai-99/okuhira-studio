@@ -2,10 +2,10 @@
 title: "【知らなきゃ損】Webデザイン学習サイトchot.design"
 description: "Webデザインを独学で学習してる方必見のWebデザイン学習サイト。プログラミングが学べる Progate や ドットインストール のWebデザイン版ともいえる魅力的なサービス、chot.design を紹介します。Web制作・Webデザイン・Webディレクターを独学で学習する方におすすめ。chot.designを有料会員で約2ヶ月実際に使ってみた感想も記載してますので、ぜひ参考にしてみて下さい。"
 createdAt: "2021-07-05"
-updateAt: "2021-09-18"
+updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["オンライン学習"]
-categories: "Webデザイン"
+categories: "Design"
 ---
 
 ## はじめに

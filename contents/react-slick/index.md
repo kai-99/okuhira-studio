@@ -2,10 +2,10 @@
 title: "Gatsby.js にスライダーを実装するなら React Slick がおすすめ！"
 description: ""
 createdAt: "2021-08-22"
-updateAt: "2021-08-22"
+updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["React", "Gatsby.js"]
-categories: "プログラミング"
+categories: "Develop"
 ---
 
 ## はじめに

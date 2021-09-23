@@ -2,10 +2,10 @@
 title: "Tailwind CSS の UIコンポーネントや UIキットの参考サイト集"
 description: "TailwindCSS を使うときに便利な UIコンポーネントや UIキット、コピペで使えるボタンデザイン 等の参考サイトをまとめました"
 createdAt: "2021-07-19"
-updateAt: "2021-08-01"
+updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["Tailwind CSS"]
-categories: "Webデザイン"
+categories: "Develop"
 ---
 
 ## はじめに

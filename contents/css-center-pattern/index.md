@@ -2,10 +2,10 @@
 title: "色々な場面で使える【CSS 中央寄せ集】"
 description: "CSSでWebサイトを作成する際、対象の要素に対してCSSで中央寄せに配置したい場面は多々あるかと思います。その際に使えるテキストの中央寄せ、flexboxを使用した中央寄せ、絶対値（css position）での中央寄せ等、CSSの中央寄せについて解説します。Web制作・Webデザインで役に立つ知識です。"
 createdAt: "2021-07-07"
-updateAt: "2021-07-07"
+updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["CSS"]
-categories: "Webデザイン"
+categories: "Develop"
 ---
 
 ## はじめに
