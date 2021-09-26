@@ -25,14 +25,26 @@ Cloudflare Pages の 1 番の魅力は料金体系です。
 
 ## カスタムドメインを設定する
 
-ここでは、Cloudflare Pages にデプロイしたサイトにカスタムドメインを設定する方法を解説していきます。
-
-以下の項目を満たしている方が対象です。
+Cloudflare Pages にデプロイしたサイトにカスタムドメインを設定する方法を解説していきますが、以下の項目を満たしている方が対象です。
 
 - [Cloudflare Pages](https://pages.cloudflare.com/) でアカウントを作成済
-- Cloudflare Pages と GitHub 対象リポジトリ の紐付け
+- [Cloudflare Pages](https://pages.cloudflare.com/) と GitHub 対象リポジトリ の紐付け
 - [Google Domains](https://domains.google/intl/ja_jp/) でドメインを取得している
+
+<span class="text-sm">※他のレジストラ（お名前.com 等）を使っている方は、それぞれの環境に合った設定してください</span>
 
 ---
 
-記事作成途中・・・・
+まずは、デプロイするプロジェクトの GitHub リポジトリと Coudflare Pages を紐付けて、GitHub にプッシュがされた場合に自動デプロイするようにします。
+
+以下の画面へは、ダッシュボードサイドバーにある **ページ** 項目をクリックしていけます。
+
+![](./step2.jpg)
+
+リポジトリ名.pages.dev で デプロイの確認ができたら、カスタムドメインを設定します。
+
+ダッシュボード上部のメニューバーに **サイトを追加** という項目があるのでそちらをクリックし、ご自身のカスタムドメインを入力します。
+
+![](./step1.jpg)
+
+--- 申し訳ございません、以降記事内容が反映されていません。
