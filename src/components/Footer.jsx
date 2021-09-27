@@ -4,7 +4,7 @@ import kebabCase from "lodash/kebabCase";
 import {
 	FolderOpenIcon,
 	HashtagIcon,
-	LinkIcon,
+	// LinkIcon,
 } from "@heroicons/react/outline";
 
 const Footer = () => {
@@ -36,7 +36,7 @@ const Footer = () => {
 	);
 	return (
 		<footer className="w-full bg-gray-800 text-gray-100 body-font">
-			<div className="max-w-7xl mx-auto">
+			<div className="max-w-5xl mx-auto">
 				<div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
 					<div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
 						<Link to="/">
@@ -49,7 +49,7 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
+						<div className="md:w-1/2 w-full px-4">
 							<h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">
 								CATEGORY
 							</h2>
@@ -73,7 +73,7 @@ const Footer = () => {
 								</ul>
 							</nav>
 						</div>
-						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
+						<div className="md:w-1/2 w-full px-4">
 							<h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">
 								HASHTAG
 							</h2>
@@ -97,7 +97,7 @@ const Footer = () => {
 								</ul>
 							</nav>
 						</div>
-						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
+						{/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
 							<h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">
 								ABOUT
 							</h2>
@@ -147,7 +147,7 @@ const Footer = () => {
 									</li>
 								</ul>
 							</nav>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
