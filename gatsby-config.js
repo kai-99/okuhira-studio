@@ -13,6 +13,14 @@ module.exports = {
 		},
 	},
 	plugins: [
+		{
+			resolve: `gatsby-plugin-redirect-to`,
+			options: {
+				force: true,
+				isPermanent: true,
+				redirectInBrowser: true,
+			},
+		},
 		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-postcss`,
 		`gatsby-plugin-image`,
