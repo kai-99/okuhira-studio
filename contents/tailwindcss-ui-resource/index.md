@@ -6,6 +6,8 @@ updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["Tailwind CSS"]
 categories: "Develop"
+# リダイレクト設定
+redirect: https://programming-shikiho.com/tailwindcss-ui-resource/
 ---
 
 ## はじめに

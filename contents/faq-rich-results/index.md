@@ -6,6 +6,8 @@ updateAt: "2021-08-23"
 thumbnail: "./hero.png"
 tags: ["構造化マークアップ"]
 categories: "SEO"
+# リダイレクト設定
+redirect: https://programming-shikiho.com/faq-rich-results/
 ---
 
 特定のキーワードの検索結果ページにて、表示されているサイトの中にそのページを開かなくても以下のように検索結果ページ上で、FAQ がパネル表示で展開されていることがあります。

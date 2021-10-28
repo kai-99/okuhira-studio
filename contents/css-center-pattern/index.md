@@ -6,6 +6,8 @@ updateAt: "2021-09-23"
 thumbnail: "./hero.png"
 tags: ["CSS"]
 categories: "Develop"
+# リダイレクト設定
+redirect: https://programming-shikiho.com/css-center-pattern/
 ---
 
 ## はじめに
